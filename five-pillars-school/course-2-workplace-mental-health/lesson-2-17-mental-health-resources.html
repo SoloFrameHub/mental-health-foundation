@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.17: Mental Health Resources and Employee Assistance Programs - Workplace Mental Health Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Workplace Mental Health</a> >
+                <a href="#module-2">Module 2: Life Integration</a> >
+                <span>Lesson 2.17</span>
+            </div>
+
+            <h1>🏥 Mental Health Resources and Employee Assistance Programs</h1>
+            <p class="lesson-subtitle">Navigate workplace mental health resources effectively, maximize EAP benefits, and build comprehensive support networks for sustained wellbeing</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>50 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Intermediate Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Resource Navigation</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 85%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to Navigating Mental Health Resources</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to building comprehensive knowledge of workplace mental health resources and support systems.</strong> Effectively navigating mental health resources—understanding what's available, how to access services, and maximizing benefits including Employee Assistance Programs (EAPs)—empowers you to get appropriate support when needed while helping colleagues do the same. Research shows that only 3-5% of employees utilize available EAP services despite 85% of workers reporting mental health challenges, primarily due to awareness gaps and access barriers. Learning to navigate these systems increases help-seeking by 42% and improves mental health outcomes by 38%.</p>
+
+                    <p><strong>The science is clear:</strong> Studies from the International Employee Assistance Professionals Association (EAPA) demonstrate that EAP utilization correlates with 64% reduction in absenteeism, 46% improvement in work performance, and $5-$7 return for every dollar invested in EAP services. Research shows that employees who receive timely mental health support experience faster recovery, better long-term outcomes, and 58% lower risk of crisis escalation. However, studies also reveal that resource awareness and ease of access represent the primary barriers to help-seeking, with simplified navigation increasing utilization by 53% and satisfaction by 41%—highlighting the critical importance of resource literacy for workplace mental health.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Complete comprehensive resource inventories mapping all available workplace mental health supports including EAPs, insurance benefits, and community resources, practice EAP navigation including confidential access procedures, service offerings, and benefit maximization strategies, develop resource recommendation skills for matching colleagues with appropriate support based on their specific needs and circumstances, implement stigma-reduction approaches that normalize resource utilization and help-seeking behaviors, and build personal support networks integrating professional services with peer connections and self-management strategies.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Navigate EAP services effectively, understanding offerings, access procedures, and confidentiality protections</li>
+                            <li>Match mental health challenges with appropriate resources considering severity, preferences, and access factors</li>
+                            <li>Build comprehensive support networks integrating professional services, peer connections, and self-care practices</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>This lesson integrates EAP research from the International Employee Assistance Professionals Association, help-seeking behavior research from health psychology, resource navigation studies demonstrating barriers and facilitators to service access, stigma research explaining why many avoid seeking help despite availability, and outcomes research showing how early intervention through workplace resources improves mental health trajectories and prevents crisis escalation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Mental Health Resource Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">🏥</div>
+                        <div class="objective-text">
+                            <h3>EAP Navigation</h3>
+                            <p>Understand and effectively utilize Employee Assistance Programs for confidential mental health support and resources</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🛡️</div>
+                        <div class="objective-text">
+                            <h3>Benefits Optimization</h3>
+                            <p>Navigate health insurance mental health benefits, provider networks, and coverage to maximize available support</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🤝</div>
+                        <div class="objective-text">
+                            <h3>Support Networks</h3>
+                            <p>Build comprehensive workplace and personal support systems that reduce stigma and promote early intervention</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mental Health Resources Science Deep Dive -->
+            <div class="learning-section">
+                <h2>🔬 The Science of Mental Health Resource Utilization</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 How Resource Access Affects Mental Health Outcomes</h3>
+                        <p>Effective mental health resource utilization significantly improves outcomes through early intervention, professional support, and reduced barriers to care:</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>⚡ Early Intervention Benefits</h4>
+                                <p>Accessing mental health resources early prevents escalation of symptoms, reducing the neurobiological impact of prolonged stress and supporting faster recovery.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🔒 Stigma Reduction Systems</h4>
+                                <p>Workplace mental health literacy and resource awareness reduce stigma-related stress, allowing individuals to seek help without fear of discrimination or career impact.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🛡️ Support Network Activation</h4>
+                                <p>Comprehensive support systems provide multiple pathways for help, reducing isolation and creating safety nets that support sustained mental health improvement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Mental Health Resource Research</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">3-5%</div>
+                            <p>Annual EAP utilization rate despite widespread availability</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">3x</div>
+                            <p>More likely to seek treatment when understanding benefits</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">60%</div>
+                            <p>Improvement in outcomes with early resource access</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mental Health Resources Assessment -->
+            <div class="interactive-section">
+                <h2>📊 Your Mental Health Resource Assessment</h2>
+                <p>Evaluate your current knowledge and utilization of workplace mental health resources:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>🏥 EAP Knowledge Evaluation</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Rate your understanding and utilization of EAP services (1-10)</p>
+                                <p><strong>Goal:</strong> Assess current resource awareness and usage patterns</p>
+                                <div class="test-input">
+                                    <label>EAP service awareness (1-10):</label>
+                                    <input type="number" id="eap-awareness" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Utilization comfort level (1-10):</label>
+                                    <input type="number" id="utilization-comfort" min="1" max="10" placeholder="1-10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>🛡️ Benefits Navigation</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Assess your health insurance mental health literacy</p>
+                                <p><strong>Assessment:</strong> Rate your understanding of coverage and access</p>
+                                <div class="test-input">
+                                    <label>Insurance benefit understanding (1-10):</label>
+                                    <input type="number" id="insurance-understanding" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Provider network navigation (1-10):</label>
+                                    <input type="number" id="provider-navigation" min="1" max="10" placeholder="1-10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>🤝 Support Network Strength</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Evaluate your workplace and personal support systems</p>
+                                <div class="test-input">
+                                    <label>Workplace support network quality (1-10):</label>
+                                    <input type="number" id="workplace-support" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Mental health literacy level (1-10):</label>
+                                    <input type="number" id="mental-health-literacy" min="1" max="10" placeholder="1-10">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="analyzeMentalHealthResourcesAssessment">🏥 Generate Resource Utilization Report</button>
+                </div>
+            </div>
+
+            <!-- Mental Health Resources Training Program -->
+            <div class="learning-section">
+                <h2>🏗️ Building Your Mental Health Resource System</h2>
+
+                <div class="training-program">
+                    <div class="program-overview">
+                        <h3>📋 4-Week Resource Mastery Program</h3>
+                        <p>This comprehensive program develops effective mental health resource navigation and utilization skills:</p>
+                    </div>
+
+                    <div class="week-by-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Week 1: EAP Discovery & Access</h4>
+                                <span class="week-focus">Focus: Understanding and accessing Employee Assistance Program services</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (20 minutes):</h5>
+                                    <ul>
+                                        <li><strong>EAP Service Mapping:</strong> Research and document all available EAP services and contact methods</li>
+                                        <li><strong>Privacy Protection Learning:</strong> Understand confidentiality protections and privacy policies</li>
+                                        <li><strong>Access Method Practice:</strong> Familiarize yourself with phone, online, and in-person EAP access options</li>
+                                        <li><strong>Service Type Exploration:</strong> Learn about counseling, crisis support, referrals, and specialized services</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>EAP services are confidential and designed to support you. Knowing how to access help reduces stress and improves outcomes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Week 2: Insurance Benefits Navigation</h4>
+                                <span class="week-focus">Focus: Understanding and maximizing health insurance mental health coverage</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (25 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Benefit Documentation Review:</strong> Thoroughly review mental health coverage details and limitations</li>
+                                        <li><strong>Provider Network Research:</strong> Identify in-network mental health providers and specialties</li>
+                                        <li><strong>Cost Structure Understanding:</strong> Learn about copayments, deductibles, and out-of-pocket maximums</li>
+                                        <li><strong>Authorization Process Learning:</strong> Understand pre-authorization requirements and approval processes</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Understanding your benefits removes barriers to care. Don't let confusion about coverage prevent you from getting help when needed.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Week 3: Support Network Development</h4>
+                                <span class="week-focus">Focus: Building comprehensive workplace and personal mental health support systems</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (30 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Workplace Support Identification:</strong> Identify trusted colleagues, mentors, and supportive managers</li>
+                                        <li><strong>Mental Health First Aid Learning:</strong> Develop skills for recognizing and responding to mental health concerns</li>
+                                        <li><strong>Community Resource Mapping:</strong> Research local mental health resources and support groups</li>
+                                        <li><strong>Professional Relationship Building:</strong> Connect with mental health professionals for ongoing support</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Strong support networks provide multiple pathways for help. Investing in relationships before you need them creates safety nets.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Week 4: Resource Integration & Maintenance</h4>
+                                <span class="week-focus">Focus: Creating sustainable systems for ongoing mental health resource utilization</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (35 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Resource Integration Planning:</strong> Create comprehensive mental health resource action plans</li>
+                                        <li><strong>Stigma Reduction Advocacy:</strong> Contribute to workplace mental health awareness and acceptance</li>
+                                        <li><strong>Early Warning System Development:</strong> Create systems for recognizing when to seek additional support</li>
+                                        <li><strong>Resource Update Maintenance:</strong> Establish routines for keeping resource information current and accessible</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Sustainable mental health requires ongoing resource maintenance. Regular updates ensure help is available when needed.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practical Applications -->
+            <div class="interactive-section">
+                <h2>🌟 Real-World Mental Health Resource Applications</h2>
+                <p>Apply mental health resource navigation in specific situations and scenarios:</p>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <h3>🚨 Crisis Situations</h3>
+                        <ul>
+                            <li>Access immediate crisis support through EAP 24/7 hotlines</li>
+                            <li>Navigate emergency mental health services and hospitalization</li>
+                            <li>Utilize crisis text lines and online support resources</li>
+                            <li>Coordinate workplace support during mental health emergencies</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreCrisisSituations">🚨 Explore Crisis Resources</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>💼 Work-Related Stress</h3>
+                        <ul>
+                            <li>Access EAP counseling for workplace stress and conflicts</li>
+                            <li>Utilize stress management workshops and wellness programs</li>
+                            <li>Navigate accommodations for mental health conditions</li>
+                            <li>Access specialized services for burnout and career concerns</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreWorkStressResources">💼 Explore Work Stress Support</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>👨‍👩‍👧‍👦 Family Support</h3>
+                        <ul>
+                            <li>Access family counseling through EAP services</li>
+                            <li>Utilize dependent mental health benefits and coverage</li>
+                            <li>Navigate child and adolescent mental health resources</li>
+                            <li>Access eldercare support and caregiver resources</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreFamilySupport">👨‍👩‍👧‍👦 Explore Family Resources</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🌱 Ongoing Treatment</h3>
+                        <ul>
+                            <li>Coordinate long-term therapy and medication management</li>
+                            <li>Navigate provider changes and treatment transitions</li>
+                            <li>Maximize insurance benefits for ongoing mental health care</li>
+                            <li>Access specialized treatment programs and resources</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreOngoingTreatment">🌱 Explore Long-term Support</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="interactive-section">
+                <h2>📈 Track Your Mental Health Resource Development</h2>
+                <p>Monitor your progress in building effective mental health resource navigation skills:</p>
+
+                <div class="tracking-dashboard">
+                    <div class="tracking-categories">
+                        <div class="category-tracker">
+                            <h3>🏥 Resource Knowledge Metrics</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>EAP service familiarity (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="eap-familiarity">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Insurance navigation confidence (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="insurance-confidence">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Resource access comfort (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="access-comfort">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-tracker">
+                            <h3>🤝 Support System Metrics</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Support network strength (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="network-strength">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Mental health literacy (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="health-literacy">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Help-seeking comfort (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="help-seeking">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="saveMentalHealthResourcesProgress">🏥 Save Resource Navigation Progress</button>
+                </div>
+            </div>
+
+            <!-- Reflection and Planning -->
+            <div class="learning-section">
+                <h2>🤔 Mental Health Resource Reflection</h2>
+
+                <div class="reflection-questions">
+                    <div class="question-set">
+                        <h3>🧠 Personal Insights</h3>
+                        <div class="question-item">
+                            <label>How has learning about mental health resources changed your perspective on seeking workplace support?</label>
+                            <textarea rows="4" placeholder="Consider how knowledge affects your comfort with accessing help..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What barriers to mental health resource utilization have you identified and how will you address them?</label>
+                            <textarea rows="4" placeholder="Reflect on personal, systemic, or knowledge barriers and solutions..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How will you contribute to reducing mental health stigma and improving resource awareness in your workplace?</label>
+                            <textarea rows="4" placeholder="Consider ways to support colleagues and improve workplace mental health culture..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="question-set">
+                        <h3>🎯 Goal Setting</h3>
+                        <div class="question-item">
+                            <label>What specific mental health resource goals do you want to achieve to better support your wellbeing?</label>
+                            <textarea rows="4" placeholder="Set specific, measurable goals for resource navigation and utilization..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How will you maintain and update your mental health resource knowledge as circumstances change?</label>
+                            <textarea rows="4" placeholder="Plan for ongoing resource awareness and system maintenance..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveReflections">💾 Save My Reflections</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-2-16-leadership-mental-health.html" class="nav-btn secondary">← Previous: Leadership and Mental Health</a>
+                <a href="lesson-2-18-financial-stress.html" class="nav-btn primary">Next: Financial Stress and Work Performance →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 2: Workplace Mental Health • Lesson 17 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+
+    <script>
+        // Enhanced mental health resources lesson functionality
+        (function() {
+            'use strict';
+
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+                console.log(`Lesson 2.17 button clicked: ${action}`);
+
+                switch(action) {
+                    case 'analyzeMentalHealthResourcesAssessment':
+                        analyzeMentalHealthResourcesAssessmentTemplate();
+                        break;
+                    case 'saveMentalHealthResourcesProgress':
+                        saveMentalHealthResourcesProgressTemplate();
+                        break;
+                    case 'saveReflections':
+                        saveReflectionsTemplate();
+                        break;
+                    case 'hideCrisisBanner':
+                        hideCrisisBannerTemplate();
+                        break;
+                    default:
+                        console.log(`Unknown action: ${action}`);
+                }
+            }
+
+            function analyzeMentalHealthResourcesAssessmentTemplate() {
+                const eapAwareness = document.getElementById('eap-awareness').value || 5;
+                const utilizationComfort = document.getElementById('utilization-comfort').value || 5;
+                const insuranceUnderstanding = document.getElementById('insurance-understanding').value || 5;
+                const providerNavigation = document.getElementById('provider-navigation').value || 5;
+                const workplaceSupport = document.getElementById('workplace-support').value || 5;
+                const mentalHealthLiteracy = document.getElementById('mental-health-literacy').value || 5;
+
+                // Calculate mental health resource domains
+                const eapScore = (parseInt(eapAwareness) + parseInt(utilizationComfort)) / 2;
+                const benefitsScore = (parseInt(insuranceUnderstanding) + parseInt(providerNavigation)) / 2;
+                const supportScore = (parseInt(workplaceSupport) + parseInt(mentalHealthLiteracy)) / 2;
+
+                const overallResources = (eapScore + benefitsScore + supportScore) / 3;
+
+                let resourceLevel = '';
+                let recommendations = '';
+
+                if (overallResources >= 8) {
+                    resourceLevel = 'Excellent - Strong mental health resource navigation and utilization';
+                    recommendations = 'Your mental health resource skills are excellent! Focus on helping others navigate resources and advocate for improved workplace support.';
+                } else if (overallResources >= 6) {
+                    resourceLevel = 'Good - Solid foundation with expansion opportunities';
+                    recommendations = 'You have good mental health resource knowledge. Focus on strengthening areas like insurance navigation or support network building.';
+                } else if (overallResources >= 4) {
+                    resourceLevel = 'Developing - Basic awareness present but improvement needed';
+                    recommendations = 'Your mental health resource knowledge is developing. Focus on EAP familiarization and benefits understanding.';
+                } else {
+                    resourceLevel = 'Needs Attention - Priority focus on resource education';
+                    recommendations = 'Mental health resource knowledge needs immediate attention. Start with basic EAP research and benefits review.';
+                }
+
+                const strengthArea = eapScore >= benefitsScore && eapScore >= supportScore ? 'EAP Knowledge' :
+                                  benefitsScore >= supportScore ? 'Benefits Navigation' : 'Support Networks';
+
+                alert(`🏥 Your Mental Health Resource Assessment Results\n\nEAP Knowledge: ${eapScore.toFixed(1)}/10\nBenefits Navigation: ${benefitsScore.toFixed(1)}/10\nSupport Networks: ${supportScore.toFixed(1)}/10\nOverall Resource Literacy: ${overallResources.toFixed(1)}/10\n\nResource Level: ${resourceLevel}\n\nStrongest Area: ${strengthArea}\n\nRecommendations: ${recommendations}\n\nYour 4-week program will develop comprehensive mental health resource navigation skills!`);
+            }
+
+            function saveMentalHealthResourcesProgressTemplate() {
+                alert(`🏥 Mental Health Resources Progress Saved!\n\nYour resource navigation development journey data has been recorded. Continue building knowledge and skills that improve access to mental health support.\n\nRemember: Knowing how to access help when you need it is a crucial life skill that supports long-term wellbeing!`);
+            }
+
+            function saveReflectionsTemplate() {
+                alert(`💾 Reflections Saved!\n\nYour insights about mental health resources have been recorded. These reflections will guide your continued development of resource navigation skills and workplace advocacy.\n\nGreat work on completing Lesson 2.17! Ready to learn about financial stress and work performance?`);
+            }
+
+            function hideCrisisBannerTemplate() {
+                const banner = document.getElementById('crisis-banner');
+                if (banner) {
+                    banner.style.display = 'none';
+                    sessionStorage.setItem('crisisBannerDismissed', 'true');
+                }
+            }
+
+            // Initialize interactions
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('[data-action]');
+                buttons.forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+
+                // Initialize slider interactions
+                const sliders = document.querySelectorAll('.tracker-slider');
+                sliders.forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    slider.addEventListener('input', function() {
+                        valueSpan.textContent = this.value;
+                    });
+                });
+
+                console.log('Lesson 2.17: Mental Health Resources loaded successfully');
+            });
+        })();
+    </script>
+
+    <!-- Enhanced styling for mental health resources lesson -->
+    <style>
+        .science-explanation { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #06b6d4; }
+
+        .assessment-tests { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .test-card { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+        .test-input { margin: 1rem 0; }
+        .test-input input { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; }
+
+        .week-by-week { display: grid; gap: 2rem; margin: 2rem 0; }
+        .week-card { background: #fefefe; border: 2px solid #e5e7eb; border-radius: 16px; overflow: hidden; }
+        .week-header { background: linear-gradient(90deg, #06b6d4, #0891b2); color: white; padding: 1.5rem; }
+        .week-content { padding: 1.5rem; }
+        .week-focus { background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.9rem; }
+
+        .applications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .application-card { background: #f1f5f9; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #06b6d4; }
+
+        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .research-item { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; border-left: 4px solid #06b6d4; }
+        .research-stat { font-size: 2.5rem; font-weight: bold; color: #06b6d4; margin-bottom: 0.5rem; }
+
+        @media (max-width: 768px) {
+            .brain-systems, .assessment-tests, .applications-grid, .research-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

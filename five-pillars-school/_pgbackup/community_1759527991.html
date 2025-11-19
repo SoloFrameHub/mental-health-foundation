@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Community Forum - Mental Health Education Platform</title>
+    <meta name="description" content="Join our supportive community of learners. Share experiences, ask questions, and connect with others on their wellness journey.">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/discourse-integration.css" rel="stylesheet">
+    <link href="css/chatbot.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #6c757d;
+            --dark-color: #2c3e50;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--dark-color);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .sitename {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: var(--dark-color);
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .btn-getstarted {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-getstarted:hover {
+            background: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: var(--dark-color);
+            color: #fff;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a href="index.html" class="navbar-brand">
+                    <span class="sitename">Mental Health Education Platform</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+                        <li class="nav-item"><a href="instructors.html" class="nav-link">Instructors</a></li>
+                        <li class="nav-item"><a href="community.html" class="nav-link active">Community</a></li>
+                    </ul>
+                    <a class="btn-getstarted ms-3" href="courses.html">Browse Courses</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="forum-hero">
+            <div class="container">
+                <h1>Community Forum</h1>
+                <p>Join our supportive community of learners. Share experiences, ask questions, and connect with others on their wellness journey.</p>
+                <div class="forum-cta-buttons">
+                    <a href="https://forum.realpsychiatricservices.com" target="_blank" rel="noopener" class="btn-forum-primary">
+                        <i class="bi bi-box-arrow-up-right"></i> Visit Full Forum
+                    </a>
+                    <a href="https://forum.realpsychiatricservices.com/signup" target="_blank" rel="noopener" class="btn-forum-outline">
+                        <i class="bi bi-person-plus"></i> Create Account
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forum Categories -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Forum Categories</h2>
+                <div class="forum-categories-grid">
+                    <!-- Physical Vitality -->
+                    <a href="https://forum.realpsychiatricservices.com/c/physical-vitality" target="_blank" rel="noopener" class="forum-category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <h3>Physical Vitality & Movement</h3>
+                        <p>Discuss exercise, movement medicine, workplace wellness, and digital wellness strategies.</p>
+                        <div class="category-stats">
+                            <span><i class="bi bi-chat-dots"></i> Topics</span>
+                            <span><i class="bi bi-people"></i> Members</span>
+                        </div>
+                    </a>
+
+                    <!-- Resilience & Cognitive -->
+                    <a href="https://forum.realpsychiatricservices.com/c/resilience-cognitive" target="_blank" rel="noopener" class="forum-category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-brain"></i>
+                        </div>
+                        <h3>Resilience & Cognitive Mastery</h3>
+                        <p>Share insights on CBT, growth mindset, stress management, and building mental resilience.</p>
+                        <div class="category-stats">
+                            <span><i class="bi bi-chat-dots"></i> Topics</span>
+                            <span><i class="bi bi-people"></i> Members</span>
+                        </div>
+                    </a>
+
+                    <!-- Relationships -->
+                    <a href="https://forum.realpsychiatricservices.com/c/relationships" target="_blank" rel="noopener" class="forum-category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h3>Relationships & Social Connection</h3>
+                        <p>Explore boundaries, friendships, family dynamics, and romantic relationships.</p>
+                        <div class="category-stats">
+                            <span><i class="bi bi-chat-dots"></i> Topics</span>
+                            <span><i class="bi bi-people"></i> Members</span>
+                        </div>
+                    </a>
+
+                    <!-- Purpose & Leadership -->
+                    <a href="https://forum.realpsychiatricservices.com/c/purpose-leadership" target="_blank" rel="noopener" class="forum-category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-compass"></i>
+                        </div>
+                        <h3>Purpose & Leadership</h3>
+                        <p>Discover meaning, develop leadership skills, and learn to support others' wellness.</p>
+                        <div class="category-stats">
+                            <span><i class="bi bi-chat-dots"></i> Topics</span>
+                            <span><i class="bi bi-people"></i> Members</span>
+                        </div>
+                    </a>
+
+                    <!-- Creative Expression -->
+                    <a href="https://forum.realpsychiatricservices.com/c/creative-expression" target="_blank" rel="noopener" class="forum-category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <h3>Creative Expression & Recreation</h3>
+                        <p>Share experiences with art therapy, nature, music, and recreational activities for wellness.</p>
+                        <div class="category-stats">
+                            <span><i class="bi bi-chat-dots"></i> Topics</span>
+                            <span><i class="bi bi-people"></i> Members</span>
+                        </div>
+                    </a>
+
+                    <!-- General Discussion -->
+                    <a href="https://forum.realpsychiatricservices.com/c/general" target="_blank" rel="noopener" class="forum-category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-chat-square-text"></i>
+                        </div>
+                        <h3>General Discussion</h3>
+                        <p>Connect with the community, introduce yourself, and discuss anything wellness-related.</p>
+                        <div class="category-stats">
+                            <span><i class="bi bi-chat-dots"></i> Topics</span>
+                            <span><i class="bi bi-people"></i> Members</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Discussions Widget -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div id="forum-widget-latest"></div>
+            </div>
+        </section>
+
+        <!-- Community Guidelines -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-center mb-4">Community Guidelines</h2>
+                        <div class="card shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="mb-4">
+                                    <h4><i class="bi bi-heart text-danger"></i> Be Respectful & Supportive</h4>
+                                    <p>Treat all community members with kindness and respect. We're all on a journey toward better mental health.</p>
+                                </div>
+                                <div class="mb-4">
+                                    <h4><i class="bi bi-shield-check text-primary"></i> Protect Privacy</h4>
+                                    <p>Never share personal information about yourself or others. Keep discussions general and focused on learning.</p>
+                                </div>
+                                <div class="mb-4">
+                                    <h4><i class="bi bi-file-medical text-success"></i> Not Medical Advice</h4>
+                                    <p>This forum is for educational purposes only. Always consult healthcare professionals for medical advice.</p>
+                                </div>
+                                <div class="mb-4">
+                                    <h4><i class="bi bi-lightbulb text-warning"></i> Share Constructively</h4>
+                                    <p>Share your experiences, ask questions, and offer support. Keep discussions constructive and evidence-based.</p>
+                                </div>
+                                <div>
+                                    <h4><i class="bi bi-exclamation-triangle text-danger"></i> Crisis Resources</h4>
+                                    <p>If you're in crisis, please contact emergency services or call the National Suicide Prevention Lifeline at 988.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4>Mental Health Education Platform</h4>
+                    <p>Evidence-based mental health and wellness education designed to transform your life.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a></li>
+                        <li><a href="courses.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Courses</a></li>
+                        <li><a href="community.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Community</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4>Community</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://forum.realpsychiatricservices.com" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.7); text-decoration: none;">Forum</a></li>
+                        <li><a href="https://forum.realpsychiatricservices.com/faq" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.7); text-decoration: none;">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4>Contact</h4>
+                    <p><i class="bi bi-envelope"></i> info@digitalwellnessplatform.com</p>
+                </div>
+            </div>
+            <div class="text-center pt-4 mt-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>© 2025 Mental Health Education Platform. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Discourse Integration -->
+    <script src="js/discourse-integration.js"></script>
+    <script>
+        // Initialize Discourse integration
+        const discourse = new DiscourseIntegration({
+            baseUrl: 'https://forum.realpsychiatricservices.com',
+            apiKey: '3540cebc7612809827c2f87b89f9de05f54be1f736846cd582c71bfbb808558f',
+            apiUsername: 'digital-wellness'
+        });
+
+        // Render latest discussions widget
+        discourse.init().then(() => {
+            discourse.renderForumWidget('forum-widget-latest', {
+                limit: 8,
+                title: 'Latest Community Discussions'
+            });
+        });
+    </script>
+
+    <!-- Chatbot -->
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.4: Recognizing and Addressing Workplace Burnout - Workplace Mental Health Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Workplace Mental Health</a> >
+                <a href="#module-2">Module 2: Stress Management</a> >
+                <span>Lesson 2.4</span>
+            </div>
+
+            <h1>🔥 Recognizing and Addressing Workplace Burnout</h1>
+            <p class="lesson-subtitle">Learn to identify burnout symptoms early, understand the three dimensions of burnout, and implement evidence-based recovery strategies</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>60 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Intermediate Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Recognition & Recovery</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 20%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to Recognizing and Addressing Workplace Burnout</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to understanding one of the most serious threats to professional wellbeing and career longevity.</strong> Workplace burnout—characterized by exhaustion, cynicism, and reduced professional accomplishment—affects 76% of employees regularly and costs organizations $190 billion annually in healthcare expenses and lost productivity. Unlike temporary stress, burnout creates lasting changes in brain structure and function, particularly affecting areas responsible for decision-making, emotional regulation, and motivation. Early recognition and intervention are critical, as untreated burnout leads to serious physical and mental health consequences while severely impairing career performance and satisfaction.</p>
+
+                    <p><strong>The science is clear:</strong> Research led by Christina Maslach and Michael Leiter demonstrates that burnout develops through three distinct dimensions: emotional and physical exhaustion that depletes energy reserves, cynicism and detachment that distance individuals from their work and colleagues, and reduced personal accomplishment that diminishes confidence and efficacy. Neuroscience studies show burnout dysregulates the HPA axis, reduces prefrontal cortex gray matter, and depletes dopamine pathways—creating a cascade of cognitive and emotional impairments. However, interventions targeting energy restoration, boundary-setting, and meaning reconnection show 68% improvement rates when implemented systematically.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Complete the comprehensive Maslach Burnout Inventory assessment evaluating your risk across all three burnout dimensions, identify early warning signs specific to your stress response patterns and work environment, practice emergency recovery techniques for immediate symptom relief and stabilization, develop energy management systems that align demanding tasks with your natural capacity and recovery patterns, and build long-term prevention strategies including boundary-setting protocols, meaning restoration practices, and sustainable performance habits that prevent burnout recurrence.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Master the Maslach Burnout Inventory dimensions: exhaustion, cynicism, and reduced personal accomplishment</li>
+                            <li>Implement evidence-based interventions including boundary-setting, energy management, and meaning restoration</li>
+                            <li>Build sustainable practices that prevent burnout recurrence while maintaining high performance</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>This lesson integrates Christina Maslach and Michael Leiter's pioneering burnout research defining the three dimensions and validated assessment tools, neuroscience research on how chronic workplace stress affects brain structure and function, recovery intervention studies from occupational health psychology, World Health Organization's recognition of burnout as an occupational phenomenon, and longitudinal research demonstrating the effectiveness of prevention strategies in reducing burnout incidence and improving workplace wellbeing outcomes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Burnout Recognition & Recovery Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">🔍</div>
+                        <div class="objective-text">
+                            <h3>Early Detection</h3>
+                            <p>Master the Maslach Burnout Inventory dimensions: exhaustion, cynicism, and reduced personal accomplishment</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">⚡</div>
+                        <div class="objective-text">
+                            <h3>Recovery Strategies</h3>
+                            <p>Implement evidence-based interventions including boundary-setting, energy management, and meaning restoration</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🛡️</div>
+                        <div class="objective-text">
+                            <h3>Prevention System</h3>
+                            <p>Build sustainable practices that prevent burnout recurrence while maintaining high performance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Burnout Science Deep Dive -->
+            <div class="learning-section">
+                <h2>🔬 The Neuroscience of Workplace Burnout</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 How Burnout Rewires the Brain</h3>
+                        <p>Burnout creates measurable changes in brain structure and function, affecting areas responsible for executive function, emotional regulation, and decision-making:</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>🔥 Chronic Stress Activation</h4>
+                                <p>Prolonged exposure to workplace stressors dysregulates the HPA axis, leading to cortisol resistance and chronic inflammation that impairs cognitive function and emotional stability.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🧠 Prefrontal Cortex Impairment</h4>
+                                <p>Burnout reduces gray matter in the prefrontal cortex, affecting working memory, attention control, and cognitive flexibility essential for workplace performance and problem-solving.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>💡 Reward System Dysfunction</h4>
+                                <p>Chronic burnout depletes dopamine pathways, reducing motivation, sense of accomplishment, and the ability to experience satisfaction from work achievements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Research Findings</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">76%</div>
+                            <p>Of employees experience workplace burnout regularly</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">$190B</div>
+                            <p>Annual healthcare costs related to workplace burnout</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">67%</div>
+                            <p>Higher likelihood of sick days with burnout</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Burnout Assessment -->
+            <div class="interactive-section">
+                <h2>📊 Your Comprehensive Burnout Assessment</h2>
+                <p>Evaluate your current burnout risk across the three core dimensions using validated assessment indicators:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>😴 Exhaustion Dimension</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Rate your experience of workplace exhaustion (1-10)</p>
+                                <p><strong>Goal:</strong> Assess emotional, physical, and cognitive exhaustion levels</p>
+                                <div class="test-input">
+                                    <label>Emotional exhaustion level (1-10):</label>
+                                    <input type="number" id="emotional-exhaustion" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Physical fatigue level (1-10):</label>
+                                    <input type="number" id="physical-fatigue" min="1" max="10" placeholder="1-10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>😤 Cynicism Dimension</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Assess your detachment and cynicism toward work</p>
+                                <p><strong>Assessment:</strong> Rate depersonalization and negative attitudes</p>
+                                <div class="test-input">
+                                    <label>Work cynicism level (1-10):</label>
+                                    <input type="number" id="work-cynicism" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Detachment from colleagues (1-10):</label>
+                                    <input type="number" id="colleague-detachment" min="1" max="10" placeholder="1-10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>📉 Reduced Accomplishment</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Evaluate sense of personal accomplishment and efficacy</p>
+                                <div class="test-input">
+                                    <label>Sense of achievement (1-10):</label>
+                                    <input type="number" id="achievement-sense" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Professional confidence (1-10):</label>
+                                    <input type="number" id="professional-confidence" min="1" max="10" placeholder="1-10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>⚠️ Warning Signs Checklist</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Count burnout warning signs experienced recently</p>
+                                <div class="test-input">
+                                    <label>Warning signs present (0-10):</label>
+                                    <input type="number" id="warning-signs-count" min="0" max="10" placeholder="0-10">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="analyzeBurnoutAssessment">📊 Generate Burnout Risk Report</button>
+                </div>
+            </div>
+
+            <!-- Burnout Recovery Program -->
+            <div class="learning-section">
+                <h2>🏗️ Building Your Burnout Recovery & Prevention System</h2>
+
+                <div class="training-program">
+                    <div class="program-overview">
+                        <h3>📋 4-Week Burnout Recovery Program</h3>
+                        <p>This evidence-based program addresses all three dimensions of burnout while building long-term resilience and sustainable performance habits:</p>
+                    </div>
+
+                    <div class="week-by-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Week 1: Emergency Recovery</h4>
+                                <span class="week-focus">Focus: Immediate relief and stabilization of burnout symptoms</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (20 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Energy Triage:</strong> Identify and eliminate non-essential energy drains immediately</li>
+                                        <li><strong>Boundary Implementation:</strong> Set strict work-life boundaries with communication about availability</li>
+                                        <li><strong>Rest Prescription:</strong> Schedule non-negotiable rest periods and sleep optimization practices</li>
+                                        <li><strong>Stress Circuit Breakers:</strong> Implement immediate stress-relief techniques throughout the day</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Focus on stopping the burnout spiral immediately. Permission to do less while you recover is essential for long-term performance and wellbeing.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Week 2: Energy Restoration</h4>
+                                <span class="week-focus">Focus: Rebuilding physical and emotional energy reserves</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (25 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Energy Audit:</strong> Track daily energy patterns and identify optimal performance windows</li>
+                                        <li><strong>Recovery Rituals:</strong> Establish consistent practices that reliably restore energy</li>
+                                        <li><strong>Micro-Recovery:</strong> Implement 2-minute energy restoration breaks every hour</li>
+                                        <li><strong>Social Connection:</strong> Rebuild supportive relationships that provide energy rather than drain it</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Build awareness of what genuinely restores your energy. Focus on small, consistent practices that create upward momentum.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Week 3: Meaning Restoration</h4>
+                                <span class="week-focus">Focus: Reconnecting with purpose and professional satisfaction</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (30 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Purpose Alignment:</strong> Identify connections between daily work and personal values/goals</li>
+                                        <li><strong>Accomplishment Tracking:</strong> Record and celebrate daily progress and achievements</li>
+                                        <li><strong>Growth Focus:</strong> Identify learning opportunities within current work challenges</li>
+                                        <li><strong>Impact Recognition:</strong> Connect your work to its positive effects on others and broader goals</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Rebuild your sense of professional efficacy and meaning. Focus on progress rather than perfection and connection rather than isolation.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Week 4: Sustainable Excellence</h4>
+                                <span class="week-focus">Focus: Creating systems for long-term burnout prevention</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (35 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Sustainable Pace:</strong> Establish work rhythms that maintain energy over time</li>
+                                        <li><strong>Early Warning System:</strong> Create monitoring systems to detect burnout risk before crisis</li>
+                                        <li><strong>Support Network:</strong> Build professional relationships that provide ongoing resilience</li>
+                                        <li><strong>Continuous Adjustment:</strong> Develop skills for adapting systems as circumstances change</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Integrate all recovery strategies into a sustainable system that supports both high performance and long-term wellbeing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practical Applications -->
+            <div class="interactive-section">
+                <h2>🌟 Real-World Burnout Prevention Applications</h2>
+                <p>Discover how to apply burnout prevention strategies in common workplace situations:</p>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <h3>⚡ Energy Management</h3>
+                        <ul>
+                            <li>Align high-demand tasks with peak energy periods</li>
+                            <li>Build recovery time into demanding project schedules</li>
+                            <li>Create energy-giving activities between draining tasks</li>
+                            <li>Monitor and respect your personal energy patterns</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreEnergyManagement">⚡ Explore Energy Strategies</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🚫 Boundary Setting</h3>
+                        <ul>
+                            <li>Establish clear work availability hours and communication preferences</li>
+                            <li>Practice saying no to non-essential requests and opportunities</li>
+                            <li>Create physical and digital boundaries between work and personal time</li>
+                            <li>Delegate tasks that don't require your specific expertise</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreBoundaryStrategies">🚫 Explore Boundary Strategies</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🎯 Workload Optimization</h3>
+                        <ul>
+                            <li>Prioritize tasks based on impact and energy requirements</li>
+                            <li>Break large projects into manageable, rewarding milestones</li>
+                            <li>Eliminate or automate repetitive, low-value activities</li>
+                            <li>Negotiate realistic deadlines and resource allocation</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreWorkloadStrategies">🎯 Explore Workload Strategies</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>💫 Meaning Cultivation</h3>
+                        <ul>
+                            <li>Connect daily tasks to larger personal and organizational goals</li>
+                            <li>Seek feedback on the impact and value of your contributions</li>
+                            <li>Find opportunities to mentor others and share expertise</li>
+                            <li>Pursue learning and growth within your current role</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreMeaningStrategies">💫 Explore Meaning Strategies</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="interactive-section">
+                <h2>📈 Track Your Burnout Recovery Journey</h2>
+                <p>Monitor your progress in recovering from burnout and building sustainable work practices:</p>
+
+                <div class="tracking-dashboard">
+                    <div class="tracking-categories">
+                        <div class="category-tracker">
+                            <h3>🔥 Burnout Dimension Recovery</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Energy level improvement (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="energy-improvement">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Work engagement and enthusiasm (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="work-engagement">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Sense of accomplishment (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="accomplishment-sense">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-tracker">
+                            <h3>🛡️ Prevention System Strength</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Boundary effectiveness (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="boundary-effectiveness">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Sustainable work pace (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="sustainable-pace">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Support system utilization (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="support-utilization">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="saveBurnoutProgress">📊 Save Recovery Progress Report</button>
+                </div>
+            </div>
+
+            <!-- Reflection and Planning -->
+            <div class="learning-section">
+                <h2>🤔 Burnout Recovery Reflection</h2>
+
+                <div class="reflection-questions">
+                    <div class="question-set">
+                        <h3>🧠 Personal Insights</h3>
+                        <div class="question-item">
+                            <label>What early warning signs tell you that you're approaching burnout?</label>
+                            <textarea rows="4" placeholder="Consider physical, emotional, and behavioral indicators that signal increasing burnout risk..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>Which aspects of your work drain your energy most significantly?</label>
+                            <textarea rows="4" placeholder="Think about specific tasks, relationships, or environmental factors that contribute to exhaustion..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What activities or experiences at work genuinely restore your energy and enthusiasm?</label>
+                            <textarea rows="4" placeholder="Identify work elements that energize you and contribute to job satisfaction..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="question-set">
+                        <h3>🎯 Goal Setting</h3>
+                        <div class="question-item">
+                            <label>What boundaries do you need to establish to prevent burnout recurrence?</label>
+                            <textarea rows="4" placeholder="Plan specific boundaries around time, energy, and availability..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How will you maintain connection to meaning and purpose in your work?</label>
+                            <textarea rows="4" placeholder="Consider ways to stay connected to the impact and value of your contributions..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveReflections">💾 Save My Reflections</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-2-3-psychological-safety.html" class="nav-btn secondary">← Previous: ️ Building Psychological Safety in Team Environmen</a>
+                <a href="lesson-2-5-emotional-regulation.html" class="nav-btn primary">Next: Emotional Regulation for Workplace Success →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 2: Workplace Mental Health • Lesson 4 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+
+    <script>
+        // Enhanced burnout recognition lesson functionality
+        (function() {
+            'use strict';
+
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+                console.log(`Lesson 2.4 button clicked: ${action}`);
+
+                switch(action) {
+                    case 'analyzeBurnoutAssessment':
+                        analyzeBurnoutAssessmentTemplate();
+                        break;
+                    case 'saveBurnoutProgress':
+                        saveBurnoutProgressTemplate();
+                        break;
+                    case 'saveReflections':
+                        saveReflectionsTemplate();
+                        break;
+                    case 'hideCrisisBanner':
+                        hideCrisisBannerTemplate();
+                        break;
+                    default:
+                        console.log(`Unknown action: ${action}`);
+                }
+            }
+
+            function analyzeBurnoutAssessmentTemplate() {
+                const emotionalExhaustion = document.getElementById('emotional-exhaustion').value || 5;
+                const physicalFatigue = document.getElementById('physical-fatigue').value || 5;
+                const workCynicism = document.getElementById('work-cynicism').value || 5;
+                const colleagueDetachment = document.getElementById('colleague-detachment').value || 5;
+                const achievementSense = document.getElementById('achievement-sense').value || 5;
+                const professionalConfidence = document.getElementById('professional-confidence').value || 5;
+                const warningSignsCount = document.getElementById('warning-signs-count').value || 0;
+
+                // Calculate burnout dimensions
+                const exhaustionScore = (parseInt(emotionalExhaustion) + parseInt(physicalFatigue)) / 2;
+                const cynicismScore = (parseInt(workCynicism) + parseInt(colleagueDetachment)) / 2;
+                const accomplishmentScore = (parseInt(achievementSense) + parseInt(professionalConfidence)) / 2;
+
+                // Overall burnout risk calculation (higher exhaustion and cynicism, lower accomplishment = higher risk)
+                const burnoutRisk = (exhaustionScore + cynicismScore + (10 - accomplishmentScore) + parseInt(warningSignsCount)) / 4;
+
+                let riskLevel = '';
+                let recommendations = '';
+
+                if (burnoutRisk >= 8) {
+                    riskLevel = 'High Risk - Immediate intervention needed';
+                    recommendations = 'Your assessment indicates significant burnout risk. Consider seeking professional support and implementing immediate stress-reduction strategies. The 4-week recovery program should be started immediately.';
+                } else if (burnoutRisk >= 6) {
+                    riskLevel = 'Moderate Risk - Active prevention needed';
+                    recommendations = 'You show signs of burnout development. Focus on boundary-setting, energy management, and meaning restoration. Consider adjusting workload and increasing support.';
+                } else if (burnoutRisk >= 4) {
+                    riskLevel = 'Low-Moderate Risk - Monitor and adjust';
+                    recommendations = 'Some burnout indicators present. Focus on prevention strategies and monitor for changes. Build stronger boundaries and recovery practices.';
+                } else {
+                    riskLevel = 'Low Risk - Maintain current practices';
+                    recommendations = 'Your burnout risk is currently low. Continue your current practices and use prevention strategies to maintain this healthy state.';
+                }
+
+                alert(`🔥 Your Burnout Assessment Results\n\nExhaustion Level: ${exhaustionScore.toFixed(1)}/10\nCynicism Level: ${cynicismScore.toFixed(1)}/10\nAccomplishment Sense: ${accomplishmentScore.toFixed(1)}/10\nWarning Signs: ${warningSignsCount}\n\nOverall Risk Level: ${riskLevel}\n\nRecommendations: ${recommendations}\n\nYour personalized recovery program will address all three burnout dimensions!`);
+            }
+
+            function saveBurnoutProgressTemplate() {
+                alert(`📊 Burnout Recovery Progress Saved!\n\nYour burnout recovery journey data has been recorded. Continue tracking improvements as you build resilience and sustainable work practices.\n\nRemember: Burnout recovery is a gradual process that requires consistent self-care and boundary maintenance!`);
+            }
+
+            function saveReflectionsTemplate() {
+                alert(`💾 Reflections Saved!\n\nYour insights about burnout recognition and recovery have been recorded. These reflections will help guide your ongoing efforts to maintain work-life balance and professional wellbeing.\n\nGreat work on completing Lesson 2.4! Ready to learn about emotional regulation techniques for workplace challenges?`);
+            }
+
+            function hideCrisisBannerTemplate() {
+                const banner = document.getElementById('crisis-banner');
+                if (banner) {
+                    banner.style.display = 'none';
+                    sessionStorage.setItem('crisisBannerDismissed', 'true');
+                }
+            }
+
+            // Initialize interactions
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('[data-action]');
+                buttons.forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+
+                // Initialize slider interactions
+                const sliders = document.querySelectorAll('.tracker-slider');
+                sliders.forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    slider.addEventListener('input', function() {
+                        valueSpan.textContent = this.value;
+                    });
+                });
+
+                console.log('Lesson 2.4: Burnout Recognition loaded successfully');
+            });
+        })();
+    </script>
+
+    <!-- Enhanced styling for burnout recognition lesson -->
+    <style>
+        .science-explanation { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #ef4444; }
+
+        .assessment-tests { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .test-card { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+        .test-input { margin: 1rem 0; }
+        .test-input input { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; }
+
+        .week-by-week { display: grid; gap: 2rem; margin: 2rem 0; }
+        .week-card { background: #fefefe; border: 2px solid #e5e7eb; border-radius: 16px; overflow: hidden; }
+        .week-header { background: linear-gradient(90deg, #ef4444, #dc2626); color: white; padding: 1.5rem; }
+        .week-content { padding: 1.5rem; }
+        .week-focus { background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.9rem; }
+
+        .applications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .application-card { background: #f1f5f9; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #ef4444; }
+
+        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .research-item { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; border-left: 4px solid #ef4444; }
+        .research-stat { font-size: 2.5rem; font-weight: bold; color: #ef4444; margin-bottom: 0.5rem; }
+
+        @media (max-width: 768px) {
+            .brain-systems, .assessment-tests, .applications-grid, .research-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1.3: Your Personal Anxiety Pattern</title>
+    
+    <style>
+        :root {
+            --calming-teal: #4a90a4;
+            --deep-teal: #357a8a;
+            --accent-orange: #fb923c;
+            --sage-green: #87a96b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--deep-teal), var(--calming-teal));
+            color: white;
+            padding: 60px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        /* PATTERN TRACKER */
+        .pattern-tracker {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .pattern-tracker h2 {
+            color: var(--deep-teal);
+            margin-bottom: 10px;
+        }
+        
+        .trigger-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .trigger-card {
+            padding: 20px;
+            background: #f7f8f6;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            text-align: center;
+            user-select: none;
+        }
+        
+        .trigger-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            background: #e8f4f6;
+        }
+        
+        .trigger-card.selected {
+            background: linear-gradient(135deg, #fff4e6, #ffe0b2);
+            border-color: var(--accent-orange);
+            transform: scale(1.05);
+        }
+        
+        .trigger-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .trigger-card strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .trigger-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* PATTERN RESULTS */
+        .pattern-results {
+            background: linear-gradient(135deg, #f0f9ff, white);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            border: 2px solid var(--calming-teal);
+            display: none;
+        }
+        
+        .pattern-results.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .pattern-chart {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .pattern-stat {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            min-width: 150px;
+        }
+        
+        .pattern-stat-value {
+            font-size: 3rem;
+            color: var(--accent-orange);
+            font-weight: bold;
+        }
+        
+        .pattern-stat-label {
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* ACTION PLAN */
+        .action-plan {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .action-plan h2 {
+            color: var(--deep-teal);
+            margin-bottom: 20px;
+        }
+        
+        .plan-item {
+            padding: 20px;
+            background: linear-gradient(135deg, #e8f4f6, white);
+            border-radius: 12px;
+            margin: 15px 0;
+            border-left: 5px solid var(--calming-teal);
+        }
+        
+        .plan-item strong {
+            color: var(--deep-teal);
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            background: var(--accent-orange);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background: #ea7c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(251, 146, 60, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        /* PROGRESS */
+        .progress-bar {
+            background: #e2e8f0;
+            height: 8px;
+            border-radius: 10px;
+            margin: 30px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--sage-green), var(--calming-teal));
+            width: 0%;
+            transition: width 1s ease;
+        }
+        
+        /* Success message */
+        .success-badge {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #4ade80, #22c55e);
+            color: white;
+            border-radius: 25px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- PROGRESS -->
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        
+        <!-- HERO -->
+        <div class="hero">
+            <h1>Lesson 1.3: Your Personal Anxiety Pattern</h1>
+            <p>Discover what triggers YOUR unique anxiety response</p>
+        </div>
+        
+        <!-- PATTERN TRACKER -->
+        <div class="pattern-tracker">
+            <h2>🔍 Identify Your Triggers</h2>
+            <p>Click all that commonly trigger your anxiety:</p>
+            
+            <div class="trigger-grid">
+                <div class="trigger-card" data-trigger="social">
+                    <div class="trigger-icon">👥</div>
+                    <strong>Social Situations</strong>
+                    <p>Parties, meetings, crowds</p>
+                </div>
+                
+                <div class="trigger-card" data-trigger="work">
+                    <div class="trigger-icon">💼</div>
+                    <strong>Work/School</strong>
+                    <p>Deadlines, presentations</p>
+                </div>
+                
+                <div class="trigger-card" data-trigger="health">
+                    <div class="trigger-icon">🏥</div>
+                    <strong>Health Concerns</strong>
+                    <p>Symptoms, appointments</p>
+                </div>
+                
+                <div class="trigger-card" data-trigger="financial">
+                    <div class="trigger-icon">💰</div>
+                    <strong>Money Matters</strong>
+                    <p>Bills, expenses, future</p>
+                </div>
+                
+                <div class="trigger-card" data-trigger="relationship">
+                    <div class="trigger-icon">❤️</div>
+                    <strong>Relationships</strong>
+                    <p>Conflict, intimacy, loss</p>
+                </div>
+                
+                <div class="trigger-card" data-trigger="change">
+                    <div class="trigger-icon">🔄</div>
+                    <strong>Life Changes</strong>
+                    <p>Moving, new job, transitions</p>
+                </div>
+                
+                <div class="trigger-card" data-trigger="news">
+                    <div class="trigger-icon">📱</div>
+                    <strong>News/Media</strong>
+                    <p>Current events, social media</p>
+                </div>
+                
+                <div class="trigger-card" data-trigger="uncertainty">
+                    <div class="trigger-icon">❓</div>
+                    <strong>Uncertainty</strong>
+                    <p>Unknown outcomes, waiting</p>
+                </div>
+            </div>
+            
+            <button class="btn" id="analyzeBtn">Analyze My Pattern</button>
+            
+            <div class="pattern-results" id="patternResults">
+                <span class="success-badge">✨ Pattern Analysis Complete!</span>
+                <h3>Your Anxiety Pattern Analysis</h3>
+                <div class="pattern-chart">
+                    <div class="pattern-stat">
+                        <div class="pattern-stat-value" id="triggerCount">0</div>
+                        <div class="pattern-stat-label">Primary Triggers</div>
+                    </div>
+                    <div class="pattern-stat">
+                        <div class="pattern-stat-value" id="patternType">-</div>
+                        <div class="pattern-stat-label">Pattern Type</div>
+                    </div>
+                </div>
+                <div id="patternInsight"></div>
+            </div>
+        </div>
+        
+        <!-- ACTION PLAN -->
+        <div class="action-plan">
+            <h2>🎯 Your Personalized Action Plan</h2>
+            <div id="actionPlanContent">
+                <p>Complete the pattern tracker above to generate your personalized plan.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Track selected triggers
+        let selectedTriggers = new Set();
+        
+        // Add click listeners to all trigger cards
+        document.addEventListener('DOMContentLoaded', function() {
+            // Setup trigger cards
+            const triggerCards = document.querySelectorAll('.trigger-card');
+            triggerCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const trigger = this.dataset.trigger;
+                    
+                    // Toggle selection
+                    if (this.classList.contains('selected')) {
+                        this.classList.remove('selected');
+                        selectedTriggers.delete(trigger);
+                    } else {
+                        this.classList.add('selected');
+                        selectedTriggers.add(trigger);
+                    }
+                    
+                    console.log('Selected triggers:', Array.from(selectedTriggers));
+                });
+            });
+            
+            // Setup analyze button
+            const analyzeBtn = document.getElementById('analyzeBtn');
+            analyzeBtn.addEventListener('click', analyzePattern);
+            
+            // Animate progress bar
+            setTimeout(() => {
+                document.querySelector('.progress-fill').style.width = '50%';
+            }, 500);
+        });
+        
+        function analyzePattern() {
+            const results = document.getElementById('patternResults');
+            const triggerCount = document.getElementById('triggerCount');
+            const patternType = document.getElementById('patternType');
+            const insight = document.getElementById('patternInsight');
+            const actionPlan = document.getElementById('actionPlanContent');
+            
+            if (selectedTriggers.size === 0) {
+                alert('Please select at least one trigger to analyze your pattern.');
+                return;
+            }
+            
+            // Show results with animation
+            results.classList.add('show');
+            triggerCount.textContent = selectedTriggers.size;
+            
+            // Determine pattern type
+            let type = 'Mixed';
+            const triggers = Array.from(selectedTriggers);
+            
+            if (triggers.includes('social') && triggers.includes('relationship')) {
+                type = 'Social';
+            } else if (triggers.includes('work') && triggers.includes('financial')) {
+                type = 'Performance';
+            } else if (triggers.includes('health') || triggers.includes('uncertainty')) {
+                type = 'Control';
+            } else if (selectedTriggers.size >= 6) {
+                type = 'Generalized';
+            }
+            
+            patternType.textContent = type;
+            
+            // Generate insight
+            let insightText = '<h4 style="color: #357a8a; margin-bottom: 15px;">Your Pattern Insight:</h4><p>';
+            if (selectedTriggers.size <= 2) {
+                insightText += '<strong>Good news!</strong> You have a focused anxiety pattern. This is actually helpful - it means your anxiety is predictable and manageable with targeted strategies. We can create very specific tools for your triggers.';
+            } else if (selectedTriggers.size <= 5) {
+                insightText += '<strong>You're not alone!</strong> You experience anxiety across several life areas. This is incredibly common. The key is learning which coping strategies work best for each trigger type. We'll build a versatile toolkit.';
+            } else {
+                insightText += '<strong>You're dealing with a lot!</strong> Generalized anxiety across many areas can feel overwhelming. But here's the thing - this comprehensive course is perfect for you. We'll build a robust toolkit that works everywhere.';
+            }
+            insightText += '</p>';
+            insight.innerHTML = insightText;
+            
+            // Generate personalized action plan
+            let planHTML = '<h3 style="color: #357a8a; margin-bottom: 20px;">Your Personalized Strategy:</h3>';
+            
+            if (type === 'Social') {
+                planHTML += `
+                    <div class="plan-item">
+                        <strong>🎯 Primary Focus: Social Confidence Building</strong>
+                        <p>Your anxiety centers around interpersonal situations. We'll prioritize:</p>
+                        <ul>
+                            <li>Assertiveness training techniques</li>
+                            <li>Gradual social exposure exercises</li>
+                            <li>Pre-social event calming routines</li>
+                            <li>Communication skills practice</li>
+                        </ul>
+                    </div>
+                `;
+            } else if (type === 'Performance') {
+                planHTML += `
+                    <div class="plan-item">
+                        <strong>🎯 Primary Focus: Performance Anxiety Management</strong>
+                        <p>Your anxiety peaks around achievement and evaluation. We'll focus on:</p>
+                        <ul>
+                            <li>Perfectionism reduction strategies</li>
+                            <li>Pre-performance breathing routines</li>
+                            <li>Cognitive reframing for success</li>
+                            <li>Building confidence through preparation</li>
+                        </ul>
+                    </div>
+                `;
+            } else if (type === 'Control') {
+                planHTML += `
+                    <div class="plan-item">
+                        <strong>🎯 Primary Focus: Uncertainty Tolerance</strong>
+                        <p>Your anxiety stems from lack of control. We'll work on:</p>
+                        <ul>
+                            <li>Acceptance and flexibility exercises</li>
+                            <li>Mindfulness for present-moment awareness</li>
+                            <li>Building comfort with uncertainty</li>
+                            <li>"Worry time" scheduling techniques</li>
+                        </ul>
+                    </div>
+                `;
+            } else if (type === 'Generalized') {
+                planHTML += `
+                    <div class="plan-item">
+                        <strong>🎯 Primary Focus: Comprehensive Anxiety Management</strong>
+                        <p>Your anxiety is widespread, so we need a complete system:</p>
+                        <ul>
+                            <li>Universal calming techniques that work anywhere</li>
+                            <li>Daily anxiety management routine</li>
+                            <li>Emergency coping strategies for acute anxiety</li>
+                            <li>Long-term resilience building</li>
+                        </ul>
+                    </div>
+                `;
+            } else {
+                planHTML += `
+                    <div class="plan-item">
+                        <strong>🎯 Primary Focus: Targeted Toolkit Development</strong>
+                        <p>Your mixed pattern needs flexible strategies:</p>
+                        <ul>
+                            <li>Situation-specific coping techniques</li>
+                            <li>Quick-relief strategies for sudden anxiety</li>
+                            <li>Prevention techniques for known triggers</li>
+                            <li>Recovery protocols after anxiety episodes</li>
+                        </ul>
+                    </div>
+                `;
+            }
+            
+            // Add specific trigger recommendations
+            planHTML += '<div class="plan-item"><strong>🎨 Your Trigger-Specific Tools:</strong><ul>';
+            
+            if (triggers.includes('social')) {
+                planHTML += '<li><strong>Social:</strong> "Arrive early" strategy + conversation starters</li>';
+            }
+            if (triggers.includes('work')) {
+                planHTML += '<li><strong>Work:</strong> Time-blocking + "good enough" standards</li>';
+            }
+            if (triggers.includes('health')) {
+                planHTML += '<li><strong>Health:</strong> Symptom diary + doctor question lists</li>';
+            }
+            if (triggers.includes('financial')) {
+                planHTML += '<li><strong>Money:</strong> Budget tracking + "worry window" technique</li>';
+            }
+            if (triggers.includes('relationship')) {
+                planHTML += '<li><strong>Relationships:</strong> Boundary scripts + conflict resolution steps</li>';
+            }
+            if (triggers.includes('change')) {
+                planHTML += '<li><strong>Change:</strong> Transition rituals + adjustment timeline</li>';
+            }
+            if (triggers.includes('news')) {
+                planHTML += '<li><strong>Media:</strong> News diet + positive content balance</li>';
+            }
+            if (triggers.includes('uncertainty')) {
+                planHTML += '<li><strong>Uncertainty:</strong> "What I can control" lists + acceptance practice</li>';
+            }
+            
+            planHTML += '</ul></div>';
+            
+            planHTML += `
+                <div class="plan-item">
+                    <strong>📅 Your Next Steps:</strong>
+                    <ol>
+                        <li>Complete Lesson 1.4 to build your support network</li>
+                        <li>Start Module 2 tomorrow to learn your first coping technique</li>
+                        <li>Use the trigger journal this week (download below)</li>
+                        <li>Practice one new skill daily from your toolkit</li>
+                        <li>Check in with your progress every Sunday</li>
+                    </ol>
+                </div>
+                
+                <div class="plan-item" style="background: linear-gradient(135deg, #fff4e6, #ffe0b2);">
+                    <strong>💡 Remember:</strong>
+                    <p>Having anxiety doesn't mean you're broken. It means your alarm system is sensitive. With the right tools, that sensitivity can become a strength - you'll be more aware, more prepared, and more resilient than most people.</p>
+                </div>
+            `;
+            
+            actionPlan.innerHTML = planHTML;
+            
+            // Smooth scroll to results
+            results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>

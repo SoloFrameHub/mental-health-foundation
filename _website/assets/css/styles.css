@@ -1,0 +1,64 @@
+/* Real Psychiatric Services - Digital Wellness Platform */
+/* Global Styles for Course Landing Pages */
+
+:root {
+    --rps-navy: #2E4057;
+    --rps-blue: #5B7DB1;
+    --rps-light-blue: #6FA8C4;
+    --rps-lavender: #C8B8DB;
+    --rps-teal: #7CB3B8;
+}
+
+/* Color Utilities */
+.bg-primary {
+    background-color: var(--rps-navy) !important;
+}
+
+.text-primary {
+    color: var(--rps-blue) !important;
+}
+
+.badge.bg-primary {
+    background-color: var(--rps-blue) !important;
+}
+
+.badge.bg-success {
+    background-color: var(--rps-teal) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--rps-blue);
+    border-color: var(--rps-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--rps-navy);
+    border-color: var(--rps-navy);
+}
+
+/* Cards */
+.card-header.bg-primary {
+    background-color: var(--rps-blue) !important;
+}
+
+/* Navigation */
+.nav-link.active {
+    color: var(--rps-blue) !important;
+    border-bottom-color: var(--rps-blue) !important;
+}
+
+/* Course Hero */
+.course-hero-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .course-hero-img {
+        height: 250px;
+    }
+}

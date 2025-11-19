@@ -1,0 +1,230 @@
+const fs = require('fs');
+const path = require('path');
+
+// Course metadata mapping
+const courses = [
+  {
+    num: 1,
+    dir: 'course-1-movement-medicine',
+    title: 'Movement Medicine: Exercise as Mental Health Treatment',
+    subtitle: 'Evidence-based exercise protocols to treat depression, anxiety, and trauma through movement',
+    price: 89,
+    pillar: 'Physical Vitality & Movement',
+    category: 'Physical Movement & Body',
+    image: 'Course 1 - Movement Medicine.jpg',
+    firstLesson: 'lesson-1-1-exercise-neuroscience-brain-chemistry.html'
+  },
+  {
+    num: 2,
+    dir: 'course-2-workplace-mental-health',
+    title: 'Workplace Mental Health: Thriving in Your Career',
+    subtitle: 'Build resilience, set boundaries, and create sustainable success in your professional life',
+    price: 89,
+    pillar: 'Physical Vitality & Movement',
+    category: 'Boundaries & Self-Protection',
+    image: 'Course 2 - Workplace Mental Health.jpg',
+    firstLesson: 'lesson-2-1-workplace-stress-mental-health-landscape.html'
+  },
+  {
+    num: 5,
+    dir: 'course-5-cbt-fundamentals',
+    title: 'CBT Fundamentals: Rewiring Thought Patterns',
+    subtitle: 'Master cognitive behavioral therapy techniques to transform your mental health',
+    price: 119,
+    pillar: 'Challenge & Growth Through Adversity',
+    category: 'Cognitive & Psychological Skills',
+    image: 'Course 5 - CBT Fundamentals.jpg',
+    firstLesson: 'lesson-5-1-cognitive-triangle-thoughts-feelings-behaviors.html'
+  },
+  {
+    num: 6,
+    dir: 'course-6-stress-challenge-navigation',
+    title: 'Stress & Challenge Navigation',
+    subtitle: 'Master your window of tolerance and thrive under pressure with science-backed strategies',
+    price: 79,
+    pillar: 'Challenge & Growth Through Adversity',
+    category: 'Cognitive & Psychological Skills',
+    image: 'Course 6 - Stress & Challenge Navigation.jpg',
+    firstLesson: 'lesson-6-1-window-tolerance-understanding-your-zone.html'
+  },
+  {
+    num: 7,
+    dir: 'course-7-boundaries-bootcamp',
+    title: 'Boundaries Bootcamp: Protecting Your Peace',
+    subtitle: 'Learn to set and maintain healthy boundaries in all areas of your life',
+    price: 89,
+    pillar: 'Challenge & Growth Through Adversity',
+    category: 'Boundaries & Self-Protection',
+    image: 'Course 7 - Boundaries Bootcamp.jpg',
+    firstLesson: 'lesson-7-1-boundaries-mental-health-foundation.html'
+  },
+  {
+    num: 8,
+    dir: 'course-8-social-circle-mastery',
+    title: 'Social Circle Mastery: Building Meaningful Connections',
+    subtitle: 'Create and nurture authentic relationships that support your mental health',
+    price: 89,
+    pillar: 'Social Connection & Community',
+    category: 'Social Connection & Community',
+    image: 'Course 8 - Social Circle Mastery.jpg',
+    firstLesson: 'lesson-8-1-social-connection-mental-health-foundation.html'
+  },
+  {
+    num: 9,
+    dir: 'course-9-team-sports-mental-health',
+    title: 'Team Sports & Mental Health',
+    subtitle: 'Harness the therapeutic power of collective movement and team connection',
+    price: 89,
+    pillar: 'Physical Vitality & Movement',
+    category: 'Physical Movement & Body',
+    image: 'Course 9 - Team Sports & Mental Health.jpg',
+    firstLesson: 'lesson-9-1-team-sports-mental-health-connection.html'
+  },
+  {
+    num: 10,
+    dir: 'course-10-relationship-dynamics',
+    title: 'Relationship Dynamics: Building Healthy Connections',
+    subtitle: 'Understand attachment, communication, and creating secure relationships',
+    price: 89,
+    pillar: 'Social Connection & Community',
+    category: 'Social Connection & Community',
+    image: 'Course 10 - Relationship Dynamics.jpg',
+    firstLesson: 'lesson-10-1-attachment-theory-relationship-foundations.html'
+  },
+  {
+    num: 11,
+    dir: 'course-11-family-parenting-mental-health',
+    title: 'Family & Parenting Mental Health',
+    subtitle: 'Break generational patterns and raise emotionally healthy children',
+    price: 79,
+    pillar: 'Social Connection & Community',
+    category: 'Family & Generational Health',
+    image: 'Course 11 - Family & Parenting Mental Health.jpg',
+    firstLesson: 'lesson-11-1-parenting-mental-health-foundation.html'
+  },
+  {
+    num: 12,
+    dir: 'course-12-purpose-and-responsibility',
+    title: 'Purpose & Responsibility: Creating Meaning Through Service',
+    subtitle: 'Discover meaning and combat existential anxiety through contribution',
+    price: 99,
+    pillar: 'Purpose Through Responsibility',
+    category: 'Purpose & Leadership',
+    image: 'Course 12 - Purpose & Responsibility.jpg',
+    firstLesson: 'lesson-12-1-logotherapy-meaning-centered-approach.html'
+  },
+  {
+    num: 13,
+    dir: 'course-13-mental-health-first-aid',
+    title: 'Mental Health First Aid & Community Support',
+    subtitle: 'Learn to recognize crisis and provide life-saving support to others',
+    price: 149,
+    pillar: 'Purpose Through Responsibility',
+    category: 'Social Connection & Community',
+    image: 'Course 13 - Mental Health First Aid.jpg',
+    firstLesson: 'lesson-13-1-mental-health-first-aid-foundations.html'
+  },
+  {
+    num: 14,
+    dir: 'course-14-coaching-mentoring',
+    title: 'Coaching & Mentoring Others',
+    subtitle: 'Develop skills to guide and empower others on their mental health journey',
+    price: 149,
+    pillar: 'Purpose Through Responsibility',
+    category: 'Purpose & Leadership',
+    image: 'Course 14 - Coaching & Mentoring Others.jpg',
+    firstLesson: 'lesson-14-1-coaching-foundations-helping-relationship.html'
+  },
+  {
+    num: 15,
+    dir: 'course-15-legacy-building',
+    title: 'Legacy Building & Wisdom Sharing',
+    subtitle: 'Create lasting impact through generativity and wisdom transmission',
+    price: 129,
+    pillar: 'Purpose Through Responsibility',
+    category: 'Family & Generational Health',
+    image: 'Course 15 - Legacy Building & Wisdom Sharing.jpg',
+    firstLesson: 'lesson-15-1-generativity-legacy-eriksons-framework.html'
+  },
+  {
+    num: 16,
+    dir: 'course-16-recreational-therapy',
+    title: 'Recreational Therapy: Rediscovering Joy & Play',
+    subtitle: 'Reclaim play, spontaneity, and joy as essential mental health practices',
+    price: 79,
+    pillar: 'Recreational Joy & Play',
+    category: 'Creative & Recreational Healing',
+    image: 'Course 16 - Recreational Therapy.jpg',
+    firstLesson: 'lesson-16-1-play-therapy-adults-rediscovering-joy.html'
+  },
+  {
+    num: 17,
+    dir: 'course-17-creative-expression',
+    title: 'Creative Expression & Art Therapy',
+    subtitle: 'Use creativity to process emotions, heal trauma, and express what words cannot',
+    price: 89,
+    pillar: 'Recreational Joy & Play',
+    category: 'Creative & Recreational Healing',
+    image: 'Course 17 - Creative Expression & Art Therapy.jpg',
+    firstLesson: 'lesson-17-1-art-therapy-foundations-creative-healing.html'
+  },
+  {
+    num: 18,
+    dir: 'course-18-adventure-outdoor-mental-health',
+    title: 'Adventure & Outdoor Mental Health',
+    subtitle: 'Harness the healing power of nature and wilderness for mental wellness',
+    price: 99,
+    pillar: 'Recreational Joy & Play',
+    category: 'Creative & Recreational Healing',
+    image: 'Course 18 - Adventure & Outdoor Mental Health.jpg',
+    firstLesson: 'lesson-18-1-nature-therapy-wilderness-mental-health.html'
+  },
+  {
+    num: 19,
+    dir: 'course-19-music-movement-wellness',
+    title: 'Music & Movement for Wellness',
+    subtitle: 'Use rhythm, sound, and dance as therapeutic tools for nervous system regulation',
+    price: 79,
+    pillar: 'Recreational Joy & Play',
+    category: 'Physical Movement & Body',
+    image: 'Course 19 - Music & Movement for Wellness.jpg',
+    firstLesson: 'lesson-19-1-neuroscience-music-mental-health.html'
+  }
+];
+
+// Read the Course 4 template
+const templatePath = '/Volumes/ext-data/github/mental-health-education-platform/github-deployment/course-4-growth-mindset/index.html';
+const template = fs.readFileSync(templatePath, 'utf8');
+
+// Update each course
+courses.forEach(course => {
+  const coursePath = `/Volumes/ext-data/github/mental-health-education-platform/github-deployment/${course.dir}/index.html`;
+
+  let html = template;
+
+  // Replace course-specific content
+  html = html.replace(/Course 4 - The Growth Mindset\.jpg/g, course.image);
+  html = html.replace(/The Growth Mindset: Thriving Through Challenge/g, course.title);
+  html = html.replace(/The Growth Mindset/g, course.title);
+  html = html.replace(/Challenge & Growth Through Adversity/g, course.pillar);
+  html = html.replace(/Cognitive & Psychological Skills/g, course.category);
+  html = html.replace(/\$99/g, `$${course.price}`);
+  html = html.replace(/lesson-9-1-neuroscience-mindset-plasticity\.html/g, course.firstLesson);
+
+  // Update breadcrumb
+  html = html.replace(/<li class="breadcrumb-item"><a href="\.\.\/\.\.\/index\.html">Home<\/a><\/li>\s*<li class="breadcrumb-item active" aria-current="page">The Growth Mindset: Thriving Through Challenge<\/li>/g,
+    `<li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">${course.title}</li>`);
+
+  // Update course-specific lesson numbers in lessons list (Lesson 9.X -> Lesson X.Y)
+  for (let i = 2; i <= 20; i++) {
+    const regex = new RegExp(`Lesson ${i}:`, 'g');
+    html = html.replace(regex, `Lesson ${i}:`);
+  }
+
+  // Write the updated file
+  fs.writeFileSync(coursePath, html);
+  console.log(`✓ Updated ${course.dir}`);
+});
+
+console.log('\n✅ All course landing pages updated successfully!');

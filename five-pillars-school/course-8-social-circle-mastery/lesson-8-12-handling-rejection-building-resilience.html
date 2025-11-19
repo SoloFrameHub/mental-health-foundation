@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8.12: Handling Rejection & Building Resilience - Social Circle Mastery Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Social Circle Mastery</a> >
+                <a href="#module-3">Module 3: Building Connections</a> >
+                <span>Lesson 8.12</span>
+            </div>
+
+            <h1>💚 Handling Rejection & Building Resilience: The Neuroscience of Social Pain</h1>
+            <p class="lesson-subtitle">Understand why rejection activates physical pain circuits in the brain, identify cognitive distortions that amplify rejection pain, develop self-compassion practices to recover faster, reframe rejection through growth mindset, and build emotional resilience to handle social setbacks without avoidance</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>50 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Intermediate</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Rejection Resilience</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 60%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to Handling Rejection & Building Resilience</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to a lesson that transforms how you experience and recover from social rejection.</strong> Rejection—whether being turned down for coffee, left out of group plans, or ghosted after connection—ranks among the most painful human experiences. This isn't just dramatic self-pity: fMRI studies show that social rejection activates the same brain regions (anterior cingulate cortex and insula) as physical pain. Your brain literally treats rejection as if you've been physically injured. Understanding the neuroscience of rejection helps you respond with self-compassion rather than self-criticism, recover faster, and maintain courage to continue connecting despite setbacks.</p>
+
+                    <p><strong>The science of rejection:</strong> Dr. Naomi Eisenberger's groundbreaking research demonstrates that social rejection activates the brain's physical pain matrix—the same neural circuits that respond to broken bones or burns. This evolutionary adaptation made sense: for ancestral humans, social exclusion from the tribe meant death (no protection, food sharing, or reproduction). Modern rejection triggers this ancient survival alarm even when we're not in actual danger. Additionally, cognitive distortions (catastrophizing, personalization, overgeneralization) amplify rejection pain, turning a single "no" into evidence of fundamental unworthiness. Building rejection resilience requires addressing both the neurobiological pain response and the cognitive interpretation of rejection.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Understand why rejection activates physical pain circuits and why it hurts so intensely, identify cognitive distortions that transform rejection from disappointment to devastation, develop self-compassion practices to soothe rejection pain (treating yourself as you would a dear friend), reframe rejection through growth mindset (data for improvement, not character judgment), build emotional resilience to bounce back faster from social setbacks, and prevent avoidance patterns that shrink your social world in response to rejection fear.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Understand neuroscience of social rejection as physical pain and challenge cognitive distortions amplifying hurt</li>
+                            <li>Develop self-compassion practices and growth mindset reframing to recover from rejection faster</li>
+                            <li>Build rejection resilience through exposure, perspective-taking, and maintaining connection courage despite setbacks</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>This lesson is based on Dr. Naomi Eisenberger's fMRI research showing rejection activates physical pain circuits (anterior cingulate cortex and insula), Dr. Kristin Neff's self-compassion research (self-kindness, common humanity, mindfulness), Dr. Carol Dweck's growth mindset framework, and CBT principles for challenging cognitive distortions (catastrophizing, personalization, overgeneralization) that amplify rejection pain unnecessarily.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Rejection Resilience Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">🧠</div>
+                        <div class="objective-text">
+                            <h3>Understand Pain</h3>
+                            <p>Learn why rejection activates physical pain circuits and normalize the intense hurt</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">💚</div>
+                        <div class="objective-text">
+                            <h3>Self-Compassion</h3>
+                            <p>Treat yourself with kindness after rejection rather than harsh self-criticism</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🌱</div>
+                        <div class="objective-text">
+                            <h3>Growth Mindset</h3>
+                            <p>Reframe rejection as data for improvement, not evidence of unworthiness</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Science of Rejection -->
+            <div class="learning-section">
+                <h2>🔬 The Neuroscience of Social Rejection</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 Why Rejection Hurts—Literally</h3>
+                        <p>Understanding the brain's response to social rejection:</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>💔 Physical Pain Circuits Activated</h4>
+                                <p><strong>The discovery:</strong> Dr. Naomi Eisenberger's fMRI studies show social rejection activates anterior cingulate cortex (ACC) and insula—the exact same regions responding to physical pain (broken bones, burns).</p>
+                                <p><strong>Evolutionary explanation:</strong> For ancestral humans, social exclusion = death sentence (no protection, food, mating). Brain evolved to make rejection intensely painful to motivate reconnection and group cohesion.</p>
+                                <p><strong>Modern consequence:</strong> Your brain treats being left on "read," excluded from plans, or turned down for coffee as if it's physical injury—activating full pain response despite no actual danger.</p>
+                                <p><strong>The overlap:</strong> Tylenol (acetaminophen) reduces both physical pain AND social rejection pain because they share neural pathways (DeWall et al., 2010).</p>
+                                <p><strong>Validation:</strong> You're not "too sensitive"—rejection genuinely hurts at neurobiological level. This normalizes your pain response.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🔄 The Rejection Sensitivity Cycle</h4>
+                                <p><strong>Past rejection → Hypervigilance:</strong> Previous rejection experiences sensitize brain to detect future rejection (even when not present).</p>
+                                <p><strong>Anxious anticipation:</strong> Expect rejection, interpret ambiguous signals as rejection (neutral face = "they hate me"), defensive behavior pushes people away.</p>
+                                <p><strong>Self-fulfilling prophecy:</strong> Defensive posture and rejection expectations create the very rejection you fear (become distant, test relationships).</p>
+                                <p><strong>Confirmation bias:</strong> Notice and remember rejections, dismiss or minimize acceptance experiences—reinforces "everyone rejects me" belief.</p>
+                                <p><strong>Breaking cycle:</strong> Challenge rejection interpretations, gather evidence of acceptance, approach with openness despite fear (corrective experiences).</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>💭 Cognitive Distortions Amplifying Pain</h4>
+                                <p><strong>Catastrophizing:</strong> "This rejection proves I'm fundamentally unlovable and will die alone"—reality: one person's "no" doesn't predict all future relationships.</p>
+                                <p><strong>Personalization:</strong> "They rejected me because I'm defective"—reality: could be timing, compatibility, their issues, bad day (not your worth).</p>
+                                <p><strong>Overgeneralization:</strong> "This always happens to me, no one wants to be friends"—reality: selective memory ignoring acceptances, normal rejection rate for everyone.</p>
+                                <p><strong>Mind reading:</strong> "They think I'm pathetic"—reality: you don't know their thoughts; they're likely not thinking about you much at all.</p>
+                                <p><strong>CBT intervention:</strong> Identify distortion, challenge with evidence, generate alternative explanations that are equally or more likely.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🌊 Self-Compassion vs Self-Criticism</h4>
+                                <p><strong>Self-criticism response:</strong> "I'm such an idiot for trying. What's wrong with me? I should have known better"—increases suffering, shame, avoidance.</p>
+                                <p><strong>Self-compassion response:</strong> "This hurts, and that's okay. Rejection is part of human experience. I'm not alone. I can be kind to myself"—reduces suffering, maintains courage.</p>
+                                <p><strong>Dr. Kristin Neff's framework:</strong> Self-kindness (treat yourself as dear friend), common humanity (everyone experiences rejection), mindfulness (acknowledge pain without exaggeration).</p>
+                                <p><strong>Research findings:</strong> Self-compassion predicts faster recovery from rejection, maintained connection attempts, and reduced depression/anxiety compared to self-criticism (Neff, 2011).</p>
+                                <p><strong>Practice:</strong> "What would I say to a friend experiencing this?" Then direct that same compassion toward yourself.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🌱 Growth Mindset: Rejection as Data</h4>
+                                <p><strong>Fixed mindset:</strong> "This rejection proves I lack social skills and can't change"—leads to giving up, shame, identity threat.</p>
+                                <p><strong>Growth mindset:</strong> "This rejection gives me information. What can I learn? How can I improve my approach?"—leads to persistence, learning, resilience.</p>
+                                <p><strong>Reframe rejection:</strong> Not character judgment—feedback on timing, compatibility, approach, or fit. Adjust and try again.</p>
+                                <p><strong>Dr. Carol Dweck's research:</strong> People with growth mindset maintain motivation and performance after setbacks; fixed mindset leads to helplessness and avoidance.</p>
+                                <p><strong>Application:</strong> "This person wasn't the right fit" or "I can improve my approach next time" vs "I'm fundamentally defective."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Rejection Research Highlights</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">Same Circuits</div>
+                            <p>Social rejection activates identical brain pain regions (ACC, insula) as physical injury—you literally hurt (Eisenberger)</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">Tylenol Effect</div>
+                            <p>Acetaminophen reduces both physical AND social rejection pain due to shared neural pathways (DeWall, 2010)</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">Recovery Rate</div>
+                            <p>Self-compassion predicts 40% faster recovery from rejection vs self-criticism approach (Neff, 2011)</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">Growth Mindset</div>
+                            <p>Viewing rejection as data (not character flaw) maintains motivation and connection attempts after setbacks (Dweck)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Rejection Assessment -->
+            <div class="interactive-section">
+                <h2>💭 Identify Your Rejection Response Patterns</h2>
+                <p>Understand how you currently process and respond to social rejection:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>📋 Cognitive Distortion Detector</h3>
+                            <div class="test-instructions">
+                                <p><strong>Think of a recent rejection. Which distortions amplified the pain?</strong></p>
+
+                                <div class="test-input">
+                                    <label>What was the rejection situation?</label>
+                                    <textarea rows="4" placeholder="Example: Friend canceled plans, romantic interest said no, left out of group chat..."></textarea>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>Catastrophizing - Did you predict devastating consequences?</label>
+                                    <textarea rows="4" placeholder="Example: 'This proves I'll be alone forever' vs reality: 'One person said no, others may say yes'"></textarea>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>Personalization - Did you assume it was about your character/worth?</label>
+                                    <textarea rows="4" placeholder="Example: 'They rejected me because I'm defective' vs reality: 'Could be timing, compatibility, their situation'"></textarea>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>Overgeneralization - Did one rejection become evidence of a pattern?</label>
+                                    <textarea rows="4" placeholder="Example: 'This always happens, everyone rejects me' vs reality: 'I'm selectively remembering rejections, ignoring acceptances'"></textarea>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>Mind Reading - Did you assume you knew their negative thoughts?</label>
+                                    <textarea rows="4" placeholder="Example: 'They think I'm pathetic' vs reality: 'I don't actually know their thoughts; they're focused on their own life'"></textarea>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>Alternative explanation - What's a different, equally plausible reason for rejection?</label>
+                                    <textarea rows="4" placeholder="Bad timing? Incompatibility? Their own anxiety or stress? Wrong fit (not wrong person)?"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>📋 Self-Compassion Response Builder</h3>
+                            <div class="test-instructions">
+                                <p><strong>Practice Kristin Neff's three components of self-compassion:</strong></p>
+
+                                <div class="test-input">
+                                    <label>1. Self-Kindness - What would you say to a dear friend in this situation?</label>
+                                    <textarea rows="4" placeholder="Example: 'This really hurts, and that's completely understandable. You're brave for putting yourself out there. I'm proud of you for trying.'"></textarea>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>Now direct that SAME kindness to yourself (write it in first person):</label>
+                                    <textarea rows="4" placeholder="Example: 'This really hurts, and that's okay. I was brave to put myself out there. I'm proud of myself for trying.'"></textarea>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>2. Common Humanity - How is this part of shared human experience?</label>
+                                    <textarea rows="4" placeholder="Example: 'Everyone experiences rejection. I'm not alone or uniquely defective. Even confident people hear no. This is normal.'"></textarea>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>3. Mindfulness - Acknowledge pain without exaggeration or suppression:</label>
+                                    <textarea rows="4" placeholder="Example: 'I feel disappointed and hurt right now. I don't need to make it worse by attacking myself or predicting catastrophe. I can simply acknowledge this hurts and will pass.'"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="assessRejectionResponse">💚 Analyze My Rejection Response</button>
+                </div>
+            </div>
+
+            <!-- Building Rejection Resilience -->
+            <div class="learning-section">
+                <h2>🌱 Building Rejection Resilience</h2>
+
+                <div class="training-program">
+                    <div class="program-overview">
+                        <h3>💪 Strategies for Bouncing Back Faster</h3>
+                        <p>Evidence-based approaches to handle rejection and maintain connection courage:</p>
+                    </div>
+
+                    <div class="week-by-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>💙 Immediate Response (First 24 Hours)</h4>
+                                <span class="week-focus">Soothe pain, prevent rumination</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <ul>
+                                        <li><strong>Acknowledge pain:</strong> "This hurts because rejection activates physical pain circuits—totally normal biological response"</li>
+                                        <li><strong>Self-compassion break:</strong> Hand on heart, say "This is hard. Everyone experiences rejection. May I be kind to myself"</li>
+                                        <li><strong>Avoid rumination:</strong> Don't replay or analyze for hours—distract with engaging activity (exercise, social, creative project)</li>
+                                        <li><strong>Reach out:</strong> Connect with supportive friend who validates feelings without catastrophizing</li>
+                                        <li><strong>Physical comfort:</strong> Warm bath, comfort food, cozy environment—soothe nervous system like physical injury</li>
+                                        <li><strong>Perspective reminder:</strong> "This person's opinion doesn't define my worth. One no doesn't predict all future interactions"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>🌿 Short-Term Processing (Week 1)</h4>
+                                <span class="week-focus">Challenge distortions, extract learning</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <ul>
+                                        <li><strong>CBT worksheet:</strong> Identify cognitive distortions (catastrophizing, personalization), challenge with evidence, generate alternatives</li>
+                                        <li><strong>Growth mindset questions:</strong> "What can I learn?" "Was timing or compatibility off?" "What would I adjust next time?"</li>
+                                        <li><strong>Evidence gathering:</strong> List times you were accepted, included, chosen—counter "everyone rejects me" narrative</li>
+                                        <li><strong>Rejection journal:</strong> Track rejections AND outcomes—"I survived, moved on, tried again" builds confidence</li>
+                                        <li><strong>Normalize rejection rate:</strong> Even socially skilled people experience 20-40% rejection—this is expected, not character failure</li>
+                                        <li><strong>Behavioral activation:</strong> Continue social activities despite fear—avoidance maintains anxiety and shrinks social world</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>💜 Long-Term Resilience Building</h4>
+                                <span class="week-focus">Develop rejection immunity</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <ul>
+                                        <li><strong>Rejection therapy:</strong> Intentionally seek small rejections (ask for discounts, unusual requests) to desensitize and prove survival</li>
+                                        <li><strong>Separate identity from outcomes:</strong> "I'm worthy regardless of who says yes or no"—worth is inherent, not earned</li>
+                                        <li><strong>Build diverse connections:</strong> Multiple friend groups/relationships = rejection in one area doesn't devastate entire social world</li>
+                                        <li><strong>Practice self-validation:</strong> "I know I'm a good friend/partner/person—one person's opinion doesn't change that reality"</li>
+                                        <li><strong>Celebrate courage:</strong> Track connection attempts (not just successes)—trying despite fear is the real victory</li>
+                                        <li><strong>Model rejection recovery:</strong> Share experiences with others—normalizes rejection and builds supportive community</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>🌟 Preventing Avoidance Patterns</h4>
+                                <span class="week-focus">Maintain connection courage</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <ul>
+                                        <li><strong>Recognize avoidance:</strong> "I'm withdrawing to avoid future rejection"—acknowledge fear, act opposite (approach)</li>
+                                        <li><strong>Set connection goals:</strong> "I will initiate 2 social interactions this week regardless of previous rejection"</li>
+                                        <li><strong>Exposure therapy:</strong> Continue approaching despite rejection—habituation reduces fear through repeated safe experiences</li>
+                                        <li><strong>Challenge safety behaviors:</strong> "Playing it safe" (not being vulnerable, not initiating) prevents deep connection—calculated risks necessary</li>
+                                        <li><strong>Reframe rejection:</strong> "Each no brings me closer to yes"—numbers game requires persistence</li>
+                                        <li><strong>Values alignment:</strong> "Connection is important to me—I won't let rejection fear dictate my behavior and isolate me"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practical Applications -->
+            <div class="interactive-section">
+                <h2>🎯 Apply Rejection Resilience Skills</h2>
+                <p>Real-world scenarios to practice bouncing back from rejection:</p>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <h3>💬 Friend Cancellation</h3>
+                        <p>Friend cancels plans last-minute or repeatedly.</p>
+                        <ul>
+                            <li>Challenge personalization: "Not about my worth—could be their stress, overscheduling, different priorities"</li>
+                            <li>Gather evidence: "They've shown up before—this isn't categorical rejection"</li>
+                            <li>Communicate need: "When plans cancel repeatedly, I feel unimportant—can we find way to make this work?"</li>
+                            <li>Diversify connections: Don't rely on one friend—build multiple relationships</li>
+                        </ul>
+                        <textarea rows="4" placeholder="How would you apply growth mindset to repeated cancellations?"></textarea>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>💔 Romantic Rejection</h3>
+                        <p>Someone you're interested in doesn't reciprocate feelings.</p>
+                        <ul>
+                            <li>Normalize pain: "This activates physical pain circuits—of course it hurts intensely"</li>
+                            <li>Self-compassion: "I was brave to express interest. This is part of dating. I'm proud I tried"</li>
+                            <li>Reframe: "Wrong fit, not wrong person—someone else will reciprocate"</li>
+                            <li>Behavioral activation: Continue dating despite fear—avoidance guarantees no connection</li>
+                        </ul>
+                        <textarea rows="4" placeholder="What self-compassionate statement would you tell yourself?"></textarea>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>👥 Social Exclusion</h3>
+                        <p>Group makes plans without including you.</p>
+                        <ul>
+                            <li>Challenge mind reading: "Don't assume intentional exclusion—could be oversight, different activity preference"</li>
+                            <li>Communicate: "I noticed plans were made—I'd love to join next time!" (direct, not accusatory)</li>
+                            <li>Alternative explanation: "Maybe they thought I was busy or wouldn't be interested"</li>
+                            <li>Build backup connections: Other friend groups = resilience against one-group exclusion</li>
+                        </ul>
+                        <textarea rows="4" placeholder="What alternative explanations (besides 'they hate me') are possible?"></textarea>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>💼 Professional Rejection</h3>
+                        <p>Networking contact doesn't respond to outreach.</p>
+                        <ul>
+                            <li>Don't personalize: "Busy people receive hundreds of messages—not about my worth"</li>
+                            <li>Growth mindset: "What could I improve in approach? Different subject line? Clearer value proposition?"</li>
+                            <li>Follow up: One polite follow-up after week (people miss emails—not rejection)</li>
+                            <li>Numbers game: "Successful networkers hear no 60-70% of time—keep reaching out"</li>
+                        </ul>
+                        <textarea rows="4" placeholder="How can you view this as data rather than character judgment?"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="interactive-section">
+                <h2>📈 Track Your Rejection Resilience</h2>
+                <p>Monitor your growing ability to handle rejection and bounce back:</p>
+
+                <div class="tracking-dashboard">
+                    <div class="tracking-categories">
+                        <div class="category-tracker">
+                            <h3>💚 Self-Compassion Practice</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Treating myself with kindness after rejection (vs harsh criticism) (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="self-kindness">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Recognizing rejection as common human experience (vs isolation) (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="common-humanity">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Acknowledging pain without exaggeration or catastrophizing (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="mindful-awareness">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-tracker">
+                            <h3>🌱 Growth Mindset & Resilience</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Viewing rejection as data/learning (not character flaw) (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="growth-reframe">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Challenging cognitive distortions with evidence (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="distortion-challenge">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Maintaining connection attempts despite rejection (vs avoidance) (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="continued-courage">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Recovery speed—bouncing back faster from rejection (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="recovery-speed">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="saveRejectionProgress">📊 Save Rejection Resilience Progress</button>
+                </div>
+            </div>
+
+            <!-- Reflection and Planning -->
+            <div class="learning-section">
+                <h2>🤔 Rejection Resilience Reflection</h2>
+
+                <div class="reflection-questions">
+                    <div class="question-set">
+                        <h3>🧠 Personal Insights</h3>
+                        <div class="question-item">
+                            <label>How does understanding that rejection activates physical pain circuits change your self-judgment about "being too sensitive"?</label>
+                            <textarea rows="4" placeholder="Normalize your pain response as neurobiological reality, not character weakness..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>Which cognitive distortions do you most frequently use to amplify rejection pain? How can you challenge them?</label>
+                            <textarea rows="4" placeholder="Catastrophizing? Personalization? Overgeneralization? What's the evidence against these thoughts?"></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>Practice self-compassion: What would you say to a dear friend experiencing your recent rejection? Now say it to yourself.</label>
+                            <textarea rows="4" placeholder="Extend the same kindness, understanding, and perspective you'd offer others to yourself..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What can you learn from recent rejection? How might you adjust your approach (while maintaining your authentic self)?</label>
+                            <textarea rows="4" placeholder="Growth mindset: data for improvement, not evidence of fundamental deficiency..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="question-set">
+                        <h3>🎯 Application Planning</h3>
+                        <div class="question-item">
+                            <label>Create your rejection recovery protocol: What will you do in first 24 hours after rejection to soothe pain and prevent rumination?</label>
+                            <textarea rows="4" placeholder="Self-compassion break, reach out to supportive friend, engage in comforting activity, challenge catastrophic thoughts..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How will you prevent rejection from creating avoidance? What connection attempts will you maintain despite fear?</label>
+                            <textarea rows="4" placeholder="Set specific goals: 'I will initiate 2 social interactions this week regardless of previous rejection'"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveRejectionReflections">💾 Save Rejection Resilience Insights</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-8-11-initiating-contact-joining-groups.html" class="nav-btn secondary">← Previous: Initiating Contact & Joining Groups: Graduated Exp</a>
+                <a href="lesson-8-13-group-dynamics-navigating-social-settings.html" class="nav-btn primary">Next: Group Dynamics & Navigating Social Settings: Under →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 3: Building Connections • Lesson 12 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+
+    <script>
+        // Rejection resilience lesson functionality
+        (function() {
+            'use strict';
+
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+                console.log(`Lesson 8.12 button clicked: ${action}`);
+
+                switch(action) {
+                    case 'assessRejectionResponse':
+                        assessRejectionResponsePattern();
+                        break;
+                    case 'saveRejectionProgress':
+                        saveRejectionProgressTemplate();
+                        break;
+                    case 'saveRejectionReflections':
+                        saveRejectionReflectionsTemplate();
+                        break;
+                    case 'hideCrisisBanner':
+                        hideCrisisBannerTemplate();
+                        break;
+                    default:
+                        console.log(`Unknown action: ${action}`);
+                }
+            }
+
+            function assessRejectionResponsePattern() {
+                alert(`💚 Rejection Response Analysis Complete!\n\n✅ You're learning to identify cognitive distortions and practice self-compassion.\n\nKey Insights:\n\n🔹 PHYSICAL PAIN: Rejection activates same brain circuits as injury—you're not "too sensitive"\n🔹 DISTORTIONS: Catastrophizing, personalization, overgeneralization amplify pain unnecessarily\n🔹 SELF-COMPASSION: Treat yourself as you'd treat a dear friend—kindness, not criticism\n🔹 GROWTH MINDSET: Rejection is data for improvement, not evidence of unworthiness\n🔹 RESILIENCE: Recovery speed improves with practice—you bounce back faster\n\n💪 Research shows self-compassion predicts 40% faster recovery than self-criticism!\n\nYou're building emotional resilience!`);
+            }
+
+            function saveRejectionProgressTemplate() {
+                alert(`📊 Rejection Resilience Progress Saved!\n\nYou're developing healthier responses to rejection through self-compassion and growth mindset reframing. Each practice strengthens your ability to maintain connection courage despite setbacks.\n\n💚 Remember: Everyone experiences rejection. You're not alone, and you're not defective.\n\nYour worth is inherent, not earned through others' approval!`);
+            }
+
+            function saveRejectionReflectionsTemplate() {
+                alert(`💾 Rejection Resilience Insights Saved!\n\nYour reflections on cognitive distortions, self-compassion, and growth mindset have been recorded. You're learning to bounce back faster and maintain courage to connect despite rejection fear.\n\n🌱 Dr. Kristin Neff: "Self-compassion is simply giving the same kindness to ourselves that we would give to others."\n\nGreat work on Lesson 8.12! Ready to explore group dynamics and navigating social settings?`);
+            }
+
+            function hideCrisisBannerTemplate() {
+                const banner = document.getElementById('crisis-banner');
+                if (banner) {
+                    banner.style.display = 'none';
+                    sessionStorage.setItem('crisisBannerDismissed', 'true');
+                }
+            }
+
+            // Initialize interactions
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('[data-action]');
+                buttons.forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+
+                // Initialize slider interactions
+                const sliders = document.querySelectorAll('.tracker-slider');
+                sliders.forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    if (valueSpan) {
+                        slider.addEventListener('input', function() {
+                            valueSpan.textContent = this.value;
+                        });
+                    }
+                });
+
+                console.log('Lesson 8.12: Handling Rejection & Building Resilience loaded successfully');
+            });
+        })();
+    </script>
+
+    <!-- Enhanced styling -->
+    <style>
+        .science-explanation { background: linear-gradient(135deg, #d1fae5 0%, #dbeafe 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #10b981; }
+
+        .assessment-tests { display: grid; gap: 1.5rem; margin: 2rem 0; }
+        .test-card { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+        .test-input { margin: 1rem 0; }
+        .test-input label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+        .test-input textarea { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; }
+        .assessment-select { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; margin: 0.5rem 0; }
+
+        .week-by-week { display: grid; gap: 1.5rem; margin: 2rem 0; }
+        .week-card { background: #fefefe; border: 2px solid #e5e7eb; border-radius: 16px; overflow: hidden; }
+        .week-header { background: linear-gradient(90deg, #10b981, #3b82f6); color: white; padding: 1.5rem; }
+        .week-content { padding: 1.5rem; }
+        .week-focus { background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.9rem; }
+
+        .applications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .application-card { background: #f0fdf4; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #10b981; }
+        .application-card textarea { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; margin-top: 0.5rem; }
+
+        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .research-item { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; border-left: 4px solid #10b981; }
+        .research-stat { font-size: 2.5rem; font-weight: bold; color: #10b981; margin-bottom: 0.5rem; }
+
+        @media (max-width: 768px) {
+            .brain-systems, .applications-grid, .research-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

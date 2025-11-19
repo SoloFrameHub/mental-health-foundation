@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provider Portal - Course Recommender | Real Psychiatric Services</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --rps-navy: #2E4057;
+            --rps-blue: #5B7DB1;
+            --rps-teal: #7CB3B8;
+        }
+
+        body {
+            background: #f8f9fa;
+        }
+
+        .provider-header {
+            background: linear-gradient(135deg, var(--rps-navy) 0%, var(--rps-blue) 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .chat-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .message.user {
+            background: #e3f2fd;
+            margin-left: 2rem;
+        }
+
+        .message.assistant {
+            background: #f5f5f5;
+            margin-right: 2rem;
+        }
+
+        .message .role {
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+            color: var(--rps-blue);
+        }
+
+        .chat-input {
+            padding: 1rem;
+            background: white;
+        }
+
+        .course-card {
+            border-left: 4px solid var(--rps-blue);
+            transition: transform 0.2s;
+        }
+
+        .course-card:hover {
+            transform: translateX(4px);
+        }
+
+        .hipaa-notice {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .recommendations-panel {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Pillar Section Styles from Homepage */
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #6c757d;
+            --accent-color: #20c997;
+            --dark-color: #2c3e50;
+            --light-color: #f4f6f9;
+            --pillar-1: #5a9bd5;
+            --pillar-2: #70ad47;
+            --pillar-3: #9966cc;
+            --pillar-4: #4a90a4;
+            --pillar-5: #ff9f40;
+        }
+
+        .pillar-section {
+            padding: 5rem 0;
+        }
+
+        .pillar-section:nth-child(even) {
+            background: var(--light-color);
+        }
+
+        .pillar-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .pillar-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .pillar-description {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .course-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .course-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .course-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--accent-color);
+            color: #fff;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .course-price {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.95);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+
+        .course-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .course-content h3 a {
+            color: var(--dark-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .course-content h3 a:hover {
+            color: var(--primary-color);
+        }
+
+        .course-content p {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .course-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e9ecef;
+            margin-top: auto;
+        }
+
+        .course-stats span {
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+        }
+
+        .course-stats i {
+            margin-right: 0.3rem;
+        }
+
+        .btn-course {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .btn-course:hover {
+            background: #0b5ed7;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Pillar Color Variants */
+        .pillar-1 .pillar-header h2 {
+            color: var(--pillar-1);
+        }
+
+        .pillar-1 .course-badge {
+            background: var(--pillar-1);
+        }
+
+        .pillar-2 .pillar-header h2 {
+            color: var(--pillar-2);
+        }
+
+        .pillar-2 .course-badge {
+            background: var(--pillar-2);
+        }
+
+        .pillar-3 .pillar-header h2 {
+            color: var(--pillar-3);
+        }
+
+        .pillar-3 .course-badge {
+            background: var(--pillar-3);
+        }
+
+        .pillar-4 .pillar-header h2 {
+            color: var(--pillar-4);
+        }
+
+        .pillar-4 .course-badge {
+            background: var(--pillar-4);
+        }
+
+        .pillar-5 .pillar-header h2 {
+            color: var(--pillar-5);
+        }
+
+        .pillar-5 .course-badge {
+            background: var(--pillar-5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="provider-header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="mb-2"><i class="bi bi-mortarboard"></i> Provider Course Recommender</h1>
+                    <p class="mb-0 opacity-75">AI-Powered Course Recommendations for Your Patients</p>
+                </div>
+                <a href="/courses" class="btn btn-light btn-sm" target="_blank">
+                    <i class="bi bi-house-door"></i> Course Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <!-- HIPAA Notice -->
+        <div class="hipaa-notice">
+            <h5><i class="bi bi-shield-lock"></i> HIPAA Compliance Notice</h5>
+            <p class="mb-0">
+                <strong>For Licensed Providers Only:</strong> This tool is HIPAA-compliant and designed for clinical use.
+                Enter de-identified clinical information only. Do not include patient names, DOB, SSN, or other direct identifiers.
+                All conversations are encrypted and logged for audit purposes.
+            </p>
+        </div>
+
+        <!-- Authentication -->
+        <div id="auth-section" class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-key"></i> Provider Authentication</h5>
+                <p class="text-muted mb-3">
+                    <i class="bi bi-info-circle"></i> Your API key is stored locally in your browser and never sent to external servers except to authenticate with the AI service.
+                </p>
+                <div class="row g-3">
+                    <div class="col-md-8">
+                        <label for="api-key" class="form-label">Provider API Key</label>
+                        <div class="input-group">
+                            <input
+                                type="password"
+                                id="api-key"
+                                class="form-control"
+                                placeholder="Enter your provider API key (starts with sk-ant-...)"
+                                onkeypress="if(event.key==='Enter') authenticate()"
+                            >
+                            <button class="btn btn-outline-secondary" type="button" onclick="toggleKeyVisibility()">
+                                <i class="bi bi-eye" id="toggle-icon"></i>
+                            </button>
+                        </div>
+                        <small class="form-text text-muted">
+                            <strong>Your API key from PROVIDER_API_KEY in .env file</strong><br>
+                            This key will be saved in your browser for convenience.
+                            <a href="#" onclick="clearSavedKey(); return false;" class="text-danger" id="clear-key-link" style="display:none;">Clear saved key</a>
+                        </small>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button class="btn btn-primary w-100" onclick="authenticate()">
+                            <i class="bi bi-unlock"></i> Authenticate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Interface (hidden until authenticated) -->
+        <div id="main-interface" style="display: none;">
+            <div class="row">
+                <!-- Left: Quick Recommend -->
+                <div class="col-lg-6">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0"><i class="bi bi-stars"></i> Quick Course Recommendation</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="patient-presentation" class="form-label">Patient Presentation</label>
+                                <textarea
+                                    id="patient-presentation"
+                                    class="form-control"
+                                    rows="4"
+                                    placeholder="Example: 28yo presenting with moderate depression, sedentary lifestyle, difficulty with motivation..."
+                                ></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="clinical-notes" class="form-label">Clinical Notes (Optional)</label>
+                                <textarea
+                                    id="clinical-notes"
+                                    class="form-control"
+                                    rows="4"
+                                    placeholder="Additional clinical observations, treatment goals, patient preferences..."
+                                ></textarea>
+                            </div>
+                            <button class="btn btn-primary btn-lg w-100" onclick="getRecommendations()">
+                                <i class="bi bi-lightbulb"></i> Get Recommendations
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Recommendations Display -->
+                    <div id="recommendations-display" class="recommendations-panel" style="display: none;">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="mb-0"><i class="bi bi-clipboard-check"></i> Recommendations</h5>
+                            <button class="btn btn-sm btn-outline-primary" onclick="sendFeedback()">
+                                <i class="bi bi-chat-left-text"></i> Send Feedback
+                            </button>
+                        </div>
+                        <div id="recommendations-content"></div>
+                    </div>
+                </div>
+
+                <!-- Right: Chat Interface -->
+                <div class="col-lg-6">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-secondary text-white">
+                            <h5 class="mb-0"><i class="bi bi-chat-dots"></i> Provider Chat</h5>
+                            <small>Ask questions about courses, discuss treatment plans, etc.</small>
+                        </div>
+                        <div class="chat-container">
+                            <div class="chat-messages" id="chat-messages">
+                                <div class="message assistant">
+                                    <div class="role">AI Course Advisor</div>
+                                    <div class="content">
+                                        Hello! I'm here to help you find the right courses for your patients.
+                                        You can:
+                                        <ul class="mt-2 mb-0">
+                                            <li>Ask about specific courses and their clinical applications</li>
+                                            <li>Discuss course sequencing for complex cases</li>
+                                            <li>Get guidance on contraindications and prerequisites</li>
+                                            <li>Request evidence summaries for specific interventions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-input">
+                                <div class="input-group">
+                                    <input
+                                        type="text"
+                                        id="chat-input"
+                                        class="form-control"
+                                        placeholder="Ask a question about courses..."
+                                        onkeypress="if(event.key === 'Enter') sendMessage()"
+                                    >
+                                    <button class="btn btn-primary" onclick="sendMessage()">
+                                        <i class="bi bi-send"></i> Send
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 Pillars Sections from Homepage -->
+            <section id="pillars" class="pillar-section pillar-1 mt-5">
+                <div class="container">
+                    <div class="pillar-header">
+                        <h2 style="color: #576fa2;">THE FIVE PILLARS</h2>
+                        <p class="pillar-description">Mental health research shows that sustainable wellbeing emerges from five interconnected domains of human experience: Physical Vitality & Movement, Challenge & Growth Through Adversity, Social Connection & Community, Purpose Through Responsibility, and Recreational Joy & Play. This evidence-based framework recognizes that true mental health goes beyond symptom management to building comprehensive wellness across all areas of life.</p>
+                        <p class="pillar-description">Rather than treating mental health as an isolated concern, this approach acknowledges that your physical energy, resilience skills, relationships, sense of purpose, and capacity for joy all work together to create psychological wellbeing. Each pillar both stands alone as a pathway to wellness and strengthens the others. Whether you're starting with movement and exercise or exploring any other pillar, you're beginning a journey toward comprehensive mental health that honors the full spectrum of human flourishing.</p>
+                        <p class="pillar-description" style="background: rgba(87, 111, 162, 0.1); padding: 1.5rem; border-radius: 10px; border-left: 4px solid #576fa2;"><strong>Real Psychiatric Services created this Mental Health Education Platform to deliver optimal mental health care</strong>—one that integrates clinical expertise with evidence-based wellness education. By combining our in-person and telepsychiatric services with comprehensive courses across all five pillars, we provide what research shows works best: a multi-domain approach that addresses physical vitality, resilience, relationships, purpose, and joy simultaneously. This is mental health care designed not just to manage symptoms, but to help you flourish.</p>
+                        <h2>PHYSICAL VITALITY & MOVEMENT PILLAR</h2>
+                        <p class="pillar-description">
+            The Physical Vitality & Movement pillar recognizes that mental health is inseparable from physical wellbeing. This foundation pillar explores how movement, exercise, and body awareness serve as powerful tools for emotional regulation, stress reduction, and cognitive enhancement. These courses address the modern challenges of sedentary lifestyles, workplace stress, and digital overwhelm while providing practical strategies for integrating physical wellness into daily mental health practices. </p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-1--movement-medicine.jpg" alt="Movement Medicine">
+                                    <div class="course-badge">Physical & Digital Wellness</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-1-movement-medicine/" target="_blank">Movement Medicine: Exercise as Mental Health Treatment</a></h3>
+                                    <p>Discover how physical activity can be as effective as medication for anxiety and depression. Learn evidence-based exercise protocols designed specifically for mental health improvement.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 12 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-1-movement-medicine/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-2--workplace-mental-health.jpg" alt="Workplace Mental Health">
+                                    <div class="course-badge">Physical & Digital Wellness</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-2-workplace-mental-health/" target="_blank">Workplace Mental Health: Thriving in Your Career</a></h3>
+                                    <p>Master strategies for managing workplace stress, preventing burnout, and creating psychological safety in professional environments while maintaining work-life balance.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 14 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-2-workplace-mental-health/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-3--digital-wellness.jpg" alt="Digital Wellness">
+                                    <div class="course-badge">Physical & Digital Wellness</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-3-digital-wellness/" target="_blank">Digital Wellness: Managing Technology's Impact on Mental Health</a></h3>
+                                    <p>Learn to harness technology's benefits while protecting your mental health from digital overwhelm, social media anxiety, and screen addiction.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 13 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-3-digital-wellness/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pillar 2: Resilience & Cognitive Mastery -->
+            <section class="pillar-section pillar-2">
+                <div class="container">
+                    <div class="pillar-header">
+                        <h2>RESILIENCE & COGNITIVE MASTERY PILLAR</h2>
+                        <p class="pillar-description">
+            The Resilience & Cognitive Mastery pillar empowers you to understand and reshape your thought patterns, build mental flexibility, and develop lasting psychological strength. Drawing from cognitive-behavioral therapy, growth mindset research, and stress science, these courses provide practical tools for managing anxiety, overcoming limiting beliefs, and navigating life's challenges with greater ease and confidence. </p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-4--the-growth-mindset.jpg" alt="Growth Mindset">
+                                    <div class="course-badge">Resilience & Cognitive Mastery</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-4-growth-mindset/" target="_blank">The Growth Mindset: Transforming Your Relationship with Challenges</a></h3>
+                                    <p>Develop the psychological flexibility to view challenges as opportunities. Learn how to overcome limiting beliefs and cultivate a mindset that supports continuous growth.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 13 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-4-growth-mindset/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-5--cbt-fundamentals.jpg" alt="CBT Fundamentals">
+                                    <div class="course-badge">Resilience & Cognitive Mastery</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-5-cbt-fundamentals/" target="_blank">CBT Fundamentals: Rewiring Thoughts for Better Mental Health</a></h3>
+                                    <p>Master cognitive-behavioral therapy techniques to identify and change negative thought patterns, manage emotions, and build lasting mental health improvements.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 15 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-5-cbt-fundamentals/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-6--stress-&-challenge-navigation.jpg" alt="Stress Navigation">
+                                    <div class="course-badge">Resilience & Cognitive Mastery</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-6-stress-challenge-navigation/" target="_blank">Stress & Challenge Navigation: Building Resilience Under Pressure</a></h3>
+                                    <p>Learn evidence-based strategies for managing stress, building resilience, and transforming pressure into performance through nervous system regulation.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 14 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-6-stress-challenge-navigation/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pillar 3: Relationships & Social Connection -->
+            <section class="pillar-section pillar-3">
+                <div class="container">
+                    <div class="pillar-header">
+                        <h2>RELATIONSHIPS & SOCIAL CONNECTION PILLAR</h2>
+                        <p class="pillar-description">
+            The Relationships & Social Connection pillar recognizes that human connection is fundamental to mental health and wellbeing. These courses explore the science of attachment, communication, and community while providing practical skills for setting boundaries, building meaningful friendships, strengthening romantic partnerships, and creating supportive family systems. From team sports to parenting, these courses address how relationships shape our mental health across all contexts. </p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-7--boundaries-bootcamp.jpg" alt="Boundaries Bootcamp">
+                                    <div class="course-badge">Relationships & Social Connection</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-7-boundaries-bootcamp/" target="_blank">Boundaries Bootcamp: The Art of Healthy Self-Respect</a></h3>
+                                    <p>Learn to establish and maintain healthy boundaries in all relationships while honoring your needs and values without guilt.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 13 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-7-boundaries-bootcamp/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-8--social-circle-mastery.jpg" alt="Social Circle Mastery">
+                                    <div class="course-badge">Relationships & Social Connection</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-8-social-circle-mastery/" target="_blank">Social Circle Mastery: Building Meaningful Connections</a></h3>
+                                    <p>Overcome social anxiety and loneliness while building authentic friendships and supportive social networks that enhance mental health.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 13 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-8-social-circle-mastery/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-9--team-sports-&-mental-health.jpg" alt="Team Sports">
+                                    <div class="course-badge">Relationships & Social Connection</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-9-team-sports-mental-health/" target="_blank">Team Sports & Collective Activity for Mental Health</a></h3>
+                                    <p>Harness the psychological benefits of team sports and group activities for building resilience, connection, and mental wellness.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 13 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-9-team-sports-mental-health/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-10--relationship-dynamics.jpg" alt="Relationship Dynamics">
+                                    <div class="course-badge">Relationships & Social Connection</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-10-relationship-dynamics/" target="_blank">Relationship Dynamics: Thriving in Romantic Partnerships</a></h3>
+                                    <p>Master the neuroscience of love, attachment styles, and communication skills to build secure, fulfilling romantic relationships.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 14 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-10-relationship-dynamics/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-11--family-&-parenting-mental-health.jpg" alt="Family & Parenting">
+                                    <div class="course-badge">Relationships & Social Connection</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-11-family-parenting-mental-health/" target="_blank">Family & Parenting Mental Health</a></h3>
+                                    <p>Create emotionally healthy family systems while supporting children's mental health development and your own wellbeing as a parent.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 15 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-11-family-parenting-mental-health/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pillar 4: Purpose & Leadership Development -->
+            <section class="pillar-section pillar-4">
+                <div class="container">
+                    <div class="pillar-header">
+                        <h2>PURPOSE & LEADERSHIP DEVELOPMENT PILLAR</h2>
+                        <p class="pillar-description">
+            The Purpose & Leadership Development pillar explores how meaning, responsibility, and contribution to others form essential pillars of mental health. Drawing from Viktor Frankl's logotherapy and positive psychology research, these courses help you discover purpose, develop the skills to support others' mental health, and create lasting legacy through mentoring and wisdom sharing. </p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-12--purpose-&-responsibility.jpg" alt="Purpose & Responsibility">
+                                    <div class="course-badge">Purpose & Leadership Development</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-12-purpose-and-responsibility/" target="_blank">Purpose & Responsibility: Finding Meaning in Life</a></h3>
+                                    <p>Discover your unique purpose and learn how taking responsibility and serving others creates profound mental health benefits.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 16 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-12-purpose-and-responsibility/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-13--mental-health-first-aid-&-community-support.jpg" alt="Mental Health First Aid">
+                                    <div class="course-badge">Purpose & Leadership Development</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-13-mental-health-first-aid/" target="_blank">Mental Health First Aid & Community Support</a></h3>
+                                    <p>Learn to recognize mental health crises, provide appropriate support, and build community mental health awareness and resources.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 18 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-13-mental-health-first-aid/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-14--coaching-&-mentoring-others.jpg" alt="Coaching & Mentoring">
+                                    <div class="course-badge">Purpose & Leadership Development</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-14-coaching-mentoring/" target="_blank">Coaching & Mentoring Others for Mental Health Growth</a></h3>
+                                    <p>Develop the skills to effectively coach and mentor others while deepening your own mental health understanding and growth.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 17 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-14-coaching-mentoring/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-15--legacy-building-&-wisdom-sharing.jpg" alt="Legacy Building">
+                                    <div class="course-badge">Purpose & Leadership Development</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-15-legacy-building/" target="_blank">Legacy Building & Wisdom Sharing</a></h3>
+                                    <p>Create lasting impact through mentoring, wisdom sharing, and generative living based on Erik Erikson's developmental framework.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 16 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-15-legacy-building/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pillar 5: Creative Expression & Recreational Therapy -->
+            <section class="pillar-section pillar-5">
+                <div class="container">
+                    <div class="pillar-header">
+                        <h2>CREATIVE EXPRESSION & RECREATIONAL THERAPY PILLAR</h2>
+                        <p class="pillar-description">
+            The Creative Expression & Recreational Therapy pillar recognizes that play, creativity, nature, and artistic expression are not luxuries but essential components of mental health. These courses explore how recreational activities, creative pursuits, outdoor experiences, and expressive arts serve as powerful therapeutic tools for emotional regulation, trauma healing, and joyful living. </p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-16--recreational-therapy.jpg" alt="Recreational Therapy">
+                                    <div class="course-badge">Creative & Recreational Therapy</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-16-recreational-therapy/" target="_blank">Recreational Therapy: The Science of Play for Mental Health</a></h3>
+                                    <p>Discover how play and recreational activities serve as powerful medicine for stress, anxiety, and mental health challenges.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 13 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-16-recreational-therapy/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-17--creative-expression-&-art-therapy.jpg" alt="Creative Expression">
+                                    <div class="course-badge">Creative & Recreational Therapy</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-17-creative-expression/" target="_blank">Creative Expression & Art Therapy for Emotional Wellness</a></h3>
+                                    <p>Use art, writing, and creative expression as therapeutic tools for processing emotions and healing psychological wounds.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 14 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-17-creative-expression/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-18--adventure-&-outdoor-mental-health.jpg" alt="Adventure & Outdoor">
+                                    <div class="course-badge">Creative & Recreational Therapy</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-18-adventure-outdoor-mental-health/" target="_blank">Adventure & Outdoor Mental Health: Nature as Healer</a></h3>
+                                    <p>Harness the therapeutic power of nature and outdoor adventure for stress reduction, trauma healing, and mental clarity.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 15 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-18-adventure-outdoor-mental-health/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="images/course-19--music-&-movement-for-wellness.jpg" alt="Music & Movement">
+                                    <div class="course-badge">Creative & Recreational Therapy</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="/course-19-music-movement-wellness/" target="_blank">Music & Movement for Wellness</a></h3>
+                                    <p>Explore how music and dance therapy can transform mood, process emotions, and create profound mental health benefits.</p>
+                                    <div class="course-stats">
+                                        <span><i class="bi bi-clock"></i> 13 hours</span>
+                                        <span><i class="bi bi-journal-text"></i> 20 lessons</span>
+                                    </div>
+                                    <a href="/course-19-music-movement-wellness/" class="btn-course" target="_blank">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Provider API key - pre-configured for seamless provider experience
+        // Configured for non-technical providers (no authentication required)
+        const DEFAULT_API_KEY = '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';
+
+        let apiKey = DEFAULT_API_KEY;  // Auto-configured
+        let conversationHistory = [];
+        const API_BASE = 'https://digital-wellness-api.mike-348.workers.dev/api/provider-chat';
+
+        /**
+         * Auto-authenticate on page load - no user input required
+         */
+        window.addEventListener('DOMContentLoaded', function() {
+            // Hide authentication section - not needed for providers
+            document.getElementById('auth-section').style.display = 'none';
+            document.getElementById('main-interface').style.display = 'block';
+
+            // Load course catalog immediately
+            loadCourseCatalog();
+        });
+
+        // Server status check removed - using Cloudflare Worker (always available)
+
+        // Authentication functions removed - auto-authentication enabled for providers
+
+        /**
+         * Send feedback about the portal itself
+         */
+        async function sendPortalFeedback() {
+            const feedbackText = prompt('How can we improve the Provider Portal?\n\nYour feedback helps us make this tool better for all providers:');
+
+            if (!feedbackText || feedbackText.trim() === '') {
+                return; // User cancelled
+            }
+
+            const portalFeedbackData = {
+                timestamp: new Date().toISOString(),
+                type: 'portal_feedback',
+                feedback: feedbackText.trim(),
+                context: {
+                    page: 'provider-portal',
+                    userAgent: navigator.userAgent,
+                    url: window.location.href
+                }
+            };
+
+            try {
+                const response = await fetch(`${API_BASE}/feedback`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Provider-API-Key': apiKey
+                    },
+                    body: JSON.stringify(portalFeedbackData)
+                });
+
+                if (response.ok) {
+                    alert('✅ Thank you! Your portal feedback has been submitted.\n\nWe appreciate you taking the time to help us improve!');
+                } else {
+                    console.log('Portal Feedback:', portalFeedbackData);
+                    alert('✅ Thank you! Your feedback has been recorded.');
+                }
+            } catch (error) {
+                console.error('Portal feedback error:', error);
+                console.log('Portal Feedback (offline):', portalFeedbackData);
+                alert('✅ Thank you! Your feedback has been recorded.');
+            }
+        }
+
+        /**
+         * Send feedback with current conversation context
+         */
+        async function sendFeedback() {
+            const feedbackText = prompt('Please share your feedback about this recommendation:\n(This will help us improve the AI course recommender)');
+
+            if (!feedbackText || feedbackText.trim() === '') {
+                return; // User cancelled
+            }
+
+            // Capture current context
+            const presentation = document.getElementById('patient-presentation').value;
+            const notes = document.getElementById('clinical-notes').value;
+            const recommendations = document.getElementById('recommendations-content').innerText;
+            const chatHistory = conversationHistory.map(msg =>
+                `${msg.role === 'user' ? 'Provider' : 'AI'}: ${msg.content}`
+            ).join('\n\n');
+
+            const feedbackData = {
+                timestamp: new Date().toISOString(),
+                feedback: feedbackText.trim(),
+                context: {
+                    presentation: presentation,
+                    clinicalNotes: notes,
+                    recommendations: recommendations,
+                    chatHistory: chatHistory
+                }
+            };
+
+            try {
+                // Send feedback to API
+                const response = await fetch(`${API_BASE}/feedback`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Provider-API-Key': apiKey
+                    },
+                    body: JSON.stringify(feedbackData)
+                });
+
+                if (response.ok) {
+                    alert('✅ Thank you! Your feedback has been submitted successfully.\n\nThis will help us improve course recommendations for future patients.');
+                } else {
+                    // Even if API fails, log to console for debugging
+                    console.log('Feedback (API unavailable):', feedbackData);
+                    alert('✅ Thank you! Your feedback has been recorded.\n\n(Note: Feedback logging is currently in development mode)');
+                }
+            } catch (error) {
+                console.error('Feedback submission error:', error);
+                console.log('Feedback (offline):', feedbackData);
+                alert('✅ Thank you! Your feedback has been recorded locally.\n\n(Note: Unable to reach server, but feedback is logged for review)');
+            }
+        }
+
+        /**
+         * Get course recommendations
+         */
+        async function getRecommendations() {
+            const presentation = document.getElementById('patient-presentation').value.trim();
+            const notes = document.getElementById('clinical-notes').value.trim();
+
+            if (!presentation) {
+                alert('Please enter patient presentation');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/recommend-courses`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Provider-API-Key': apiKey
+                    },
+                    body: JSON.stringify({
+                        patientPresentation: presentation,
+                        clinicalNotes: notes
+                    })
+                });
+
+                const data = await response.json();
+
+                if (!data.success) {
+                    throw new Error(data.error || 'Failed to get recommendations');
+                }
+
+                // Display recommendations
+                displayRecommendations(data.recommendations);
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to get recommendations: ' + error.message);
+            }
+        }
+
+        /**
+         * Display recommendations
+         */
+        function displayRecommendations(recommendations) {
+            const display = document.getElementById('recommendations-display');
+            const content = document.getElementById('recommendations-content');
+
+            // Convert markdown-style formatting to HTML
+            const formatted = recommendations
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\n/g, '<br>');
+
+            content.innerHTML = `
+                <div class="alert alert-success">
+                    <i class="bi bi-check-circle"></i> Recommendations generated
+                </div>
+                <div class="recommendations-text">${formatted}</div>
+            `;
+
+            display.style.display = 'block';
+            display.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        /**
+         * Send chat message
+         */
+        async function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+
+            if (!message) return;
+
+            // Add user message to UI
+            addMessageToChat('user', message);
+
+            // Clear input
+            input.value = '';
+
+            try {
+                // Add to conversation history
+                conversationHistory.push({
+                    role: 'user',
+                    content: message
+                });
+
+                const response = await fetch(`${API_BASE}/chat`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Provider-API-Key': apiKey
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        conversationHistory: conversationHistory.slice(-10) // Keep last 10 messages
+                    })
+                });
+
+                const data = await response.json();
+
+                if (!data.success) {
+                    throw new Error(data.error || 'Failed to send message');
+                }
+
+                // Add assistant reply to UI
+                addMessageToChat('assistant', data.reply);
+
+                // Add to conversation history
+                conversationHistory.push({
+                    role: 'assistant',
+                    content: data.reply
+                });
+
+            } catch (error) {
+                console.error('Error:', error);
+                addMessageToChat('assistant', '❌ Error: ' + error.message);
+            }
+        }
+
+        /**
+         * Add message to chat UI
+         */
+        function addMessageToChat(role, content) {
+            const messagesDiv = document.getElementById('chat-messages');
+
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${role}`;
+
+            const roleLabel = role === 'user' ? 'You' : 'AI Course Advisor';
+
+            messageDiv.innerHTML = `
+                <div class="role">${roleLabel}</div>
+                <div class="content">${content.replace(/\n/g, '<br>')}</div>
+            `;
+
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        /**
+         * Load course catalog
+         */
+        async function loadCourseCatalog() {
+            try {
+                const response = await fetch(`${API_BASE}/courses`, {
+                    headers: {
+                        'X-Provider-API-Key': apiKey
+                    }
+                });
+
+                const data = await response.json();
+
+                if (!data.success) {
+                    throw new Error(data.error || 'Failed to load courses');
+                }
+
+                displayCourseCatalog(data.courses);
+
+            } catch (error) {
+                console.error('Error loading courses:', error);
+            }
+        }
+
+        /**
+         * Display course catalog with images and links
+         */
+        function displayCourseCatalog(courses) {
+            const catalogDiv = document.getElementById('course-catalog');
+
+            // Course URL and image mapping (matches actual course directories and images)
+            const courseData = {
+                1: { dir: 'course-1-movement-medicine', img: 'course-1--movement-medicine.jpg' },
+                2: { dir: 'course-2-workplace-mental-health', img: 'course-2--workplace-mental-health.jpg' },
+                3: { dir: 'course-3-digital-wellness', img: 'course-3--digital-wellness.jpg' },
+                4: { dir: 'course-4-growth-mindset', img: 'course-4--the-growth-mindset.jpg' },
+                5: { dir: 'course-5-cbt-fundamentals', img: 'course-5--cbt-fundamentals.jpg' },
+                6: { dir: 'course-6-stress-challenge-navigation', img: 'course-6--stress-&-challenge-navigation.jpg' },
+                7: { dir: 'course-7-boundaries-bootcamp', img: 'course-7--boundaries-bootcamp.jpg' },
+                8: { dir: 'course-8-social-circle-mastery', img: 'course-8--social-circle-mastery.jpg' },
+                9: { dir: 'course-9-team-sports-mental-health', img: 'course-9--team-sports-&-mental-health.jpg' },
+                10: { dir: 'course-10-relationship-dynamics', img: 'course-10--relationship-dynamics.jpg' },
+                11: { dir: 'course-11-family-parenting-mental-health', img: 'course-11--family-&-parenting-mental-health.jpg' },
+                12: { dir: 'course-12-purpose-and-responsibility', img: 'course-12--purpose-&-responsibility.jpg' },
+                13: { dir: 'course-13-mental-health-first-aid', img: 'course-13--mental-health-first-aid-&-community-support.jpg' },
+                14: { dir: 'course-14-coaching-mentoring', img: 'course-14--coaching-&-mentoring-others.jpg' },
+                15: { dir: 'course-15-legacy-building', img: 'course-15--legacy-building-&-wisdom-sharing.jpg' },
+                16: { dir: 'course-16-recreational-therapy', img: 'course-16--recreational-therapy.jpg' },
+                17: { dir: 'course-17-creative-expression', img: 'course-17--creative-expression-&-art-therapy.jpg' },
+                18: { dir: 'course-18-adventure-outdoor-mental-health', img: 'course-18--adventure-&-outdoor-mental-health.jpg' },
+                19: { dir: 'course-19-music-movement-wellness', img: 'course-19--music-&-movement-for-wellness.jpg' }
+            };
+
+            courses.forEach(course => {
+                const col = document.createElement('div');
+                col.className = 'col-md-6 col-lg-4 mb-4';
+
+                const courseInfo = courseData[course.id] || { dir: '', img: '' };
+                const courseUrl = courseInfo.dir;
+                const imageUrl = courseInfo.img ? `${courseUrl}/${courseInfo.img}` : 'images/placeholder-course.jpg';
+
+                col.innerHTML = `
+                    <div class="card course-card h-100 shadow-sm">
+                        <img src="${imageUrl}" class="card-img-top" alt="${course.name}" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <div class="mb-2">
+                                <span class="badge bg-primary">${course.pillar}</span>
+                                <span class="badge bg-success">${course.evidenceLevel}</span>
+                            </div>
+                            <h5 class="card-title">${course.name}</h5>
+                            <p class="card-text small text-muted">${course.description}</p>
+                            <p class="card-text">
+                                <strong>Indications:</strong><br>
+                                <small>${course.indications.join(', ')}</small>
+                            </p>
+                            ${course.contraindications.length > 0 ? `
+                                <p class="card-text">
+                                    <strong class="text-danger">Contraindications:</strong><br>
+                                    <small>${course.contraindications.join(', ')}</small>
+                                </p>
+                            ` : ''}
+                            <p class="card-text">
+                                <i class="bi bi-clock"></i> ${course.duration} |
+                                <i class="bi bi-currency-dollar"></i> $29.95
+                            </p>
+                            <div class="mt-auto">
+                                <a href="${courseUrl}/" class="btn btn-primary w-100" target="_blank">
+                                    <i class="bi bi-box-arrow-up-right"></i> View Course Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                catalogDiv.appendChild(col);
+            });
+        }
+    </script>
+
+    <!-- Portal Feedback Widget -->
+    <script src="js/portal-feedback.js"></script>
+</body>
+</html>

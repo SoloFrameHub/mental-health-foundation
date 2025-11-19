@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Brain on Anxiety - Lesson 1.2</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #4a90a4, #6ba3d0);
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .presentation {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide {
+            width: 90%;
+            max-width: 1200px;
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            display: none;
+            animation: slideIn 0.5s ease;
+        }
+        
+        .slide.active {
+            display: block;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        h1 {
+            color: #357a8a;
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #4a90a4;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+        
+        p {
+            color: #4a5568;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .brain-diagram {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .amygdala {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+        
+        .navigation {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+        
+        button {
+            padding: 12px 30px;
+            background: #4a90a4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #357a8a;
+        }
+        
+        .slide-number {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            color: #999;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <h1>Your Brain on Anxiety</h1>
+            <p>Understanding what's really happening inside</p>
+            <p style="margin-top: 60px; font-style: italic;">
+                "Let me show you why your brain sometimes overreacts - and why that's actually fixable."
+                <br>- Autumn Persinger, PMHNP
+            </p>
+            <span class="slide-number">1 / 5</span>
+        </div>
+        
+        <!-- Slide 2: The Amygdala -->
+        <div class="slide">
+            <h2>Meet Your Amygdala</h2>
+            <div class="brain-diagram">
+                <div class="amygdala"></div>
+            </div>
+            <p>This is your brain's alarm system. When it senses danger (real or imagined), it hits the panic button FAST - before your thinking brain can evaluate if the threat is real.</p>
+            <span class="slide-number">2 / 5</span>
+        </div>
+        
+        <!-- Slide 3: Fight, Flight, Freeze -->
+        <div class="slide">
+            <h2>Three Automatic Responses</h2>
+            <div style="display: flex; justify-content: space-around; margin: 40px 0;">
+                <div>
+                    <h3>⚔️ FIGHT</h3>
+                    <p>Irritability, anger, tension</p>
+                </div>
+                <div>
+                    <h3>🏃 FLIGHT</h3>
+                    <p>Escape urges, restlessness</p>
+                </div>
+                <div>
+                    <h3>🧊 FREEZE</h3>
+                    <p>Numbness, stuck feeling</p>
+                </div>
+            </div>
+            <p>Your body is trying to protect you - it just can't tell the difference between a tiger and a work email.</p>
+            <span class="slide-number">3 / 5</span>
+        </div>
+        
+        <!-- Slide 4: The Good News -->
+        <div class="slide">
+            <h2>The Amazing News: Neuroplasticity</h2>
+            <p style="font-size: 1.6rem; color: #4a90a4;">Your brain can literally rewire itself!</p>
+            <p>With practice, you can:</p>
+            <ul style="text-align: left; max-width: 600px; margin: 30px auto; font-size: 1.2rem;">
+                <li>Train your amygdala to be less reactive</li>
+                <li>Strengthen your "thinking brain" control</li>
+                <li>Build new, calmer neural pathways</li>
+                <li>Actually change your brain structure</li>
+            </ul>
+            <p style="font-weight: bold;">This isn't wishful thinking - it's proven neuroscience.</p>
+            <span class="slide-number">4 / 5</span>
+        </div>
+        
+        <!-- Slide 5: You Can Do This -->
+        <div class="slide">
+            <h2>You're Not Broken - You're Adaptable</h2>
+            <p>Your anxiety is your brain trying too hard to keep you safe.</p>
+            <p>In this course, you'll learn to:</p>
+            <ul style="text-align: left; max-width: 600px; margin: 30px auto; font-size: 1.2rem;">
+                <li>✓ Recognize false alarms</li>
+                <li>✓ Calm your amygdala</li>
+                <li>✓ Engage your thinking brain</li>
+                <li>✓ Build lasting change</li>
+            </ul>
+            <p style="margin-top: 40px; font-size: 1.3rem; color: #4a90a4;">
+                <strong>Let's continue learning how to work WITH your brain, not against it.</strong>
+            </p>
+            <span class="slide-number">5 / 5</span>
+        </div>
+    </div>
+    
+    <div class="navigation">
+        <button onclick="changeSlide(-1)">← Previous</button>
+        <button onclick="changeSlide(1)">Next →</button>
+    </div>
+    
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+        
+        function showSlide(n) {
+            const slides = document.getElementsByClassName('slide');
+            
+            if (n > totalSlides) currentSlide = 1;
+            if (n < 1) currentSlide = totalSlides;
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+            }
+            
+            slides[currentSlide - 1].classList.add('active');
+        }
+        
+        function changeSlide(direction) {
+            currentSlide += direction;
+            showSlide(currentSlide);
+        }
+        
+        // Auto-advance slides
+        setInterval(() => {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }, 15000); // 15 seconds per slide
+    </script>
+</body>
+</html>

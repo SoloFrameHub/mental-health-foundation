@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.15: Workplace Wellness Program Development - Workplace Mental Health Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Workplace Mental Health</a> >
+                <a href="#module-9">Module 9: Crisis & Support</a> >
+                <span>Lesson 2.15</span>
+            </div>
+
+            <h1>🏢 Workplace Wellness Program Development</h1>
+            <p class="lesson-subtitle">Design, implement, and sustain comprehensive workplace mental health programs that create lasting cultural change and support employee wellbeing at all organizational levels</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>75 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Advanced Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Program Development</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to Workplace Wellness Program Development</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to becoming a catalyst for organizational mental health transformation.</strong> Workplace wellness program development—creating comprehensive, evidence-based initiatives that support employee mental health at individual, team, and organizational levels—represents one of the highest-impact contributions professionals can make to workplace culture. Research shows that well-designed wellness programs reduce healthcare costs by $3.27 for every dollar invested, decrease absenteeism by 28%, and improve productivity by 26%. Organizations with strong wellness cultures experience 37% lower turnover and 52% higher employee engagement, demonstrating that wellness programs benefit both people and business outcomes.</p>
+
+                    <p><strong>The science is clear:</strong> Studies from the Centers for Disease Control and Prevention (CDC) and Harvard Business School demonstrate that effective workplace wellness programs addressing mental health produce measurable improvements in employee wellbeing, job satisfaction, and organizational performance. Research shows that multi-level interventions targeting individual skills, team dynamics, and organizational policies achieve 3x better outcomes than single-level programs. The World Health Organization reports that comprehensive workplace mental health programs can reduce depression and anxiety symptoms by 40% while improving work capacity and quality of life, highlighting the critical importance of systematic, evidence-based wellness program design and implementation.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Complete organizational needs assessments identifying current mental health support gaps and opportunities for improvement, design multi-level wellness programs integrating individual resources, team practices, and organizational policies, develop implementation strategies that build buy-in across stakeholders from leadership to frontline employees, practice evaluation frameworks measuring program effectiveness through multiple metrics including utilization, satisfaction, and outcomes, and build sustainability plans ensuring wellness initiatives continue evolving rather than becoming one-time projects.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Design evidence-based wellness programs that address individual, team, and organizational levels</li>
+                            <li>Navigate stakeholder engagement, resource allocation, and implementation challenges effectively</li>
+                            <li>Measure program effectiveness and demonstrate ROI to secure ongoing organizational support</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>This lesson integrates workplace wellness program research from occupational health psychology, CDC and NIOSH guidelines for comprehensive workplace health promotion, cost-benefit analysis research demonstrating wellness program ROI, implementation science frameworks for sustaining organizational change initiatives, and case studies from organizations successfully implementing mental health-focused wellness programs including best practices and lessons learned.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Wellness Program Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">📋</div>
+                        <div class="objective-text">
+                            <h3>Strategic Planning</h3>
+                            <p>Develop comprehensive wellness strategies aligned with organizational goals, employee needs, and evidence-based best practices</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🚀</div>
+                        <div class="objective-text">
+                            <h3>Implementation Excellence</h3>
+                            <p>Execute wellness initiatives effectively, manage change processes, and create sustainable program structures that engage all employees</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">📊</div>
+                        <div class="objective-text">
+                            <h3>Measurement & Improvement</h3>
+                            <p>Establish metrics, evaluate program effectiveness, and continuously improve wellness initiatives based on data and feedback</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wellness Program Science -->
+            <div class="learning-section">
+                <h2>🔬 The Science of Workplace Wellness Programs</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 How Wellness Programs Impact Organizations</h3>
+                        <p>Comprehensive wellness programs create measurable improvements in both individual and organizational outcomes:</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>💰 Economic Benefits</h4>
+                                <p>Wellness programs demonstrate ROI through reduced healthcare costs, decreased absenteeism, lower turnover, and improved productivity, with some programs showing $3-6 return for every dollar invested.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🤝 Social Capital Enhancement</h4>
+                                <p>Programs that focus on mental health and social connection strengthen workplace relationships, improve team cohesion, and create positive organizational culture that supports overall business goals.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🧠 Cognitive Performance Improvement</h4>
+                                <p>Mental health-focused wellness initiatives enhance cognitive function, creativity, decision-making, and problem-solving capacity across the organization, leading to better business outcomes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Wellness Program Research</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">3.27:1</div>
+                            <p>Average ROI for comprehensive wellness programs</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">26%</div>
+                            <p>Reduction in healthcare costs with mental health focus</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">85%</div>
+                            <p>Employee satisfaction increase with comprehensive programs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Development Assessment -->
+            <div class="interactive-section">
+                <h2>📊 Wellness Program Development Assessment</h2>
+                <p>Evaluate your organization's readiness and capacity for implementing comprehensive workplace wellness programs:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>📋 Organizational Readiness</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Rate your organization's wellness program readiness (1-10)</p>
+                                <p><strong>Goal:</strong> Assess implementation readiness and capacity</p>
+                                <div class="test-input">
+                                    <label>Leadership commitment to employee mental health (1-10):</label>
+                                    <input type="number" id="leadership-commitment" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Available resources and budget for wellness initiatives (1-10):</label>
+                                    <input type="number" id="resource-availability" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Current workplace culture supports mental health discussions (1-10):</label>
+                                    <input type="number" id="culture-support" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Employee engagement and participation likelihood (1-10):</label>
+                                    <input type="number" id="engagement-potential" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <button class="test-button" data-action="calculateReadiness">Assess Readiness</button>
+                            </div>
+                            <div class="test-result" id="readiness-result"></div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>🎯 Program Focus Assessment</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Rate the importance of different wellness program components (1-10)</p>
+                                <p><strong>Goal:</strong> Identify priority areas for program development</p>
+                                <div class="test-input">
+                                    <label>Stress management and resilience training (1-10):</label>
+                                    <input type="number" id="stress-priority" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Mental health awareness and education (1-10):</label>
+                                    <input type="number" id="education-priority" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Work-life balance and flexibility initiatives (1-10):</label>
+                                    <input type="number" id="balance-priority" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Crisis support and intervention systems (1-10):</label>
+                                    <input type="number" id="crisis-priority" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <button class="test-button" data-action="calculatePriorities">Assess Priorities</button>
+                            </div>
+                            <div class="test-result" id="priorities-result"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Development Framework -->
+            <div class="strategy-section">
+                <h2>🛠️ Wellness Program Development Framework</h2>
+
+                <div class="strategy-grid">
+                    <div class="strategy-card">
+                        <h3>📋 Strategic Planning Phase</h3>
+                        <div class="strategy-content">
+                            <h4>🎯 Needs Assessment</h4>
+                            <ul>
+                                <li><strong>Employee Surveys:</strong> Comprehensive mental health and wellness needs assessment</li>
+                                <li><strong>Focus Groups:</strong> Qualitative insights into employee experiences and preferences</li>
+                                <li><strong>Data Analysis:</strong> Review existing health, performance, and engagement metrics</li>
+                                <li><strong>Stakeholder Interviews:</strong> Input from leadership, HR, managers, and employee representatives</li>
+                            </ul>
+
+                            <h4>📊 Program Design</h4>
+                            <ul>
+                                <li><strong>Goal Setting:</strong> SMART objectives aligned with business and employee outcomes</li>
+                                <li><strong>Component Selection:</strong> Evidence-based interventions matched to identified needs</li>
+                                <li><strong>Resource Planning:</strong> Budget, staffing, and infrastructure requirements</li>
+                                <li><strong>Timeline Development:</strong> Phased implementation approach with key milestones</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="strategy-card">
+                        <h3>🚀 Implementation Excellence</h3>
+                        <div class="strategy-content">
+                            <h4>🎬 Launch Strategy</h4>
+                            <ul>
+                                <li><strong>Leadership Communication:</strong> Clear messaging about program value and commitment</li>
+                                <li><strong>Pilot Programs:</strong> Small-scale testing with representative groups</li>
+                                <li><strong>Training & Support:</strong> Manager and employee education on program components</li>
+                                <li><strong>Marketing Campaign:</strong> Multi-channel promotion to drive awareness and participation</li>
+                            </ul>
+
+                            <h4>🔄 Sustained Engagement</h4>
+                            <ul>
+                                <li><strong>Regular Communication:</strong> Ongoing updates, success stories, and program highlights</li>
+                                <li><strong>Incentive Systems:</strong> Recognition and rewards for participation and outcomes</li>
+                                <li><strong>Peer Champions:</strong> Employee wellness advocates and program ambassadors</li>
+                                <li><strong>Continuous Feedback:</strong> Regular input collection and program adjustments</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="strategy-card">
+                        <h3>📊 Measurement & Improvement</h3>
+                        <div class="strategy-content">
+                            <h4>📈 Key Performance Indicators</h4>
+                            <ul>
+                                <li><strong>Participation Metrics:</strong> Enrollment rates, session attendance, program completion</li>
+                                <li><strong>Health Outcomes:</strong> Stress levels, mental health scores, absenteeism rates</li>
+                                <li><strong>Business Impact:</strong> Productivity, engagement, turnover, healthcare costs</li>
+                                <li><strong>Cultural Indicators:</strong> Psychological safety, stigma reduction, help-seeking behavior</li>
+                            </ul>
+
+                            <h4>🔧 Continuous Improvement</h4>
+                            <ul>
+                                <li><strong>Regular Evaluation:</strong> Quarterly assessments of program effectiveness</li>
+                                <li><strong>Data-Driven Adjustments:</strong> Program modifications based on outcome data</li>
+                                <li><strong>Best Practice Integration:</strong> Incorporation of new research and successful practices</li>
+                                <li><strong>Stakeholder Reviews:</strong> Regular feedback sessions with key stakeholders</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Components Library -->
+            <div class="training-section">
+                <h2>📚 Comprehensive Program Components Library</h2>
+
+                <div class="component-grid">
+                    <div class="component-card">
+                        <h3>🧠 Mental Health Education</h3>
+                        <div class="component-content">
+                            <h4>Core Components:</h4>
+                            <ul>
+                                <li>Mental health literacy workshops</li>
+                                <li>Stress and anxiety management training</li>
+                                <li>Depression awareness and support</li>
+                                <li>Suicide prevention education</li>
+                                <li>Mental health first aid certification</li>
+                            </ul>
+                            <h4>Implementation Options:</h4>
+                            <ul>
+                                <li>Lunch-and-learn sessions</li>
+                                <li>Online learning modules</li>
+                                <li>Expert speaker series</li>
+                                <li>Peer education programs</li>
+                                <li>Manager-specific training tracks</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <h3>🛡️ Stress & Resilience</h3>
+                        <div class="component-content">
+                            <h4>Core Components:</h4>
+                            <ul>
+                                <li>Stress management workshops</li>
+                                <li>Resilience building programs</li>
+                                <li>Mindfulness and meditation training</li>
+                                <li>Cognitive behavioral techniques</li>
+                                <li>Time management and prioritization</li>
+                            </ul>
+                            <h4>Implementation Options:</h4>
+                            <ul>
+                                <li>Group workshops and seminars</li>
+                                <li>Individual coaching sessions</li>
+                                <li>Mobile app-based interventions</li>
+                                <li>Retreat and intensive programs</li>
+                                <li>Team-based challenges</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <h3>🤝 Support Systems</h3>
+                        <div class="component-content">
+                            <h4>Core Components:</h4>
+                            <ul>
+                                <li>Employee Assistance Programs (EAP)</li>
+                                <li>Peer support networks</li>
+                                <li>Manager training programs</li>
+                                <li>Crisis intervention protocols</li>
+                                <li>Mental health resource libraries</li>
+                            </ul>
+                            <h4>Implementation Options:</h4>
+                            <ul>
+                                <li>24/7 helpline services</li>
+                                <li>On-site counseling services</li>
+                                <li>Peer mentor programs</li>
+                                <li>Support group facilitation</li>
+                                <li>Digital mental health platforms</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <h3>⚖️ Work-Life Integration</h3>
+                        <div class="component-content">
+                            <h4>Core Components:</h4>
+                            <ul>
+                                <li>Flexible work arrangements</li>
+                                <li>Time-off policies and sabbaticals</li>
+                                <li>Childcare and eldercare support</li>
+                                <li>Financial wellness programs</li>
+                                <li>Recreation and social activities</li>
+                            </ul>
+                            <h4>Implementation Options:</h4>
+                            <ul>
+                                <li>Remote work and hybrid policies</li>
+                                <li>Flexible scheduling options</li>
+                                <li>On-site wellness facilities</li>
+                                <li>Family support services</li>
+                                <li>Community partnership programs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <h3>🏢 Environmental Wellness</h3>
+                        <div class="component-content">
+                            <h4>Core Components:</h4>
+                            <ul>
+                                <li>Workspace design optimization</li>
+                                <li>Quiet spaces and retreat areas</li>
+                                <li>Natural lighting and air quality</li>
+                                <li>Noise reduction initiatives</li>
+                                <li>Technology wellness policies</li>
+                            </ul>
+                            <h4>Implementation Options:</h4>
+                            <ul>
+                                <li>Biophilic design elements</li>
+                                <li>Meditation and relaxation rooms</li>
+                                <li>Ergonomic workspace assessments</li>
+                                <li>Digital wellness guidelines</li>
+                                <li>Movement-friendly environments</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <h3>📊 Data & Analytics</h3>
+                        <div class="component-content">
+                            <h4>Core Components:</h4>
+                            <ul>
+                                <li>Wellness program dashboards</li>
+                                <li>Employee health risk assessments</li>
+                                <li>Engagement and satisfaction surveys</li>
+                                <li>ROI and outcome measurements</li>
+                                <li>Predictive analytics for risk identification</li>
+                            </ul>
+                            <h4>Implementation Options:</h4>
+                            <ul>
+                                <li>Real-time monitoring systems</li>
+                                <li>Personalized feedback reports</li>
+                                <li>Benchmark comparison tools</li>
+                                <li>Trend analysis and forecasting</li>
+                                <li>Privacy-protected data systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Program Builder -->
+            <div class="tools-section">
+                <h2>🛠️ Interactive Program Builder</h2>
+
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <h3>🏗️ Program Design Wizard</h3>
+                        <p>Step-by-step guidance for creating a customized workplace wellness program.</p>
+                        <div class="tool-interface">
+                            <select class="tool-select">
+                                <option>Select organization size</option>
+                                <option>Small (under 100 employees)</option>
+                                <option>Medium (100-500 employees)</option>
+                                <option>Large (500-2000 employees)</option>
+                                <option>Enterprise (2000+ employees)</option>
+                            </select>
+                            <select class="tool-select">
+                                <option>Select industry type</option>
+                                <option>Healthcare</option>
+                                <option>Technology</option>
+                                <option>Manufacturing</option>
+                                <option>Financial Services</option>
+                                <option>Education</option>
+                                <option>Other</option>
+                            </select>
+                            <input type="range" min="1" max="5" value="3" class="tool-slider" id="budget-level">
+                            <label>Budget Level: <span id="budget-value">Medium</span></label>
+                            <button class="tool-button" data-action="generateProgram">Generate Custom Program</button>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <h3>📊 ROI Calculator</h3>
+                        <p>Estimate the financial return on investment for your wellness program initiatives.</p>
+                        <div class="tool-interface">
+                            <input type="number" placeholder="Number of employees" class="tool-input">
+                            <input type="number" placeholder="Average salary ($)" class="tool-input">
+                            <input type="number" placeholder="Current turnover rate (%)" class="tool-input">
+                            <input type="number" placeholder="Current absenteeism rate (%)" class="tool-input">
+                            <input type="number" placeholder="Annual program cost ($)" class="tool-input">
+                            <button class="tool-button" data-action="calculateROI">Calculate Program ROI</button>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <h3>📅 Implementation Timeline</h3>
+                        <p>Create a detailed timeline for launching and sustaining your wellness program.</p>
+                        <div class="tool-interface">
+                            <select class="tool-select">
+                                <option>Select implementation approach</option>
+                                <option>Pilot program (3-6 months)</option>
+                                <option>Phased rollout (6-12 months)</option>
+                                <option>Full launch (immediate)</option>
+                                <option>Gradual expansion (12+ months)</option>
+                            </select>
+                            <div class="priority-checklist">
+                                <label><input type="checkbox"> Leadership training</label>
+                                <label><input type="checkbox"> Employee education</label>
+                                <label><input type="checkbox"> Support systems</label>
+                                <label><input type="checkbox"> Environmental changes</label>
+                                <label><input type="checkbox"> Measurement systems</label>
+                            </div>
+                            <button class="tool-button" data-action="generateTimeline">Generate Implementation Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Studies -->
+            <div class="application-section">
+                <h2>🌍 Successful Wellness Program Case Studies</h2>
+
+                <div class="case-studies">
+                    <div class="case-study">
+                        <h3>🏢 Case Study 1: Tech Company Transformation</h3>
+                        <div class="case-content">
+                            <p><strong>Organization:</strong> 1,500-employee software company experiencing high turnover and burnout rates.</p>
+                            <p><strong>Challenge:</strong> 68% of employees reported high stress, 23% annual turnover, declining productivity and innovation.</p>
+                            <p><strong>Program Components:</strong> Comprehensive mental health education, manager training, mindfulness programs, flexible work policies, on-site counseling, and environmental wellness improvements.</p>
+                            <p><strong>Outcomes (18 months):</strong> 45% reduction in stress levels, 19% decrease in turnover, 32% improvement in employee engagement, $2.8M cost savings.</p>
+                            <div class="case-lessons">
+                                <h4>Key Success Factors:</h4>
+                                <ul>
+                                    <li>Strong leadership commitment and visible participation</li>
+                                    <li>Comprehensive manager training on mental health support</li>
+                                    <li>Integration of wellness into company culture and values</li>
+                                    <li>Data-driven approach with regular measurement and adjustment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study">
+                        <h3>🏥 Case Study 2: Healthcare System Wellness</h3>
+                        <div class="case-content">
+                            <p><strong>Organization:</strong> 5,000-employee regional healthcare system facing pandemic-related stress and trauma.</p>
+                            <p><strong>Challenge:</strong> Secondary trauma, emotional exhaustion, high absenteeism, and declining patient satisfaction scores.</p>
+                            <p><strong>Program Components:</strong> Trauma-informed wellness approach, peer support programs, resilience training, crisis intervention systems, and family support services.</p>
+                            <p><strong>Outcomes (12 months):</strong> 38% reduction in burnout symptoms, 29% decrease in turnover intentions, improved patient satisfaction, enhanced team cohesion.</p>
+                            <div class="case-lessons">
+                                <h4>Key Success Factors:</h4>
+                                <ul>
+                                    <li>Trauma-informed approach addressing specific industry stressors</li>
+                                    <li>Peer support programs leveraging existing relationships</li>
+                                    <li>Flexible program delivery accommodating shift work</li>
+                                    <li>Integration with existing employee assistance programs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="progress-section">
+                <h2>📈 Your Program Development Progress</h2>
+                <div class="progress-grid">
+                    <div class="progress-item">
+                        <h3>📋 Strategic Planning</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <h3>🚀 Implementation Skills</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <h3>📊 Measurement & Evaluation</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-nav">
+            <a href="lesson-2-14-crisis-intervention.html" class="nav-button prev-button">
+                ← Previous: Crisis Intervention
+            </a>
+            <a href="lesson-2-16-leadership-mental-health.html" class="nav-button next-button">
+                Next: Leadership Mental Health →
+            </a>
+        </div>
+    </div>
+
+    <script src="js/lesson-script.js"></script>
+    <script src="js/workplace-wellness.js"></script>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Your Anxiety Toolkit - Autumn Persinger</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4a90a4, #6ba3d0);
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .presentation-container {
+            width: 90%;
+            max-width: 1200px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .slide {
+            padding: 60px;
+            text-align: center;
+            min-height: 500px;
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .slide h1 {
+            color: #357a8a;
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+        .slide h2 {
+            color: #4a90a4;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+        .slide p {
+            color: #4a5568;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        .provider-intro {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 40px;
+        }
+        .provider-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #87a96b, #4a90a4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        .slide-navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 60px;
+            background: #f7f8f6;
+        }
+        .btn-nav {
+            padding: 12px 30px;
+            background: #4a90a4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-nav:hover {
+            background: #357a8a;
+            transform: translateY(-2px);
+        }
+        .btn-nav:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        .slide-counter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+            transition: all 0.3s;
+        }
+        .dot.active {
+            background: #4a90a4;
+            width: 30px;
+            border-radius: 5px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Title & Provider Introduction -->
+        <div class="slide active" id="slide1">
+            <h1>Welcome to Your Anxiety Toolkit</h1>
+            <div class="provider-intro">
+                <div class="provider-photo">👩‍⚕️</div>
+                <div>
+                    <h2>Autumn Persinger, PMHNP-BC</h2>
+                    <p>Hi, I'm Autumn. I'm a psychiatric nurse practitioner at Real Psychiatric Services, and I'll be your guide on this transformative journey.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Your Journey Ahead -->
+        <div class="slide" id="slide2">
+            <h2>Your Journey Over the Next 8 Weeks</h2>
+            <p><strong>Week 1-2:</strong> Understanding your anxiety patterns</p>
+            <p><strong>Week 3-4:</strong> Building your cognitive toolkit</p>
+            <p><strong>Week 5-6:</strong> Mastering emotional regulation</p>
+            <p><strong>Week 7-8:</strong> Creating lasting change</p>
+        </div>
+
+        <!-- Slide 3: What You'll Accomplish -->
+        <div class="slide" id="slide3">
+            <h2>What You'll Accomplish</h2>
+            <p>✓ Recognize your unique anxiety triggers</p>
+            <p>✓ Build a personalized toolkit of coping strategies</p>
+            <p>✓ Transform anxious thoughts into balanced thinking</p>
+            <p>✓ Create sustainable practices for long-term wellness</p>
+        </div>
+
+        <!-- Slide 4: Why This Matters -->
+        <div class="slide" id="slide4">
+            <h2>Why This Matters Clinically</h2>
+            <p>Anxiety affects 1 in 3 adults at some point in their lives. The techniques you'll learn are evidence-based, drawn from CBT and DBT - proven to reduce anxiety symptoms by up to 60%.</p>
+            <p><strong>You're not broken. You're not weak. You're human.</strong></p>
+        </div>
+
+        <!-- Slide 5: Your Support System -->
+        <div class="slide" id="slide5">
+            <h2>You're Not Alone</h2>
+            <p>🤝 <strong>Community Forum:</strong> Connect with others on similar journeys</p>
+            <p>🤖 <strong>AI Support:</strong> 24/7 guidance when you need it</p>
+            <p>👩‍⚕️ <strong>Provider Access:</strong> Regular Q&A sessions</p>
+            <p>📚 <strong>Resource Library:</strong> Tools, worksheets, and guides</p>
+        </div>
+
+        <!-- Slide 6: Let's Begin -->
+        <div class="slide" id="slide6">
+            <h2>Let's Begin Your Transformation</h2>
+            <p><strong>Remember:</strong> Every expert was once a beginner. Every master was once a disaster. You're exactly where you need to be.</p>
+            <p style="font-size: 1.8rem; color: #87a96b; margin-top: 40px;">🌱 Your journey to calm starts now.</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="slide-navigation">
+            <button class="btn-nav" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+            <div class="slide-counter">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <button class="btn-nav" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 6;
+
+        function showSlide(n) {
+            const slides = document.getElementsByClassName('slide');
+            const dots = document.getElementsByClassName('dot');
+            
+            if (n > totalSlides) currentSlide = totalSlides;
+            if (n < 1) currentSlide = 1;
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+            }
+            
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('active');
+            }
+            
+            slides[currentSlide - 1].classList.add('active');
+            dots[currentSlide - 1].classList.add('active');
+            
+            // Update button states
+            document.getElementById('prevBtn').disabled = currentSlide === 1;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            showSlide(currentSlide);
+        }
+
+        // Initialize
+        showSlide(1);
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+    </script>
+</body>
+</html>

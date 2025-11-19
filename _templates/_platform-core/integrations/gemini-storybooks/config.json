@@ -1,0 +1,419 @@
+{
+  "integration_name": "gemini-storybooks",
+  "version": "1.0.0",
+  "status": "planned",
+  "description": "AI-generated narrative companions for courses using Google Gemini",
+  "platform_type": "content_generation",
+  "category": "educational_tools",
+
+  "modes": {
+    "symptom-oriented": {
+      "name": "Clinical Case Studies",
+      "description": "Evidence-based recovery narratives showing tool application",
+      "tone": "clinical, empathetic, hopeful",
+      "structure": {
+        "chapters": 6,
+        "words_per_chapter": "800-1000",
+        "reading_time": "5-7 minutes per chapter"
+      },
+      "features": [
+        "Provider commentary throughout",
+        "GAD-7/PHQ-9 integration",
+        "Crisis resources embedded",
+        "Clinical accuracy validation",
+        "Tool demonstration in context"
+      ],
+      "protagonist_profile": {
+        "age_range": "25-45",
+        "presentation": "Active symptoms seeking treatment",
+        "journey_arc": "Crisis → Diagnosis → Treatment → Recovery → Maintenance",
+        "clinical_accuracy": "Board-certified PMHNP reviewed"
+      },
+      "example_stories": [
+        {
+          "title": "Alex's Anxiety Journey",
+          "course": "anxiety-toolkit",
+          "protagonist": "Alex, 32, software engineer with panic disorder",
+          "chapters": [
+            "The Breaking Point (first panic attack)",
+            "Getting Diagnosed (GAD-7 assessment)",
+            "Learning to Breathe (4-7-8 technique)",
+            "Challenging Thoughts (cognitive restructuring)",
+            "Facing Fears (exposure therapy)",
+            "Life After Anxiety (maintenance and growth)"
+          ]
+        }
+      ]
+    },
+
+    "five-pillars": {
+      "name": "Wellness Transformations",
+      "description": "Inspirational stories of personal growth and human flourishing",
+      "tone": "supportive, aspirational, growth-oriented",
+      "structure": {
+        "chapters": 6,
+        "words_per_chapter": "800-1000",
+        "reading_time": "5-7 minutes per chapter"
+      },
+      "features": [
+        "Five Pillars framework integration",
+        "Wellness check-in prompts",
+        "Reflective journaling integration",
+        "Community connection themes",
+        "Sustainable lifestyle changes"
+      ],
+      "protagonist_profile": {
+        "age_range": "25-55",
+        "presentation": "Seeking wellness optimization and growth",
+        "journey_arc": "Burnout → Awareness → Action → Integration → Thriving",
+        "relatability": "Professional, parent, student personas"
+      },
+      "example_stories": [
+        {
+          "title": "From Stressed to Strong: Maya's Story",
+          "course": "five-pillars-overview",
+          "protagonist": "Maya, 34, startup founder experiencing burnout",
+          "chapters": [
+            "Burnout at 32 (wake-up call)",
+            "Movement Medicine (first steps)",
+            "Boundaries Bootcamp (learning to say no)",
+            "Nourishment & Recovery (sleep and nutrition)",
+            "Social Connection (finding support)",
+            "Purpose Through Responsibility (sustainable success)"
+          ]
+        }
+      ]
+    },
+
+    "provider-stories": {
+      "name": "Provider Narratives",
+      "description": "Behind-the-scenes stories from clinical practice",
+      "tone": "authentic, professional, personal",
+      "structure": {
+        "chapters": "4-6",
+        "words_per_chapter": "600-800",
+        "reading_time": "4-6 minutes per chapter"
+      },
+      "features": [
+        "Provider personal journey",
+        "Clinical philosophy and approach",
+        "Memorable patient cases (anonymized)",
+        "Decision-making insights",
+        "Vision for mental health care"
+      ],
+      "protagonist_profile": {
+        "provider": "David Glenn, PMHNP-BC",
+        "journey_themes": [
+          "Why I became a PMHNP",
+          "Philosophy behind Five Pillars",
+          "Lessons from clinical practice",
+          "Vision for accessible care"
+        ]
+      },
+      "example_stories": [
+        {
+          "title": "A Day in the Life: PMHNP Practice",
+          "provider": "David Glenn",
+          "chapters": [
+            "My Journey to Mental Health",
+            "The Five Pillars Philosophy",
+            "Lessons from the Clinic",
+            "Why I Created This Platform",
+            "The Future of Mental Health Care"
+          ]
+        }
+      ]
+    }
+  },
+
+  "technical_implementation": {
+    "api": {
+      "service": "Google Gemini",
+      "model": "gemini-2.5-pro",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent",
+      "authentication": "API Key (GEMINI_API_KEY)",
+      "rate_limits": {
+        "free_tier": "15 requests/minute",
+        "paid_tier": "360 requests/minute"
+      }
+    },
+
+    "generation_script": {
+      "location": "scripts/gemini/gemini-storybook-generator.py",
+      "status": "planned",
+      "dependencies": [
+        "google-generativeai",
+        "python-dotenv"
+      ]
+    },
+
+    "templates": {
+      "location": "config/gemini/storybook-templates/",
+      "files": [
+        "clinical-case-study.txt",
+        "wellness-transformation.txt",
+        "provider-story.txt"
+      ]
+    },
+
+    "output_format": {
+      "type": "HTML5",
+      "base_template": "_platform-core/templates/base/",
+      "styling": "lesson-styles.css",
+      "mobile_responsive": true,
+      "accessibility": "WCAG 2.1 AA compliant"
+    }
+  },
+
+  "integration_points": {
+    "course_landing_pages": {
+      "description": "Companion story preview card",
+      "placement": "Below course overview",
+      "cta": "Read Free Chapter 1 →"
+    },
+
+    "between_modules": {
+      "description": "Story checkpoint updates",
+      "placement": "Module completion screens",
+      "content": "See how [protagonist] applied this module's tools"
+    },
+
+    "email_sequences": {
+      "description": "Story-driven onboarding",
+      "frequency": "1 chapter per day for 6 days",
+      "goal": "Engagement and course preview"
+    },
+
+    "marketing_materials": {
+      "description": "Social media content",
+      "formats": [
+        "Quote graphics from stories",
+        "Chapter preview snippets",
+        "Character profile cards"
+      ]
+    },
+
+    "community_features": {
+      "description": "Discussion prompts",
+      "integration": "NodeBB forum",
+      "topics": [
+        "Share your story",
+        "What would you do in [situation]?",
+        "Ask the provider Q&A"
+      ]
+    }
+  },
+
+  "quality_validation": {
+    "automated_checks": [
+      "Provider voice consistency",
+      "Clinical accuracy (symptom-oriented)",
+      "Crisis resources included",
+      "Reading level appropriate (8th-10th grade)",
+      "Chapter length within range"
+    ],
+
+    "manual_review": {
+      "provider_approval": "David Glenn, PMHNP-BC",
+      "quality_gates": [
+        "ChatGPT Test: Unique value vs. AI",
+        "Provider Prescription Test: Would prescribe",
+        "Emotional Connection Test: Authentic voice",
+        "Practice Test: Demonstrates tool application"
+      ]
+    },
+
+    "student_validation": {
+      "completion_rate": "Target: 70%+ per chapter",
+      "engagement_score": "Time on page, scroll depth",
+      "feedback_survey": "Did this story help? (Yes/No + comments)"
+    }
+  },
+
+  "content_structure": {
+    "protagonist_profiles": {
+      "location": "data/gemini/protagonist-profiles/",
+      "format": "JSON",
+      "fields": [
+        "name",
+        "age",
+        "occupation",
+        "presenting_problem",
+        "demographics",
+        "personality_traits",
+        "goals",
+        "obstacles"
+      ]
+    },
+
+    "story_arcs": {
+      "structure": "6-act narrative",
+      "acts": [
+        "Setup: Introduce protagonist and struggle",
+        "Catalyst: Event that triggers change",
+        "Rising Action: Learning and applying tools",
+        "Midpoint: Progress and setbacks",
+        "Crisis: Major challenge to overcome",
+        "Resolution: Integration and growth"
+      ]
+    },
+
+    "chapter_template": {
+      "opening": "Scene setting (200-300 words)",
+      "development": "Tool application or growth (400-500 words)",
+      "provider_commentary": "Clinical context or encouragement (100-150 words)",
+      "closing": "Reflection and preview (100-150 words)",
+      "course_link": "Related lesson or tool",
+      "discussion_prompt": "Reader engagement question"
+    }
+  },
+
+  "cost_analysis": {
+    "api_costs": {
+      "per_chapter": "$0.15-0.30",
+      "per_storybook": "$1-2 (6 chapters)",
+      "pilot_phase": "$3-6 (3 storybooks)",
+      "scale_phase": "$16-20 (10 storybooks)"
+    },
+
+    "development_costs": {
+      "script_development": "4-6 hours",
+      "template_creation": "2-3 hours",
+      "per_storybook_generation": "1-1.5 hours",
+      "quality_review": "30-45 minutes per storybook"
+    },
+
+    "total_investment": {
+      "pilot": "$300-450 labor + $3-6 API",
+      "scale": "$1,200-1,500 labor + $16-20 API",
+      "enhanced": "$2,000-3,000 labor + $50-100 API"
+    }
+  },
+
+  "success_metrics": {
+    "engagement": {
+      "chapter_completion_rate": "Target: 70%+",
+      "time_on_page": "Target: 5-7 minutes",
+      "story_to_course_conversion": "Target: 30%+"
+    },
+
+    "quality": {
+      "provider_approval": "Required: 100%",
+      "quality_gate_pass_rate": "Target: 90%+",
+      "clinical_accuracy": "Required: 100%"
+    },
+
+    "business_impact": {
+      "lesson_completion_boost": "Target: +30-50%",
+      "course_referrals": "Increased sharing",
+      "subscription_retention": "Story anticipation",
+      "marketing_reach": "Social media engagement"
+    }
+  },
+
+  "implementation_phases": {
+    "phase_1_pilot": {
+      "timeline": "1-2 weeks",
+      "deliverables": [
+        "Alex's Anxiety Journey (symptom-oriented)",
+        "From Stressed to Strong (five-pillars)",
+        "A Day in the Life: PMHNP (provider story)"
+      ],
+      "validation": "Student engagement + provider approval",
+      "decision_gate": "Proceed to scale if 70%+ engagement"
+    },
+
+    "phase_2_scale": {
+      "timeline": "2-3 weeks",
+      "deliverables": [
+        "1 story per Tier 1 course (4 stories)",
+        "Overview stories (2 stories)",
+        "Provider collection (4 stories)"
+      ],
+      "integration": "Course platform + marketing materials",
+      "validation": "+30% lesson completion boost"
+    },
+
+    "phase_3_enhanced": {
+      "timeline": "1 month",
+      "features": [
+        "Visual storybooks (AI-generated illustrations)",
+        "Interactive narratives (branching paths)",
+        "Audio narration (text-to-speech)"
+      ],
+      "investment": "Higher cost for visual/interactive",
+      "validation": "Premium experience differentiation"
+    }
+  },
+
+  "dependencies": {
+    "prerequisites": [
+      "Gemini API configured (COMPLETE)",
+      "Provider voice profiles extracted",
+      "Core courses available for reference",
+      "Quality validation system operational"
+    ],
+
+    "required_before_start": [
+      "Provider approval (David Glenn buy-in)",
+      "3-5 protagonist profiles developed",
+      "Story arc templates created",
+      "Integration points identified"
+    ]
+  },
+
+  "related_integrations": {
+    "typebot": {
+      "integration": "Story checkpoints trigger Typebot reflections",
+      "example": "Chapter 3 → Typebot: 'Try the breathing technique Alex used'"
+    },
+
+    "flowise": {
+      "integration": "Story-aware chatbot",
+      "example": "Ask questions about Alex's recovery journey"
+    },
+
+    "tinymce": {
+      "integration": "Story-prompted journaling",
+      "example": "Reflect on your own experience like Maya did"
+    },
+
+    "nodebb": {
+      "integration": "Story discussion threads",
+      "example": "Share your reaction to Chapter 4"
+    }
+  },
+
+  "future_enhancements": {
+    "user_generated_stories": {
+      "description": "Community-submitted recovery stories",
+      "moderation": "Provider review required",
+      "impact": "Peer support and authenticity"
+    },
+
+    "video_storybooks": {
+      "description": "Provider-narrated video stories",
+      "production": "Professional or AI-generated video",
+      "impact": "Higher engagement, premium feel"
+    },
+
+    "vr_story_experiences": {
+      "description": "Immersive recovery journey simulations",
+      "technology": "VR headsets",
+      "impact": "Cutting-edge differentiation"
+    },
+
+    "storybook_courses": {
+      "description": "Entire courses delivered as narratives",
+      "format": "Story-first, tools embedded naturally",
+      "impact": "Revolutionary learning experience"
+    }
+  },
+
+  "documentation": {
+    "roadmap": "project-docs/GEMINI-STORYBOOKS-ROADMAP.md",
+    "templates": "config/gemini/storybook-templates/",
+    "examples": "data/gemini/example-stories/",
+    "integration_guide": "docs/technical-guides/STORYBOOKS-INTEGRATION-GUIDE.md (to be created)"
+  }
+}

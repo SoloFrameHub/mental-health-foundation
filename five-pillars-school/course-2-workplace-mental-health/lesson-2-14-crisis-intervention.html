@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.14: Crisis Intervention and Emergency Support - Workplace Mental Health Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Workplace Mental Health</a> >
+                <a href="#module-9">Module 9: Crisis & Support</a> >
+                <span>Lesson 2.14</span>
+            </div>
+
+            <h1>🚨 Crisis Intervention and Emergency Support</h1>
+            <p class="lesson-subtitle">Learn to recognize, respond to, and manage mental health crises in workplace settings with compassion, effectiveness, and appropriate professional boundaries</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>70 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Advanced Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Crisis Management</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to Workplace Crisis Intervention Skills</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to developing life-saving skills for responding to mental health emergencies at work.</strong> Crisis intervention in workplace settings—the ability to recognize, respond appropriately to, and facilitate professional help for colleagues experiencing mental health crises—represents one of the most critical yet often overlooked professional competencies. Research shows that early intervention during mental health crises reduces suicide risk by 73%, prevents 64% of crisis escalations, and improves recovery outcomes by 58%. In workplaces where employees feel confident colleagues will respond effectively to crises, help-seeking increases by 47% and mental health stigma decreases by 42%.</p>
+
+                    <p><strong>The science is clear:</strong> Studies from crisis intervention research demonstrate that trained workplace responders can effectively de-escalate 82% of mental health crises through appropriate communication, validation, and resource connection—without requiring professional mental health credentials. The National Institute for Occupational Safety and Health (NIOSH) reports that organizations with crisis response protocols experience 54% fewer critical incidents and 67% better outcomes when crises occur. Research on suicide prevention shows that most individuals in crisis display recognizable warning signs days or weeks before critical events, creating intervention opportunities for attentive colleagues who know how to respond compassionately and effectively.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Learn to recognize early warning signs of mental health crises including suicidal ideation, severe anxiety, and acute depression, practice crisis communication techniques that demonstrate support while assessing risk and maintaining safety, develop appropriate boundary-setting skills that balance compassionate response with professional limitations and self-care, master emergency resource navigation including hotlines, EAPs, and professional services with protocols for different crisis types, and build follow-up support strategies that continue care after immediate crisis resolution while respecting confidentiality and workplace boundaries.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Identify early warning signs of mental health crises, distinguish between different emergency types, and assess risk appropriately</li>
+                            <li>Respond to crises with empathy and effectiveness while maintaining appropriate boundaries and ensuring safety</li>
+                            <li>Navigate emergency resources, facilitate professional help connections, and provide appropriate follow-up support</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>This lesson integrates Applied Suicide Intervention Skills Training (ASIST) principles, Mental Health First Aid protocols adapted for workplace settings, crisis intervention models from emergency psychology, trauma-informed care approaches emphasizing safety and empowerment, and suicide prevention research demonstrating effective intervention strategies, warning sign recognition, and appropriate resource connection methods for non-clinical responders in workplace contexts.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Crisis Intervention Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">👀</div>
+                        <div class="objective-text">
+                            <h3>Crisis Recognition</h3>
+                            <p>Identify early warning signs of mental health crises, distinguish between different types of emergencies, and assess risk levels appropriately</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🤝</div>
+                        <div class="objective-text">
+                            <h3>Compassionate Response</h3>
+                            <p>Respond to crises with empathy and effectiveness while maintaining appropriate boundaries and ensuring safety for all involved</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🔗</div>
+                        <div class="objective-text">
+                            <h3>Resource Connection</h3>
+                            <p>Navigate emergency resources, facilitate professional help connections, and provide appropriate follow-up support within workplace contexts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crisis Response Science -->
+            <div class="learning-section">
+                <h2>🔬 The Psychology of Crisis Response and Support</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 How Crisis Affects Brain Function</h3>
+                        <p>Understanding the neurological impact of crisis helps inform appropriate response strategies:</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>🚨 Acute Stress Response</h4>
+                                <p>During crisis, the amygdala triggers fight-flight-freeze responses, while prefrontal cortex function becomes impaired, affecting logical thinking and decision-making capacity.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🔄 Trauma Processing Systems</h4>
+                                <p>The hippocampus may struggle to encode traumatic memories normally, while the nervous system remains hyperactivated, requiring specific calming and grounding interventions.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🤝 Social Connection Benefits</h4>
+                                <p>Compassionate support activates oxytocin and activates the parasympathetic nervous system, promoting recovery and resilience through co-regulation with supportive others.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Crisis Response Research</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">85%</div>
+                            <p>Improvement in outcomes with early intervention</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">67%</div>
+                            <p>Reduction in crisis escalation with trained workplace support</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">72%</div>
+                            <p>Better recovery rates with compassionate crisis response</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crisis Recognition -->
+            <div class="interactive-section">
+                <h2>📊 Crisis Recognition Assessment</h2>
+                <p>Develop your ability to recognize different types of mental health crises and appropriate response levels:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>👀 Warning Signs Recognition</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Rate your confidence in recognizing crisis warning signs (1-10)</p>
+                                <p><strong>Goal:</strong> Assess crisis recognition skills</p>
+                                <div class="test-input">
+                                    <label>I can identify signs of suicidal ideation in colleagues (1-10):</label>
+                                    <input type="number" id="suicide-recognition" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>I recognize symptoms of severe anxiety or panic attacks (1-10):</label>
+                                    <input type="number" id="anxiety-recognition" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>I can distinguish between crisis and normal stress responses (1-10):</label>
+                                    <input type="number" id="crisis-distinction" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>I know when to involve emergency services (1-10):</label>
+                                    <input type="number" id="emergency-assessment" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <button class="test-button" data-action="calculateRecognition">Assess Recognition Skills</button>
+                            </div>
+                            <div class="test-result" id="recognition-result"></div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>🤝 Response Confidence Assessment</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Rate your confidence in crisis response abilities (1-10)</p>
+                                <p><strong>Goal:</strong> Measure crisis response preparedness</p>
+                                <div class="test-input">
+                                    <label>I feel confident approaching someone in crisis (1-10):</label>
+                                    <input type="number" id="approach-confidence" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>I know how to de-escalate intense emotional situations (1-10):</label>
+                                    <input type="number" id="deescalation-skills" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>I can connect people with appropriate professional help (1-10):</label>
+                                    <input type="number" id="resource-connection" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>I maintain appropriate boundaries during crisis support (1-10):</label>
+                                    <input type="number" id="boundary-maintenance" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <button class="test-button" data-action="calculateResponse">Assess Response Confidence</button>
+                            </div>
+                            <div class="test-result" id="response-result"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crisis Response Strategies -->
+            <div class="strategy-section">
+                <h2>🛠️ Crisis Response Strategies</h2>
+
+                <div class="strategy-grid">
+                    <div class="strategy-card">
+                        <h3>👀 Crisis Recognition Framework</h3>
+                        <div class="strategy-content">
+                            <h4>🚨 Immediate Risk Indicators</h4>
+                            <ul>
+                                <li><strong>Suicidal Ideation:</strong> Direct or indirect statements about self-harm or death</li>
+                                <li><strong>Severe Panic:</strong> Intense physical symptoms, hyperventilation, feeling of impending doom</li>
+                                <li><strong>Psychosis Signs:</strong> Hallucinations, delusions, severe disconnection from reality</li>
+                                <li><strong>Violence Risk:</strong> Threats, aggressive behavior, loss of impulse control</li>
+                            </ul>
+
+                            <h4>⚠️ Escalating Warning Signs</h4>
+                            <ul>
+                                <li><strong>Behavioral Changes:</strong> Sudden personality shifts, withdrawal, erratic behavior</li>
+                                <li><strong>Performance Decline:</strong> Significant drops in work quality or attendance</li>
+                                <li><strong>Emotional Extremes:</strong> Intense mood swings, persistent hopelessness</li>
+                                <li><strong>Physical Symptoms:</strong> Unexplained illness, fatigue, appearance changes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="strategy-card">
+                        <h3>🤝 Compassionate Response Protocol</h3>
+                        <div class="strategy-content">
+                            <h4>💬 Initial Approach (LEAP Method)</h4>
+                            <ul>
+                                <li><strong>Listen:</strong> Provide full attention without judgment or immediate solutions</li>
+                                <li><strong>Empathize:</strong> Acknowledge their emotional experience and validate feelings</li>
+                                <li><strong>Ask:</strong> Use open-ended questions to understand their perspective and needs</li>
+                                <li><strong>Paraphrase:</strong> Reflect back what you hear to ensure understanding</li>
+                            </ul>
+
+                            <h4>🛡️ Safety Assessment (SLAP)</h4>
+                            <ul>
+                                <li><strong>Specific Plan:</strong> Do they have a specific plan for self-harm or suicide?</li>
+                                <li><strong>Lethality:</strong> How dangerous is their intended method?</li>
+                                <li><strong>Access:</strong> Do they have access to means for self-harm?</li>
+                                <li><strong>Proximity:</strong> How close in time is their intended action?</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="strategy-card">
+                        <h3>🔗 Resource Connection & Follow-up</h3>
+                        <div class="strategy-content">
+                            <h4>🚨 Emergency Resources</h4>
+                            <ul>
+                                <li><strong>988 Suicide & Crisis Lifeline:</strong> 24/7 crisis support and suicide prevention</li>
+                                <li><strong>Crisis Text Line:</strong> Text HOME to 741741 for immediate text support</li>
+                                <li><strong>Emergency Services:</strong> 911 for immediate safety threats</li>
+                                <li><strong>Mobile Crisis Teams:</strong> Community mental health crisis response units</li>
+                            </ul>
+
+                            <h4>📞 Professional Support Connections</h4>
+                            <ul>
+                                <li><strong>Employee Assistance Programs:</strong> Workplace-provided mental health resources</li>
+                                <li><strong>Mental Health Professionals:</strong> Therapists, counselors, psychiatrists</li>
+                                <li><strong>Community Resources:</strong> Local mental health centers and support groups</li>
+                                <li><strong>Peer Support Programs:</strong> Workplace or community peer support networks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crisis Response Training Scenarios -->
+            <div class="training-section">
+                <h2>📅 Crisis Response Training Scenarios</h2>
+
+                <div class="scenario-container">
+                    <div class="scenario-card">
+                        <h3>Scenario 1: Suicidal Ideation</h3>
+                        <div class="scenario-content">
+                            <p><strong>Situation:</strong> A colleague mentions they've been thinking "everyone would be better off without me" and has been giving away personal items.</p>
+
+                            <h4>🎯 Response Steps:</h4>
+                            <ol>
+                                <li><strong>Take it seriously:</strong> Never dismiss or minimize suicidal statements</li>
+                                <li><strong>Ask directly:</strong> "Are you thinking about suicide?" or "Are you thinking about hurting yourself?"</li>
+                                <li><strong>Listen without judgment:</strong> Let them express their feelings without trying to talk them out of it</li>
+                                <li><strong>Assess immediate risk:</strong> Use SLAP framework to evaluate danger level</li>
+                                <li><strong>Stay with them:</strong> Don't leave them alone if risk is high</li>
+                                <li><strong>Connect to help:</strong> Call 988, involve EAP, or emergency services if necessary</li>
+                                <li><strong>Follow up:</strong> Check in regularly and ensure professional support is accessed</li>
+                            </ol>
+
+                            <div class="scenario-practice">
+                                <h4>🗣️ Practice Phrases:</h4>
+                                <ul>
+                                    <li>"I'm concerned about you and want to help."</li>
+                                    <li>"It sounds like you're going through a really difficult time."</li>
+                                    <li>"You're important to me and to this team."</li>
+                                    <li>"Let's get you connected with someone who can provide professional support."</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h3>Scenario 2: Panic Attack</h3>
+                        <div class="scenario-content">
+                            <p><strong>Situation:</strong> A team member suddenly becomes overwhelmed during a meeting, showing signs of hyperventilation, sweating, and expressing fear of losing control.</p>
+
+                            <h4>🎯 Response Steps:</h4>
+                            <ol>
+                                <li><strong>Stay calm:</strong> Your calm presence will help stabilize the situation</li>
+                                <li><strong>Move to private space:</strong> Gently guide them away from public view</li>
+                                <li><strong>Use grounding techniques:</strong> Help them focus on breathing and present moment</li>
+                                <li><strong>Provide reassurance:</strong> Remind them that panic attacks are temporary and not dangerous</li>
+                                <li><strong>Avoid overwhelming them:</strong> Keep instructions simple and speak slowly</li>
+                                <li><strong>Stay until stable:</strong> Remain with them until symptoms subside</li>
+                                <li><strong>Discuss next steps:</strong> Help them plan for ongoing support and potential triggers</li>
+                            </ol>
+
+                            <div class="scenario-practice">
+                                <h4>🧘 Grounding Techniques:</h4>
+                                <ul>
+                                    <li><strong>5-4-3-2-1:</strong> Name 5 things you see, 4 you hear, 3 you touch, 2 you smell, 1 you taste</li>
+                                    <li><strong>Square breathing:</strong> Breathe in for 4, hold for 4, out for 4, hold for 4</li>
+                                    <li><strong>Progressive muscle relaxation:</strong> Tense and release muscle groups</li>
+                                    <li><strong>Reality orientation:</strong> "You are safe, this is a panic attack, it will pass"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h3>Scenario 3: Workplace Violence Risk</h3>
+                        <div class="scenario-content">
+                            <p><strong>Situation:</strong> An employee has been making threatening statements, showing increased agitation, and colleagues report feeling unsafe around them.</p>
+
+                            <h4>🎯 Response Steps:</h4>
+                            <ol>
+                                <li><strong>Prioritize safety:</strong> Ensure immediate safety of all individuals</li>
+                                <li><strong>Document concerns:</strong> Record specific behaviors and statements objectively</li>
+                                <li><strong>Involve security/HR:</strong> Alert appropriate workplace authorities immediately</li>
+                                <li><strong>Avoid direct confrontation:</strong> Don't approach alone or attempt to counsel</li>
+                                <li><strong>Follow workplace protocols:</strong> Use established threat assessment procedures</li>
+                                <li><strong>Consider professional evaluation:</strong> Workplace may require fitness-for-duty assessment</li>
+                                <li><strong>Support affected colleagues:</strong> Provide resources for those impacted by the situation</li>
+                            </ol>
+
+                            <div class="scenario-practice">
+                                <h4>⚠️ Warning Signs to Report:</h4>
+                                <ul>
+                                    <li>Direct or veiled threats against individuals or the organization</li>
+                                    <li>Obsession with weapons or violence</li>
+                                    <li>Stalking or intimidating behavior toward colleagues</li>
+                                    <li>Significant personality changes or deteriorating behavior</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crisis Support Tools -->
+            <div class="tools-section">
+                <h2>🛠️ Crisis Support Tools</h2>
+
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <h3>📱 Emergency Contact Quick Reference</h3>
+                        <p>Essential crisis resources for immediate access during emergencies.</p>
+                        <div class="emergency-contacts">
+                            <div class="contact-item">
+                                <h4>🚨 Immediate Danger</h4>
+                                <p><strong>911</strong> - Police, Fire, Medical Emergency</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>☎️ Crisis Support</h4>
+                                <p><strong>988</strong> - Suicide & Crisis Lifeline</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>💬 Text Support</h4>
+                                <p><strong>Text HOME to 741741</strong> - Crisis Text Line</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>🆘 Veterans Crisis</h4>
+                                <p><strong>1-800-273-8255, Press 1</strong> - Veterans Crisis Line</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <h3>📋 Crisis Assessment Checklist</h3>
+                        <p>Systematic evaluation tool for crisis situations.</p>
+                        <div class="tool-interface">
+                            <div class="checklist-section">
+                                <h4>Immediate Risk Assessment:</h4>
+                                <label><input type="checkbox"> Direct statements about self-harm</label>
+                                <label><input type="checkbox"> Specific plan mentioned</label>
+                                <label><input type="checkbox"> Access to means of harm</label>
+                                <label><input type="checkbox"> Timeline for action specified</label>
+                                <label><input type="checkbox"> Previous suicide attempts</label>
+                                <label><input type="checkbox"> Substance use involved</label>
+                                <label><input type="checkbox"> Social isolation present</label>
+                                <label><input type="checkbox"> Recent significant losses</label>
+                            </div>
+                            <button class="tool-button" data-action="calculateRisk">Calculate Risk Level</button>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <h3>📝 Crisis Response Documentation</h3>
+                        <p>Template for documenting crisis interventions and follow-up actions.</p>
+                        <div class="tool-interface">
+                            <textarea placeholder="Date and time of incident..." class="tool-input"></textarea>
+                            <textarea placeholder="Individuals involved..." class="tool-input"></textarea>
+                            <textarea placeholder="Specific behaviors/statements observed..." class="tool-input"></textarea>
+                            <textarea placeholder="Actions taken..." class="tool-input"></textarea>
+                            <textarea placeholder="Resources contacted..." class="tool-input"></textarea>
+                            <textarea placeholder="Follow-up plan..." class="tool-input"></textarea>
+                            <button class="tool-button" data-action="generateReport">Generate Crisis Report</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Self-Care for Crisis Responders -->
+            <div class="application-section">
+                <h2>🌍 Self-Care for Crisis Responders</h2>
+
+                <div class="self-care-grid">
+                    <div class="self-care-card">
+                        <h3>🛡️ Emotional Protection Strategies</h3>
+                        <div class="self-care-content">
+                            <h4>During Crisis Response:</h4>
+                            <ul>
+                                <li><strong>Maintain boundaries:</strong> Remember you're providing support, not therapy</li>
+                                <li><strong>Stay grounded:</strong> Use breathing techniques to remain calm</li>
+                                <li><strong>Seek backup:</strong> Don't handle serious situations alone</li>
+                                <li><strong>Document objectively:</strong> Focus on facts rather than interpretations</li>
+                            </ul>
+
+                            <h4>After Crisis Response:</h4>
+                            <ul>
+                                <li><strong>Debrief with supervisor:</strong> Process the experience with appropriate support</li>
+                                <li><strong>Practice self-care:</strong> Engage in restorative activities</li>
+                                <li><strong>Monitor your impact:</strong> Watch for signs of secondary trauma</li>
+                                <li><strong>Seek professional support:</strong> Access counseling if needed</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="self-care-card">
+                        <h3>⚠️ Secondary Trauma Prevention</h3>
+                        <div class="self-care-content">
+                            <h4>Warning Signs to Monitor:</h4>
+                            <ul>
+                                <li>Intrusive thoughts about the crisis situation</li>
+                                <li>Avoidance of crisis-related triggers</li>
+                                <li>Changes in sleep or appetite patterns</li>
+                                <li>Increased anxiety or irritability</li>
+                                <li>Feeling overwhelmed by others' problems</li>
+                                <li>Difficulty separating work from personal life</li>
+                            </ul>
+
+                            <h4>Prevention Strategies:</h4>
+                            <ul>
+                                <li>Regular supervision and peer support</li>
+                                <li>Professional development and training</li>
+                                <li>Healthy work-life boundaries</li>
+                                <li>Personal therapy or counseling</li>
+                                <li>Mindfulness and stress reduction practices</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="progress-section">
+                <h2>📈 Your Crisis Response Development</h2>
+                <div class="progress-grid">
+                    <div class="progress-item">
+                        <h3>👀 Crisis Recognition</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <h3>🤝 Response Skills</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <h3>🔗 Resource Connection</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-nav">
+            <a href="lesson-2-13-performance-optimization.html" class="nav-button prev-button">
+                ← Previous: Performance Optimization
+            </a>
+            <a href="lesson-2-15-workplace-wellness.html" class="nav-button next-button">
+                Next: Workplace Wellness →
+            </a>
+        </div>
+    </div>
+
+    <script src="js/lesson-script.js"></script>
+    <script src="js/crisis-intervention.js"></script>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

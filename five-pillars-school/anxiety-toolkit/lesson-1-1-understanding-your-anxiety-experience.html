@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1.1: Understanding Your Anxiety Experience | Anxiety Toolkit</title>
+    
+    <style>
+        :root {
+            --calming-teal: #4a90a4;
+            --deep-teal: #357a8a;
+            --soft-blue: #6ba3d0;
+            --sage-green: #87a96b;
+            --warm-gray: #7d8597;
+            --gentle-text: #4a5568;
+            --light-sage: #f7f8f6;
+            --soft-white: #fdfdfd;
+            --light-teal: #e8f4f6;
+            --accent-orange: #fb923c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--gentle-text);
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Course Navigation Bar */
+        .course-nav {
+            background: white;
+            padding: 15px 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .course-nav a {
+            color: var(--deep-teal);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .course-nav a:hover {
+            color: var(--calming-teal);
+        }
+
+        /* Progress Section */
+        .progress-section {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--deep-teal);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: var(--light-teal);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--sage-green), var(--calming-teal));
+            width: 10%;
+            transition: width 0.5s ease;
+        }
+
+        /* Hero Header */
+        .hero-header {
+            background: linear-gradient(135deg, var(--deep-teal) 0%, var(--calming-teal) 50%, var(--soft-blue) 100%);
+            color: white;
+            padding: 60px 50px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .hero-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.05) 10px,
+                rgba(255,255,255,0.05) 20px
+            );
+        }
+
+        .hero-header h1 {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Main Content Container */
+        .main-content {
+            background: var(--soft-white);
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        /* COURSE NOTEBOOK CALLOUT */
+        .notebook-callout {
+            background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+            border: 3px solid var(--accent-orange);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(251, 146, 60, 0.2);
+        }
+
+        .notebook-callout h3 {
+            color: #c2410c;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .notebook-callout p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .notebook-btn {
+            display: inline-block;
+            background: var(--accent-orange);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(251, 146, 60, 0.3);
+        }
+
+        .notebook-btn:hover {
+            background: #ea580c;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(251, 146, 60, 0.4);
+        }
+
+        /* Provider Voice Section */
+        .provider-intro {
+            background: var(--light-teal);
+            border-left: 6px solid var(--deep-teal);
+            padding: 35px 40px;
+            border-radius: 0 16px 16px 0;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .provider-intro h2 {
+            color: var(--deep-teal);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .provider-intro p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .provider-note {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+            font-style: italic;
+            border: 2px solid rgba(74, 144, 164, 0.2);
+        }
+
+        .provider-note strong {
+            color: var(--deep-teal);
+            display: block;
+            margin-bottom: 10px;
+            font-style: normal;
+            font-size: 1.1rem;
+        }
+
+        /* Learning Objectives */
+        .objectives-section {
+            background: var(--light-sage);
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 50px;
+            border: 2px solid var(--sage-green);
+        }
+
+        .objectives-section h3 {
+            color: var(--deep-teal);
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .objectives-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .objective-item {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 12px;
+            border-left: 5px solid var(--sage-green);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .objective-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .objective-item span:last-child {
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        /* BODY MAP SECTION - ENHANCED */
+        .body-map-section {
+            margin: 60px 0;
+            background: var(--light-sage);
+            padding: 50px;
+            border-radius: 20px;
+            border: 3px solid var(--sage-green);
+        }
+
+        .body-map-section h2 {
+            color: var(--deep-teal);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .body-map-section > p {
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            color: var(--warm-gray);
+        }
+
+        .body-map-container {
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .body-figure {
+            position: relative;
+            width: 300px;
+            height: 600px;
+            flex-shrink: 0;
+        }
+
+        /* SVG Body Map Styles */
+        #anxiety-body-map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .body-region {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pulse-ring {
+            fill: none;
+            stroke: var(--accent-orange);
+            stroke-width: 3;
+            opacity: 0.6;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                stroke-opacity: 0.6;
+                stroke-width: 3;
+            }
+            50% {
+                stroke-opacity: 0.3;
+                stroke-width: 6;
+            }
+        }
+
+        .region-clickable {
+            opacity: 0.3;
+            transition: all 0.3s ease;
+        }
+
+        .body-region:hover .region-clickable {
+            opacity: 0.6;
+        }
+
+        .body-region.active .region-clickable {
+            fill: var(--calming-teal);
+            opacity: 0.7;
+        }
+
+        .body-region.active .pulse-ring {
+            stroke: var(--deep-teal);
+            animation: none;
+        }
+
+        /* Symptom Description Panel */
+        .symptom-description {
+            flex: 1;
+            min-width: 350px;
+            max-width: 500px;
+            background: var(--light-teal);
+            padding: 40px;
+            border-radius: 16px;
+            border: 3px solid var(--calming-teal);
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .symptom-description h3 {
+            color: var(--deep-teal);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .symptom-description p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--gentle-text);
+            margin-bottom: 15px;
+        }
+
+        .symptom-description.placeholder {
+            text-align: center;
+            background: white;
+            border-style: dashed;
+        }
+
+        .symptom-description .clinical-note {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid var(--calming-teal);
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        /* Recognition Section */
+        .recognition-section {
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            margin: 50px 0;
+            border: 2px solid var(--light-teal);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+        }
+
+        .recognition-section h2 {
+            color: var(--deep-teal);
+            font-size: 1.9rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .symptoms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .symptom-category {
+            background: var(--light-sage);
+            padding: 30px;
+            border-radius: 12px;
+            border-top: 5px solid var(--calming-teal);
+        }
+
+        .symptom-category h4 {
+            color: var(--deep-teal);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .symptom-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .symptom-category li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .symptom-category li::before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            color: var(--sage-green);
+            font-size: 1.5rem;
+        }
+
+        /* Key Takeaway */
+        .key-takeaway {
+            background: var(--light-teal);
+            padding: 40px;
+            border-radius: 16px;
+            border-left: 6px solid var(--deep-teal);
+            margin: 50px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .key-takeaway h3 {
+            color: var(--deep-teal);
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+        }
+
+        .key-takeaway p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+        }
+
+        /* Navigation Buttons */
+        .lesson-navigation {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--sage-green);
+            color: white;
+            box-shadow: 0 4px 12px rgba(135, 169, 107, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #769a59;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(135, 169, 107, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--deep-teal);
+            border: 3px solid var(--calming-teal);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-teal);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .main-content {
+                padding: 35px;
+            }
+
+            .body-map-container {
+                flex-direction: column;
+                padding: 35px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .hero-header {
+                padding: 40px 30px;
+            }
+
+            .main-content {
+                padding: 25px 20px;
+            }
+
+            .symptoms-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Course Navigation -->
+        <nav class="course-nav">
+            <a href="course-introduction.html">← Back to Course Overview</a>
+            <a href="../../student-platform/anxiety-toolkit/pages/my-workbooks.html">📓 My Workbook</a>
+        </nav>
+
+        <!-- Progress Section -->
+        <div class="progress-section">
+            <div class="progress-label">
+                <span>Module 1: Understanding Your Anxiety</span>
+                <span>Lesson 1 of 5</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Hero Header -->
+        <header class="hero-header">
+            <h1>Lesson 1.1: Understanding Your Anxiety Experience</h1>
+            <p>Learning to recognize what anxiety feels like in YOUR body</p>
+        </header>
+
+        <main class="main-content">
+            <!-- COURSE NOTEBOOK CALLOUT -->
+            <section class="notebook-callout">
+                <h3>📓 Your Personal Course Workbook</h3>
+                <p>This course includes a digital workbook where you'll track insights, practice skills, and build your personalized anxiety toolkit. Keep it open in another tab as you go through each lesson!</p>
+                <a href="../../student-platform/anxiety-toolkit/pages/my-workbooks.html" class="notebook-btn">Open My Workbook →</a>
+                <p style="margin-top: 20px; font-size: 0.95rem;">
+                    <strong>✅ Auto-saves as you type</strong> • <strong>📥 Export to PDF anytime</strong> • <strong>📊 Track your progress</strong>
+                </p>
+            </section>
+
+            <!-- Provider Introduction -->
+            <section class="provider-intro">
+                <h2>Before We Dive Into the Science...</h2>
+                <p>I want to start where you are right now. Not with definitions or diagrams, but with your lived experience. Because anxiety doesn't announce itself with technical terms—it shows up as a racing heart, a tight chest, or that feeling of dread you can't quite explain.</p>
+                
+                <p>In my practice, I've worked with hundreds of people struggling with anxiety. One thing I've learned: everyone experiences it differently. Some people feel it in their stomach. Others feel it in their chest or their head. There's no "right" way to experience anxiety.</p>
+                
+                <div class="provider-note">
+                    <strong>A note from David Glenn, PMHNP-BC:</strong>
+                    "Understanding YOUR anxiety starts with recognizing how it uniquely shows up in your body and mind. This isn't about learning medical definitions—it's about becoming an expert on your own experience. That's the foundation everything else builds on."
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <section class="objectives-section">
+                <h3>What You'll Learn in This Lesson</h3>
+                <div class="objectives-list">
+                    <div class="objective-item">
+                        <span class="objective-icon">🎯</span>
+                        <span>Recognize anxiety signals in YOUR body</span>
+                    </div>
+                    <div class="objective-item">
+                        <span class="objective-icon">🧠</span>
+                        <span>Understand the mind-body connection in anxiety</span>
+                    </div>
+                    <div class="objective-item">
+                        <span class="objective-icon">💭</span>
+                        <span>Identify your personal anxiety patterns</span>
+                    </div>
+                    <div class="objective-item">
+                        <span class="objective-icon">📝</span>
+                        <span>Start building your anxiety awareness in your workbook</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTERACTIVE BODY MAP -->
+            <section class="body-map-section">
+                <h2>🗺️ Where Do You Feel Anxiety?</h2>
+                <p>Click on the highlighted areas to explore how anxiety commonly shows up in different parts of your body. Each person's experience is unique—notice which ones resonate with you.</p>
+                
+                <div class="body-map-container">
+                    <div class="body-figure">
+                        <object data="body-map.svg" type="image/svg+xml" id="body-map-object">
+                            <!-- Fallback if SVG doesn't load -->
+                            <p>Interactive body map loading...</p>
+                        </object>
+                    </div>
+                    
+                    <div class="symptom-description placeholder" id="symptom-display">
+                        <p style="font-size: 1.3rem;"><strong>👆 Click any highlighted area</strong></p>
+                        <p>to explore how anxiety shows up in that part of your body.</p>
+                        <p style="margin-top: 20px; font-size: 0.95rem; font-style: italic;">Each person's anxiety feels different. This is about discovering YOUR unique experience.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recognition Grid -->
+            <section class="recognition-section">
+                <h2>Common Anxiety Signals: A Comprehensive Look</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; font-size: 1.15rem;">Anxiety affects us physically, mentally, emotionally, and behaviorally. Here's what to watch for:</p>
+                
+                <div class="symptoms-grid">
+                    <div class="symptom-category">
+                        <h4><span>💓</span> Physical Signals</h4>
+                        <ul>
+                            <li>Racing or pounding heartbeat</li>
+                            <li>Shortness of breath or tight chest</li>
+                            <li>Stomach upset or nausea</li>
+                            <li>Sweating or feeling hot</li>
+                            <li>Trembling or shaking</li>
+                            <li>Muscle tension or aches</li>
+                            <li>Dizziness or lightheadedness</li>
+                            <li>Fatigue or exhaustion</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="symptom-category">
+                        <h4><span>🧠</span> Mental Signals</h4>
+                        <ul>
+                            <li>Racing thoughts</li>
+                            <li>Difficulty concentrating</li>
+                            <li>Mind going blank</li>
+                            <li>Catastrophic thinking</li>
+                            <li>Difficulty making decisions</li>
+                            <li>Constant worry about the future</li>
+                            <li>Replaying past events</li>
+                            <li>Fear of losing control</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="symptom-category">
+                        <h4><span>😰</span> Emotional Signals</h4>
+                        <ul>
+                            <li>Feeling on edge or restless</li>
+                            <li>Sense of impending doom</li>
+                            <li>Irritability or anger</li>
+                            <li>Feeling overwhelmed</li>
+                            <li>Fear or panic</li>
+                            <li>Feeling disconnected</li>
+                            <li>Sadness or hopelessness</li>
+                            <li>Shame or embarrassment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="symptom-category">
+                        <h4><span>🏃</span> Behavioral Signals</h4>
+                        <ul>
+                            <li>Avoiding certain situations</li>
+                            <li>Procrastinating or overworking</li>
+                            <li>Difficulty sleeping</li>
+                            <li>Seeking constant reassurance</li>
+                            <li>Nervous habits (nail biting, etc.)</li>
+                            <li>Social withdrawal</li>
+                            <li>Changes in eating patterns</li>
+                            <li>Checking or repeating behaviors</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NOTEBOOK REMINDER -->
+            <section class="notebook-callout">
+                <h3>💡 Ready to Track Your Experience?</h3>
+                <p>Now that you've explored how anxiety can show up, open your workbook and record which symptoms resonate most with YOUR experience. This self-awareness is the foundation for everything we'll build together.</p>
+                <a href="../../student-platform/anxiety-toolkit/pages/my-workbooks.html" class="notebook-btn">Go to My Workbook →</a>
+            </section>
+
+            <!-- Key Takeaway -->
+            <section class="key-takeaway">
+                <h3>💡 The Most Important Thing to Remember</h3>
+                <p><strong>Anxiety is information, not a character flaw.</strong> Your body and mind are trying to protect you—they're just sometimes overreacting to situations that aren't actually dangerous. Learning to recognize YOUR specific anxiety signals is the first step toward managing them effectively.</p>
+                
+                <p style="margin-top: 20px;">In the next lesson, we'll explore what's happening in your brain and nervous system when you feel anxious, and why understanding this changes everything about how you respond.</p>
+            </section>
+
+            <!-- Navigation -->
+            <nav class="lesson-navigation" aria-label="Lesson navigation">
+                <a href="../../student-platform/anxiety-toolkit/pages/my-workbooks.html" class="btn btn-secondary">
+                    📓 Open My Workbook
+                </a>
+                <a href="lesson-1-2-your-nervous-system.html" class="btn btn-primary">
+                    Continue to Lesson 1.2 →
+                </a>
+            </nav>
+        </main>
+    </div>
+
+    <script>
+        // Symptom data for interactive body map
+        const symptomData = {
+            head: {
+                title: "Head & Mind Symptoms",
+                description: "Racing thoughts, difficulty concentrating, fear of losing control, lightheadedness, headaches, or feeling like your mind is in overdrive. Many people describe it as 'thoughts moving too fast to catch.'",
+                clinical: "This is your brain's alarm system working overtime. When anxiety activates, your prefrontal cortex (thinking brain) can get overwhelmed by your amygdala (fear center), making it hard to think clearly."
+            },
+            chest: {
+                title: "Chest & Heart Symptoms",
+                description: "Racing or pounding heart, tight chest, shortness of breath, or feeling like you can't get enough air. This is your sympathetic nervous system preparing for 'fight or flight'—even when there's no real danger.",
+                clinical: "Your heart rate increases to pump more oxygen to your muscles. This is completely normal and not dangerous, even though it can feel scary. It's your body's way of preparing you to respond to a threat."
+            },
+            stomach: {
+                title: "Stomach & Digestive Symptoms",
+                description: "Butterflies, nausea, upset stomach, loss of appetite, or sudden digestive issues. That's why we say we have 'butterflies' when nervous—your gut is deeply connected to your emotional state.",
+                clinical: "Your gut has its own nervous system with more neurons than your spinal cord. When you're anxious, blood flow shifts away from digestion toward your muscles, which can cause these uncomfortable sensations."
+            },
+            hands: {
+                title: "Hands & Extremities",
+                description: "Sweaty palms, trembling hands, tingling fingers, or feeling cold in your hands and feet. Blood flow redirects to major muscle groups when your body thinks you need to flee or fight.",
+                clinical: "This is called 'peripheral vasoconstriction'—your body prioritizes blood flow to core muscles and vital organs during perceived threats, which can make your hands and feet feel cold, tingly, or shaky."
+            },
+            legs: {
+                title: "Legs & Movement",
+                description: "Restless legs, feeling weak in the knees, urge to pace or move, or heaviness in your legs. Your body is preparing for action—flight or fight—which affects your leg muscles.",
+                clinical: "Increased muscle tension and blood flow to large leg muscles is your body's preparation for running or defending yourself. This is why anxiety often comes with an urge to move or escape."
+            }
+        };
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for SVG object to load
+            const bodyMapObject = document.getElementById('body-map-object');
+            
+            bodyMapObject.addEventListener('load', function() {
+                const svgDoc = bodyMapObject.contentDocument;
+                if (svgDoc) {
+                    setupBodyMap(svgDoc);
+                }
+            });
+
+            setupAccessibility();
+            setupScrollProgress();
+        });
+
+        function setupBodyMap(svgDoc) {
+            const regions = svgDoc.querySelectorAll('.body-region');
+            const symptomDisplay = document.getElementById('symptom-display');
+
+            regions.forEach(region => {
+                // Click event
+                region.addEventListener('click', function() {
+                    const regionType = this.getAttribute('data-region');
+                    displaySymptom(regionType);
+                    
+                    // Visual feedback - remove active from all, add to this
+                    regions.forEach(r => r.classList.remove('active'));
+                    this.classList.add('active');
+                });
+
+                // Keyboard accessibility
+                region.setAttribute('tabindex', '0');
+                region.setAttribute('role', 'button');
+                
+                region.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+        }
+
+        function displaySymptom(regionType) {
+            const symptomDisplay = document.getElementById('symptom-display');
+            const data = symptomData[regionType];
+            
+            if (!data) return;
+            
+            // Remove placeholder class
+            symptomDisplay.classList.remove('placeholder');
+            
+            // Fade out
+            symptomDisplay.style.opacity = '0';
+            
+            // Update content and fade in
+            setTimeout(() => {
+                symptomDisplay.innerHTML = `
+                    <h3>${data.title}</h3>
+                    <p>${data.description}</p>
+                    <div class="clinical-note">
+                        <strong>The Science:</strong> ${data.clinical}
+                    </div>
+                `;
+                symptomDisplay.style.opacity = '1';
+                
+                // Announce to screen readers
+                announceToScreenReader(`Displaying ${data.title}: ${data.description}`);
+            }, 200);
+        }
+
+        // Accessibility Setup
+        function setupAccessibility() {
+            // Create live region for screen reader announcements
+            const liveRegion = document.createElement('div');
+            liveRegion.setAttribute('aria-live', 'polite');
+            liveRegion.setAttribute('aria-atomic', 'true');
+            liveRegion.className = 'sr-only';
+            liveRegion.id = 'live-region';
+            document.body.appendChild(liveRegion);
+        }
+
+        function announceToScreenReader(message) {
+            const liveRegion = document.getElementById('live-region');
+            if (liveRegion) {
+                liveRegion.textContent = message;
+            }
+        }
+
+        // Update progress bar on scroll
+        function setupScrollProgress() {
+            window.addEventListener('scroll', function() {
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight - windowHeight;
+                const scrolled = window.scrollY;
+                const progress = (scrolled / documentHeight) * 100;
+                
+                const progressFill = document.querySelector('.progress-fill');
+                if (progressFill) {
+                    const totalProgress = 10 + (progress * 0.9);
+                    progressFill.style.width = Math.min(totalProgress, 100) + '%';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

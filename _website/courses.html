@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>All Courses - Mental Health Education Platform | Real Psychiatric Services</title>
+    <meta name="description" content="Browse our complete library of evidence-based mental health and wellness courses. 19 comprehensive courses across 8 categories.">
+    <meta name="keywords" content="mental health courses, wellness courses, CBT, mindfulness, anxiety therapy, stress management, Columbus mental health">
+
+    <!-- Favicons -->
+    <link href="images/wellness-site-icon.jpg" rel="icon">
+    <link href="images/wellness-site-icon.jpg" rel="apple-touch-icon">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --rps-navy: #2E4057;
+            --rps-blue: #5B7DB1;
+            --rps-light-blue: #6FA8C4;
+            --rps-lavender: #C8B8DB;
+            --rps-teal: #7CB3B8;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--rps-navy) !important;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--rps-navy) 0%, var(--rps-blue) 100%);
+            color: white;
+            padding: 60px 0 40px;
+        }
+
+        .filter-sidebar {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .filter-group {
+            margin-bottom: 25px;
+        }
+
+        .filter-group h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--rps-navy);
+            margin-bottom: 12px;
+        }
+
+        .filter-checkbox {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+            padding: 5px 0;
+        }
+
+        .filter-checkbox input {
+            margin-right: 8px;
+        }
+
+        .course-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .course-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .course-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .course-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+        }
+
+        .badge-physical { background-color: #28a745; }
+        .badge-resilience { background-color: #dc3545; }
+        .badge-relationships { background-color: #17a2b8; }
+        .badge-purpose { background-color: #28a745; }
+        .badge-creative { background-color: #ffc107; color: #333; }
+        .badge-specialized { background-color: #6f42c1; }
+        .badge-mindfulness { background-color: #20c997; }
+        .badge-demographic { background-color: #fd7e14; }
+
+        .course-price {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            color: var(--rps-teal);
+            font-size: 1.1rem;
+        }
+
+        .course-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .course-meta .category {
+            background: var(--rps-light-blue);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .course-meta .level {
+            background: #e9ecef;
+            color: #495057;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .course-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--rps-navy);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .course-card p {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .course-stats {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            padding: 12px 0;
+            border-top: 1px solid #e9ecef;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+        .stat i {
+            color: var(--rps-blue);
+        }
+
+        .btn-course {
+            display: block;
+            text-align: center;
+            background: var(--rps-blue);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+            margin-top: auto;
+        }
+
+        .btn-course:hover {
+            background: var(--rps-navy);
+            color: white;
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 45px 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .search-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, var(--rps-light-blue) 0%, var(--rps-teal) 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .category-header h2 {
+            margin: 0;
+            font-size: 1.75rem;
+        }
+
+        .category-count {
+            opacity: 0.9;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="fw-bold fs-5">Mental Health Education Platform</div>
+                <small style="font-size: 0.7rem; opacity: 0.9;">by Real Psychiatric Services</small>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="instructors.html">Instructors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+                    <li class="nav-item"><a class="nav-link" href="forum.html">Forum</a></li>
+                    <li class="nav-item"><a class="nav-link" href="5-pillars-evidence.html">5 Pillars</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">All Courses</h1>
+                    <p class="lead">Evidence-based mental health and wellness education. 19 comprehensive courses across 8 categories.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-lg-3">
+                <div class="filter-sidebar">
+                    <h4 class="mb-3">Filter Courses</h4>
+
+                    <div class="filter-group">
+                        <h5>Category</h5>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="category-filter" value="all" checked> All Categories
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="category-filter" value="physical"> Physical & Digital Wellness
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="category-filter" value="resilience"> Resilience & Cognitive Mastery
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="category-filter" value="relationships"> Relationships & Social Connection
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="category-filter" value="purpose"> Purpose & Leadership
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="category-filter" value="creative"> Creative & Recreational Therapy
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="category-filter" value="demographic"> Life Stage & Demographic
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h5>Price Range</h5>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="price-filter" value="all" checked> All Prices
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="price-filter" value="under-50"> Under $50
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="price-filter" value="50-75"> $50 - $75
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="price-filter" value="75-plus"> $75+
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h5>Duration</h5>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="duration-filter" value="all" checked> All Durations
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="duration-filter" value="short"> Under 15 hours
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="duration-filter" value="medium"> 15-20 hours
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="duration-filter" value="long"> 20+ hours
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="col-lg-9">
+                <div class="search-box">
+                    <input type="text" id="courseSearch" placeholder="Search courses by name or topic...">
+                    <i class="bi bi-search"></i>
+                </div>
+
+                <!-- Physical & Digital Wellness -->
+                <div class="category-section" data-category="physical">
+                    <div class="category-header">
+                        <h2>Physical & Digital Wellness</h2>
+                        <div class="category-count">4 courses</div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-1-movement-medicine/course-1--movement-medicine.jpg" alt="Movement Medicine">
+                                    <div class="course-badge badge-physical">Physical & Digital Wellness</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Movement Medicine: Exercise for Mental Health</h3>
+                                    <p>Learn evidence-based exercise interventions for anxiety, depression, and stress management.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-1-movement-medicine/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-2-workplace-mental-health/course-2--workplace-mental-health.jpg" alt="Workplace Mental Health">
+                                    <div class="course-badge badge-physical">Physical & Digital Wellness</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Workplace Mental Health: Thriving in Your Career</h3>
+                                    <p>Navigate workplace stress, burnout prevention, and professional boundaries with evidence-based strategies.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-2-workplace-mental-health/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-3-digital-wellness/course-3--digital-wellness.jpg" alt="Digital Wellness">
+                                    <div class="course-badge badge-physical">Physical & Digital Wellness</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Digital Wellness: Healthy Tech Use</h3>
+                                    <p>Master screen time management, digital boundaries, and technology's impact on mental health.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 16+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-3-digital-wellness/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-6-stress-challenge-navigation/course-6--stress-&-challenge-navigation.jpg" alt="Stress & Challenge Navigation">
+                                    <div class="course-badge badge-physical">Physical & Digital Wellness</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Stress & Challenge Navigation</h3>
+                                    <p>Build resilience and master evidence-based stress management techniques for lasting wellness.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-6-stress-challenge-navigation/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resilience & Cognitive Mastery -->
+                <div class="category-section" data-category="resilience">
+                    <div class="category-header">
+                        <h2>Resilience & Cognitive Mastery</h2>
+                        <div class="category-count">2 courses</div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-4-growth-mindset/course-4--the-growth-mindset.jpg" alt="The Growth Mindset">
+                                    <div class="course-badge badge-resilience">Resilience & Cognitive Mastery</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>The Growth Mindset: Neuroplasticity & Potential</h3>
+                                    <p>Transform your mindset using neuroplasticity research and Carol Dweck's evidence-based principles.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 16+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-4-growth-mindset/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-5-cbt-fundamentals/course-5--cbt-fundamentals.jpg" alt="CBT Fundamentals">
+                                    <div class="course-badge badge-resilience">Resilience & Cognitive Mastery</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">Intermediate</span>
+                                    </div>
+                                    <h3>CBT Fundamentals: Cognitive Behavioral Therapy</h3>
+                                    <p>Master evidence-based CBT techniques for anxiety, depression, and thought pattern transformation.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-5-cbt-fundamentals/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Relationships & Social Connection -->
+                <div class="category-section" data-category="relationships">
+                    <div class="category-header">
+                        <h2>Relationships & Social Connection</h2>
+                        <div class="category-count">4 courses</div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-7-boundaries-bootcamp/course-7--boundaries-bootcamp.jpg" alt="Boundaries Bootcamp">
+                                    <div class="course-badge badge-relationships">Relationships & Social Connection</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Boundaries Bootcamp: Protecting Your Peace</h3>
+                                    <p>Learn to set healthy boundaries in work, relationships, and digital life with confidence.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-7-boundaries-bootcamp/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-8-social-circle-mastery/course-8--social-circle-mastery.jpg" alt="Social Circle Mastery">
+                                    <div class="course-badge badge-relationships">Relationships & Social Connection</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Social Circle Mastery: Building Meaningful Connections</h3>
+                                    <p>Develop authentic friendships and strengthen social connections using evidence-based strategies.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-8-social-circle-mastery/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-9-team-sports-mental-health/course-9--team-sports-&-mental-health.jpg" alt="Team Sports & Mental Health">
+                                    <div class="course-badge badge-relationships">Relationships & Social Connection</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Team Sports & Mental Health</h3>
+                                    <p>Enhance athletic performance and team dynamics through mental health awareness and support.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-9-team-sports-mental-health/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-10-relationship-dynamics/course-10--relationship-dynamics.jpg" alt="Relationship Dynamics">
+                                    <div class="course-badge badge-relationships">Relationships & Social Connection</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Relationship Dynamics: Love, Connection & Communication</h3>
+                                    <p>Build healthier intimate relationships through attachment theory and communication science.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-10-relationship-dynamics/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purpose & Leadership Development -->
+                <div class="category-section" data-category="purpose">
+                    <div class="category-header">
+                        <h2>Purpose & Leadership Development</h2>
+                        <div class="category-count">3 courses</div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-12-purpose-and-responsibility/course-12--purpose-&-responsibility.jpg" alt="Purpose & Responsibility">
+                                    <div class="course-badge badge-purpose">Purpose & Leadership Development</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Purpose & Responsibility: Service to Others</h3>
+                                    <p>Find meaning through service using Viktor Frankl's logotherapy and altruism research.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-12-purpose-and-responsibility/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-14-coaching-mentoring/course-14--coaching-&-mentoring-others.jpg" alt="Coaching & Mentoring Others">
+                                    <div class="course-badge badge-purpose">Purpose & Leadership Development</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">Intermediate</span>
+                                    </div>
+                                    <h3>Coaching & Mentoring Others</h3>
+                                    <p>Develop professional coaching skills using evidence-based frameworks and motivational interviewing.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-14-coaching-mentoring/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-15-legacy-building/course-15--legacy-building-&-wisdom-sharing.jpg" alt="Legacy Building & Wisdom Sharing">
+                                    <div class="course-badge badge-purpose">Purpose & Leadership Development</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Legacy Building & Wisdom Sharing</h3>
+                                    <p>Create lasting impact through generativity and wisdom transmission across generations.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-15-legacy-building/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creative & Recreational Therapy -->
+                <div class="category-section" data-category="creative">
+                    <div class="category-header">
+                        <h2>Creative & Recreational Therapy</h2>
+                        <div class="category-count">4 courses</div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-16-recreational-therapy/course-16--recreational-therapy.jpg" alt="Recreational Therapy">
+                                    <div class="course-badge badge-creative">Creative & Recreational Therapy</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Recreational Therapy: Rediscovering Joy & Play</h3>
+                                    <p>Reclaim play and spontaneity as essential mental health practices using play science.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-16-recreational-therapy/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-17-creative-expression/course-17--creative-expression-&-art-therapy.jpg" alt="Creative Expression & Art Therapy">
+                                    <div class="course-badge badge-creative">Creative & Recreational Therapy</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Creative Expression & Art Therapy</h3>
+                                    <p>Use creativity to process emotions, heal trauma, and express what words cannot.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-17-creative-expression/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-18-adventure-outdoor-mental-health/course-18--adventure-&-outdoor-mental-health.jpg" alt="Adventure & Outdoor Mental Health">
+                                    <div class="course-badge badge-creative">Creative & Recreational Therapy</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Adventure & Outdoor Mental Health</h3>
+                                    <p>Harness the healing power of nature and wilderness for mental wellness and resilience.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-18-adventure-outdoor-mental-health/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-19-music-movement-wellness/course-19--music-&-movement-for-wellness.jpg" alt="Music & Movement for Wellness">
+                                    <div class="course-badge badge-creative">Creative & Recreational Therapy</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Music & Movement for Wellness</h3>
+                                    <p>Use rhythm, sound, and dance as therapeutic tools for nervous system regulation.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-19-music-movement-wellness/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Life Stage & Demographic-Specific -->
+                <div class="category-section" data-category="demographic">
+                    <div class="category-header">
+                        <h2>Life Stage & Demographic-Specific</h2>
+                        <div class="category-count">2 courses</div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-11-family-parenting-mental-health/course-11--family-&-parenting-mental-health.jpg" alt="Family & Parenting Mental Health">
+                                    <div class="course-badge badge-demographic">Life Stage & Demographic</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">All Levels</span>
+                                    </div>
+                                    <h3>Family & Parenting Mental Health</h3>
+                                    <p>Support children's mental health and family wellness using evidence-based parenting strategies.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-11-family-parenting-mental-health/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <img src="course-13-mental-health-first-aid/course-13--mental-health-first-aid-&-community-support.jpg" alt="Mental Health First Aid">
+                                    <div class="course-badge badge-demographic">Life Stage & Demographic</div>
+                                    <div class="course-price">$29.95</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-meta">
+                                        <span class="level">Intermediate</span>
+                                    </div>
+                                    <h3>Mental Health First Aid & Community Support</h3>
+                                    <p>Learn crisis intervention, suicide prevention, and community mental health support skills.</p>
+                                    <div class="course-stats">
+                                        <div class="stat"><i class="bi bi-clock"></i> 18+ Hours</div>
+                                        <div class="stat"><i class="bi bi-journal-text"></i> 20 Lessons</div>
+                                    </div>
+                                    <a href="course-13-mental-health-first-aid/index.html" class="btn-course">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">Mental Health Education Platform</h5>
+                    <p class="text-white-50">Evidence-based mental health and wellness education from Real Psychiatric Services.</p>
+                    <p class="text-white-50 small">4770 Indianola Ave., Suite 111<br>Columbus, OH 43214</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="courses.html" class="text-white-50 text-decoration-none">All Courses</a></li>
+                        <li class="mb-2"><a href="../pages/upgrade.html" class="text-white-50 text-decoration-none">Upgrade</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">Platform Subscription</h5>
+                    <p class="text-white-50">Access all courses for $19.95/month</p>
+                    <a href="../pages/upgrade.html" class="btn btn-outline-light">Subscribe Now</a>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 bg-white opacity-25">
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2025 Real Psychiatric Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Simple search functionality
+        document.getElementById('courseSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const courseCards = document.querySelectorAll('.course-card');
+
+            courseCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.closest('.col-lg-6').style.display = 'block';
+                } else {
+                    card.closest('.col-lg-6').style.display = 'none';
+                }
+            });
+        });
+
+        // Filter functionality
+        function applyFilters() {
+            const categoryFilters = Array.from(document.querySelectorAll('.category-filter:checked'))
+                .map(cb => cb.value);
+            const priceFilters = Array.from(document.querySelectorAll('.price-filter:checked'))
+                .map(cb => cb.value);
+            const durationFilters = Array.from(document.querySelectorAll('.duration-filter:checked'))
+                .map(cb => cb.value);
+
+            const categorySections = document.querySelectorAll('.category-section');
+
+            categorySections.forEach(section => {
+                const sectionCategory = section.getAttribute('data-category');
+
+                // Check category filter
+                const categoryMatch = categoryFilters.includes('all') || categoryFilters.includes(sectionCategory);
+
+                if (categoryMatch) {
+                    section.style.display = 'block';
+
+                    // Now filter individual courses by price and duration
+                    const courseCards = section.querySelectorAll('.course-card');
+                    courseCards.forEach(card => {
+                        const priceText = card.querySelector('.course-price').textContent.trim();
+                        const price = parseFloat(priceText.replace('$', ''));
+                        const durationText = card.querySelector('.course-stats .stat:first-child').textContent.trim();
+                        const hours = parseInt(durationText);
+
+                        // Check price filter
+                        let priceMatch = priceFilters.includes('all');
+                        if (!priceMatch) {
+                            if (priceFilters.includes('under-50') && price < 50) priceMatch = true;
+                            if (priceFilters.includes('50-75') && price >= 50 && price <= 75) priceMatch = true;
+                            if (priceFilters.includes('75-plus') && price > 75) priceMatch = true;
+                        }
+
+                        // Check duration filter
+                        let durationMatch = durationFilters.includes('all');
+                        if (!durationMatch) {
+                            if (durationFilters.includes('short') && hours < 15) durationMatch = true;
+                            if (durationFilters.includes('medium') && hours >= 15 && hours <= 20) durationMatch = true;
+                            if (durationFilters.includes('long') && hours > 20) durationMatch = true;
+                        }
+
+                        if (priceMatch && durationMatch) {
+                            card.closest('.col-lg-6').style.display = 'block';
+                        } else {
+                            card.closest('.col-lg-6').style.display = 'none';
+                        }
+                    });
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        // Handle "All" checkbox behavior
+        function handleAllCheckbox(filterClass) {
+            const allCheckbox = document.querySelector(`.${filterClass}[value="all"]`);
+            const otherCheckboxes = document.querySelectorAll(`.${filterClass}:not([value="all"])`);
+
+            allCheckbox.addEventListener('change', function() {
+                if (this.checked) {
+                    otherCheckboxes.forEach(cb => cb.checked = false);
+                }
+                applyFilters();
+            });
+
+            otherCheckboxes.forEach(cb => {
+                cb.addEventListener('change', function() {
+                    if (this.checked) {
+                        allCheckbox.checked = false;
+                    }
+                    // If no checkboxes are checked, check "All"
+                    const anyChecked = Array.from(otherCheckboxes).some(checkbox => checkbox.checked);
+                    if (!anyChecked) {
+                        allCheckbox.checked = true;
+                    }
+                    applyFilters();
+                });
+            });
+        }
+
+        // Initialize filters
+        handleAllCheckbox('category-filter');
+        handleAllCheckbox('price-filter');
+        handleAllCheckbox('duration-filter');
+    </script>
+    <!-- Chatwoot Customer Support Widget -->
+    <script src="js/chatwoot-widget.js"></script>
+</body>
+</html>

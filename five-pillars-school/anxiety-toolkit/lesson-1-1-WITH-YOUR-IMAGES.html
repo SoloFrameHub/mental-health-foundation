@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1.1: Understanding Your Anxiety - WITH YOUR ACTUAL IMAGES</title>
+    <style>
+        :root {
+            --calming-teal: #4a90a4;
+            --deep-teal: #357a8a;
+            --soft-blue: #6ba3d0;
+            --sage-green: #87a96b;
+            --warm-gray: #7d8597;
+            --gentle-text: #4a5568;
+            --light-sage: #f7f8f6;
+            --soft-white: #fdfdfd;
+            --light-teal: #e8f4f6;
+            --accent-orange: #fb923c;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--gentle-text);
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* BODY MAP THAT ACTUALLY WORKS */
+        .body-map-section {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .body-map-section h2 {
+            color: var(--deep-teal);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .body-map-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--warm-gray);
+            margin-bottom: 40px;
+        }
+
+        .body-map-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .body-figure {
+            position: relative;
+        }
+
+        .body-figure img {
+            height: 600px;
+            width: auto;
+            display: block;
+        }
+
+        /* Interactive points positioned for YOUR body image */
+        .anxiety-point {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: var(--accent-orange);
+            border-radius: 50%;
+            border: 4px solid white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(251, 146, 60, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .anxiety-point:hover {
+            transform: scale(1.2);
+            box-shadow: 0 8px 25px rgba(251, 146, 60, 0.7);
+            animation: none;
+        }
+
+        .anxiety-point.active {
+            background: var(--deep-teal);
+            animation: none;
+        }
+
+        /* Positions for the actual body image */
+        .point-head { 
+            top: 8%; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+        
+        .point-chest { 
+            top: 30%; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+        
+        .point-stomach { 
+            top: 45%; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+        
+        .point-hands-left { 
+            top: 40%; 
+            left: 25%; 
+        }
+        
+        .point-hands-right { 
+            top: 40%; 
+            right: 25%; 
+        }
+        
+        .point-legs { 
+            top: 70%; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+
+        /* Symptom display panel */
+        .symptom-panel {
+            flex: 1;
+            min-width: 350px;
+            max-width: 500px;
+            background: linear-gradient(135deg, var(--light-teal) 0%, white 100%);
+            padding: 40px;
+            border-radius: 16px;
+            border: 3px solid var(--calming-teal);
+            min-height: 400px;
+        }
+
+        .symptom-panel h3 {
+            color: var(--deep-teal);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .symptom-panel p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--gentle-text);
+            margin-bottom: 15px;
+        }
+
+        .symptom-panel .provider-note {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid var(--calming-teal);
+            font-style: italic;
+            background: rgba(135, 169, 107, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="body-map-section">
+            <h2>🗺️ Your Anxiety Body Map</h2>
+            <p class="body-map-intro">
+                Click on the highlighted areas to explore how anxiety shows up in YOUR body.<br>
+                This isn't just a diagram - it's your personal anxiety atlas.
+            </p>
+            
+            <div class="body-map-container">
+                <div class="body-figure">
+                    <!-- USING YOUR ACTUAL IMAGE -->
+                    <img src="images/full-body-image.jpg" alt="Body map for anxiety symptoms">
+                    
+                    <!-- Interactive points -->
+                    <div class="anxiety-point point-head" onclick="showSymptom('head')">🧠</div>
+                    <div class="anxiety-point point-chest" onclick="showSymptom('chest')">💓</div>
+                    <div class="anxiety-point point-stomach" onclick="showSymptom('stomach')">🦋</div>
+                    <div class="anxiety-point point-hands-left" onclick="showSymptom('hands')">✋</div>
+                    <div class="anxiety-point point-hands-right" onclick="showSymptom('hands')">🤚</div>
+                    <div class="anxiety-point point-legs" onclick="showSymptom('legs')">🦵</div>
+                </div>
+                
+                <div class="symptom-panel" id="symptomPanel">
+                    <h3>👆 Click Any Highlighted Area</h3>
+                    <p>
+                        Each glowing point represents a common area where anxiety manifests physically.
+                        Your experience might be different - and that's completely normal.
+                    </p>
+                    <p>
+                        Take a moment to do a body scan right now. Where do YOU feel tension, 
+                        discomfort, or unusual sensations?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const anxietySymptoms = {
+            head: {
+                title: "🧠 Head & Mind Symptoms",
+                description: "Racing thoughts that won't stop. Feeling lightheaded or dizzy. Difficulty concentrating on anything except worry. Sometimes headaches that wrap around your skull like a tight band.",
+                science: "Your amygdala (fear center) is overriding your prefrontal cortex (logical thinking), making it literally harder to think clearly.",
+                providerNote: "In my practice, I see this constantly. Clients say 'I can't turn my brain off.' That's your anxiety hijacking your thoughts."
+            },
+            chest: {
+                title: "💓 Chest & Heart Symptoms",
+                description: "Heart racing or pounding. Chest feels tight or heavy. Short, shallow breathing. Sometimes it feels like you can't get enough air.",
+                science: "Your sympathetic nervous system floods your body with adrenaline, increasing heart rate to prepare for 'danger' - even when there's no real threat.",
+                providerNote: "This is the symptom that scares people most. They think they're having a heart attack. It's terrifying, but it's not dangerous."
+            },
+            stomach: {
+                title: "🦋 Stomach & Gut Symptoms",
+                description: "Butterflies, knots, or churning. Nausea or loss of appetite. Sometimes sudden urgent need for the bathroom. That 'gut feeling' something's wrong.",
+                science: "The gut-brain axis means your digestive system has more nerve endings than your spinal cord. It literally has its own nervous system that responds to emotion.",
+                providerNote: "I always ask clients about their stomach. It's often the first place anxiety shows up, even before conscious worry."
+            },
+            hands: {
+                title: "✋ Hands & Extremities",
+                description: "Sweaty palms even when it's cool. Trembling or shaking hands. Tingling or numbness in fingers. Cold hands and feet.",
+                science: "Blood flow redirects from extremities to major muscle groups during the stress response, causing these sensations.",
+                providerNote: "Notice how your hands feel before a big presentation or difficult conversation. They're often our early warning system."
+            },
+            legs: {
+                title: "🦵 Legs & Movement",
+                description: "Restless, can't sit still. Legs feel weak or shaky. Urge to pace or run. Sometimes they feel like jelly.",
+                science: "Your body is literally preparing to run from danger - increasing blood flow to large muscle groups and creating that restless energy.",
+                providerNote: "That restless leg bouncing in meetings? That's anxiety looking for an outlet. Your body wants to move the energy through."
+            }
+        };
+
+        function showSymptom(area) {
+            const panel = document.getElementById('symptomPanel');
+            const symptom = anxietySymptoms[area];
+            
+            // Remove active class from all points
+            document.querySelectorAll('.anxiety-point').forEach(point => {
+                point.classList.remove('active');
+            });
+            
+            // Add active class to clicked point(s)
+            event.target.classList.add('active');
+            
+            panel.innerHTML = `
+                <h3>${symptom.title}</h3>
+                <p>${symptom.description}</p>
+                <p><strong>The Science:</strong> ${symptom.science}</p>
+                <div class="provider-note">
+                    <strong>From Autumn:</strong> "${symptom.providerNote}"
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

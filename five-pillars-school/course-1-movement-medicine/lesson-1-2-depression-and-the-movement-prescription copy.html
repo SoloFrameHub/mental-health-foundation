@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1.2: Depression and the Movement Prescription - Movement Medicine Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Movement Medicine: Exercise as Mental Health Treatment</a> >
+                <a href="#module-1">Module 1: Exercise Science Foundation</a> >
+                <span>Lesson 1.2</span>
+            </div>
+
+            <h1>💊 Depression and the Movement Prescription</h1>
+            <p class="lesson-subtitle">Discover how exercise works as effectively as antidepressants, and build your personalized movement prescription for depression recovery</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>45 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Foundational</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Depression Treatment</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 10%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Opening (David's Voice) -->
+            <section class="lesson-opening">
+                <div class="provider-message">
+                    <div class="provider-avatar">DG</div>
+                    <div class="provider-content">
+                        <h2>Welcome to Your Movement Prescription</h2>
+                        <p>I remember Sarah—a 38-year-old teacher who came to my office after six months on sertraline with minimal improvement. She was exhausted, gaining weight from the medication, and losing hope. When I suggested adding exercise to her treatment, she looked at me like I was suggesting she climb Everest. "David," she said, "I can barely get out of bed."</p>
+
+                        <p>Three months later, Sarah was walking 30 minutes four times a week. Her PHQ-9 score dropped from 18 to 7. She had more energy than she'd had in years. And here's what amazed her most: on days she walked, her mood improved within an hour and stayed better all day.</p>
+
+                        <p><strong>The research is clear: exercise is as effective as antidepressants for mild to moderate depression, with longer-lasting effects and zero side effects.</strong> Today, you're going to learn exactly how to write your own movement prescription—the type, duration, frequency, and intensity that research shows actually works for depression.</p>
+
+                        <p>This isn't about "just exercise more." It's about understanding the specific dose of movement that treats depression, and how to overcome the unique motivational barriers depression creates.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Concrete Experience (Experiential Learning - Step 1) -->
+            <section class="concrete-experience">
+                <h2>🎯 Start Here: Your Current Movement & Mood Connection</h2>
+                <p><strong>Before we dive into the science, I want you to explore your own experience.</strong> Depression makes it hard to remember that movement helps, so let's create some data right now.</p>
+
+                <div class="experience-activity">
+                    <h3>5-Minute Movement Experiment</h3>
+                    <div class="activity-instructions">
+                        <p><strong>Step 1:</strong> Rate your current mood (1-10, where 1 = terrible, 10 = excellent)</p>
+                        <div class="mood-rating">
+                            <label>Mood BEFORE movement:</label>
+                            <input type="range" min="1" max="10" value="5" class="mood-slider" id="mood-before">
+                            <span class="mood-value" id="mood-before-value">5</span>
+                        </div>
+
+                        <p><strong>Step 2:</strong> Do ONE of these right now (seriously, pause and do this):</p>
+                        <ul>
+                            <li>Walk around your space for 5 minutes</li>
+                            <li>March in place for 5 minutes</li>
+                            <li>Do 10 sit-to-stands from a chair</li>
+                            <li>Stretch while taking 10 deep breaths</li>
+                        </ul>
+
+                        <p><strong>Step 3:</strong> Rate your mood again</p>
+                        <div class="mood-rating">
+                            <label>Mood AFTER movement:</label>
+                            <input type="range" min="1" max="10" value="5" class="mood-slider" id="mood-after">
+                            <span class="mood-value" id="mood-after-value">5</span>
+                        </div>
+
+                        <div id="mood-change-result" class="result-box" style="display: none;">
+                            <h4>Your Mood Change:</h4>
+                            <p class="mood-change-text"></p>
+                        </div>
+
+                        <button class="btn btn-primary" data-action="calculateMoodChange">See My Mood Change</button>
+                    </div>
+                </div>
+
+                <div class="chat-prompt">
+                    <p>💬 <strong>Questions about this experiment?</strong> <button class="btn-link" data-action="openChat" data-context="mood-movement-experiment">Ask David Glenn</button></p>
+                </div>
+            </section>
+
+            <!-- Reflective Observation (Experiential Learning - Step 2) -->
+            <section class="reflective-observation">
+                <h2>🤔 Reflect on Your Experience</h2>
+                <p>Take a moment to think about what you just experienced:</p>
+
+                <div class="reflection-questions">
+                    <div class="question-item">
+                        <label><strong>What did you notice in your body during and after the movement?</strong></label>
+                        <textarea rows="3" placeholder="Energy level, tension, breathing, temperature..."></textarea>
+                    </div>
+
+                    <div class="question-item">
+                        <label><strong>Did your mood change at all? Even slightly?</strong></label>
+                        <textarea rows="3" placeholder="More alert? Less heavy? Any shift in your thoughts?"></textarea>
+                    </div>
+
+                    <div class="question-item">
+                        <label><strong>What made it hard to start the movement (if anything)?</strong></label>
+                        <textarea rows="3" placeholder="Fatigue? Skepticism? Physical discomfort? Motivation?"></textarea>
+                    </div>
+
+                    <div class="question-item">
+                        <label><strong>If you felt even a 1-point improvement, what does that tell you about movement's immediate effects?</strong></label>
+                        <textarea rows="3" placeholder="Your thoughts here..."></textarea>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary" data-action="saveReflections">💾 Save My Reflections</button>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 What You'll Learn in This Lesson</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">💊</div>
+                        <div class="objective-text">
+                            <h3>Exercise as Antidepressant</h3>
+                            <p>Understand the research showing exercise equals medication effectiveness for mild-moderate depression</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">📊</div>
+                        <div class="objective-text">
+                            <h3>The Therapeutic Dose</h3>
+                            <p>Learn the specific exercise prescription (type, duration, frequency) that treats depression</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🔄</div>
+                        <div class="objective-text">
+                            <h3>Behavioral Activation</h3>
+                            <p>Master strategies to overcome depression's motivational barriers using movement</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">📝</div>
+                        <div class="objective-text">
+                            <h3>Your Personal Prescription</h3>
+                            <p>Create a personalized movement prescription tailored to your depression and circumstances</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Teaching Content (Abstract Conceptualization) -->
+            <div class="learning-section">
+                <h2>🔬 The Science: Exercise as Antidepressant Medicine</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>💊 Research That Changed Depression Treatment</h3>
+                        <p>For years, we've known exercise helps mood. But the landmark research I'm about to share proves it's not just "helpful"—<strong>it's as effective as medication</strong> for many people with depression.</p>
+
+                        <div class="research-highlight">
+                            <h4>🏆 The SMILE Study (Blumenthal et al., 1999, 2007)</h4>
+                            <p><strong>The Setup:</strong> Duke University researchers recruited 156 adults with major depression and randomly assigned them to:</p>
+                            <ul>
+                                <li><strong>Group 1:</strong> Sertraline (Zoloft) - standard antidepressant</li>
+                                <li><strong>Group 2:</strong> Aerobic exercise (30 min, 3x/week, moderate intensity)</li>
+                                <li><strong>Group 3:</strong> Both medication AND exercise</li>
+                            </ul>
+
+                            <p><strong>The Results After 16 Weeks:</strong></p>
+                            <ul>
+                                <li>All three groups showed significant improvement</li>
+                                <li><strong>No statistical difference in remission rates:</strong> Exercise worked as well as medication</li>
+                                <li>60.4% of exercise-only group achieved remission (no longer met depression criteria)</li>
+                            </ul>
+
+                            <p><strong>The 10-Month Follow-Up (The Kicker):</strong></p>
+                            <ul>
+                                <li>Exercise-only group had LOWEST relapse rate (8%)</li>
+                                <li>Medication-only group: 38% relapse rate</li>
+                                <li>Why? People who exercised felt agency—"I did this myself"—which protected against relapse</li>
+                            </ul>
+                        </div>
+
+                        <div class="research-highlight">
+                            <h4>📈 The TREAD Study (Trivedi et al., 2011)</h4>
+                            <p><strong>The Question:</strong> Is there a dose-response relationship? How much exercise is needed?</p>
+
+                            <p><strong>The Finding:</strong> The "therapeutic dose" for depression is:</p>
+                            <div class="therapeutic-dose-box">
+                                <h5>🎯 Therapeutic Exercise Dose for Depression</h5>
+                                <p class="dose-number"><strong>16 kcal/kg/week</strong></p>
+                                <p>For a 70kg (154lb) person: <strong>1,120 calories burned per week through exercise</strong></p>
+                                <p><strong>Translates to approximately:</strong></p>
+                                <ul>
+                                    <li>150 minutes moderate aerobic activity per week (5 × 30 min walks)</li>
+                                    <li>OR 75 minutes vigorous activity per week (3 × 25 min runs)</li>
+                                    <li>OR equivalent combination</li>
+                                </ul>
+                            </div>
+
+                            <p><strong>Important finding:</strong> Lower doses (7.5 kcal/kg/week) showed some benefit but not as robust. Higher doses didn't add much more benefit—there's a sweet spot.</p>
+                        </div>
+
+                        <div class="research-highlight">
+                            <h4>🧠 Meta-Analysis (Schuch et al., 2016)</h4>
+                            <p>Analysis of 25 studies with 1,487 participants with depression:</p>
+                            <ul>
+                                <li><strong>Effect size: d = 0.62</strong> (considered "moderate-to-large")</li>
+                                <li>Exercise reduced depression regardless of diagnosis severity</li>
+                                <li>Effects lasted beyond the exercise program</li>
+                                <li>Both aerobic and resistance training worked</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="concept-card">
+                        <h3>🧪 How Exercise Treats Depression (The Mechanisms)</h3>
+                        <p>Understanding <em>why</em> exercise works helps you trust the prescription when depression makes you doubt it:</p>
+
+                        <div class="mechanism-list">
+                            <div class="mechanism-item">
+                                <h4>1️⃣ Neurotransmitter Production</h4>
+                                <p><strong>What happens:</strong> Exercise increases serotonin, norepinephrine, and dopamine—the same chemicals targeted by antidepressants.</p>
+                                <p><strong>Timeline:</strong> Acute boost within 30-60 minutes; chronic elevation with consistent training.</p>
+                                <p><strong>Why it matters:</strong> You're treating the same neurochemical deficits as medication, but naturally.</p>
+                            </div>
+
+                            <div class="mechanism-item">
+                                <h4>2️⃣ BDNF (Brain-Derived Neurotrophic Factor)</h4>
+                                <p><strong>What happens:</strong> Exercise triggers production of BDNF, which grows new neurons and connections in the hippocampus (memory/mood center).</p>
+                                <p><strong>Timeline:</strong> BDNF elevation peaks 2-3 hours post-exercise; structural brain changes visible at 12+ weeks.</p>
+                                <p><strong>Why it matters:</strong> Depression shrinks the hippocampus; exercise regrows it. This is neuroprotection and repair.</p>
+                            </div>
+
+                            <div class="mechanism-item">
+                                <h4>3️⃣ Inflammation Reduction</h4>
+                                <p><strong>What happens:</strong> Exercise reduces inflammatory markers (IL-6, CRP) linked to depression.</p>
+                                <p><strong>Timeline:</strong> Anti-inflammatory effects accumulate over weeks.</p>
+                                <p><strong>Why it matters:</strong> Depression is partly an inflammatory condition; exercise treats the root cause.</p>
+                            </div>
+
+                            <div class="mechanism-item">
+                                <h4>4️⃣ HPA Axis Regulation</h4>
+                                <p><strong>What happens:</strong> Regular exercise normalizes the stress response system (hypothalamic-pituitary-adrenal axis).</p>
+                                <p><strong>Timeline:</strong> 8-12 weeks of consistent training.</p>
+                                <p><strong>Why it matters:</strong> Depression dysregulates stress hormones; exercise recalibrates the system.</p>
+                            </div>
+
+                            <div class="mechanism-item">
+                                <h4>5️⃣ Behavioral Activation</h4>
+                                <p><strong>What happens:</strong> Movement breaks the inertia-depression cycle; activity generates positive experiences and reinforcement.</p>
+                                <p><strong>Timeline:</strong> Immediate—every exercise session interrupts withdrawal.</p>
+                                <p><strong>Why it matters:</strong> Depression thrives on inactivity; movement starves it.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Key Research Numbers</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">60%</div>
+                            <p>Remission rate from exercise alone in SMILE study</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">30-45 min</div>
+                            <p>Optimal session duration, moderate intensity, 3-5x per week</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">12 weeks</div>
+                            <p>Time to achieve antidepressant effects comparable to medication</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">8%</div>
+                            <p>Relapse rate in exercise group vs 38% in medication-only group</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-prompt">
+                    <p>💬 <strong>Questions about the research?</strong> <button class="btn-link" data-action="openChat" data-context="depression-research">Ask David Glenn</button></p>
+                </div>
+            </div>
+
+            <!-- Interactive Exercise Prescription Calculator -->
+            <div class="interactive-section">
+                <h2>🧮 Your Depression Exercise Prescription Calculator</h2>
+                <p>Let's calculate your personalized therapeutic dose based on the TREAD study:</p>
+
+                <div class="calculator-tool">
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label>Your current weight:</label>
+                            <input type="number" id="user-weight-lbs" value="154" min="50" max="500">
+                            <select id="weight-unit">
+                                <option value="lbs">lbs</option>
+                                <option value="kg">kg</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Current depression severity (optional):</label>
+                            <select id="depression-severity">
+                                <option value="mild">Mild (PHQ-9: 5-9)</option>
+                                <option value="moderate" selected>Moderate (PHQ-9: 10-14)</option>
+                                <option value="moderately-severe">Moderately Severe (PHQ-9: 15-19)</option>
+                                <option value="severe">Severe (PHQ-9: 20-27)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Current fitness level:</label>
+                            <select id="fitness-level">
+                                <option value="sedentary">Sedentary (no regular activity)</option>
+                                <option value="low">Low (some activity, inconsistent)</option>
+                                <option value="moderate">Moderate (regular light activity)</option>
+                                <option value="high">High (regular vigorous activity)</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary" data-action="calculatePrescription">📊 Calculate My Prescription</button>
+                    </div>
+
+                    <div id="prescription-results" class="results-box" style="display: none;">
+                        <h3>Your Personalized Movement Prescription</h3>
+                        <div id="prescription-content"></div>
+                        <button class="btn btn-secondary" data-action="savePrescription">💾 Save My Prescription</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Behavioral Activation Section -->
+            <div class="learning-section">
+                <h2>🔄 Behavioral Activation: Breaking the Depression-Inactivity Cycle</h2>
+
+                <div class="concept-explanation">
+                    <p>Here's the cruel catch-22 of depression: <strong>movement helps depression, but depression kills motivation to move.</strong> This is where behavioral activation comes in—it's the clinical strategy for overcoming this barrier.</p>
+
+                    <div class="cycle-diagram">
+                        <h4>❌ The Depression Spiral</h4>
+                        <div class="spiral-steps">
+                            <p>😔 Feel depressed → 🛋️ Withdraw and rest → ⬇️ Energy drops further → 🧠 Negative thoughts intensify → 😞 Feel more depressed → 🔁 Repeat</p>
+                        </div>
+
+                        <h4>✅ The Activation Spiral</h4>
+                        <div class="spiral-steps">
+                            <p>😔 Feel depressed → 🚶 Move anyway (small action) → ⬆️ Energy lifts slightly → 🎯 Small accomplishment → 🙂 Mood improves → 🔁 Next action easier</p>
+                        </div>
+                    </div>
+
+                    <div class="activation-strategies">
+                        <h3>💡 Behavioral Activation Strategies That Work</h3>
+
+                        <div class="strategy-card">
+                            <h4>1. Start Ridiculously Small</h4>
+                            <p><strong>The principle:</strong> Depression demands perfection or nothing. We reject that.</p>
+                            <ul>
+                                <li>Can't do 30 minutes? Do 5 minutes.</li>
+                                <li>Can't do 5 minutes? Walk to the mailbox.</li>
+                                <li>Can't walk? Stand up and stretch for 60 seconds.</li>
+                            </ul>
+                            <p class="strategy-why"><strong>Why it works:</strong> Any action breaks the inertia. Momentum builds from there.</p>
+                        </div>
+
+                        <div class="strategy-card">
+                            <h4>2. Schedule Movement Like Medication</h4>
+                            <p><strong>The principle:</strong> Don't wait for motivation. Motivation follows action, not the other way around.</p>
+                            <ul>
+                                <li>Put movement in your calendar at specific times</li>
+                                <li>Treat it like a doctor's appointment—non-negotiable</li>
+                                <li>Set out workout clothes the night before</li>
+                                <li>Use alarms/reminders</li>
+                            </ul>
+                            <p class="strategy-why"><strong>Why it works:</strong> You're prescribing the medicine. Would you skip your antidepressant? This is the same.</p>
+                        </div>
+
+                        <div class="strategy-card">
+                            <h4>3. The 10-Minute Rule</h4>
+                            <p><strong>The principle:</strong> Commit to 10 minutes only. If you still feel terrible, you can stop.</p>
+                            <ul>
+                                <li>Put on shoes, walk for 10 minutes</li>
+                                <li>After 10 minutes, reassess</li>
+                                <li>80% of the time, you'll continue</li>
+                                <li>20% of the time, you stop—and that's okay, you still got 10 minutes</li>
+                            </ul>
+                            <p class="strategy-why"><strong>Why it works:</strong> Overcomes the "all or nothing" thinking. Starting is the hardest part.</p>
+                        </div>
+
+                        <div class="strategy-card">
+                            <h4>4. Track the Mood Benefit</h4>
+                            <p><strong>The principle:</strong> Depression lies and says movement doesn't help. Data defeats the lie.</p>
+                            <ul>
+                                <li>Rate mood before movement (1-10)</li>
+                                <li>Rate mood after movement (1-10)</li>
+                                <li>Write it down—every single time</li>
+                                <li>Review your data weekly</li>
+                            </ul>
+                            <p class="strategy-why"><strong>Why it works:</strong> When depression says "this won't work," you have proof that it does.</p>
+                        </div>
+
+                        <div class="strategy-card">
+                            <h4>5. Enlist Support/Accountability</h4>
+                            <p><strong>The principle:</strong> You don't have to do this alone. External structure helps when internal motivation fails.</p>
+                            <ul>
+                                <li>Exercise with a friend or family member</li>
+                                <li>Join a class (gentle yoga, water aerobics, walking group)</li>
+                                <li>Text someone before/after your movement</li>
+                                <li>Use your therapist or provider for accountability</li>
+                            </ul>
+                            <p class="strategy-why"><strong>Why it works:</strong> Social commitment is powerful. You're more likely to show up for others than yourself (and that's okay).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Persona-Specific Applications -->
+            <section class="persona-applications">
+                <h2>👥 Personalized Strategies: Maria, Jake, and David</h2>
+                <p>Let's see how three different people apply the movement prescription to their unique depression experiences:</p>
+
+                <div class="persona-tabs">
+                    <button class="persona-tab active" data-persona="maria">Maria's Story</button>
+                    <button class="persona-tab" data-persona="jake">Jake's Story</button>
+                    <button class="persona-tab" data-persona="david">David's Story</button>
+                </div>
+
+                <div class="persona-content active" data-persona="maria">
+                    <div class="persona-header">
+                        <h3>💚 Maria - Starting from Complete Sedentary</h3>
+                        <p><strong>Age 42, Marketing Director, PHQ-9: 12 (Moderate Depression)</strong></p>
+                        <p><em>"I can barely get through my workday. The thought of exercise feels impossible."</em></p>
+                    </div>
+
+                    <div class="persona-details">
+                        <h4>Maria's Depression Pattern:</h4>
+                        <ul>
+                            <li>Low energy and fatigue dominate</li>
+                            <li>All-or-nothing thinking: "If I can't do it perfectly, why bother?"</li>
+                            <li>Uses lunch hour to nap in car</li>
+                            <li>Feels guilty about not exercising, which worsens depression</li>
+                        </ul>
+
+                        <h4>Maria's Therapeutic Dose:</h4>
+                        <p><strong>Goal:</strong> 150 minutes moderate activity per week (therapeutic dose)</p>
+                        <p><strong>Starting Point:</strong> 10 minutes, 3x per week (adaptive dose for current state)</p>
+
+                        <h4>Maria's 12-Week Progression:</h4>
+                        <div class="progression-timeline">
+                            <div class="week-block">
+                                <strong>Weeks 1-2:</strong> 10-minute walks, 3x/week (lunch break)
+                            </div>
+                            <div class="week-block">
+                                <strong>Weeks 3-4:</strong> 15-minute walks, 3x/week
+                            </div>
+                            <div class="week-block">
+                                <strong>Weeks 5-6:</strong> 20-minute walks, 4x/week
+                            </div>
+                            <div class="week-block">
+                                <strong>Weeks 7-8:</strong> 25-minute walks, 4x/week
+                            </div>
+                            <div class="week-block">
+                                <strong>Weeks 9-12:</strong> 30-minute walks, 5x/week = 150 min (therapeutic dose!)
+                            </div>
+                        </div>
+
+                        <h4>Maria's Behavioral Activation Tactics:</h4>
+                        <ul>
+                            <li><strong>The deal:</strong> "I will walk for 10 minutes. If I want to stop, I can. No judgment."</li>
+                            <li><strong>Calendar blocking:</strong> 12:00-12:15 PM marked "Movement Medicine" (not "exercise")</li>
+                            <li><strong>Tracking:</strong> Rates mood before/after every walk in phone notes</li>
+                            <li><strong>Accountability:</strong> Texts her sister after each walk: "✅ Walked today"</li>
+                            <li><strong>Environment:</strong> Keeps walking shoes in car, downloads audiobook for walks</li>
+                        </ul>
+
+                        <h4>What Maria Discovered:</h4>
+                        <p><em>"By week 3, I noticed I wasn't napping at lunch anymore—I actually had more energy after walking than I did from napping. That was huge. By week 8, my therapist noticed I was less tearful. By week 12, my PHQ-9 was down to 7. I'm not 'cured,' but I feel like myself again."</em></p>
+                    </div>
+                </div>
+
+                <div class="persona-content" data-persona="jake">
+                    <div class="persona-header">
+                        <h3>💙 Jake - Former Athlete with All-or-Nothing Thinking</h3>
+                        <p><strong>Age 28, Software Engineer, PHQ-9: 15 (Moderately Severe Depression)</strong></p>
+                        <p><em>"I used to train 2 hours a day. Now I can't do anything. What's the point of 20 minutes?"</em></p>
+                    </div>
+
+                    <div class="persona-details">
+                        <h4>Jake's Depression Pattern:</h4>
+                        <ul>
+                            <li>Identity loss after ACL injury ended competitive soccer</li>
+                            <li>Compares current fitness to peak athletic performance</li>
+                            <li>"If it's not intense, it doesn't count" mindset</li>
+                            <li>Either trains too hard and gets injured, or does nothing</li>
+                            <li>Shame about current fitness level prevents gym visits</li>
+                        </ul>
+
+                        <h4>Jake's Therapeutic Dose:</h4>
+                        <p><strong>Goal:</strong> 150 minutes moderate activity OR 75 minutes vigorous per week</p>
+                        <p><strong>Starting Point:</strong> 20 minutes moderate, 4x/week (protect healing knee)</p>
+
+                        <h4>Jake's 12-Week Progression:</h4>
+                        <div class="progression-timeline">
+                            <div class="week-block">
+                                <strong>Weeks 1-3:</strong> 20-minute bike rides, 4x/week (low-impact for knee)
+                            </div>
+                            <div class="week-block">
+                                <strong>Weeks 4-6:</strong> 30-minute rides, 4x/week + 1x gentle strength (bodyweight)
+                            </div>
+                            <div class="week-block">
+                                <strong>Weeks 7-9:</strong> 30-minute rides, 3x/week + 2x strength training (30 min)
+                            </div>
+                            <div class="week-block">
+                                <strong>Weeks 10-12:</strong> 25-minute vigorous rides, 3x/week (75 min vigorous dose) + 2x strength
+                            </div>
+                        </div>
+
+                        <h4>Jake's Behavioral Activation Tactics:</h4>
+                        <ul>
+                            <li><strong>Reframe:</strong> "This isn't my peak—this is my recovery. Every session is progress."</li>
+                            <li><strong>New metrics:</strong> Track consistency (days moved) not intensity or performance</li>
+                            <li><strong>Sport substitution:</strong> Cycling scratches competitive itch without knee impact</li>
+                            <li><strong>Home gym:</strong> Avoids shame triggers of commercial gym during rebuilding phase</li>
+                            <li><strong>Coach mentality:</strong> "Would I tell an injured player to go 100%? No. Same applies to me."</li>
+                        </ul>
+
+                        <h4>What Jake Discovered:</h4>
+                        <p><em>"I had to grieve the athlete I was and accept where I am now. Once I stopped comparing, I could actually enjoy movement again. By week 10, I wasn't exercising to escape depression—I was exercising because it felt good. That shift was everything. My PHQ-9 dropped to 8."</em></p>
+                    </div>
+                </div>
+
+                <div class="persona-content" data-persona="david">
+                    <div class="persona-header">
+                        <h3>💜 David - Time-Starved Professional</h3>
+                        <p><strong>Age 45, Accountant, PHQ-9: 9 (Mild Depression)</strong></p>
+                        <p><em>"Between 60-hour work weeks and kids' activities, when am I supposed to exercise?"</em></p>
+                    </div>
+
+                    <div class="persona-details">
+                        <h4>David's Depression Pattern:</h4>
+                        <ul>
+                            <li>Chronic low-grade depression from burnout</li>
+                            <li>Stress eating, poor sleep, no energy</li>
+                            <li>"I don't have time" blocks all movement</li>
+                            <li>Feels guilty prioritizing self-care over family</li>
+                            <li>Past gym memberships went unused—waste of money</li>
+                        </ul>
+
+                        <h4>David's Therapeutic Dose:</h4>
+                        <p><strong>Goal:</strong> 150 minutes moderate activity per week</p>
+                        <p><strong>Starting Point:</strong> Multiple 10-15 minute "exercise snacks" daily (no gym required)</p>
+
+                        <h4>David's 12-Week Progression:</h4>
+                        <div class="progression-timeline">
+                            <div class="week-block">
+                                <strong>Weeks 1-3:</strong> 10 min morning + 10 min lunch + 10 min evening = 30 min/day, 5 days = 150 min/week
+                            </div>
+                            <div class="week-block">
+                                <strong>Weeks 4-6:</strong> Same frequency, add family walks on weekends (15 min with kids)
+                            </div>
+                            <div class="week-block">
+                                <strong>Weeks 7-9:</strong> Increase lunch walks to 20 minutes (using calendar blocks)
+                            </div>
+                            <div class="week-block">
+                                <strong>Weeks 10-12:</strong> 20 min morning + 20 min lunch + 10 min evening = 50 min/day, 3-4 days/week
+                            </div>
+                        </div>
+
+                        <h4>David's Behavioral Activation Tactics:</h4>
+                        <ul>
+                            <li><strong>Exercise snacking:</strong> Three 10-minute sessions feel manageable vs. one 30-minute block</li>
+                            <li><strong>Calendar protection:</strong> Blocks 7:00-7:10 AM, 12:30-12:40 PM as "meetings" so no one schedules over them</li>
+                            <li><strong>Family integration:</strong> After-dinner walks with kids = family time + exercise</li>
+                            <li><strong>Commute hacks:</strong> Parks far from office entrance (5 min walk each way = 10 min daily)</li>
+                            <li><strong>No-gym-required:</strong> Home bodyweight exercises, neighborhood walks—zero travel time</li>
+                            <li><strong>Reframe:</strong> "This makes me a better dad and employee—it's not selfish, it's essential maintenance"</li>
+                        </ul>
+
+                        <h4>What David Discovered:</h4>
+                        <p><em>"I thought I needed an hour at the gym, which I'd never have. But 10 minutes? I can always find 10 minutes. And three 10-minute walks gave me MORE mood benefit than one exhausting hour at the gym ever did. Plus, my kids started asking, 'Dad, can we go on a walk?' That was the moment I knew it was working. PHQ-9 down to 4."</em></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Assessment -->
+            <div class="interactive-section">
+                <h2>📋 Depression Movement Readiness Assessment</h2>
+                <p>Let's personalize your movement prescription with an adaptive assessment:</p>
+
+                <div class="assessment-container">
+                    <div id="assessment-intro" class="assessment-screen active">
+                        <p>This brief assessment will help us:</p>
+                        <ul>
+                            <li>Understand your current depression symptoms and activity level</li>
+                            <li>Identify your specific barriers to movement</li>
+                            <li>Match you to a persona (Maria, Jake, or David)</li>
+                            <li>Generate your personalized starting prescription</li>
+                        </ul>
+                        <p><strong>This will take 5-7 minutes.</strong> Answer honestly—there are no wrong answers.</p>
+                        <button class="btn btn-primary" data-action="startAssessment">Start Assessment</button>
+                    </div>
+
+                    <div id="assessment-questions" class="assessment-screen">
+                        <div class="question-progress">
+                            <div class="progress-bar">
+                                <div class="progress" id="assessment-progress" style="width: 0%"></div>
+                            </div>
+                            <p><span id="current-question-num">1</span> of <span id="total-questions">8</span></p>
+                        </div>
+
+                        <div id="question-container">
+                            <!-- Questions will be dynamically loaded here -->
+                        </div>
+
+                        <div class="assessment-navigation">
+                            <button class="btn btn-secondary" id="prev-question" style="display: none;">← Previous</button>
+                            <button class="btn btn-primary" id="next-question">Next →</button>
+                        </div>
+                    </div>
+
+                    <div id="assessment-results" class="assessment-screen">
+                        <h3>Your Personalized Movement Prescription</h3>
+                        <div id="assessment-results-content">
+                            <!-- Results will be displayed here -->
+                        </div>
+                        <button class="btn btn-primary" data-action="saveAssessmentResults">💾 Save My Results</button>
+                    </div>
+                </div>
+
+                <div class="chat-prompt" style="margin-top: 1rem;">
+                    <p>💬 <strong>Questions about your prescription?</strong> <button class="btn-link" data-action="openChat" data-context="personalized-prescription">Ask David Glenn</button></p>
+                </div>
+            </div>
+
+            <!-- Active Experimentation -->
+            <section class="active-experimentation">
+                <h2>🎯 Practice: Build Your Movement Activation Plan</h2>
+                <p>Now it's time to apply everything you've learned. You'll create three levels of commitment:</p>
+
+                <div class="practice-levels">
+                    <div class="practice-card">
+                        <h3>Level 1: This Week's Minimum Viable Movement</h3>
+                        <p><strong>The commitment:</strong> What's the smallest movement you can commit to this week, even on your worst day?</p>
+                        <textarea rows="3" id="minimum-commitment" placeholder="Example: Walk around the block once (5 min) on Monday, Wednesday, Friday"></textarea>
+                    </div>
+
+                    <div class="practice-card">
+                        <h3>Level 2: Your Ideal Week (If Everything Goes Right)</h3>
+                        <p><strong>The goal:</strong> If you had decent energy and no major obstacles, what would your movement look like?</p>
+                        <textarea rows="4" id="ideal-commitment" placeholder="Example: 20-minute walks 5 days, plus stretching on weekends"></textarea>
+                    </div>
+
+                    <div class="practice-card">
+                        <h3>Level 3: Your 12-Week Therapeutic Dose Target</h3>
+                        <p><strong>The destination:</strong> Based on your prescription, where do you want to be in 12 weeks?</p>
+                        <textarea rows="4" id="target-commitment" placeholder="Example: 30-minute walks 5x/week = 150 minutes moderate activity (therapeutic dose)"></textarea>
+                    </div>
+                </div>
+
+                <div class="activation-plan">
+                    <h3>Your Behavioral Activation Strategy</h3>
+                    <p>Choose and plan your top 3 activation tactics:</p>
+
+                    <div class="tactic-checklist">
+                        <label><input type="checkbox" value="schedule"> <strong>Schedule it:</strong> When exactly will you move? <input type="text" placeholder="Specific days/times"></label>
+                        <label><input type="checkbox" value="track-mood"> <strong>Track mood impact:</strong> How will you track before/after mood? <input type="text" placeholder="Method"></label>
+                        <label><input type="checkbox" value="accountability"> <strong>Accountability:</strong> Who will know about your commitment? <input type="text" placeholder="Person/group"></label>
+                        <label><input type="checkbox" value="environment"> <strong>Environment setup:</strong> What will you prepare ahead? <input type="text" placeholder="Clothes, route, equipment"></label>
+                        <label><input type="checkbox" value="10-min-rule"> <strong>10-minute rule:</strong> Will you use the "just 10 minutes" commitment?</label>
+                        <label><input type="checkbox" value="small-start"> <strong>Start ridiculously small:</strong> Will you give yourself permission to do less than perfect?</label>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveActivationPlan">💾 Save My Activation Plan</button>
+            </section>
+
+            <!-- Knowledge Check -->
+            <div class="learning-section">
+                <h2>✅ Knowledge Check</h2>
+                <p>Test your understanding of the key concepts:</p>
+
+                <div class="knowledge-quiz">
+                    <div class="quiz-question">
+                        <h4>Question 1: What was the key finding from the SMILE study?</h4>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q1" value="a"> Exercise is better than medication for depression</label>
+                            <label><input type="radio" name="q1" value="b"> Exercise is as effective as sertraline (Zoloft) for treating depression</label>
+                            <label><input type="radio" name="q1" value="c"> Medication is better than exercise for depression</label>
+                            <label><input type="radio" name="q1" value="d"> Exercise only works for mild depression</label>
+                        </div>
+                        <div class="quiz-feedback" data-question="q1" style="display: none;"></div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>Question 2: What is the "therapeutic dose" of exercise for depression from the TREAD study?</h4>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q2" value="a"> 7.5 kcal/kg/week</label>
+                            <label><input type="radio" name="q2" value="b"> 16 kcal/kg/week (about 150 min moderate activity/week)</label>
+                            <label><input type="radio" name="q2" value="c"> 30 kcal/kg/week</label>
+                            <label><input type="radio" name="q2" value="d"> Any amount of movement helps equally</label>
+                        </div>
+                        <div class="quiz-feedback" data-question="q2" style="display: none;"></div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>Question 3: What is behavioral activation?</h4>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q3" value="a"> Waiting until you feel motivated to exercise</label>
+                            <label><input type="radio" name="q3" value="b"> Taking action even without motivation, to break the inactivity-depression cycle</label>
+                            <label><input type="radio" name="q3" value="c"> Only exercising when your energy is high</label>
+                            <label><input type="radio" name="q3" value="d"> Forcing yourself to do intense workouts</label>
+                        </div>
+                        <div class="quiz-feedback" data-question="q3" style="display: none;"></div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>Question 4: Scenario - Maria feels exhausted and doesn't think she can do her planned 20-minute walk. What's the best behavioral activation approach?</h4>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q4" value="a"> Skip it and rest—listen to her body</label>
+                            <label><input type="radio" name="q4" value="b"> Push through and do the full 20 minutes no matter what</label>
+                            <label><input type="radio" name="q4" value="c"> Commit to just 10 minutes, with permission to stop if she wants</label>
+                            <label><input type="radio" name="q4" value="d"> Wait until she feels more motivated tomorrow</label>
+                        </div>
+                        <div class="quiz-feedback" data-question="q4" style="display: none;"></div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="checkAnswers">Check My Answers</button>
+                </div>
+            </div>
+
+            <!-- Celebration & Closure -->
+            <section class="celebration">
+                <div class="provider-message">
+                    <div class="provider-avatar">DG</div>
+                    <div class="provider-content">
+                        <h2>🎉 Excellent Work on Lesson 1.2!</h2>
+                        <p>You've just completed one of the most important lessons in this entire course. Here's what you accomplished:</p>
+
+                        <div class="accomplishments">
+                            <h3>✅ What You've Learned:</h3>
+                            <ul>
+                                <li><strong>The research:</strong> You now know exercise is as effective as antidepressants (SMILE study, 60% remission rate)</li>
+                                <li><strong>The prescription:</strong> You calculated your therapeutic dose (16 kcal/kg/week, ~150 min moderate activity)</li>
+                                <li><strong>The mechanisms:</strong> You understand HOW exercise treats depression (neurotransmitters, BDNF, inflammation, HPA axis)</li>
+                                <li><strong>Behavioral activation:</strong> You have concrete strategies to overcome motivational barriers</li>
+                                <li><strong>Your personal plan:</strong> You created a specific, actionable movement prescription for the next 12 weeks</li>
+                            </ul>
+                        </div>
+
+                        <div class="homework">
+                            <h3>📝 Your Practice Assignment This Week:</h3>
+                            <ol>
+                                <li><strong>Implement Level 1:</strong> Do your minimum viable movement at least 3 times this week</li>
+                                <li><strong>Track mood impact:</strong> Rate mood before/after each movement session (use the simple 1-10 scale)</li>
+                                <li><strong>Notice barriers:</strong> When resistance shows up, name which barrier it is (fatigue? All-or-nothing thinking? Time?)</li>
+                                <li><strong>Practice ONE behavioral activation tactic:</strong> Choose your favorite strategy and use it consistently</li>
+                                <li><strong>Celebrate micro-wins:</strong> Every movement session counts, no matter how short</li>
+                            </ol>
+                        </div>
+
+                        <div class="next-lesson-preview">
+                            <h3>🔜 Coming Up in Lesson 1.3: Anxiety Disorders and Movement Therapy</h3>
+                            <p>Next, we'll explore how exercise treats anxiety through a completely different mechanism—you'll learn about interoceptive exposure, anxiety sensitivity reduction, and why certain types of movement are especially powerful for panic disorder, generalized anxiety, and social anxiety.</p>
+                        </div>
+
+                        <p><strong>Remember:</strong> Depression will tell you movement doesn't help. Your data will prove it wrong. Trust the process, start small, and show up consistently. You've got this.</p>
+
+                        <p>— David Glenn, PMHNP</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources -->
+            <section class="resources">
+                <h2>📚 Additional Resources</h2>
+
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h3>📄 Downloadable Materials</h3>
+                        <ul>
+                            <li><a href="#" download>Movement Prescription Worksheet (PDF)</a></li>
+                            <li><a href="#" download>Behavioral Activation Tracker (PDF)</a></li>
+                            <li><a href="#" download>Mood-Movement Log Template (PDF)</a></li>
+                            <li><a href="#" download>Weekly Exercise Planning Template (PDF)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3>📖 Research References</h3>
+                        <ul>
+                            <li>Blumenthal et al. (1999). Effects of exercise training on older patients with major depression. <em>Archives of Internal Medicine</em></li>
+                            <li>Blumenthal et al. (2007). Exercise and pharmacotherapy in the treatment of major depressive disorder. <em>Psychosomatic Medicine</em></li>
+                            <li>Trivedi et al. (2011). Exercise as an augmentation treatment for nonremitted major depressive disorder. <em>Journal of Clinical Psychiatry</em></li>
+                            <li>Schuch et al. (2016). Exercise as a treatment for depression. <em>Journal of Psychiatric Research</em></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3>🔗 Related Lessons</h3>
+                        <ul>
+                            <li><a href="lesson-1-1-the-science-of-exercise-as-medicine.html">Lesson 1.1: The Science of Exercise as Medicine</a></li>
+                            <li><a href="lesson-1-3-anxiety-disorders-and-movement-therapy.html">Lesson 1.3: Anxiety Disorders and Movement Therapy</a></li>
+                            <li><a href="lesson-1-6-building-your-personal-movement-assessment.html">Lesson 1.6: Building Your Personal Movement Assessment</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3>🆘 Crisis Resources</h3>
+                        <ul>
+                            <li><strong>988 Suicide & Crisis Lifeline:</strong> Call or text 988</li>
+                            <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
+                            <li><strong>Emergency:</strong> Call 911</li>
+                            <li><strong>SAMHSA Helpline:</strong> 1-800-662-4357</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-1-1-the-science-of-exercise-as-medicine.html" class="nav-btn secondary">← Previous: The Science of Exercise as Medicine</a>
+                <a href="lesson-1-3-anxiety-disorders-and-movement-therapy.html" class="nav-btn primary">Next: Anxiety Disorders and Movement Therapy →</a>
+            </div>
+
+            <div class="lesson-progress-footer">
+                <span>Module 1: Exercise Science Foundation • Lesson 2 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget (will connect to GenKit when Firebase is deployed) -->
+    <div id="chat-widget" class="chat-widget">
+        <button class="chat-toggle" id="chat-toggle">
+            <span class="chat-icon">💬</span>
+            <span class="chat-label">Ask David</span>
+        </button>
+        <div class="chat-window" id="chat-window" style="display: none;">
+            <div class="chat-header">
+                <h3>Chat with David Glenn</h3>
+                <button class="chat-close" id="chat-close">×</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="chat-message assistant">
+                    <p>Hi! I'm here to answer questions about this lesson. What would you like to know about exercise and depression?</p>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <textarea id="chat-input" placeholder="Ask a question..." rows="2"></textarea>
+                <button id="chat-send" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/lesson-interactions.js"></script>
+    <script src="js/firebase-integration.js"></script>
+
+    <script>
+        // Lesson 1.2 specific functionality
+        (function() {
+            'use strict';
+
+            // Correct answers for quiz
+            const quizAnswers = {
+                q1: 'b',
+                q2: 'b',
+                q3: 'b',
+                q4: 'c'
+            };
+
+            const quizFeedback = {
+                q1: {
+                    correct: "✅ Correct! The SMILE study found exercise was as effective as sertraline (Zoloft) for treating depression, with a 60% remission rate and lower relapse rates.",
+                    incorrect: "Not quite. The SMILE study found that exercise was equally effective as sertraline (Zoloft)—not better or worse, but equivalent. And it worked for moderate depression, not just mild."
+                },
+                q2: {
+                    correct: "✅ Correct! The TREAD study found 16 kcal/kg/week is the therapeutic dose, which equals about 150 minutes of moderate activity per week for most people.",
+                    incorrect: "Not quite. The TREAD study found 16 kcal/kg/week is the therapeutic dose (about 150 min/week moderate activity). Lower doses showed some benefit but weren't as robust."
+                },
+                q3: {
+                    correct: "✅ Correct! Behavioral activation means taking action BEFORE motivation appears, because action creates motivation, not the other way around.",
+                    incorrect: "Not quite. Behavioral activation is about taking action even without motivation—because action breaks the depression-inactivity cycle and motivation follows."
+                },
+                q4: {
+                    correct: "✅ Correct! The 10-minute rule: commit to just 10 minutes, with permission to stop. This overcomes all-or-nothing thinking and usually leads to continuing.",
+                    incorrect: "Not quite. The behavioral activation approach is to commit to something small (10 minutes) with permission to stop. This overcomes the barrier while respecting her state."
+                }
+            };
+
+            // Mood change calculator
+            document.getElementById('mood-before')?.addEventListener('input', function(e) {
+                document.getElementById('mood-before-value').textContent = e.target.value;
+            });
+
+            document.getElementById('mood-after')?.addEventListener('input', function(e) {
+                document.getElementById('mood-after-value').textContent = e.target.value;
+            });
+
+            function calculateMoodChange() {
+                const before = parseInt(document.getElementById('mood-before').value);
+                const after = parseInt(document.getElementById('mood-after').value);
+                const change = after - before;
+
+                const resultDiv = document.getElementById('mood-change-result');
+                const resultText = resultDiv.querySelector('.mood-change-text');
+
+                let message = '';
+                if (change > 0) {
+                    message = `🎉 Your mood improved by ${change} points! (${before} → ${after})\n\nThis is exactly what the research shows: even brief movement creates measurable mood improvements. Your body just proved it to you. Remember this moment when depression tells you movement doesn't help.`;
+                } else if (change === 0) {
+                    message = `Your mood stayed the same (${before} → ${after}).\n\nThat's okay! Sometimes movement prevents mood from dropping further, which is still valuable. Also, 5 minutes is quite brief—longer durations typically show clearer effects. The key is you moved, and that matters.`;
+                } else {
+                    message = `Your mood decreased (${before} → ${after}).\n\nThis is uncommon but can happen if you're very depleted or in pain. The movement might still help you sleep better tonight or feel better tomorrow. If movement consistently worsens mood, please discuss with your healthcare provider.`;
+                }
+
+                resultText.textContent = message;
+                resultDiv.style.display = 'block';
+            }
+
+            // Exercise prescription calculator
+            function calculatePrescription() {
+                const weightInput = parseFloat(document.getElementById('user-weight-lbs').value);
+                const weightUnit = document.getElementById('weight-unit').value;
+                const severity = document.getElementById('depression-severity').value;
+                const fitnessLevel = document.getElementById('fitness-level').value;
+
+                // Convert to kg if needed
+                const weightKg = weightUnit === 'lbs' ? weightInput * 0.453592 : weightInput;
+
+                // Therapeutic dose: 16 kcal/kg/week
+                const therapeuticCalories = Math.round(weightKg * 16);
+
+                // Moderate activity burns ~5 kcal/min, so therapeutic minutes:
+                const therapeuticMinutes = Math.round(therapeuticCalories / 5);
+
+                // Starting dose based on fitness level
+                const startingDoses = {
+                    sedentary: Math.round(therapeuticMinutes * 0.2), // Start at 20%
+                    low: Math.round(therapeuticMinutes * 0.3),
+                    moderate: Math.round(therapeuticMinutes * 0.5),
+                    high: Math.round(therapeuticMinutes * 0.7)
+                };
+
+                const startingMinutes = startingDoses[fitnessLevel];
+
+                const resultsDiv = document.getElementById('prescription-results');
+                const contentDiv = document.getElementById('prescription-content');
+
+                contentDiv.innerHTML = `
+                    <div class="prescription-details">
+                        <div class="prescription-stat">
+                            <h4>Your Therapeutic Dose</h4>
+                            <p class="big-number">${therapeuticMinutes} minutes/week</p>
+                            <p class="stat-detail">Moderate-intensity aerobic activity</p>
+                            <p class="stat-detail">OR ${Math.round(therapeuticMinutes / 2)} minutes vigorous activity</p>
+                        </div>
+
+                        <div class="prescription-stat">
+                            <h4>Your Starting Point (Week 1)</h4>
+                            <p class="big-number">${startingMinutes} minutes/week</p>
+                            <p class="stat-detail">Based on your current ${fitnessLevel} fitness level</p>
+                        </div>
+
+                        <div class="prescription-breakdown">
+                            <h4>Recommended Weekly Schedule:</h4>
+                            <p><strong>Weeks 1-2:</strong> ${Math.round(startingMinutes / 3)} minutes, 3x per week</p>
+                            <p><strong>Weeks 3-4:</strong> ${Math.round(startingMinutes / 3 * 1.5)} minutes, 3x per week</p>
+                            <p><strong>Weeks 5-6:</strong> ${Math.round(startingMinutes / 4 * 1.5)} minutes, 4x per week</p>
+                            <p><strong>Weeks 7-12:</strong> Gradually build to ${Math.round(therapeuticMinutes / 5)} minutes, 5x per week</p>
+                        </div>
+
+                        <div class="prescription-types">
+                            <h4>Recommended Activity Types:</h4>
+                            <ul>
+                                <li><strong>Moderate intensity:</strong> Brisk walking, cycling, swimming, dancing, gardening</li>
+                                <li><strong>Vigorous intensity:</strong> Jogging, running, HIIT, vigorous cycling, sports</li>
+                                <li><strong>Strength training:</strong> Can count toward total if done at moderate+ intensity</li>
+                            </ul>
+                            <p><em>Choose activities you can sustain. Consistency matters more than intensity.</em></p>
+                        </div>
+
+                        <div class="prescription-notes">
+                            <h4>Important Notes:</h4>
+                            <ul>
+                                <li>This is a <strong>12-week build</strong> to therapeutic dose</li>
+                                <li>Depression symptoms typically improve significantly by week 8-12</li>
+                                <li>If you have health conditions, get medical clearance first</li>
+                                <li>Track your mood before/after exercise to see the impact</li>
+                                <li>Use behavioral activation strategies when motivation is low</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+
+                resultsDiv.style.display = 'block';
+                resultsDiv.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // Persona tabs
+            document.querySelectorAll('.persona-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const persona = this.dataset.persona;
+
+                    // Update active tab
+                    document.querySelectorAll('.persona-tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Update active content
+                    document.querySelectorAll('.persona-content').forEach(c => c.classList.remove('active'));
+                    document.querySelector(`.persona-content[data-persona="${persona}"]`).classList.add('active');
+                });
+            });
+
+            // Quiz functionality
+            function checkAnswers() {
+                let allAnswered = true;
+                let score = 0;
+
+                Object.keys(quizAnswers).forEach(questionId => {
+                    const selected = document.querySelector(`input[name="${questionId}"]:checked`);
+                    const feedbackDiv = document.querySelector(`.quiz-feedback[data-question="${questionId}"]`);
+
+                    if (!selected) {
+                        allAnswered = false;
+                        return;
+                    }
+
+                    const isCorrect = selected.value === quizAnswers[questionId];
+                    if (isCorrect) score++;
+
+                    feedbackDiv.textContent = isCorrect ? quizFeedback[questionId].correct : quizFeedback[questionId].incorrect;
+                    feedbackDiv.style.display = 'block';
+                    feedbackDiv.className = `quiz-feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+                });
+
+                if (!allAnswered) {
+                    alert('Please answer all questions before checking your answers.');
+                    return;
+                }
+
+                // Show overall score
+                alert(`You scored ${score} out of ${Object.keys(quizAnswers).length}!\n\n${score === Object.keys(quizAnswers).length ? '🎉 Perfect! You\'ve mastered the key concepts.' : 'Review the feedback above to strengthen your understanding.'}`);
+            }
+
+            // Event delegation for all buttons
+            document.addEventListener('click', function(e) {
+                const action = e.target.dataset.action;
+                if (!action) return;
+
+                e.preventDefault();
+
+                switch(action) {
+                    case 'calculateMoodChange':
+                        calculateMoodChange();
+                        break;
+                    case 'calculatePrescription':
+                        calculatePrescription();
+                        break;
+                    case 'checkAnswers':
+                        checkAnswers();
+                        break;
+                    case 'saveReflections':
+                    case 'savePrescription':
+                    case 'saveActivationPlan':
+                    case 'saveAssessmentResults':
+                        // These will integrate with Firestore when Firebase is set up
+                        alert('✅ Saved! (In production, this will save to your secure Firestore profile)');
+                        break;
+                    case 'startAssessment':
+                        // This will use GenKit assessment flow when deployed
+                        alert('🔧 Assessment feature coming soon!\n\nThis will use Firebase GenKit to provide an adaptive, personalized assessment that matches you to Maria, Jake, or David and generates your custom prescription.');
+                        break;
+                    case 'openChat':
+                        document.getElementById('chat-window').style.display = 'block';
+                        const context = e.target.dataset.context;
+                        console.log('Chat opened with context:', context);
+                        break;
+                    case 'hideCrisisBanner':
+                        document.getElementById('crisis-banner').style.display = 'none';
+                        break;
+                }
+            });
+
+            console.log('Lesson 1.2: Depression and the Movement Prescription loaded successfully');
+        })();
+    </script>
+
+    <!-- Styling for this lesson -->
+    <style>
+        .lesson-opening { background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .provider-message { display: flex; gap: 1.5rem; }
+        .provider-avatar { width: 60px; height: 60px; background: #3b82f6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; flex-shrink: 0; }
+        .provider-content { flex: 1; }
+
+        .concrete-experience { background: #fef3c7; border-radius: 16px; padding: 2rem; margin: 2rem 0; border-left: 6px solid #f59e0b; }
+        .experience-activity { background: white; border-radius: 12px; padding: 1.5rem; margin-top: 1rem; }
+        .mood-rating { display: flex; align-items: center; gap: 1rem; margin: 1rem 0; }
+        .mood-slider { flex: 1; }
+        .mood-value { font-size: 1.5rem; font-weight: bold; color: #3b82f6; min-width: 2rem; }
+        .result-box { background: #ecfdf5; border: 2px solid #10b981; border-radius: 12px; padding: 1.5rem; margin-top: 1rem; }
+
+        .reflective-observation { background: #f3e8ff; border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .reflection-questions { display: grid; gap: 1.5rem; margin-top: 1.5rem; }
+        .question-item label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+        .question-item textarea { width: 100%; padding: 0.75rem; border: 2px solid #d1d5db; border-radius: 8px; font-family: inherit; }
+
+        .science-explanation { background: white; border-radius: 16px; padding: 2rem; }
+        .concept-card { margin-bottom: 2rem; }
+        .research-highlight { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin: 1.5rem 0; border-radius: 8px; }
+        .therapeutic-dose-box { background: #dbeafe; border: 3px solid #3b82f6; border-radius: 12px; padding: 2rem; margin: 1.5rem 0; text-align: center; }
+        .dose-number { font-size: 2.5rem; font-weight: bold; color: #1e40af; margin: 1rem 0; }
+
+        .mechanism-list { display: grid; gap: 1.5rem; margin-top: 1.5rem; }
+        .mechanism-item { background: #f8fafc; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #10b981; }
+
+        .calculator-tool { background: #f9fafb; border-radius: 12px; padding: 2rem; margin: 2rem 0; }
+        .calculator-inputs { display: grid; gap: 1.5rem; }
+        .input-group { display: grid; gap: 0.5rem; }
+        .input-group input, .input-group select { padding: 0.75rem; border: 2px solid #d1d5db; border-radius: 8px; font-size: 1rem; }
+        .results-box { background: white; border: 3px solid #10b981; border-radius: 16px; padding: 2rem; margin-top: 2rem; }
+        .big-number { font-size: 3rem; font-weight: bold; color: #3b82f6; margin: 0.5rem 0; }
+        .prescription-details { display: grid; gap: 2rem; }
+        .prescription-stat { background: #f0f9ff; border-radius: 12px; padding: 1.5rem; text-align: center; }
+
+        .cycle-diagram { background: white; border-radius: 12px; padding: 2rem; margin: 2rem 0; }
+        .spiral-steps { background: #f3f4f6; padding: 1.5rem; border-radius: 8px; margin: 1rem 0; font-size: 1.1rem; line-height: 1.8; }
+        .activation-strategies { display: grid; gap: 1.5rem; margin-top: 2rem; }
+        .strategy-card { background: #fefefe; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; }
+        .strategy-why { background: #ecfdf5; padding: 1rem; border-radius: 8px; margin-top: 1rem; font-style: italic; }
+
+        .persona-tabs { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .persona-tab { padding: 1rem 2rem; border: 2px solid #e5e7eb; background: white; border-radius: 12px; cursor: pointer; transition: all 0.2s; }
+        .persona-tab.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+        .persona-content { display: none; }
+        .persona-content.active { display: block; }
+        .persona-header { background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; }
+        .progression-timeline { display: grid; gap: 1rem; margin: 1.5rem 0; }
+        .week-block { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; border-radius: 6px; }
+
+        .practice-levels { display: grid; gap: 1.5rem; margin: 2rem 0; }
+        .practice-card { background: #fefefe; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; }
+        .practice-card textarea { width: 100%; padding: 0.75rem; border: 2px solid #d1d5db; border-radius: 8px; font-family: inherit; margin-top: 0.5rem; }
+
+        .tactic-checklist { display: grid; gap: 1rem; margin-top: 1rem; }
+        .tactic-checklist label { display: flex; align-items: center; gap: 0.5rem; padding: 1rem; background: #f9fafb; border-radius: 8px; }
+        .tactic-checklist input[type="text"] { flex: 1; margin-left: 0.5rem; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 6px; }
+
+        .knowledge-quiz { background: #f9fafb; border-radius: 12px; padding: 2rem; }
+        .quiz-question { background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .quiz-options { display: grid; gap: 0.75rem; margin: 1rem 0; }
+        .quiz-options label { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: #f9fafb; border-radius: 6px; cursor: pointer; }
+        .quiz-options label:hover { background: #f3f4f6; }
+        .quiz-feedback { margin-top: 1rem; padding: 1rem; border-radius: 8px; }
+        .quiz-feedback.correct { background: #ecfdf5; color: #065f46; }
+        .quiz-feedback.incorrect { background: #fef2f2; color: #991b1b; }
+
+        .celebration { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-radius: 16px; padding: 2rem; margin: 3rem 0; }
+        .accomplishments, .homework, .next-lesson-preview { background: white; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+
+        .chat-prompt { text-align: center; margin-top: 1.5rem; }
+        .btn-link { background: none; border: none; color: #3b82f6; text-decoration: underline; cursor: pointer; font-size: 1rem; }
+
+        .chat-widget { position: fixed; bottom: 2rem; right: 2rem; z-index: 1000; }
+        .chat-toggle { background: #3b82f6; color: white; border: none; border-radius: 50px; padding: 1rem 1.5rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 0.5rem; }
+        .chat-window { position: fixed; bottom: 5rem; right: 2rem; width: 400px; max-width: calc(100vw - 4rem); height: 500px; background: white; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); display: flex; flex-direction: column; }
+        .chat-header { background: #3b82f6; color: white; padding: 1rem; border-radius: 16px 16px 0 0; display: flex; justify-content: space-between; align-items: center; }
+        .chat-close { background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        .chat-messages { flex: 1; overflow-y: auto; padding: 1rem; }
+        .chat-message { margin-bottom: 1rem; padding: 0.75rem; border-radius: 8px; }
+        .chat-message.assistant { background: #f0f9ff; }
+        .chat-input-container { display: flex; gap: 0.5rem; padding: 1rem; border-top: 1px solid #e5e7eb; }
+        #chat-input { flex: 1; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 8px; resize: none; }
+
+        @media (max-width: 768px) {
+            .provider-message { flex-direction: column; }
+            .persona-tabs { flex-direction: column; }
+            .chat-window { width: calc(100vw - 2rem); right: 1rem; }
+        }
+    </style>
+
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

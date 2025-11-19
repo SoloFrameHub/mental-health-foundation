@@ -1,0 +1,304 @@
+const fs = require('fs');
+
+// Extract lesson titles from the generation script
+const lessonTitles = [
+  "The Science of Exercise as Medicine",
+  "Depression and the Movement Prescription",
+  "Anxiety Disorders and Movement Therapy",
+  "PTSD and Trauma-Informed Movement",
+  "ADHD and Movement-Based Focus Enhancement",
+  "Building Your Personal Movement Assessment",
+  "The Neuroscience of Movement and Mood",
+  "Cardio for Mental Clarity and Emotional Regulation",
+  "Strength Training for Self-Esteem and Resilience",
+  "Yoga and Mindful Movement for Mental Health",
+  "High-Intensity Interval Training (HIIT) for Mental Toughness",
+  "Team Sports and Social Connection Through Movement",
+  "Individual Sport Psychology and Personal Growth",
+  "Dance and Creative Movement Therapy",
+  "Outdoor Exercise and Nature's Mental Health Benefits",
+  "Creating Sustainable Exercise Habits",
+  "Exercise for Sleep and Circadian Rhythm Optimization",
+  "Nutrition and Exercise Synergy for Mental Health",
+  "Technology and Exercise Tracking for Mental Health",
+  "Building Your Personal Movement Medicine Plan"
+];
+
+const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Movement Medicine: Exercise as Mental Health Treatment | Evidence-Based Course | Real Psychiatric Services</title>
+    <meta name="description" content="Evidence-based exercise protocols to treat depression, anxiety, and trauma through movement">
+    <meta name="keywords" content="exercise mental health, movement therapy, exercise depression, fitness anxiety, physical activity mental wellness, Columbus mental health">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Movement Medicine: Exercise as Mental Health Treatment">
+    <meta property="og:description" content="Evidence-based exercise protocols to treat depression, anxiety, and trauma through movement">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://digital-wellness.realpsychiatricservices.com/course-1-movement-medicine/">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="US-OH">
+    <meta name="geo.placename" content="Columbus">
+    <meta name="geo.position" content="39.9612;-82.9988">
+
+    <!-- Schema.org Course Markup -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Movement Medicine: Exercise as Mental Health Treatment",
+  "description": "Evidence-based exercise protocols to treat depression, anxiety, and trauma through movement",
+  "provider": {
+    "@type": "EducationalOrganization",
+    "name": "Real Psychiatric Services - Mental Health Education Platform",
+    "url": "https://digital-wellness.realpsychiatricservices.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4770 Indianola Ave., Suite 111",
+      "addressLocality": "Columbus",
+      "addressRegion": "OH",
+      "postalCode": "43214"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.9612",
+      "longitude": "-82.9988"
+    }
+  },
+  "numberOfLessons": 20,
+  "timeRequired": "PT18H",
+  "offers": {
+    "@type": "Offer",
+    "price": "29",
+    "priceCurrency": "USD"
+  }
+}
+    </script>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --rps-navy: #2E4057;
+            --rps-blue: #5B7DB1;
+            --rps-light-blue: #6FA8C4;
+            --rps-lavender: #C8B8DB;
+            --rps-teal: #7CB3B8;
+        }
+        .bg-primary { background-color: var(--rps-navy) !important; }
+        .text-primary { color: var(--rps-blue) !important; }
+        .badge.bg-primary { background-color: var(--rps-blue) !important; }
+        .badge.bg-success { background-color: var(--rps-teal) !important; }
+        .btn-primary { background-color: var(--rps-blue); border-color: var(--rps-blue); }
+        .btn-primary:hover { background-color: var(--rps-navy); border-color: var(--rps-navy); }
+        .nav-link.active { color: var(--rps-blue) !important; border-bottom-color: var(--rps-blue) !important; }
+        .course-hero-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .breadcrumb-item a {
+            color: #667cae;
+        }
+        .breadcrumb-item.active {
+            color: #667cae;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <div class="fw-bold fs-5">Mental Health Education Platform</div>
+                <small style="font-size: 0.7rem; opacity: 0.9;">by Real Psychiatric Services</small>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../courses.html">All Courses</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="../courses.html">Courses</a></li>
+                            <li class="breadcrumb-item active">Movement Medicine</li>
+                        </ol>
+                    </nav>
+
+                    <img src="course-1--movement-medicine.jpg" alt="Movement Medicine" class="course-hero-img">
+
+                    <h1 class="display-4 fw-bold mb-3">Movement Medicine: Exercise as Mental Health Treatment</h1>
+                    <p class="mb-4">Evidence-based exercise protocols to treat depression, anxiety, and trauma through movement</p>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <span class="badge bg-primary fs-6"><i class="bi bi-journal-text"></i> 20 Lessons</span>
+                        <span class="badge bg-secondary fs-6"><i class="bi bi-clock"></i> 18+ Hours</span>
+                        <span class="badge bg-success fs-6"><i class="bi bi-person"></i> David Glenn, PMHNP-BC</span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card shadow-sm border-primary">
+                        <div class="card-body text-center">
+                            <p class="text-muted mb-2">Until 1 Jan 2026</p>
+                            <h2 class="mb-0">
+                                <span class="display-3 text-success fw-bold">$29</span>
+                                <span class="display-4 text-muted text-decoration-line-through ms-2">$89</span>
+                            </h2>
+                            <p class="text-muted mb-4">One-time payment • Lifetime access</p>
+                            <a href="#enroll" class="btn btn-primary btn-lg w-100 mb-2">Enroll Now</a>
+                            <a href="#overview" class="btn btn-outline-secondary w-100">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-5" id="overview">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Tabbed Content -->
+                    <ul class="nav nav-tabs mb-4" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview-content" type="button">Overview</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="evidence-tab" data-bs-toggle="tab" data-bs-target="#evidence-content" type="button">Evidence Foundation</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="faq-tab" data-bs-toggle="tab" data-bs-target="#faq-content" type="button">FAQ</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="lessons-tab" data-bs-toggle="tab" data-bs-target="#lessons-content" type="button">Lessons</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <!-- Overview Tab -->
+                        <div class="tab-pane fade show active" id="overview-content">
+                            <h2 class="mb-4">Course Description</h2>
+                            <p class="mb-3">The mind-body connection has been validated through decades of neuroscientific research. Studies from Harvard Medical School demonstrate that regular physical activity triggers neuroplasticity, creating new neural pathways that enhance mood regulation. The landmark SMILE study (2007) found that exercise was as effective as antidepressants for treating major depressive disorder, with only 9% relapse rate compared to 38% for medication alone.</p>
+                            <p class="mb-3">Exercise increases BDNF (brain-derived neurotrophic factor), promoting neuron growth while reducing inflammatory markers linked to depression. Physical activity helps normalize the HPA axis stress response system and optimizes circadian rhythms for better sleep-wake cycles. Within 30 minutes of movement, you experience endorphin release, reduced cortisol levels, improved focus, and enhanced energy.</p>
+                            <p class="mb-3">This comprehensive 20-lesson course provides evidence-based exercise prescriptions for specific mental health conditions, sustainable movement routines, and strategies for overcoming exercise resistance. You'll learn to track mental health improvements through movement, understand the neuroscience behind exercise's impact on brain chemistry, and develop personalized plans based on your fitness level and goals.</p>
+
+                            <h3 class="mt-5 mb-3">Who This Course Is For</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Individuals experiencing depression, anxiety, or chronic stress seeking natural treatment options</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Anyone wanting to use exercise strategically for mental health improvement</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>People struggling with motivation to start or maintain exercise routines</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Mental health professionals seeking evidence-based exercise prescriptions</li>
+                            </ul>
+
+                            <h3 class="mt-5 mb-3">What to Expect</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Learn neuroscience of how different exercises affect brain chemistry and mental health</li>
+                                <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Develop personalized movement plans tailored to your specific conditions and goals</li>
+                                <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Master evidence-based techniques for using movement to manage anxiety and depression</li>
+                                <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Build sustainable exercise habits through interactive lessons and practical application</li>
+                            </ul>
+                        </div>
+
+                        <!-- Evidence Tab -->
+                        <div class="tab-pane fade" id="evidence-content">
+                            <h2 class="mb-4">Research & Evidence Foundation</h2>
+                            <p class="lead mb-4">This course is built on rigorous scientific research:</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-3"><i class="bi bi-mortarboard-fill text-primary me-2"></i>Harvard Medical School neuroplasticity research showing exercise creates new neural pathways</li>
+                                <li class="mb-3"><i class="bi bi-mortarboard-fill text-primary me-2"></i>SMILE study (2007) demonstrating 9% relapse rate with exercise vs. 38% with medication alone</li>
+                                <li class="mb-3"><i class="bi bi-mortarboard-fill text-primary me-2"></i>BDNF research proving exercise promotes neuron growth and brain health</li>
+                                <li class="mb-3"><i class="bi bi-mortarboard-fill text-primary me-2"></i>Inflammation studies linking physical activity to reduced depression markers</li>
+                            </ul>
+                        </div>
+
+                        <!-- FAQ Tab -->
+                        <div class="tab-pane fade" id="faq-content">
+                            <h2 class="mb-4">Frequently Asked Questions</h2>
+                            <div class="accordion" id="faqAccordion">
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq0">
+                                            How does exercise help with depression and anxiety?
+                                        </button>
+                                    </h3>
+                                    <div id="faq0" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Exercise increases BDNF (brain-derived neurotrophic factor) which promotes neuron growth, reduces inflammatory markers linked to depression, and releases endorphins for natural mood elevation. The SMILE study found exercise as effective as antidepressants with only 9% relapse rate compared to 38% for medication.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                            How much exercise do I need for mental health benefits?
+                                        </button>
+                                    </h3>
+                                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Research shows benefits begin with just 30 minutes of moderate movement. This course teaches you to find the optimal amount and type for your specific mental health goals.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                            What if I have physical limitations?
+                                        </button>
+                                    </h3>
+                                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            The course includes modifications for all fitness levels and physical abilities. We start with gentle movement options and progressively build based on your individual capacity.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lessons Tab -->
+                        <div class="tab-pane fade" id="lessons-content">
+                            <h2 class="mb-4">Course Lessons</h2>
+                            <div class="mb-3">
+                                <a href="lesson-1-1-the-science-of-exercise-as-medicine.html" class="h5 text-decoration-none">
+                                    Lesson 1: ${lessonTitles[0]} <span class="text-primary">- visit</span>
+                                </a>
+                            </div>
+                            <div class="text-muted">
+${lessonTitles.slice(1).map((title, idx) => `                                <div class="mb-2">Lesson ${idx + 2}: ${title}</div>`).join('\n')}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>`;
+
+fs.writeFileSync('/Users/mike/github/rps-digital-wellness-platform/github-deployment/course-1-movement-medicine/index.html', html);
+console.log('✅ Course 1 landing page rebuilt successfully!');

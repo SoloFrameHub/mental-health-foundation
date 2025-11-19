@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.3: Building Psychological Safety in Team Environments - Workplace Mental Health Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Workplace Mental Health</a> >
+                <a href="#module-2">Module 2: Team Dynamics</a> >
+                <span>Lesson 2.3</span>
+            </div>
+
+            <h1>🛡️ Building Psychological Safety in Team Environments</h1>
+            <p class="lesson-subtitle">Create and contribute to team environments where everyone feels safe to speak up, take risks, and be authentic</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>55 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Intermediate Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Team Building</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 15%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to Building Psychological Safety in Teams</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to exploring the foundation of high-performing workplace teams.</strong> Psychological safety—the shared belief that team members can take risks, voice opinions, and be vulnerable without fear of negative consequences—represents the single most important factor distinguishing exceptional teams from average ones. Google's Project Aristotle, which analyzed 180 teams, identified psychological safety as the number one predictor of team effectiveness, surpassing factors like individual talent, resources, or team structure. In psychologically safe environments, teams show 27% lower turnover, 47% higher revenue, and 19% higher accuracy on challenging tasks.</p>
+
+                    <p><strong>The science is clear:</strong> Research from Harvard Business School professor Amy Edmondson demonstrates that psychological safety activates brain networks associated with innovation and collaboration while deactivating threat-detection systems that trigger defensive behaviors. When teams lack psychological safety, the amygdala's fight-or-flight response impairs prefrontal cortex function, reducing creativity, problem-solving, and decision-making capacity. Studies show that teams with high psychological safety generate 3.5x more innovative ideas, share critical information more readily during crises, and adapt more effectively to changing conditions—all while maintaining stronger interpersonal relationships.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Complete Timothy Clark's four-stage psychological safety assessment evaluating inclusion, learner, contributor, and challenger safety levels in your team, practice vulnerability modeling techniques that demonstrate it's safe for others to take risks and admit mistakes, develop active listening and inclusive facilitation skills that ensure all team members' voices are heard and valued, implement feedback culture practices that frame criticism as learning opportunities rather than personal attacks, and build systematic approaches to maintaining psychological safety during conflicts and organizational changes.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Understand Project Aristotle findings: psychological safety as the #1 factor in high-performing teams</li>
+                            <li>Master practical techniques for creating psychological safety through modeling vulnerability and active listening</li>
+                            <li>Learn to assess current team psychological safety levels and implement evidence-based improvements</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>This lesson draws on Amy Edmondson's foundational psychological safety research from Harvard Business School, Google's Project Aristotle team effectiveness studies, Timothy Clark's four-stage psychological safety framework, neuroscience research on how threat perception impacts cognitive function and collaboration, and organizational behavior studies demonstrating the relationship between psychological safety and innovation, learning, and performance outcomes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Psychological Safety Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">🔬</div>
+                        <div class="objective-text">
+                            <h3>Google's Discovery</h3>
+                            <p>Understand Project Aristotle findings: psychological safety as the #1 factor in high-performing teams</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🛠️</div>
+                        <div class="objective-text">
+                            <h3>Trust-Building Framework</h3>
+                            <p>Master practical techniques for creating psychological safety through modeling vulnerability and active listening</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">📊</div>
+                        <div class="objective-text">
+                            <h3>Assessment & Improvement</h3>
+                            <p>Learn to assess current team psychological safety levels and implement evidence-based improvements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Psychological Safety Science Deep Dive -->
+            <div class="learning-section">
+                <h2>🔬 The Neuroscience of Psychological Safety</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 How Safety Impacts Brain Function</h3>
+                        <p>Psychological safety directly influences neurological processes that determine team performance and individual wellbeing, creating measurable changes in brain activity and team outcomes:</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>⚡ Threat Detection System</h4>
+                                <p>When teams feel unsafe, the amygdala activates fight-or-flight responses, shutting down prefrontal cortex functions needed for creativity, collaboration, and complex problem-solving. This creates defensive rather than innovative behaviors.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>💡 Innovation Neurocircuitry</h4>
+                                <p>Psychological safety enables the release of oxytocin and dopamine, neurochemicals that enhance cognitive flexibility, pattern recognition, and willingness to take calculated risks essential for innovation and team success.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🤝 Social Brain Networks</h4>
+                                <p>Safe environments activate mirror neuron systems and social brain networks, improving empathy, communication, and collective intelligence that multiply individual contributions into team excellence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Research Findings</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">19%</div>
+                            <p>Higher accuracy on challenging tasks with psychological safety</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">27%</div>
+                            <p>Lower turnover in psychologically safe teams</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">47%</div>
+                            <p>Higher revenue from psychologically safe teams</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Psychological Safety Assessment -->
+            <div class="interactive-section">
+                <h2>📊 Your Team Psychological Safety Assessment</h2>
+                <p>Evaluate your current team's psychological safety level using validated research indicators:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>💬 Communication Climate Test</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Rate your team on psychological safety factors (1-10)</p>
+                                <p><strong>Goal:</strong> Assess current team safety levels across key dimensions</p>
+                                <div class="test-input">
+                                    <label>Ability to show vulnerability (1-10):</label>
+                                    <input type="number" id="vulnerability-rating" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Permission to ask questions (1-10):</label>
+                                    <input type="number" id="questions-rating" min="1" max="10" placeholder="1-10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>🔄 Response Patterns Evaluation</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Assess how your team typically responds to challenges</p>
+                                <p><strong>Assessment:</strong> Rate team response quality on key scenarios</p>
+                                <div class="test-input">
+                                    <label>Response to failed initiatives (1-10):</label>
+                                    <input type="number" id="failure-response" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Response to challenging questions (1-10):</label>
+                                    <input type="number" id="question-response" min="1" max="10" placeholder="1-10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>👥 Inclusion Indicators Check</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Count inclusion behaviors present in your team</p>
+                                <div class="test-input">
+                                    <label>Inclusion behaviors present (0-8):</label>
+                                    <input type="number" id="inclusion-count" min="0" max="8" placeholder="0-8">
+                                </div>
+                                <div class="test-input">
+                                    <label>Team participation balance (1-10):</label>
+                                    <input type="number" id="participation-balance" min="1" max="10" placeholder="1-10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>🎯 Safety Stages Assessment</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Evaluate your team's progression through safety stages</p>
+                                <div class="test-input">
+                                    <label>Current safety stage level (1-4):</label>
+                                    <input type="number" id="safety-stage" min="1" max="4" placeholder="1-4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="analyzePsychologicalSafetyAssessment">📊 Generate Team Safety Report</button>
+                </div>
+            </div>
+
+            <!-- Psychological Safety Building Program -->
+            <div class="learning-section">
+                <h2>🏗️ Building Your Team's Psychological Safety</h2>
+
+                <div class="training-program">
+                    <div class="program-overview">
+                        <h3>📋 4-Stage Safety Development Program</h3>
+                        <p>This progressive program builds psychological safety through Timothy Clark's four stages, creating environments where teams can achieve peak performance:</p>
+                    </div>
+
+                    <div class="week-by-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Stage 1: Inclusion Safety</h4>
+                                <span class="week-focus">Focus: Everyone feels included and accepted as a human being</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (15 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Name and Recognition:</strong> Learn and use everyone's names, pronouns, and communication preferences</li>
+                                        <li><strong>Personal Interest:</strong> Show genuine curiosity about team members as individuals beyond their work roles</li>
+                                        <li><strong>Contribution Acknowledgment:</strong> Regularly recognize contributions from all team members, not just the most vocal</li>
+                                        <li><strong>Style Accommodation:</strong> Create space for different working and communication styles without judgment</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Focus on creating belonging through authentic connection. Every team member should feel valued for who they are, not just what they produce.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Stage 2: Learner Safety</h4>
+                                <span class="week-focus">Focus: Everyone feels safe to learn, ask questions, and make mistakes</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (20 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Question Modeling:</strong> Ask questions publicly to demonstrate curiosity and normalize not knowing everything</li>
+                                        <li><strong>Uncertainty Sharing:</strong> Admit when you don't know something and model learning behaviors</li>
+                                        <li><strong>Learning Celebration:</strong> Share your own learning experiences, including failures and recovery strategies</li>
+                                        <li><strong>Positive Response Practice:</strong> Respond enthusiastically to questions, treating them as opportunities rather than interruptions</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Create a culture where learning is valued over knowing. Frame mistakes as data that helps the team improve and grow together.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Stage 3: Contributor Safety</h4>
+                                <span class="week-focus">Focus: Everyone feels safe to contribute their skills and abilities</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (25 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Strengths Mapping:</strong> Identify and actively utilize each team member's unique strengths and perspectives</li>
+                                        <li><strong>Meaningful Delegation:</strong> Assign work that matches individual capabilities while providing growth opportunities</li>
+                                        <li><strong>Autonomy Provision:</strong> Give clear expectations but allow freedom in approach and execution methods</li>
+                                        <li><strong>Credit Distribution:</strong> Ensure contributions are visible and properly attributed to the right team members</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Empower each team member to contribute their best work. Focus on creating opportunities for everyone to shine and make meaningful contributions.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Stage 4: Challenger Safety</h4>
+                                <span class="week-focus">Focus: Everyone feels safe to challenge the status quo and speak up about problems</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (30 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Perspective Invitation:</strong> Explicitly invite different viewpoints and challenge assumptions constructively</li>
+                                        <li><strong>Dissent Rewarding:</strong> Recognize and appreciate team members who raise important concerns or alternative ideas</li>
+                                        <li><strong>Challenge Modeling:</strong> Demonstrate respectful challenging of ideas, including your own decisions and assumptions</li>
+                                        <li><strong>Feedback Systems:</strong> Create formal and informal channels for team members to voice concerns and suggestions</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Build the highest level of safety where innovation thrives. Foster constructive conflict that improves outcomes while maintaining relationships.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practical Applications -->
+            <div class="interactive-section">
+                <h2>🌟 Real-World Psychological Safety Applications</h2>
+                <p>Discover how to apply psychological safety principles in common workplace situations:</p>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <h3>💼 Meeting Facilitation</h3>
+                        <ul>
+                            <li>Start meetings with personal check-ins to build connection</li>
+                            <li>Rotate speaking opportunities to ensure equal participation</li>
+                            <li>Use "Yes, and..." approach to build on ideas constructively</li>
+                            <li>Create space for reflection before requiring immediate responses</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreMeetingStrategies">💼 Explore Meeting Strategies</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🔄 Feedback Culture Building</h3>
+                        <ul>
+                            <li>Frame feedback as mutual learning opportunities</li>
+                            <li>Focus on specific behaviors rather than personality traits</li>
+                            <li>Practice receiving feedback openly and non-defensively</li>
+                            <li>Create regular feedback loops rather than annual events</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreFeedbackStrategies">🔄 Explore Feedback Strategies</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>⚡ Conflict Resolution</h3>
+                        <ul>
+                            <li>Address conflicts early before they escalate</li>
+                            <li>Focus on understanding different perspectives first</li>
+                            <li>Separate people from problems to maintain relationships</li>
+                            <li>Use conflicts as opportunities to strengthen team bonds</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreConflictStrategies">⚡ Explore Conflict Strategies</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🚀 Innovation Encouragement</h3>
+                        <ul>
+                            <li>Celebrate creative attempts even when they don't work out</li>
+                            <li>Provide resources and time for experimental thinking</li>
+                            <li>Share your own innovative failures and lessons learned</li>
+                            <li>Create safe-to-fail pilots for testing new approaches</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreInnovationStrategies">🚀 Explore Innovation Strategies</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="interactive-section">
+                <h2>📈 Track Your Psychological Safety Building Journey</h2>
+                <p>Monitor your progress in creating and maintaining psychological safety within your team environment:</p>
+
+                <div class="tracking-dashboard">
+                    <div class="tracking-categories">
+                        <div class="category-tracker">
+                            <h3>🛡️ Safety Stage Development</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Inclusion safety level (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="inclusion-safety">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Learner safety level (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="learner-safety">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Contributor safety level (1-10):</label>
+                                    <input type="range" min="1" max="10" value="7" class="tracker-slider" id="contributor-safety">
+                                    <span class="tracker-value">7</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-tracker">
+                            <h3>🎯 Team Performance Metrics</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Challenger safety level (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="challenger-safety">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Team communication quality (1-10):</label>
+                                    <input type="range" min="1" max="10" value="7" class="tracker-slider" id="communication-quality">
+                                    <span class="tracker-value">7</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Innovation and risk-taking comfort (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="innovation-comfort">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="saveSafetyProgress">📊 Save Safety Progress Report</button>
+                </div>
+            </div>
+
+            <!-- Reflection and Planning -->
+            <div class="learning-section">
+                <h2>🤔 Psychological Safety Reflection</h2>
+
+                <div class="reflection-questions">
+                    <div class="question-set">
+                        <h3>🧠 Personal Insights</h3>
+                        <div class="question-item">
+                            <label>What behaviors contribute most to psychological safety on your team?</label>
+                            <textarea rows="4" placeholder="Consider both leader and team member behaviors that create trust and openness..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>When have you felt most safe to take risks or speak up at work? What conditions enabled this?</label>
+                            <textarea rows="4" placeholder="Think about specific situations and environmental factors that created psychological safety..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What barriers currently prevent full psychological safety in your team?</label>
+                            <textarea rows="4" placeholder="Identify specific obstacles and potential solutions..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="question-set">
+                        <h3>🎯 Goal Setting</h3>
+                        <div class="question-item">
+                            <label>How can you model vulnerability and curiosity to help others feel safer?</label>
+                            <textarea rows="4" placeholder="Consider specific actions you could take this week to demonstrate psychological safety behaviors..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What systems will you implement to maintain and improve psychological safety over time?</label>
+                            <textarea rows="4" placeholder="Plan ongoing practices and feedback mechanisms..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveReflections">💾 Save My Reflections</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-2-2-stress-vs-challenge.html" class="nav-btn secondary">← Previous: ⚖️ Understanding Workplace Stress vs. Healthy Chal</a>
+                <a href="lesson-2-4-burnout-recognition.html" class="nav-btn primary">Next: Recognizing and Addressing Workplace Burnout →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 2: Workplace Mental Health • Lesson 3 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+
+    <script>
+        // Enhanced psychological safety lesson functionality
+        (function() {
+            'use strict';
+
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+                console.log(`Lesson 2.3 button clicked: ${action}`);
+
+                switch(action) {
+                    case 'analyzePsychologicalSafetyAssessment':
+                        analyzePsychologicalSafetyAssessmentTemplate();
+                        break;
+                    case 'saveSafetyProgress':
+                        saveSafetyProgressTemplate();
+                        break;
+                    case 'saveReflections':
+                        saveReflectionsTemplate();
+                        break;
+                    case 'hideCrisisBanner':
+                        hideCrisisBannerTemplate();
+                        break;
+                    default:
+                        console.log(`Unknown action: ${action}`);
+                }
+            }
+
+            function analyzePsychologicalSafetyAssessmentTemplate() {
+                const vulnerability = document.getElementById('vulnerability-rating').value || 5;
+                const questions = document.getElementById('questions-rating').value || 5;
+                const failureResponse = document.getElementById('failure-response').value || 5;
+                const questionResponse = document.getElementById('question-response').value || 5;
+                const inclusionCount = document.getElementById('inclusion-count').value || 4;
+                const participationBalance = document.getElementById('participation-balance').value || 5;
+
+                const averageScore = (parseInt(vulnerability) + parseInt(questions) + parseInt(failureResponse) +
+                                   parseInt(questionResponse) + parseInt(participationBalance)) / 5;
+
+                let safetyLevel = '';
+                let recommendations = '';
+
+                if (averageScore >= 8) {
+                    safetyLevel = 'Excellent - High psychological safety with strong team trust and openness';
+                    recommendations = 'Your team has excellent psychological safety! Focus on maintaining these practices and helping other teams develop similar cultures.';
+                } else if (averageScore >= 6) {
+                    safetyLevel = 'Good - Solid psychological safety foundation with room for growth';
+                    recommendations = 'You have good psychological safety. Focus on advancing to higher stages and addressing any specific weak areas.';
+                } else if (averageScore >= 4) {
+                    safetyLevel = 'Developing - Basic safety present but significant improvement needed';
+                    recommendations = 'Your team is developing psychological safety. Focus on inclusion practices and building trust through vulnerability modeling.';
+                } else {
+                    safetyLevel = 'Low - Limited psychological safety, priority focus needed';
+                    recommendations = 'Psychological safety needs immediate attention. Start with inclusion practices and consistent positive responses to questions and mistakes.';
+                }
+
+                const inclusionFeedback = parseInt(inclusionCount) >= 6 ?
+                    'Strong inclusion behaviors present' :
+                    'Inclusion behaviors need development';
+
+                alert(`🛡️ Your Team Psychological Safety Assessment Results\n\nVulnerability Comfort: ${vulnerability}/10\nQuestion Freedom: ${questions}/10\nFailure Response: ${failureResponse}/10\nQuestion Response: ${questionResponse}/10\nParticipation Balance: ${participationBalance}/10\n\nOverall Safety Level: ${safetyLevel}\n\nInclusion Assessment: ${inclusionFeedback}\n\nRecommendations: ${recommendations}\n\nYour 4-stage development program will help build stronger psychological safety!`);
+            }
+
+            function saveSafetyProgressTemplate() {
+                alert(`📊 Psychological Safety Progress Saved!\n\nYour team safety development journey data has been recorded. Continue tracking improvements as you build stronger team trust and openness.\n\nRemember: Psychological safety is built through consistent behaviors over time, not single actions!`);
+            }
+
+            function saveReflectionsTemplate() {
+                alert(`💾 Reflections Saved!\n\nYour insights about psychological safety have been recorded. These reflections will guide your continued work to create environments where everyone can do their best work.\n\nGreat work on completing Lesson 2.3! Ready to learn about recognizing and addressing workplace burnout?`);
+            }
+
+            function hideCrisisBannerTemplate() {
+                const banner = document.getElementById('crisis-banner');
+                if (banner) {
+                    banner.style.display = 'none';
+                    sessionStorage.setItem('crisisBannerDismissed', 'true');
+                }
+            }
+
+            // Initialize interactions
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('[data-action]');
+                buttons.forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+
+                // Initialize slider interactions
+                const sliders = document.querySelectorAll('.tracker-slider');
+                sliders.forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    slider.addEventListener('input', function() {
+                        valueSpan.textContent = this.value;
+                    });
+                });
+
+                console.log('Lesson 2.3: Psychological Safety loaded successfully');
+            });
+        })();
+    </script>
+
+    <!-- Enhanced styling for psychological safety lesson -->
+    <style>
+        .science-explanation { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #8b5cf6; }
+
+        .assessment-tests { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .test-card { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+        .test-input { margin: 1rem 0; }
+        .test-input input { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; }
+
+        .week-by-week { display: grid; gap: 2rem; margin: 2rem 0; }
+        .week-card { background: #fefefe; border: 2px solid #e5e7eb; border-radius: 16px; overflow: hidden; }
+        .week-header { background: linear-gradient(90deg, #8b5cf6, #7c3aed); color: white; padding: 1.5rem; }
+        .week-content { padding: 1.5rem; }
+        .week-focus { background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.9rem; }
+
+        .applications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .application-card { background: #f1f5f9; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #8b5cf6; }
+
+        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .research-item { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; border-left: 4px solid #8b5cf6; }
+        .research-stat { font-size: 2.5rem; font-weight: bold; color: #8b5cf6; margin-bottom: 0.5rem; }
+
+        @media (max-width: 768px) {
+            .brain-systems, .assessment-tests, .applications-grid, .research-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

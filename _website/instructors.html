@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Meet Our Providers - Mental Health Education Platform</title>
+  <meta name="description" content="Meet our board-certified psychiatric mental health nurse practitioners. Compassionate, experienced professionals dedicated to your mental wellness journey.">
+  <meta name="keywords" content="psychiatric nurse practitioner, PMHNP-BC, mental health providers, telehealth, Ohio mental health, trauma-informed care">
+
+  <!-- Favicons -->
+  <link href="images/wellness-site-icon.jpg" rel="icon">
+  <link href="images/wellness-site-icon.jpg" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #4a6fa5;
+      --secondary-color: #6c757d;
+      --accent-color: #20c997;
+      --dark-color: #2c3e50;
+      --light-color: #f4f6f9;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--dark-color);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+    }
+
+    /* Header */
+    .header {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .sitename {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      color: var(--dark-color);
+      padding: 0.5rem 1rem;
+      transition: color 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: var(--primary-color);
+    }
+
+    .btn-getstarted {
+      background: var(--primary-color);
+      color: #fff;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-getstarted:hover {
+      background: #0b5ed7;
+      transform: translateY(-2px);
+    }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, #4a6fa5 0%, #5a7fb8 100%);
+      color: #fff;
+      padding: 4rem 0 3rem;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Provider Section */
+    .provider-section {
+      padding: 5rem 0;
+    }
+
+    .provider-section:nth-child(even) {
+      background: var(--light-color);
+    }
+
+    .provider-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 3rem;
+    }
+
+    .provider-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .provider-header {
+      padding: 2rem;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .provider-header h2 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .provider-credentials {
+      color: var(--secondary-color);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .provider-tagline {
+      color: var(--dark-color);
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .provider-content {
+      padding: 0 2rem 2rem;
+    }
+
+    .provider-content h3 {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .provider-content p {
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .provider-content ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .provider-content li {
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+    }
+
+    .quote {
+      background: var(--light-color);
+      border-left: 4px solid var(--primary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+
+    .testimonial {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    .btn-book {
+      background: var(--primary-color);
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: all 0.3s;
+    }
+
+    .btn-book:hover {
+      background: #0b5ed7;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark-color);
+      color: #fff;
+      padding: 3rem 0 1rem;
+    }
+
+    .footer h4 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      color: #fff;
+      margin-right: 0.5rem;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--primary-color);
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a href="index.html" class="navbar-brand">
+          <span class="sitename">Mental Health Education Platform</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="courses.html" class="nav-link">All Courses</a></li>
+            <li class="nav-item"><a href="5-pillars-evidence.html" class="nav-link">5 Pillars</a></li>
+            <li class="nav-item"><a href="instructors.html" class="nav-link">Instructors</a></li>
+          </ul>
+          <a class="btn-getstarted ms-3" href="courses.html">Browse Courses</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Meet Our Providers</h1>
+        <p>Board-certified psychiatric mental health nurse practitioners dedicated to your wellness journey</p>
+      </div>
+    </section>
+
+    <!-- David Glenn Section -->
+    <section class="provider-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <img src="images/david-glenn.jpg" alt="David Glenn, PMHNP-BC" class="provider-image rounded shadow">
+          </div>
+          <div class="col-lg-8">
+            <div class="provider-header">
+              <h2>David Glenn, PMHNP-BC</h2>
+              <p class="provider-credentials">Board-Certified Psychiatric Mental Health Nurse Practitioner</p>
+              <p class="provider-tagline">Compassionate care · Personalized treatment · Telehealth & In-Person Options</p>
+            </div>
+            <div class="provider-content">
+              <p>From the moment you connect with David, you'll sense his genuine warmth and easygoing nature. With 14 years in healthcare—from rushing to emergencies as an EMT to guiding patients as a psychiatric nurse and now a board-certified Psychiatric Mental Health Nurse Practitioner—he brings a wealth of experience and a down-to-earth humor that instantly puts you at ease. His honest, empathetic engagement helps you feel understood, not judged, as you take the first steps toward healing.</p>
+
+              <h3>A Holistic Philosophy</h3>
+              <p>Dave sees you as a whole person, not a collection of symptoms. He believes every aspect of your life—your stressors, relationships, lifestyle habits, and spiritual needs—shapes your mental health. Before recommending medication, he'll gently explore where you're stuck and what strengths you can build on. If medicine becomes part of your journey, he treats it as one tool among many, always ensuring you understand why it's prescribed and how it supports your long-term goals.</p>
+
+              <h3>Areas of Expertise</h3>
+              <p>Over the years, Dave has helped people overcome low self-esteem, social anxiety, and complex trauma like PTSD. He's equally skilled supporting those facing bipolar disorder, ADHD, depression, or generalized anxiety. His LGBTQ+-affirming approach creates a safe space where you can share your story without fear. Whether you're struggling to set boundaries in relationships or feeling overwhelmed by inner critics, Dave's evidence-based practices are tailored to your unique needs. He utilizes a variety of therapeutic modalities, including Cognitive Behavioral Therapy (CBT), Interpersonal Therapy (IPT), Mindfulness, and Behavioral Activation, always focusing on the person, not just the diagnosis.</p>
+
+              <h3>Professional Journey</h3>
+              <p>You'll benefit from Dave's wide-ranging background in crisis intervention, psychiatric inpatient care, and correctional mental health services. He's guided countless individuals through outpatient community clinics and substance-use treatment programs, always prioritizing respect and dignity. As a licensed telehealth provider, Dave makes it simple to fit high-quality mental health support into your busy life—so you never have to choose between your well-being and your schedule. He is licensed in Ohio and offers both virtual and in-person appointments.</p>
+
+              <div class="quote">
+                "You're the boss of your treatment. Every step of your plan is co-created: you'll understand why each strategy or medication is recommended, and you'll have the final say."
+              </div>
+
+              <h3>What Patients Say</h3>
+              <div class="testimonial">
+                <p class="mb-2">"David is great, he listens to my needs and actually cares about his patients. I've been seeing him for about a year and highly recommend him."</p>
+              </div>
+              <div class="testimonial">
+                <p class="mb-0">"Dave helped me find the right medication regimen when I was on the wrong mix of meds. He was very kind and helpful during the difficult transitional period of changing meds. Finding Dave was a true blessing. He really cares about my health and well-being."</p>
+              </div>
+
+              <a href="#contact" class="btn-book">Book a Session with David</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Autumn Persinger Section -->
+    <section class="provider-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <img src="images/autumn-persinger.jpg" alt="Autumn Persinger, PMHNP-BC" class="provider-image rounded shadow">
+          </div>
+          <div class="col-lg-8">
+            <div class="provider-header">
+              <h2>Autumn Persinger, PMHNP-BC</h2>
+              <p class="provider-credentials">Board-Certified Psychiatric Mental Health Nurse Practitioner</p>
+              <p class="provider-tagline">Compassionate care · Personalized treatment · Telehealth for your convenience</p>
+            </div>
+            <div class="provider-content">
+              <p>From your first conversation with Autumn, you'll sense her genuine commitment to understanding your story. With a nursing background spanning critical care, emergency medicine, inpatient psychiatry, and detox units, she's honed the ability to stay calm under pressure—and brings that steadiness straight into your sessions. Her specialized training as a sexual assault nurse examiner means she approaches trauma with the utmost sensitivity, ensuring you feel safe and respected every step of the way.</p>
+
+              <h3>A Holistic, Patient-Centered Philosophy</h3>
+              <div class="quote">
+                "Your care is in your hands. I'm here to educate, guide, and offer options—medical or holistic—that truly align with your goals."
+              </div>
+              <p>Autumn is currently deepening her expertise through a functional psychiatry program, exploring how nutritional imbalances and genetic variations can fuel symptoms of anxiety, depression, or brain fog. In your first appointment, she'll take a deep dive into all areas of your life—sleep habits, diet, stressors, and family history—to uncover where targeted lab testing or lifestyle tweaks could make a real difference.</p>
+
+              <h3>How Autumn Helps You Thrive</h3>
+              <ul>
+                <li><strong>Trauma-Informed Support:</strong> Leveraging her sexual assault examiner training to create a safe, non-judged space. Clients consistently describe her as nurturing, positive, and deeply encouraging.</li>
+                <li><strong>Evidence-Based Interventions:</strong> From traditional therapies to nutrition-focused strategies, each plan is rooted in science. Autumn is committed to ongoing education through her functional psychiatry program.</li>
+                <li><strong>Collaborative Approach:</strong> You set the priorities, and Autumn provides the education and guidance to meet them, empowering you throughout your care journey.</li>
+                <li><strong>Lab Testing Guidance:</strong> For those seeking holistic insights, she can order and interpret labs to pinpoint nutritional or hormonal factors.</li>
+                <li><strong>Life-Stage Expertise:</strong> Serving adults 18+ with PTSD, anxiety, mood disorders, and more, with expertise in medication management and therapy referrals.</li>
+              </ul>
+
+              <h3>Accessible Telehealth Care in Ohio</h3>
+              <p>Autumn's telehealth practice makes professional mental health support effortless and private. She welcomes patients 18 and older across Ohio, with flexible scheduling options arranged during your initial consultation—because your mental wellness shouldn't compete with your busy life.</p>
+
+              <h3>What Patients Say</h3>
+              <div class="testimonial">
+                <p class="mb-2">"She is the absolute BEST!! I adore her. She is extremely positive & encouraging, and really talks through treatment suggestions... She has helped me with my anxiety & depression more than I can even describe!"</p>
+              </div>
+              <div class="testimonial">
+                <p class="mb-0">"She provides a very safe, nurturing environment to open up and discuss whatever I felt I needed to... she never once judged me for them, made me feel uncomfortable, or pushed me away."</p>
+              </div>
+
+              <a href="#contact" class="btn-book">Book a Session with Autumn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phillip Jaskot Section -->
+    <section class="provider-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <img src="images/phillip-jaskot.jpg" alt="Phillip Jaskot, PMHNP-BC" class="provider-image rounded shadow">
+          </div>
+          <div class="col-lg-8">
+            <div class="provider-header">
+              <h2>Phillip Jaskot, PMHNP-BC</h2>
+              <p class="provider-credentials">Board-Certified Psychiatric Mental Health Nurse Practitioner</p>
+              <p class="provider-tagline">Compassionate care · Personalized treatment · Telehealth & In-Person Options</p>
+            </div>
+            <div class="provider-content">
+              <p>From your initial meeting with Phillip, you'll notice his steady confidence and genuine empathy. With over six years of experience as an ICU and Interventional Radiology nurse, Phillip is adept at navigating high-pressure situations—skills he now channels into calm, focused, and thoughtful mental health support. As a board-certified Psychiatric Mental Health Nurse Practitioner, he blends clinical rigor with a warm, approachable style, making it easy to open up and feel truly heard.</p>
+
+              <h3>A Whole-Person, Collaborative Philosophy</h3>
+              <div class="quote">
+                "You're the expert on your life. I'm here to listen, guide, and offer options—whether that's therapy techniques, lifestyle tweaks, or medication—so you feel empowered every step of the way."
+              </div>
+              <p>Phillip's approach is rooted in collaboration, empathy, and respect. He believes mental wellness flourishes when every facet of your world is considered: relationships, daily routines, stressors, and strengths. He creates a safe, supportive space where your questions are always welcome and every treatment decision is made together. His goal is to help you build resilience and confidence that last long after your sessions end.</p>
+
+              <h3>Areas of Focus</h3>
+              <p>Phillip specializes in treating a wide range of mental health conditions, including:</p>
+              <ul>
+                <li>Anxiety, depression, and low self-esteem</li>
+                <li>ADHD, bipolar disorder, and PTSD</li>
+                <li>Interpersonal challenges and life transitions</li>
+                <li>Emotional disturbance, mood disorders, OCD, and sleep/insomnia issues</li>
+                <li>LGBTQ+ affirming care</li>
+              </ul>
+              <p>While he values evidence-based medication management, Phillip prioritizes exploring non-medication strategies—such as mindfulness exercises, behavioral tools, or nutrition insights—whenever they align with your goals. He is committed to finding the most tailored plan for your unique needs, always treating you as an individual deserving of respect and personalized care.</p>
+
+              <h3>Flexible, Fast Availability</h3>
+              <p>Phillip offers both in-person and telehealth appointments for adults 18+ in Ohio, with availability typically within one week. He is dedicated to making high-quality mental health care accessible and convenient, so support fits seamlessly into your life.</p>
+
+              <h3>What Patients Can Expect</h3>
+              <p>Phillip's patients describe him as collaborative, transparent, and deeply respectful. He is committed to honest communication, guiding you through treatment options and supporting you in making informed choices. Whether you choose in-person or virtual care, Phillip is here to listen, answer your questions, and help you navigate your mental health journey with confidence.</p>
+
+              <a href="#contact" class="btn-book">Book a Session with Phillip</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #4a6fa5 0%, #5a7fb8 100%); color: #fff;">
+      <div class="container text-center">
+        <h2 class="mb-4">Ready to Start Your Journey?</h2>
+        <p class="lead mb-4">Connect with one of our experienced providers today</p>
+        <a href="courses.html" class="btn-book me-3">Browse Our Courses</a>
+        <a href="index.html" class="btn-book" style="background: transparent; border: 2px solid #fff;">Learn More</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h4>Mental Health Education Platform</h4>
+          <p>Evidence-based mental health and wellness education designed to transform your life across 5 core pillars of wellbeing.</p>
+          <div class="social-links mt-3">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">All Courses</a></li>
+            <li><a href="5-pillars-evidence.html">5 Pillars</a></li>
+            <li><a href="instructors.html">Instructors</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4>Our Providers</h4>
+          <ul class="footer-links">
+            <li><a href="#david-glenn">David Glenn, PMHNP-BC</a></li>
+            <li><a href="#autumn-persinger">Autumn Persinger, PMHNP-BC</a></li>
+            <li><a href="#phillip-jaskot">Phillip Jaskot, PMHNP-BC</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4>Contact</h4>
+          <p><i class="bi bi-envelope"></i> info@digitalwellnessplatform.com</p>
+          <p><i class="bi bi-phone"></i> +1 (555) 123-4567</p>
+          <p class="mt-3"><strong>Platform Subscription:</strong><br>$19.95/month - Access all 19 courses</p>
+        </div>
+      </div>
+
+      <div class="copyright text-center">
+        <p>© 2025 Mental Health Education Platform. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Chatwoot Customer Support Widget -->
+  <script src="js/chatwoot-widget.js"></script>
+
+</body>
+
+</html>

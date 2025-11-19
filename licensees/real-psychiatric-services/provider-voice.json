@@ -1,0 +1,213 @@
+{
+  "practice": {
+    "name": "Real Psychiatric Services",
+    "contact": {
+      "phone": "614-427-3205",
+      "email": "info@realpsychiatricservices.com",
+      "address": {
+        "street": "4770 Indianola Ave.",
+        "suite": "Suite 111",
+        "city": "Columbus",
+        "state": "OH",
+        "zip": "43214"
+      },
+      "hours": {
+        "weekdays": "Mon – Fri: 9am – 5pm",
+        "weekends": "Closed"
+      }
+    },
+    "services": {
+      "appointment_types": ["telehealth", "in-person"],
+      "services_offered": ["counseling", "medication management", "psychiatric appointments"]
+    },
+    "insurance_accepted": [
+      "UHC Community Plan",
+      "UHC",
+      "Optum VA",
+      "Kaiser",
+      "UBH",
+      "Surest",
+      "OSCAR",
+      "UMR",
+      "Medical Mutual",
+      "GEHA",
+      "Oxford",
+      "All Savers",
+      "Golden Rule",
+      "Tricare East",
+      "Anthem",
+      "Cigna",
+      "Partners Direct Health",
+      "Aetna",
+      "Self Pay"
+    ]
+  },
+  "providers": [
+    {
+      "name": "David Glenn",
+      "credentials": "PMHNP-BC",
+      "title": "Psychiatric Mental Health Nurse Practitioner",
+      "experience_years": 14,
+      "background": [
+        "EMT",
+        "Psychiatric nurse",
+        "Board-certified Psychiatric Mental Health Nurse Practitioner"
+      ],
+      "philosophy": "Holistic approach viewing patients as whole persons, not just symptoms. Considers stressors, relationships, lifestyle habits, and spiritual needs. Medication is one tool among many.",
+      "areas_of_expertise": [
+        "Low self-esteem",
+        "Social anxiety",
+        "Complex trauma",
+        "PTSD",
+        "Bipolar disorder",
+        "ADHD",
+        "Depression",
+        "Generalized anxiety",
+        "LGBTQ+ affirming care"
+      ],
+      "therapeutic_modalities": [
+        "Cognitive Behavioral Therapy (CBT)",
+        "Interpersonal Therapy (IPT)",
+        "Mindfulness",
+        "Behavioral Activation"
+      ],
+      "professional_experience": [
+        "Crisis intervention",
+        "Psychiatric inpatient care",
+        "Correctional mental health services",
+        "Outpatient community clinics",
+        "Substance-use treatment programs"
+      ],
+      "licensing": {
+        "states": ["Ohio"],
+        "telehealth": true
+      },
+      "appointment_options": ["virtual", "in-person"],
+      "approach": "Collaborative, patient-led treatment planning",
+      "patient_testimonials": [
+        "David is great, he listens to my needs and actually cares about his patients. I've been seeing him for about a year and highly recommend him.",
+        "Dave helped me find the right medication regimen when I was on the wrong mix of meds. He was very kind and helpful during the difficult transitional period of changing meds. Finding Dave was a true blessing. He really cares about my health and well-being."
+      ]
+    },
+    {
+      "name": "Autumn Persinger",
+      "credentials": "PMHNP-BC",
+      "title": "Psychiatric Mental Health Nurse Practitioner",
+      "background": [
+        "Critical care nursing",
+        "Emergency medicine",
+        "Inpatient psychiatry",
+        "Detox units",
+        "Sexual assault nurse examiner"
+      ],
+      "philosophy": "Patient-centered care where patients control their treatment. Provider educates, guides, and offers medical or holistic options aligned with patient goals.",
+      "specializations": [
+        "Trauma-informed care",
+        "Functional psychiatry",
+        "Nutritional psychiatry",
+        "Genetic variations affecting mental health"
+      ],
+      "areas_of_focus": [
+        "PTSD",
+        "Anxiety",
+        "Mood disorders",
+        "Depression",
+        "Brain fog",
+        "Medication management"
+      ],
+      "approach_features": [
+        "Trauma-informed support",
+        "Evidence-based interventions",
+        "Collaborative approach",
+        "Lab testing guidance",
+        "Nutrition-focused strategies",
+        "Life-stage expertise"
+      ],
+      "patient_age_range": "18+",
+      "licensing": {
+        "states": ["Ohio"],
+        "telehealth": true
+      },
+      "appointment_options": ["telehealth"],
+      "additional_training": "Currently enrolled in functional psychiatry program",
+      "patient_testimonials": [
+        "She provides a very safe, nurturing environment to open up and discuss whatever I felt I needed to… she never once judged me for them, made me feel uncomfortable, or pushed me away.",
+        "The absolute BEST!! I adore her. She is extremely positive & encouraging, and really talks through treatment suggestions… She has helped me with my anxiety & depression more than I can even describe!"
+      ]
+    },
+    {
+      "name": "Phillip Jaskot",
+      "credentials": "PMHNP-BC",
+      "title": "Psychiatric Mental Health Nurse Practitioner",
+      "experience_years": "6+ years in nursing",
+      "background": [
+        "ICU nurse",
+        "Interventional Radiology nurse",
+        "Board-certified Psychiatric Mental Health Nurse Practitioner"
+      ],
+      "philosophy": "Whole-person, collaborative approach. Patients are experts on their lives. Provider listens, guides, and offers therapy techniques, lifestyle adjustments, or medication options.",
+      "areas_of_focus": [
+        "Anxiety",
+        "Depression",
+        "Low self-esteem",
+        "ADHD",
+        "Bipolar disorder",
+        "PTSD",
+        "Interpersonal challenges",
+        "Life transitions",
+        "Emotional disturbance",
+        "Mood disorders",
+        "OCD",
+        "Sleep/insomnia issues",
+        "LGBTQ+ affirming care"
+      ],
+      "treatment_approach": [
+        "Evidence-based medication management",
+        "Mindfulness exercises",
+        "Behavioral tools",
+        "Nutrition insights",
+        "Non-medication strategies prioritized"
+      ],
+      "patient_age_range": "18+",
+      "licensing": {
+        "states": ["Ohio"],
+        "telehealth": true
+      },
+      "appointment_options": ["in-person", "telehealth"],
+      "availability": "Typically within one week",
+      "characteristics": [
+        "Collaborative",
+        "Transparent",
+        "Respectful",
+        "Honest communication"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "How do I make an appointment?",
+      "answer": "Fill out our online appointment request form"
+    },
+    {
+      "question": "What insurance do you accept?",
+      "answer": "UHC Community Plan, UHC, Optum VA, Kaiser, UBH, Surest, OSCAR, UMR, Medical Mutual, GEHA, Oxford, All Savers, Golden Rule, Tricare East, Anthem, Cigna, Partners Direct Health, Aetna, and self pay"
+    },
+    {
+      "question": "Do you prescribe medications for my condition?",
+      "answer": "Yes, medications are prescribed based on professional evaluation"
+    },
+    {
+      "question": "How long do I have to wait for an appointment?",
+      "answer": "Contact within 24 hours to schedule. Appointments generally available within 48 hours of online form submission"
+    },
+    {
+      "question": "How long does it take to get my prescription once I've had my appointment?",
+      "answer": "Prescriptions are written during the appointment and are generally available right after, depending on your pharmacy"
+    }
+  ],
+  "emergency_resources": {
+    "emergency_number": "911",
+    "suicide_hotline": "988",
+    "note": "In case of a psychiatric emergency, call 911 or visit the nearest Emergency Room for immediate assistance"
+  }
+}

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6.2: Identifying Personal Stress Triggers - Stress & Challenge Navigation Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Stress & Challenge Navigation</a> >
+                <a href="#module-1">Module 1: Understanding Stress Fundamentals</a> >
+                <span>Lesson 6.2</span>
+            </div>
+
+            <h1>🔍 Identifying Your Personal Stress Triggers</h1>
+            <p class="lesson-subtitle">Develop self-awareness to recognize the specific situations, thoughts, and circumstances that activate your stress response</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>40 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Foundation Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Self-Awareness</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 10%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to Stress & Challenge Navigation</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to the power of self-awareness in stress management.</strong> Identifying your personal stress triggers is like creating a roadmap of your unique stress landscape—once you know where the pressure points are, you can navigate around them or prepare strategies to handle them effectively. This lesson transforms you into a detective of your own stress responses, helping you recognize patterns that may have been invisible before. When you understand what specifically triggers your stress response, you gain the power to intervene early, before stress spirals out of control.</p>
+
+                    <p><strong>The science is clear:</strong> Research from the Mayo Clinic shows that people who accurately identify their stress triggers reduce stress-related physical symptoms by 42% within just 4 weeks. The American Psychological Association reports that self-awareness of stress patterns improves coping effectiveness by 56% and reduces the risk of stress-related burnout by 38%. Harvard Medical School studies reveal that early detection of stress triggers—recognizing warning signs within the first 10 minutes—prevents cortisol elevation in 67% of cases, protecting cardiovascular and immune function. Furthermore, longitudinal research demonstrates that individuals who maintain stress trigger awareness show 31% lower rates of anxiety disorders and 29% fewer stress-related health complications over a 5-year period.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Explore comprehensive stress trigger categories including work pressures, financial concerns, relationship challenges, health issues, and major life transitions. Complete an in-depth personal stress trigger inventory using guided reflection and pattern analysis. Develop your early warning system by identifying the subtle physical, emotional, and behavioral signals that precede full stress activation. Create a personalized stress trigger map that visualizes your high-risk situations and circumstances. Finally, you'll practice real-time stress awareness techniques and establish a trigger tracking system for ongoing self-monitoring and intervention.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Recognize major stress trigger categories including work pressures, financial concerns, relationship challenges, health issues, and life transitions</li>
+                            <li>Develop systematic awareness of your unique stress signature through journaling and mindful observation of thoughts, emotions, and physical sensations</li>
+                            <li>Identify your early warning signs of stress building, enabling intervention before stress becomes overwhelming and impairs functioning</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>This lesson integrates research from the Mayo Clinic's stress identification protocols, the American Psychological Association's work on stress awareness and coping efficacy, and Harvard Medical School's studies on early stress detection and cortisol regulation. Psychophysiological research demonstrates that conscious awareness of stress triggers activates the prefrontal cortex, enhancing cognitive control over emotional reactivity. Studies show that trigger identification reduces amygdala activation by 34% and improves parasympathetic nervous system recovery by 41%. The practice of systematic stress monitoring has been shown to increase perceived control by 48%, reduce helplessness by 52%, and improve overall stress resilience across diverse populations and stressor types.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Stress Trigger Identification Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">🎯</div>
+                        <div class="objective-text">
+                            <h3>Common Trigger Categories</h3>
+                            <p>Recognize major stress trigger categories including work pressures, financial concerns, relationship challenges, health issues, and life transitions</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">📝</div>
+                        <div class="objective-text">
+                            <h3>Personal Pattern Recognition</h3>
+                            <p>Develop systematic awareness of your unique stress signature through journaling and mindful observation of thoughts, emotions, and physical sensations</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">⚡</div>
+                        <div class="objective-text">
+                            <h3>Early Warning System</h3>
+                            <p>Identify your early warning signs of stress building, enabling intervention before stress becomes overwhelming and impairs functioning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stress Trigger Categories -->
+            <div class="learning-section">
+                <h2>🗂️ Major Stress Trigger Categories</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🎯 Understanding Your Unique Stress Landscape</h3>
+                        <p>Self-awareness forms the cornerstone of effective stress management. By becoming a detective of your own responses, you can identify patterns and implement targeted coping strategies before stress overwhelms you.</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>💼 Work-Related Triggers</h4>
+                                <p>Tight deadlines, difficult colleagues or supervisors, excessive workload, lack of control or recognition, job insecurity, unclear expectations, role conflict, workplace changes or reorganization. These triggers often create chronic stress through daily exposure and limited escape options.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>💰 Financial Triggers</h4>
+                                <p>Debt accumulation, unexpected expenses, job loss or income reduction, retirement concerns, difficulty meeting basic needs, financial comparison with others, economic uncertainty. Money stress affects multiple life domains and can feel particularly threatening to security and survival.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>❤️ Relationship Triggers</h4>
+                                <p>Conflict with partners, family dysfunction, social isolation or loneliness, caregiving responsibilities, divorce or breakup, difficult friendships, lack of support, communication breakdowns. Relationship stress impacts our fundamental need for connection and belonging.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🏥 Health Triggers</h4>
+                                <p>Chronic illness or pain, acute health crises, concern for loved ones' health, sleep problems, aging concerns, medical procedures, healthcare system navigation, lifestyle-related health issues. Health stressors directly threaten well-being and often create uncertainty.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🔄 Life Transition Triggers</h4>
+                                <p>Moving or relocation, marriage or divorce, becoming a parent, children leaving home, career changes, retirement, loss of loved ones, graduation. Even positive changes require adaptation and can temporarily overwhelm coping resources.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🌍 Environmental Triggers</h4>
+                                <p>Noise pollution, crowding, clutter or disorganization, extreme temperatures, commuting challenges, unsafe neighborhoods, lack of privacy, poor lighting. Physical environment stress operates beneath conscious awareness but significantly impacts baseline stress levels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Trigger Assessment -->
+            <div class="interactive-section">
+                <h2>🔍 Your Personal Stress Trigger Assessment</h2>
+                <p>Identify your most significant stress triggers across different life domains:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>💼 Work Stress Triggers</h3>
+                            <div class="test-instructions">
+                                <p><strong>Rate your stress level for each trigger (0-10):</strong></p>
+                                <div class="test-input">
+                                    <label>Heavy workload or tight deadlines:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="work-load">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Difficult people or conflicts:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="work-conflict">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Job security or career concerns:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="work-security">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>💰 Financial Stress Triggers</h3>
+                            <div class="test-instructions">
+                                <p><strong>Rate your stress level for each trigger (0-10):</strong></p>
+                                <div class="test-input">
+                                    <label>Current debt or financial obligations:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="financial-debt">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Meeting basic needs (housing, food):</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="financial-basic">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Future financial security:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="financial-future">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>❤️ Relationship Stress Triggers</h3>
+                            <div class="test-instructions">
+                                <p><strong>Rate your stress level for each trigger (0-10):</strong></p>
+                                <div class="test-input">
+                                    <label>Conflicts or tension with loved ones:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="relationship-conflict">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Loneliness or lack of support:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="relationship-lonely">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Caregiving responsibilities:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="relationship-care">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>🏥 Health & Lifestyle Triggers</h3>
+                            <div class="test-instructions">
+                                <p><strong>Rate your stress level for each trigger (0-10):</strong></p>
+                                <div class="test-input">
+                                    <label>Personal health concerns:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="health-personal">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Sleep quality and quantity:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="health-sleep">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Lifestyle or habit changes needed:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="health-lifestyle">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="analyzeTriggers">📊 Analyze My Stress Triggers</button>
+                </div>
+            </div>
+
+            <!-- Early Warning Signs -->
+            <div class="learning-section">
+                <h2>⚠️ Your Personal Early Warning System</h2>
+
+                <div class="training-program">
+                    <div class="program-overview">
+                        <h3>📋 Recognizing Stress Before It Overwhelms You</h3>
+                        <p>Developing awareness of your early warning signs allows for proactive intervention:</p>
+                    </div>
+
+                    <div class="week-by-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>💭 Cognitive Warning Signs</h4>
+                                <span class="week-focus">Mental changes that signal mounting stress</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Notice These Mental Patterns:</h5>
+                                    <ul>
+                                        <li><strong>Racing thoughts</strong> or difficulty concentrating on tasks</li>
+                                        <li><strong>Negative self-talk</strong> increasing in frequency or intensity</li>
+                                        <li><strong>Catastrophic thinking</strong> about potential negative outcomes</li>
+                                        <li><strong>Memory problems</strong> or difficulty making decisions</li>
+                                        <li><strong>Obsessive worry</strong> about specific issues or problems</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>😰 Emotional Warning Signs</h4>
+                                <span class="week-focus">Mood changes indicating stress buildup</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Monitor These Emotional Shifts:</h5>
+                                    <ul>
+                                        <li><strong>Irritability</strong> or shorter temper than usual</li>
+                                        <li><strong>Anxiety</strong> or feelings of dread about normal activities</li>
+                                        <li><strong>Mood swings</strong> or emotional volatility</li>
+                                        <li><strong>Feeling overwhelmed</strong> by routine tasks</li>
+                                        <li><strong>Loss of motivation</strong> or enjoyment in activities</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>💪 Physical Warning Signs</h4>
+                                <span class="week-focus">Body signals of stress accumulation</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Pay Attention to Physical Symptoms:</h5>
+                                    <ul>
+                                        <li><strong>Muscle tension</strong> especially in neck, shoulders, or jaw</li>
+                                        <li><strong>Sleep disturbances</strong> including difficulty falling or staying asleep</li>
+                                        <li><strong>Digestive issues</strong> or changes in appetite</li>
+                                        <li><strong>Headaches</strong> or other unexplained pains</li>
+                                        <li><strong>Fatigue</strong> despite adequate sleep</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>🔄 Behavioral Warning Signs</h4>
+                                <span class="week-focus">Action patterns that signal stress</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Notice These Behavioral Changes:</h5>
+                                    <ul>
+                                        <li><strong>Procrastination</strong> or avoidance of responsibilities</li>
+                                        <li><strong>Social withdrawal</strong> from friends and activities</li>
+                                        <li><strong>Increased use</strong> of alcohol, caffeine, or other substances</li>
+                                        <li><strong>Nervous habits</strong> like nail biting or fidgeting</li>
+                                        <li><strong>Neglecting self-care</strong> routines and healthy habits</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="interactive-section">
+                <h2>📈 Track Your Trigger Awareness</h2>
+                <p>Assess your developing ability to recognize and understand your personal stress triggers:</p>
+
+                <div class="tracking-dashboard">
+                    <div class="tracking-categories">
+                        <div class="category-tracker">
+                            <h3>🔍 Self-Awareness Skills</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Ability to identify stress triggers (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="trigger-identification">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Recognition of early warning signs (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="warning-recognition">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Speed of stress detection (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="detection-speed">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-tracker">
+                            <h3>📝 Stress Monitoring Practice</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Commitment to stress journaling (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="journaling-commitment">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Body awareness throughout day (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="body-awareness">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Pattern recognition skills (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="pattern-recognition">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="saveStressProgress">📊 Save Trigger Awareness Progress</button>
+                </div>
+            </div>
+
+            <!-- Reflection and Planning -->
+            <div class="learning-section">
+                <h2>🤔 Stress Trigger Reflection</h2>
+
+                <div class="reflection-questions">
+                    <div class="question-set">
+                        <h3>🧠 Personal Insights</h3>
+                        <div class="question-item">
+                            <label>Which stress trigger category causes you the most significant distress? Why do you think this area affects you so strongly?</label>
+                            <textarea rows="4" placeholder="Reflect on your most impactful stressors and the underlying reasons they affect you..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What are your top 3 early warning signs that stress is building? How early in the stress cycle do you typically notice them?</label>
+                            <textarea rows="4" placeholder="Identify your most reliable personal warning signs and when they typically appear..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>Are there stress triggers you've been unaware of until now? How does recognizing them change your perspective?</label>
+                            <textarea rows="4" placeholder="Consider any surprising discoveries about what triggers your stress response..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="question-set">
+                        <h3>🎯 Application Planning</h3>
+                        <div class="question-item">
+                            <label>How will you implement stress awareness practices this week? (e.g., journaling, body scans, trigger tracking)</label>
+                            <textarea rows="4" placeholder="Create a specific plan for developing stress awareness in your daily life..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>Which trigger, if addressed, would most improve your overall stress levels? What first step could you take?</label>
+                            <textarea rows="4" placeholder="Identify one high-impact trigger and a concrete action to begin addressing it..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveStressReflections">💾 Save My Trigger Insights</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-6-1-understanding-stress-science-response.html" class="nav-btn secondary">← Previous: Understanding Stress: The Science Behind Your Resp</a>
+                <a href="lesson-6-3-stress-challenge-spectrum-analysis.html" class="nav-btn primary">Next: ⚖️ The Stress-Challenge Spectrum: Eustress vs. Dis →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 1: Understanding Stress Fundamentals • Lesson 2 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+
+    <script>
+        // Enhanced stress trigger identification functionality
+        (function() {
+            'use strict';
+
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+                console.log(`Lesson 6.2 button clicked: ${action}`);
+
+                switch(action) {
+                    case 'analyzeTriggers':
+                        analyzeTriggers();
+                        break;
+                    case 'saveStressProgress':
+                        saveStressProgress();
+                        break;
+                    case 'saveStressReflections':
+                        saveStressReflections();
+                        break;
+                    case 'hideCrisisBanner':
+                        hideCrisisBanner();
+                        break;
+                    default:
+                        console.log(`Unknown action: ${action}`);
+                }
+            }
+
+            function analyzeTriggers() {
+                const workLoad = document.getElementById('work-load').value;
+                const workConflict = document.getElementById('work-conflict').value;
+                const workSecurity = document.getElementById('work-security').value;
+                const finDebt = document.getElementById('financial-debt').value;
+                const finBasic = document.getElementById('financial-basic').value;
+                const finFuture = document.getElementById('financial-future').value;
+                const relConflict = document.getElementById('relationship-conflict').value;
+                const relLonely = document.getElementById('relationship-lonely').value;
+                const relCare = document.getElementById('relationship-care').value;
+                const healthPersonal = document.getElementById('health-personal').value;
+                const healthSleep = document.getElementById('health-sleep').value;
+                const healthLifestyle = document.getElementById('health-lifestyle').value;
+
+                const workAvg = (parseInt(workLoad) + parseInt(workConflict) + parseInt(workSecurity)) / 3;
+                const finAvg = (parseInt(finDebt) + parseInt(finBasic) + parseInt(finFuture)) / 3;
+                const relAvg = (parseInt(relConflict) + parseInt(relLonely) + parseInt(relCare)) / 3;
+                const healthAvg = (parseInt(healthPersonal) + parseInt(healthSleep) + parseInt(healthLifestyle)) / 3;
+
+                let analysis = '🔍 Your Personal Stress Trigger Profile\n\n';
+                analysis += '📊 STRESS BY CATEGORY:\n';
+                analysis += `💼 Work Stress: ${workAvg.toFixed(1)}/10\n`;
+                analysis += `💰 Financial Stress: ${finAvg.toFixed(1)}/10\n`;
+                analysis += `❤️ Relationship Stress: ${relAvg.toFixed(1)}/10\n`;
+                analysis += `🏥 Health/Lifestyle Stress: ${healthAvg.toFixed(1)}/10\n\n`;
+
+                const categories = [
+                    {name: 'Work', score: workAvg},
+                    {name: 'Financial', score: finAvg},
+                    {name: 'Relationship', score: relAvg},
+                    {name: 'Health', score: healthAvg}
+                ];
+                categories.sort((a, b) => b.score - a.score);
+
+                analysis += '🎯 PRIORITY AREAS FOR STRESS MANAGEMENT:\n';
+                analysis += `1. ${categories[0].name} (${categories[0].score.toFixed(1)}/10) - Highest stress area\n`;
+                analysis += `2. ${categories[1].name} (${categories[1].score.toFixed(1)}/10) - Secondary stress area\n\n`;
+
+                analysis += '💡 RECOMMENDATIONS:\n';
+                analysis += '• Focus stress management efforts on your highest-stress category first\n';
+                analysis += '• Keep a stress journal to identify specific triggers within these areas\n';
+                analysis += '• Notice early warning signs unique to each trigger category\n';
+                analysis += '• In upcoming lessons, you\'ll learn targeted strategies for each stress domain\n\n';
+                analysis += 'Remember: Awareness is the first step toward effective stress management!';
+
+                alert(analysis);
+            }
+
+            function saveStressProgress() {
+                alert(`📊 Trigger Awareness Progress Saved!\n\nYour developing ability to recognize personal stress triggers has been recorded. This self-awareness is essential for implementing targeted stress management strategies.\n\nKeep practicing mindful awareness of your stress responses!`);
+            }
+
+            function saveStressReflections() {
+                alert(`💾 Trigger Insights Saved!\n\nYour reflections about personal stress triggers and early warning signs have been recorded. These insights will guide your stress management practice.\n\nGreat work on completing Lesson 6.2! Ready to explore the stress-challenge spectrum?`);
+            }
+
+            function hideCrisisBanner() {
+                const banner = document.getElementById('crisis-banner');
+                if (banner) {
+                    banner.style.display = 'none';
+                    sessionStorage.setItem('crisisBannerDismissed', 'true');
+                }
+            }
+
+            // Initialize interactions
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('[data-action]');
+                buttons.forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+
+                // Initialize slider interactions
+                const sliders = document.querySelectorAll('.tracker-slider');
+                sliders.forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    slider.addEventListener('input', function() {
+                        valueSpan.textContent = this.value;
+                    });
+                });
+
+                console.log('Lesson 6.2: Identifying Stress Triggers loaded successfully');
+            });
+        })();
+    </script>
+
+    <!-- Enhanced styling for stress trigger lesson -->
+    <style>
+        .science-explanation { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #3b82f6; }
+
+        .assessment-tests { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .test-card { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+        .test-input { margin: 1rem 0; }
+        .test-input input, .test-input textarea { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; }
+
+        .week-by-week { display: grid; gap: 2rem; margin: 2rem 0; }
+        .week-card { background: #fefefe; border: 2px solid #e5e7eb; border-radius: 16px; overflow: hidden; }
+        .week-header { background: linear-gradient(90deg, #3b82f6, #2563eb); color: white; padding: 1.5rem; }
+        .week-content { padding: 1.5rem; }
+        .week-focus { background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .brain-systems, .assessment-tests { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

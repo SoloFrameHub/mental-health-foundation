@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1.3: Your Personal Anxiety Pattern</title>
+    
+    <style>
+        :root {
+            --calming-teal: #4a90a4;
+            --deep-teal: #357a8a;
+            --accent-orange: #fb923c;
+            --sage-green: #87a96b;
+        }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--deep-teal), var(--calming-teal));
+            color: white;
+            padding: 60px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        /* GAMMA SECTION */
+        .gamma-section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .gamma-embed {
+            width: 100%;
+            height: 800px;
+            border: none;
+            border-radius: 12px;
+        }
+        
+        /* PATTERN TRACKER */
+        .pattern-tracker {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .trigger-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .trigger-card {
+            padding: 20px;
+            background: #f7f8f6;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 3px solid transparent;
+            text-align: center;
+        }
+        
+        .trigger-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .trigger-card.selected {
+            background: linear-gradient(135deg, #fff4e6, #ffe0b2);
+            border-color: var(--accent-orange);
+        }
+        
+        .trigger-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        /* PATTERN RESULTS */
+        .pattern-results {
+            background: linear-gradient(135deg, #f0f9ff, white);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            display: none;
+        }
+        
+        .pattern-chart {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .pattern-stat {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .pattern-stat-value {
+            font-size: 3rem;
+            color: var(--accent-orange);
+            font-weight: bold;
+        }
+        
+        .pattern-stat-label {
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* ACTION PLAN */
+        .action-plan {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .plan-item {
+            padding: 20px;
+            background: linear-gradient(135deg, #e8f4f6, white);
+            border-radius: 12px;
+            margin: 15px 0;
+            border-left: 5px solid var(--calming-teal);
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            background: var(--accent-orange);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #ea7c1c;
+            transform: translateY(-2px);
+        }
+        
+        /* PROGRESS */
+        .progress-bar {
+            background: #e2e8f0;
+            height: 8px;
+            border-radius: 10px;
+            margin: 30px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--sage-green), var(--calming-teal));
+            width: 45%; /* Lesson 3 of 4 */
+            transition: width 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- PROGRESS -->
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        
+        <!-- HERO -->
+        <div class="hero">
+            <h1>Lesson 1.3: Your Personal Anxiety Pattern</h1>
+            <p>Discover what triggers YOUR unique anxiety response</p>
+        </div>
+        
+        <!-- GAMMA PRESENTATION -->
+        <div class="gamma-section">
+            <h2>📽️ Understanding Your Patterns</h2>
+            <iframe src="gamma-presentations/lesson-1-3-anxiety-pattern.html" class="gamma-embed"></iframe>
+        </div>
+        
+        <!-- PATTERN TRACKER -->
+        <div class="pattern-tracker">
+            <h2>🔍 Identify Your Triggers</h2>
+            <p>Click all that commonly trigger your anxiety:</p>
+            
+            <div class="trigger-grid">
+                <div class="trigger-card" onclick="selectTrigger(this, 'social')">
+                    <div class="trigger-icon">👥</div>
+                    <strong>Social Situations</strong>
+                    <p>Parties, meetings, crowds</p>
+                </div>
+                
+                <div class="trigger-card" onclick="selectTrigger(this, 'work')">
+                    <div class="trigger-icon">💼</div>
+                    <strong>Work/School</strong>
+                    <p>Deadlines, presentations</p>
+                </div>
+                
+                <div class="trigger-card" onclick="selectTrigger(this, 'health')">
+                    <div class="trigger-icon">🏥</div>
+                    <strong>Health Concerns</strong>
+                    <p>Symptoms, appointments</p>
+                </div>
+                
+                <div class="trigger-card" onclick="selectTrigger(this, 'financial')">
+                    <div class="trigger-icon">💰</div>
+                    <strong>Money Matters</strong>
+                    <p>Bills, expenses, future</p>
+                </div>
+                
+                <div class="trigger-card" onclick="selectTrigger(this, 'relationship')">
+                    <div class="trigger-icon">❤️</div>
+                    <strong>Relationships</strong>
+                    <p>Conflict, intimacy, loss</p>
+                </div>
+                
+                <div class="trigger-card" onclick="selectTrigger(this, 'change')">
+                    <div class="trigger-icon">🔄</div>
+                    <strong>Life Changes</strong>
+                    <p>Moving, new job, transitions</p>
+                </div>
+                
+                <div class="trigger-card" onclick="selectTrigger(this, 'news')">
+                    <div class="trigger-icon">📱</div>
+                    <strong>News/Media</strong>
+                    <p>Current events, social media</p>
+                </div>
+                
+                <div class="trigger-card" onclick="selectTrigger(this, 'uncertainty')">
+                    <div class="trigger-icon">❓</div>
+                    <strong>Uncertainty</strong>
+                    <p>Unknown outcomes, waiting</p>
+                </div>
+            </div>
+            
+            <button class="btn" onclick="analyzePattern()">Analyze My Pattern</button>
+            
+            <div class="pattern-results" id="patternResults">
+                <h3>Your Anxiety Pattern Analysis</h3>
+                <div class="pattern-chart">
+                    <div class="pattern-stat">
+                        <div class="pattern-stat-value" id="triggerCount">0</div>
+                        <div class="pattern-stat-label">Primary Triggers</div>
+                    </div>
+                    <div class="pattern-stat">
+                        <div class="pattern-stat-value" id="patternType">-</div>
+                        <div class="pattern-stat-label">Pattern Type</div>
+                    </div>
+                </div>
+                <div id="patternInsight"></div>
+            </div>
+        </div>
+        
+        <!-- ACTION PLAN -->
+        <div class="action-plan">
+            <h2>🎯 Your Personalized Action Plan</h2>
+            <div id="actionPlanContent">
+                <p>Complete the pattern tracker above to generate your personalized plan.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let selectedTriggers = [];
+        
+        function selectTrigger(element, trigger) {
+            element.classList.toggle('selected');
+            
+            if (selectedTriggers.includes(trigger)) {
+                selectedTriggers = selectedTriggers.filter(t => t !== trigger);
+            } else {
+                selectedTriggers.push(trigger);
+            }
+        }
+        
+        function analyzePattern() {
+            const results = document.getElementById('patternResults');
+            const triggerCount = document.getElementById('triggerCount');
+            const patternType = document.getElementById('patternType');
+            const insight = document.getElementById('patternInsight');
+            const actionPlan = document.getElementById('actionPlanContent');
+            
+            if (selectedTriggers.length === 0) {
+                alert('Please select at least one trigger to analyze your pattern.');
+                return;
+            }
+            
+            // Show results
+            results.style.display = 'block';
+            triggerCount.textContent = selectedTriggers.length;
+            
+            // Determine pattern type
+            let type = 'Mixed';
+            if (selectedTriggers.includes('social') && selectedTriggers.includes('relationship')) {
+                type = 'Social';
+            } else if (selectedTriggers.includes('work') && selectedTriggers.includes('financial')) {
+                type = 'Performance';
+            } else if (selectedTriggers.includes('health') || selectedTriggers.includes('uncertainty')) {
+                type = 'Control';
+            }
+            
+            patternType.textContent = type;
+            
+            // Generate insight
+            let insightText = '<h4>Your Pattern Insight:</h4><p>';
+            if (selectedTriggers.length <= 2) {
+                insightText += 'You have a focused anxiety pattern. This is actually good news - it means your anxiety is predictable and manageable with targeted strategies.';
+            } else if (selectedTriggers.length <= 5) {
+                insightText += 'You experience anxiety across several life areas. This is very common. The key is learning which coping strategies work best for each trigger type.';
+            } else {
+                insightText += 'You're dealing with generalized anxiety across many areas. This comprehensive course is perfect for you - we'll build a robust toolkit that works everywhere.';
+            }
+            insightText += '</p>';
+            insight.innerHTML = insightText;
+            
+            // Generate action plan
+            let planHTML = '<h3>Your Personalized Strategy:</h3>';
+            
+            if (type === 'Social') {
+                planHTML += `
+                    <div class="plan-item">
+                        <strong>🎯 Primary Focus: Social Confidence Building</strong>
+                        <p>Your anxiety centers around interpersonal situations. We'll prioritize:</p>
+                        <ul>
+                            <li>Assertiveness training techniques</li>
+                            <li>Gradual social exposure exercises</li>
+                            <li>Communication skills practice</li>
+                        </ul>
+                    </div>
+                `;
+            } else if (type === 'Performance') {
+                planHTML += `
+                    <div class="plan-item">
+                        <strong>🎯 Primary Focus: Performance Anxiety Management</strong>
+                        <p>Your anxiety peaks around achievement and evaluation. We'll focus on:</p>
+                        <ul>
+                            <li>Perfectionism reduction strategies</li>
+                            <li>Pre-performance routines</li>
+                            <li>Cognitive reframing for success</li>
+                        </ul>
+                    </div>
+                `;
+            } else if (type === 'Control') {
+                planHTML += `
+                    <div class="plan-item">
+                        <strong>🎯 Primary Focus: Uncertainty Tolerance</strong>
+                        <p>Your anxiety stems from lack of control. We'll work on:</p>
+                        <ul>
+                            <li>Acceptance and flexibility exercises</li>
+                            <li>Mindfulness for present-moment awareness</li>
+                            <li>Building comfort with uncertainty</li>
+                        </ul>
+                    </div>
+                `;
+            } else {
+                planHTML += `
+                    <div class="plan-item">
+                        <strong>🎯 Primary Focus: Comprehensive Toolkit</strong>
+                        <p>Your anxiety is multifaceted. We'll build a complete system:</p>
+                        <ul>
+                            <li>Universal calming techniques</li>
+                            <li>Situation-specific strategies</li>
+                            <li>Daily anxiety management routine</li>
+                        </ul>
+                    </div>
+                `;
+            }
+            
+            planHTML += `
+                <div class="plan-item">
+                    <strong>📅 Your Next Steps:</strong>
+                    <ol>
+                        <li>Complete Lesson 1.4 to build your support network</li>
+                        <li>Start Module 2 to learn specific coping techniques</li>
+                        <li>Track your triggers for one week using our journal</li>
+                        <li>Practice one new skill daily from your toolkit</li>
+                    </ol>
+                </div>
+            `;
+            
+            actionPlan.innerHTML = planHTML;
+            
+            // Scroll to results
+            results.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Animate progress on load
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.querySelector('.progress-fill').style.width = '50%';
+            }, 500);
+        });
+    </script>
+</body>
+</html>

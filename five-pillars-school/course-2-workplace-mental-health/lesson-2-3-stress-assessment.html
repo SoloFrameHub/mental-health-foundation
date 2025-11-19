@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.3: Assess Your Stress Profile | Mental Health Education Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/lesson-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Mental Health Education Platform</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://realpsychiatricservices.com" target="_blank">Clinical Services</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container lesson-container">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="lesson-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../courses.html">Courses</a></li>
+                <li class="breadcrumb-item"><a href="course-2-overview.html">Workplace Mental Health</a></li>
+                <li class="breadcrumb-item active">Lesson 2.3: Stress Assessment</li>
+            </ol>
+        </nav>
+
+        <!-- Lesson Header -->
+        <div class="lesson-header">
+            <h1>Lesson 2.3: Assess Your Stress Profile</h1>
+            <p class="lesson-meta">
+                <span class="badge bg-info">10 minutes</span>
+                <span class="badge bg-success">Interactive Assessment</span>
+                <span class="lesson-sequence">Part 2 of 5 in the Stress Mastery Series</span>
+            </p>
+        </div>
+
+        <!-- Learning Objective -->
+        <div class="learning-objectives-clear">
+            <h2>🎯 What You'll Accomplish in 10 Minutes:</h2>
+            <div class="objectives-list">
+                <div class="objective-item">
+                    <span class="objective-number">1</span>
+                    <span class="objective-text">Get a comprehensive measurement of your current stress-challenge balance</span>
+                </div>
+                <div class="objective-item">
+                    <span class="objective-number">2</span>
+                    <span class="objective-text">Discover your specific zone: Active Learning, High Strain, Passive, or Low Strain</span>
+                </div>
+                <div class="objective-item">
+                    <span class="objective-number">3</span>
+                    <span class="objective-text">Receive personalized feedback on your strengths and focus areas</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Quick Recap -->
+            <div class="recap-section">
+                <h2>📚 Quick Recap from Lesson 2.2</h2>
+                <div class="recap-card">
+                    <p><strong>You learned:</strong> The difference between energizing challenge and draining stress is <strong>CONTROL</strong>.</p>
+                    <div class="recap-formula">
+                        <p>✅ High Demands + High Control = Challenge (energizing)</p>
+                        <p>❌ High Demands + Low Control = Stress (draining)</p>
+                    </div>
+                    <p><strong>Now let's measure exactly where you are.</strong></p>
+                </div>
+            </div>
+
+            <!-- Assessment Introduction -->
+            <div class="assessment-intro">
+                <h2>📊 Your Comprehensive Stress-Challenge Assessment</h2>
+                <p>This assessment measures 6 key factors that determine whether your work energizes or drains you:</p>
+
+                <div class="factors-grid">
+                    <div class="factor-item">
+                        <span class="factor-icon">⚖️</span>
+                        <span class="factor-name">Work Demands</span>
+                    </div>
+                    <div class="factor-item">
+                        <span class="factor-icon">🎛️</span>
+                        <span class="factor-name">Personal Control</span>
+                    </div>
+                    <div class="factor-item">
+                        <span class="factor-icon">🤝</span>
+                        <span class="factor-name">Social Support</span>
+                    </div>
+                    <div class="factor-item">
+                        <span class="factor-icon">🔋</span>
+                        <span class="factor-name">Recovery Quality</span>
+                    </div>
+                    <div class="factor-item">
+                        <span class="factor-icon">✨</span>
+                        <span class="factor-name">Challenge Indicators</span>
+                    </div>
+                    <div class="factor-item">
+                        <span class="factor-icon">⚠️</span>
+                        <span class="factor-name">Stress Indicators</span>
+                    </div>
+                </div>
+
+                <p class="assessment-instruction"><strong>Instructions:</strong> Move each slider to reflect your experience <strong>over the past week</strong>. Be honest - this is just for you.</p>
+            </div>
+
+            <!-- Assessment Tool -->
+            <div class="assessment-tool">
+                <div class="assessment-progress">
+                    <span id="assessment-question-count">Question 1 of 6</span>
+                </div>
+
+                <div class="assessment-questions">
+                    <!-- Question 1 -->
+                    <div class="question-card">
+                        <h3>1. Work Demands Level</h3>
+                        <p>How demanding has your workload been this week?</p>
+                        <div class="slider-container">
+                            <div class="slider-labels">
+                                <span>Very Low</span>
+                                <span>Low</span>
+                                <span>Moderate</span>
+                                <span>High</span>
+                                <span>Very High</span>
+                            </div>
+                            <input type="range" id="demands-level" min="1" max="10" value="5" class="range-slider">
+                            <div class="slider-value-display">
+                                <span class="range-value" id="demands-value">5</span>
+                                <span class="range-label">out of 10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question-card">
+                        <h3>2. Control Over Your Work</h3>
+                        <p>How much control do you have over your work methods, schedule, and decisions?</p>
+                        <div class="slider-container">
+                            <div class="slider-labels">
+                                <span>No Control</span>
+                                <span>Little</span>
+                                <span>Some</span>
+                                <span>Good</span>
+                                <span>Full Control</span>
+                            </div>
+                            <input type="range" id="control-level" min="1" max="10" value="5" class="range-slider">
+                            <div class="slider-value-display">
+                                <span class="range-value" id="control-value">5</span>
+                                <span class="range-label">out of 10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question-card">
+                        <h3>3. Social Support at Work</h3>
+                        <p>How supported do you feel by colleagues, managers, or your team?</p>
+                        <div class="slider-container">
+                            <div class="slider-labels">
+                                <span>Isolated</span>
+                                <span>Limited</span>
+                                <span>Some Support</span>
+                                <span>Good Support</span>
+                                <span>Excellent</span>
+                            </div>
+                            <input type="range" id="social-support" min="1" max="10" value="5" class="range-slider">
+                            <div class="slider-value-display">
+                                <span class="range-value" id="support-value">5</span>
+                                <span class="range-label">out of 10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="question-card">
+                        <h3>4. Recovery Time Quality</h3>
+                        <p>How well can you disconnect from work and recharge during off-hours?</p>
+                        <div class="slider-container">
+                            <div class="slider-labels">
+                                <span>Can't Disconnect</span>
+                                <span>Poor</span>
+                                <span>Moderate</span>
+                                <span>Good</span>
+                                <span>Fully Recharge</span>
+                            </div>
+                            <input type="range" id="recovery-time" min="1" max="10" value="5" class="range-slider">
+                            <div class="slider-value-display">
+                                <span class="range-value" id="recovery-value">5</span>
+                                <span class="range-label">out of 10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question-card">
+                        <h3>5. Challenge Indicators</h3>
+                        <p>How many of these did you experience this week? (energized, focused, motivated, sleeping well, excited about work)</p>
+                        <div class="slider-container">
+                            <div class="slider-labels">
+                                <span>0</span>
+                                <span>1</span>
+                                <span>2-3</span>
+                                <span>4</span>
+                                <span>All 5</span>
+                            </div>
+                            <input type="range" id="positive-indicators" min="0" max="5" value="2" class="range-slider">
+                            <div class="slider-value-display">
+                                <span class="range-value" id="positive-value">2</span>
+                                <span class="range-label">indicators</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="question-card">
+                        <h3>6. Stress Indicators</h3>
+                        <p>How many of these did you experience this week? (exhausted, anxious, tense, trouble sleeping, dreading work)</p>
+                        <div class="slider-container">
+                            <div class="slider-labels">
+                                <span>0</span>
+                                <span>1</span>
+                                <span>2-3</span>
+                                <span>4</span>
+                                <span>All 5</span>
+                            </div>
+                            <input type="range" id="stress-indicators" min="0" max="5" value="2" class="range-slider">
+                            <div class="slider-value-display">
+                                <span class="range-value" id="stress-value">2</span>
+                                <span class="range-label">indicators</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-large" onclick="analyzeAssessment()">📊 Get My Personalized Results</button>
+            </div>
+
+            <!-- Results Panel -->
+            <div id="assessment-results-panel" class="results-panel" style="display: none;">
+                <div class="results-header">
+                    <h2>✅ Your Stress-Challenge Profile</h2>
+                    <span class="results-date" id="results-date"></span>
+                </div>
+
+                <div class="results-score">
+                    <div class="score-visual">
+                        <div class="score-circle" id="score-circle">
+                            <span class="score-number" id="score-number">0</span>
+                            <span class="score-label">Overall Score</span>
+                        </div>
+                    </div>
+                    <div class="score-zone" id="score-zone">
+                        <h3 id="zone-title"></h3>
+                        <p id="zone-description"></p>
+                    </div>
+                </div>
+
+                <div class="results-breakdown">
+                    <div class="breakdown-item strength">
+                        <h4>💪 Your Strength</h4>
+                        <p id="strength-area"></p>
+                    </div>
+                    <div class="breakdown-item focus">
+                        <h4>🎯 Focus This Week</h4>
+                        <p id="focus-area"></p>
+                    </div>
+                </div>
+
+                <div class="results-action">
+                    <h4>⚡ What This Means for You:</h4>
+                    <p id="next-action-text"></p>
+                </div>
+
+                <div class="next-lesson-cta">
+                    <h3>Ready to learn how to increase your control?</h3>
+                    <p>In Lesson 2.4, you'll learn specific strategies to shift from High Strain to Active Learning.</p>
+                    <a href="lesson-2-4-control-strategies.html" class="btn btn-primary btn-large">Continue to Lesson 2.4: Control Strategies →</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Series Progress -->
+        <div class="series-progress-footer">
+            <h3>📍 Your Progress in the Stress Mastery Series</h3>
+            <div class="series-progress">
+                <div class="series-item completed">
+                    <span class="series-number">✓</span>
+                    <span class="series-title">Lesson 2.2: Understanding the Model</span>
+                </div>
+                <div class="series-item completed">
+                    <span class="series-number">✓</span>
+                    <span class="series-title">Lesson 2.3: Assess Your Profile (You are here)</span>
+                </div>
+                <div class="series-item next">
+                    <span class="series-number">3</span>
+                    <span class="series-title">Lesson 2.4: Strategies to Increase Control</span>
+                </div>
+                <div class="series-item">
+                    <span class="series-number">4</span>
+                    <span class="series-title">Lesson 2.5: Your 4-Week Action Plan</span>
+                </div>
+                <div class="series-item">
+                    <span class="series-number">5</span>
+                    <span class="series-title">Lesson 2.6: Real-World Applications</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-2-2-stress-vs-challenge-SIMPLIFIED.html" class="nav-btn secondary">← Previous: Understanding the Model</a>
+                <a href="lesson-2-4-control-strategies.html" class="nav-btn primary">Next: Control Strategies →</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Update slider values in real-time
+        const sliderPairs = [
+            ['demands-level', 'demands-value'],
+            ['control-level', 'control-value'],
+            ['positive-indicators', 'positive-value'],
+            ['stress-indicators', 'stress-value'],
+            ['social-support', 'support-value'],
+            ['recovery-time', 'recovery-value']
+        ];
+
+        sliderPairs.forEach(([sliderId, valueId]) => {
+            const slider = document.getElementById(sliderId);
+            const valueSpan = document.getElementById(valueId);
+
+            slider.addEventListener('input', function() {
+                valueSpan.textContent = this.value;
+                updateProgress();
+            });
+        });
+
+        function updateProgress() {
+            const answered = sliderPairs.filter(([sliderId]) => {
+                const slider = document.getElementById(sliderId);
+                return parseInt(slider.value) !== 5;
+            }).length;
+
+            const counter = document.getElementById('assessment-question-count');
+            counter.textContent = `Question ${Math.min(answered + 1, 6)} of 6`;
+        }
+
+        function analyzeAssessment() {
+            const demands = parseInt(document.getElementById('demands-level').value);
+            const control = parseInt(document.getElementById('control-level').value);
+            const socialSupport = parseInt(document.getElementById('social-support').value);
+            const recoveryTime = parseInt(document.getElementById('recovery-time').value);
+            const positiveIndicators = parseInt(document.getElementById('positive-indicators').value);
+            const stressIndicators = parseInt(document.getElementById('stress-indicators').value);
+
+            // Calculate overall score
+            const overallScore = Math.round(
+                (control * 2 + socialSupport + recoveryTime + positiveIndicators * 2 - stressIndicators * 2 - demands) / 2
+            );
+
+            // Determine zone
+            let zone, zoneColor, zoneDescription, strengthArea, focusArea, nextAction;
+
+            if (demands >= 7 && (control <= 4 || socialSupport <= 3 || stressIndicators >= 4)) {
+                zone = '⚠️ High Strain Zone';
+                zoneColor = '#ef4444';
+                zoneDescription = 'High demands without adequate control or support. This is the most stressful combination and can lead to burnout.';
+                strengthArea = 'You\'re handling intense demands - that shows you\'re capable and resilient.';
+                focusArea = 'Urgently work to increase control: negotiate workload, build skills, or set boundaries.';
+                nextAction = 'You need immediate strategies to increase control and reduce strain. Lesson 2.4 will show you exactly how.';
+            } else if (demands >= 7 && control >= 7) {
+                zone = '🚀 Active Learning Zone';
+                zoneColor = '#10b981';
+                zoneDescription = 'High demands with high control creates optimal challenge. This is where peak performance and growth happen.';
+                strengthArea = 'You\'re in the optimal zone for performance and growth!';
+                focusArea = 'Maintain this balance while managing recovery to prevent burnout.';
+                nextAction = 'Keep this momentum! Lesson 2.4 will help you sustain this zone and handle specific challenges.';
+            } else if (demands <= 4 && control <= 4) {
+                zone = '😴 Passive Zone';
+                zoneColor = '#6366f1';
+                zoneDescription = 'Low demands and low control can lead to boredom and stagnation.';
+                strengthArea = 'Low stress levels - you have energy available for growth.';
+                focusArea = 'Seek opportunities for more challenging work and increased autonomy.';
+                nextAction = 'You have capacity for more. Lesson 2.4 will show you how to advocate for growth opportunities.';
+            } else if (demands <= 4 && control >= 7) {
+                zone = '😌 Low Strain Zone';
+                zoneColor = '#0284c7';
+                zoneDescription = 'Low demands with high control is relaxing and sustainable, but may lack growth opportunities.';
+                strengthArea = 'Excellent work-life balance and autonomy.';
+                focusArea = 'Consider if you want more challenge for professional growth.';
+                nextAction = 'This is a recovery zone. If you want more challenge, Lesson 2.4 will guide you.';
+            } else {
+                zone = '⚖️ Balanced Zone';
+                zoneColor = '#f59e0b';
+                zoneDescription = 'Moderate demands and control. Room for optimization.';
+                strengthArea = 'You have a stable foundation to build from.';
+                focusArea = 'Small increases in control can move you toward Active Learning.';
+                nextAction = 'You\'re close to optimal. Lesson 2.4 will help you fine-tune your approach.';
+            }
+
+            // Display results
+            document.getElementById('score-number').textContent = Math.max(0, Math.min(100, overallScore + 50));
+            document.getElementById('score-circle').style.borderColor = zoneColor;
+            document.getElementById('zone-title').textContent = zone;
+            document.getElementById('zone-title').style.color = zoneColor;
+            document.getElementById('zone-description').textContent = zoneDescription;
+            document.getElementById('strength-area').textContent = strengthArea;
+            document.getElementById('focus-area').textContent = focusArea;
+            document.getElementById('next-action-text').textContent = nextAction;
+            document.getElementById('results-date').textContent = new Date().toLocaleDateString();
+
+            // Show results
+            document.getElementById('assessment-results-panel').style.display = 'block';
+            document.getElementById('assessment-results-panel').scrollIntoView({ behavior: 'smooth' });
+
+            // Save to localStorage
+            localStorage.setItem('stress_assessment', JSON.stringify({
+                date: new Date().toISOString(),
+                demands, control, socialSupport, recoveryTime, positiveIndicators, stressIndicators,
+                zone, overallScore
+            }));
+        }
+    </script>
+
+    <style>
+        /* Copy styling from simplified lesson */
+        .learning-objectives-clear { background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; border-left: 5px solid #0284c7; }
+        .learning-objectives-clear h2 { color: #075985; margin-top: 0; }
+        .objectives-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+        .objective-item { display: flex; align-items: center; gap: 1rem; background: white; padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .objective-number { background: #0284c7; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; flex-shrink: 0; }
+        .objective-text { font-size: 1.05rem; line-height: 1.5; }
+        .lesson-sequence { margin-left: 1rem; color: #6b7280; font-style: italic; }
+
+        .recap-section { margin: 2rem 0; }
+        .recap-card { background: #f8fafc; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #0284c7; }
+        .recap-formula { background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+        .recap-formula p { margin: 0.5rem 0; }
+
+        .assessment-intro { margin: 3rem 0; }
+        .factors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+        .factor-item { background: white; padding: 1rem; border-radius: 8px; text-align: center; border: 2px solid #e5e7eb; }
+        .factor-icon { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+        .factor-name { font-weight: 600; color: #1f2937; }
+        .assessment-instruction { background: #fef3c7; padding: 1rem; border-radius: 8px; margin-top: 1.5rem; font-weight: 600; }
+
+        .assessment-tool { margin: 2rem 0; }
+        .assessment-progress { background: #f1f5f9; padding: 0.75rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; text-align: center; font-weight: 600; color: #475569; }
+        .assessment-questions { display: flex; flex-direction: column; gap: 2rem; margin: 2rem 0; }
+        .question-card { background: white; padding: 2rem; border-radius: 12px; border: 2px solid #e5e7eb; }
+        .question-card h3 { color: #1f2937; margin-top: 0; }
+
+        .slider-container { margin: 1.5rem 0; }
+        .slider-labels { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.85rem; color: #6b7280; }
+        .range-slider { width: 100%; height: 8px; -webkit-appearance: none; background: #e2e8f0; outline: none; border-radius: 4px; }
+        .range-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 24px; height: 24px; background: #0284c7; cursor: pointer; border-radius: 50%; }
+        .range-slider::-moz-range-thumb { width: 24px; height: 24px; background: #0284c7; cursor: pointer; border-radius: 50%; border: none; }
+        .slider-value-display { text-align: center; margin-top: 1rem; }
+        .range-value { display: inline-block; background: #0284c7; color: white; padding: 0.5rem 1rem; border-radius: 12px; font-weight: bold; font-size: 1.2rem; }
+        .range-label { margin-left: 0.5rem; color: #6b7280; }
+
+        .btn-large { padding: 1rem 2rem; font-size: 1.1rem; margin: 2rem auto; display: block; }
+
+        .results-panel { background: white; border-radius: 16px; padding: 2rem; margin: 3rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 3px solid #10b981; }
+        .results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid #e5e7eb; padding-bottom: 1rem; }
+        .results-header h2 { margin: 0; color: #1f2937; }
+        .results-date { color: #6b7280; font-size: 0.9rem; }
+        .results-score { display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center; margin-bottom: 2rem; }
+        .score-circle { width: 120px; height: 120px; border-radius: 50%; border: 8px solid #10b981; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); }
+        .score-number { font-size: 2.5rem; font-weight: bold; color: #065f46; }
+        .score-label { font-size: 0.8rem; color: #047857; }
+        .score-zone h3 { margin: 0 0 0.5rem 0; font-size: 1.5rem; }
+        .results-breakdown { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem 0; }
+        .breakdown-item { border-radius: 12px; padding: 1.5rem; }
+        .breakdown-item.strength { background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-left: 4px solid #10b981; }
+        .breakdown-item.focus { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-left: 4px solid #f59e0b; }
+        .breakdown-item h4 { margin-top: 0; }
+        .results-action { background: #f0f9ff; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+        .results-action h4 { margin-top: 0; color: #1e40af; }
+
+        .next-lesson-cta { background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); padding: 2rem; border-radius: 16px; margin-top: 2rem; text-align: center; }
+
+        .series-progress-footer { margin: 3rem 0; padding: 2rem; background: #f8fafc; border-radius: 12px; }
+        .series-progress { margin: 2rem 0; }
+        .series-item { display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: 8px; margin: 0.75rem 0; }
+        .series-item.completed { background: #d1fae5; }
+        .series-item.next { background: #fef3c7; border: 2px solid #f59e0b; }
+        .series-number { width: 30px; height: 30px; background: #6b7280; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .series-item.completed .series-number { background: #10b981; }
+        .series-item.next .series-number { background: #f59e0b; }
+
+        @media (max-width: 768px) {
+            .factors-grid { grid-template-columns: repeat(2, 1fr); }
+            .results-score, .results-breakdown { grid-template-columns: 1fr; }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANATOMICALLY CORRECT Anxiety Body Map - FINAL VERSION</title>
+    <style>
+        :root {
+            --calming-teal: #4a90a4;
+            --deep-teal: #357a8a;
+            --accent-orange: #fb923c;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f9ff;
+        }
+
+        .body-map-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--deep-teal);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .body-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .body-figure {
+            position: relative;
+            width: 300px;
+        }
+
+        .body-figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ANATOMICALLY CORRECT POSITIONS */
+        .anxiety-point {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: var(--accent-orange);
+            border-radius: 50%;
+            border: 4px solid white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(251, 146, 60, 0.5);
+        }
+
+        .anxiety-point:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 25px rgba(251, 146, 60, 0.7);
+        }
+
+        .anxiety-point.active {
+            background: var(--deep-teal);
+        }
+
+        /* CORRECT ANATOMICAL POSITIONS FOR BLUE BODY SILHOUETTE */
+        
+        /* HEAD/BRAIN - TOP OF HEAD */
+        .point-head { 
+            top: 8%; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+        
+        /* HEART - CHEST (LEFT SIDE OF CHEST) */
+        .point-chest { 
+            top: 28%; 
+            left: 45%; 
+        }
+        
+        /* STOMACH - MIDDLE OF TORSO */
+        .point-stomach { 
+            top: 42%; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+        
+        /* LEFT HAND - END OF LEFT ARM */
+        .point-hand-left { 
+            top: 45%; 
+            left: 18%; 
+        }
+        
+        /* RIGHT HAND - END OF RIGHT ARM */
+        .point-hand-right { 
+            top: 45%; 
+            right: 18%; 
+        }
+        
+        /* LEGS - THIGHS/KNEES AREA (TWO SEPARATE POINTS) */
+        .point-leg-left { 
+            top: 65%; 
+            left: 40%; 
+        }
+        
+        .point-leg-right { 
+            top: 65%; 
+            right: 40%; 
+        }
+
+        /* Info Panel */
+        .symptom-panel {
+            flex: 1;
+            min-width: 350px;
+            max-width: 500px;
+            background: linear-gradient(135deg, #e8f4f6 0%, white 100%);
+            padding: 40px;
+            border-radius: 16px;
+            border: 3px solid var(--calming-teal);
+            min-height: 400px;
+        }
+
+        .symptom-panel h3 {
+            color: var(--deep-teal);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .symptom-panel p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .science-note {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(74, 144, 164, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid var(--calming-teal);
+        }
+
+        /* Debug Grid - REMOVE THIS AFTER CONFIRMING POSITIONS */
+        .debug-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            display: none; /* Set to 'grid' to see positioning guide */
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            opacity: 0.3;
+        }
+
+        .debug-grid div {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="body-map-container">
+        <h1>🗺️ Where Anxiety Lives in Your Body - ANATOMICALLY CORRECT VERSION</h1>
+        
+        <div class="body-wrapper">
+            <div class="body-figure">
+                <!-- YOUR ACTUAL BLUE BODY IMAGE -->
+                <img src="images/full-body-image.jpg" alt="Human body silhouette">
+                
+                <!-- DEBUG GRID - Uncomment to see position guide -->
+                <!-- <div class="debug-grid">
+                    <div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div>
+                </div> -->
+                
+                <!-- ANATOMICALLY CORRECT INTERACTIVE POINTS -->
+                
+                <!-- HEAD/BRAIN - Where it actually is -->
+                <div class="anxiety-point point-head" onclick="showSymptom('head')" title="Head/Brain">
+                    🧠
+                </div>
+                
+                <!-- HEART/CHEST - In the actual chest -->
+                <div class="anxiety-point point-chest" onclick="showSymptom('chest')" title="Heart/Chest">
+                    ❤️
+                </div>
+                
+                <!-- STOMACH - In the actual stomach area -->
+                <div class="anxiety-point point-stomach" onclick="showSymptom('stomach')" title="Stomach/Gut">
+                    🦋
+                </div>
+                
+                <!-- HANDS - On the actual hands -->
+                <div class="anxiety-point point-hand-left" onclick="showSymptom('hands')" title="Left Hand">
+                    ✋
+                </div>
+                <div class="anxiety-point point-hand-right" onclick="showSymptom('hands')" title="Right Hand">
+                    🤚
+                </div>
+                
+                <!-- LEGS - Two separate legs, not one in the middle -->
+                <div class="anxiety-point point-leg-left" onclick="showSymptom('legs')" title="Left Leg">
+                    🦵
+                </div>
+                <div class="anxiety-point point-leg-right" onclick="showSymptom('legs')" title="Right Leg">
+                    🦵
+                </div>
+            </div>
+            
+            <div class="symptom-panel" id="symptomPanel">
+                <h3>👆 Click Any Body Part</h3>
+                <p>
+                    Each orange circle shows where anxiety commonly appears in the body. 
+                    Click to learn what happens and why.
+                </p>
+                <p>
+                    <strong>Note:</strong> This body map is anatomically correct. The heart is in the chest, 
+                    the stomach is in the abdomen, hands are at the end of arms, and humans have two legs.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ANXIETY SYMPTOMS - ANATOMICALLY CORRECT
+        const anxietySymptoms = {
+            head: {
+                title: "🧠 Head & Brain",
+                location: "Located in your skull, not your stomach",
+                symptoms: "Racing thoughts, headaches, dizziness, brain fog, difficulty concentrating",
+                science: "Your amygdala (in the brain, IN YOUR HEAD) triggers the fear response, flooding your prefrontal cortex with stress hormones.",
+                note: "This is where thinking happens - in your head, at the top of your body."
+            },
+            chest: {
+                title: "❤️ Heart & Chest",
+                location: "Located in your CHEST, behind your ribcage",
+                symptoms: "Racing heart, chest tightness, shortness of breath, feeling like you can't breathe",
+                science: "Your heart (IN YOUR CHEST, not your stomach) pumps faster due to adrenaline, preparing for fight-or-flight.",
+                note: "Your heart is protected by your ribcage, on the left side of your chest."
+            },
+            stomach: {
+                title: "🦋 Stomach & Digestive System",
+                location: "Located in your ABDOMEN, below your chest, above your pelvis",
+                symptoms: "Butterflies, nausea, upset stomach, loss of appetite, digestive issues",
+                science: "Your gut (IN YOUR BELLY, not your groin) has millions of nerve cells that respond to stress hormones.",
+                note: "Your stomach is where food goes - in the middle of your torso."
+            },
+            hands: {
+                title: "✋ Hands & Arms",
+                location: "Located at the END OF YOUR ARMS",
+                symptoms: "Sweaty palms, trembling hands, cold fingers, tingling",
+                science: "Blood flow redirects from extremities (YOUR ACTUAL HANDS) to core muscles during stress.",
+                note: "Hands are those things with fingers at the end of your arms."
+            },
+            legs: {
+                title: "🦵 Legs (You Have Two)",
+                location: "The TWO limbs you walk on, below your torso",
+                symptoms: "Restless legs, weakness, shaking, urge to run, jelly legs",
+                science: "Your legs (BOTH OF THEM) receive increased blood flow to prepare for running from danger.",
+                note: "Humans have TWO legs, one on each side. Not one leg in the middle."
+            }
+        };
+
+        function showSymptom(area) {
+            const panel = document.getElementById('symptomPanel');
+            const symptom = anxietySymptoms[area];
+            
+            // Clear all active states
+            document.querySelectorAll('.anxiety-point').forEach(point => {
+                point.classList.remove('active');
+            });
+            
+            // Mark clicked point as active
+            if (event && event.target) {
+                event.target.classList.add('active');
+                // Also mark the pair if it's hands or legs
+                if (area === 'hands') {
+                    document.querySelectorAll('.point-hand-left, .point-hand-right').forEach(p => {
+                        p.classList.add('active');
+                    });
+                } else if (area === 'legs') {
+                    document.querySelectorAll('.point-leg-left, .point-leg-right').forEach(p => {
+                        p.classList.add('active');
+                    });
+                }
+            }
+            
+            // Display the symptom information
+            panel.innerHTML = `
+                <h3>${symptom.title}</h3>
+                <p><strong>📍 Anatomical Location:</strong> ${symptom.location}</p>
+                <p><strong>🎯 Common Symptoms:</strong> ${symptom.symptoms}</p>
+                <div class="science-note">
+                    <p><strong>🔬 The Science:</strong> ${symptom.science}</p>
+                    <p><em>${symptom.note}</em></p>
+                </div>
+            `;
+        }
+
+        // Test function to verify all points are visible
+        function testAllPoints() {
+            console.log("Testing all anxiety points:");
+            document.querySelectorAll('.anxiety-point').forEach(point => {
+                const rect = point.getBoundingClientRect();
+                const title = point.getAttribute('title');
+                console.log(`${title}: Top=${rect.top}, Left=${rect.left}`);
+            });
+        }
+
+        // Run test on load (remove in production)
+        window.addEventListener('load', testAllPoints);
+    </script>
+</body>
+</html>

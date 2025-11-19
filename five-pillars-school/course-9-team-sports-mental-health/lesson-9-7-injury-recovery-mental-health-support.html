@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9.7: Injury Recovery and Mental Health Support - Team Sports & Mental Health Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                    <a href="tel:18006624357" class="crisis-link">🏃 SAMHSA Helpline: 1-800-662-4357</a>
+                </div>
+                <p class="athlete-resources"><strong>Athletic Support:</strong> Contact your athletic department, team physician, or athletic trainer immediately</p>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Team Sports & Mental Health</a> >
+                <a href="#module-2">Module 2: Communication & Team Culture</a> >
+                <span>Lesson 9.7</span>
+            </div>
+
+            <h1>🏥 Injury Recovery and Mental Health Support</h1>
+            <p class="lesson-subtitle">Navigate the psychological challenges of sports injuries through understanding grief processes, maintaining team connection, preventing social identity threat, and providing effective teammate support during rehabilitation</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>50 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Recovery Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Injury Psychology</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 35%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to Injury Recovery & Mental Health</h2>
+                <div class="introduction-content">
+                    <p><strong>Sports injuries create profound psychological challenges that extend far beyond physical healing.</strong> Research demonstrates that injured athletes experience depression rates 2-3 times higher than non-injured teammates, alongside increased anxiety, identity confusion, and social isolation during rehabilitation periods. The psychological response to injury follows predictable patterns similar to grief processing—including denial, anger, bargaining, depression, and acceptance—though these stages don't occur linearly and individual responses vary significantly based on injury severity, athletic identity strength, and available support systems.</p>
+
+                    <p><strong>Team environments can profoundly influence injury recovery trajectories:</strong> Studies show that injured athletes who maintain meaningful roles within their teams—such as mentoring younger players, conducting video analysis, or contributing to strategic planning—demonstrate faster psychological recovery and maintain stronger team connections throughout rehabilitation compared to those who are excluded or treated with pity. The concept of "social identity threat" helps explain why injuries often trigger identity crises: when your defining team activities become temporarily or permanently inaccessible, feelings of disconnection and diminished self-worth commonly emerge.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Understand the psychological stages of injury response and how they parallel grief processes, explore social identity threat and why injuries challenge self-concept for athletes with strong team identities, learn evidence-based strategies for maintaining mental health during rehabilitation including visualization, goal-setting, and staying connected to your team, develop skills for supporting injured teammates through empathy without pity and practical assistance without creating dependence, and recognize warning signs of clinical depression or anxiety during recovery that may require professional intervention beyond athletic training support.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Understand psychological injury responses including grief stages, social identity threat, and depression risk factors during rehabilitation</li>
+                            <li>Master mental health strategies for injured athletes including maintaining team connection, visualization training, and adaptive goal-setting</li>
+                            <li>Develop effective teammate support skills that validate emotions, maintain inclusion, and recognize when professional help is needed</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>This lesson draws from injury psychology research showing 2-3x higher depression rates in injured athletes, social identity theory applied to athletic injury, grief stage models adapted for injury response, and studies demonstrating that maintained team roles predict better psychological outcomes during rehabilitation. The support strategies integrate sports psychology best practices and mental health intervention protocols.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Injury Recovery Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">💚</div>
+                        <div class="objective-text">
+                            <h3>Psychological Response Understanding</h3>
+                            <p>Understand grief stages, social identity threat, and depression risk factors during injury rehabilitation</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">💙</div>
+                        <div class="objective-text">
+                            <h3>Mental Health Strategies</h3>
+                            <p>Master techniques for maintaining mental health during recovery including team connection and adaptive goals</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🌿</div>
+                        <div class="objective-text">
+                            <h3>Teammate Support Skills</h3>
+                            <p>Develop empathetic support approaches that maintain inclusion and recognize professional help needs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Injury Psychology Science -->
+            <div class="learning-section">
+                <h2>🔬 The Psychology of Athletic Injury</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 Why Injuries Profoundly Impact Mental Health</h3>
+                        <p>Athletic injuries create a perfect storm of psychological stressors: sudden loss of physical capabilities central to self-concept, removal from team activities that provide belonging and purpose, fear about future athletic participation, pain and physical discomfort, and dramatic lifestyle changes including training routines and social patterns. Understanding these psychological dimensions enables more effective support and self-care during rehabilitation.</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>💚 Grief Stages in Injury Response</h4>
+                                <p><strong>Denial:</strong> "This isn't serious, I'll be back soon" (minimizing injury severity). <strong>Anger:</strong> "This is unfair! Why did this happen to me?" (frustration at circumstances). <strong>Bargaining:</strong> "If I push rehab harder, maybe I'll recover faster" (unrealistic negotiations). <strong>Depression:</strong> "I'll never be the same, my season/career is over" (sadness, hopelessness). <strong>Acceptance:</strong> "This happened, and I'll work through rehabilitation one step at a time" (realistic engagement). These stages aren't linear—athletes move between them, sometimes experiencing multiple simultaneously.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>💙 Social Identity Threat</h4>
+                                <p>When athletic participation becomes central to your identity ("I am a soccer player"), injury creates existential threat to self-concept. The inability to participate in defining activities triggers questions like "Who am I if I can't play?" Research shows athletes with strong athletic identity but limited identity diversity experience more severe depression and anxiety during injury. Maintaining team connection and valued non-playing roles helps preserve identity continuity during recovery.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🌿 Depression & Anxiety Risk Factors</h4>
+                                <p>Injured athletes show 2-3x higher depression rates than non-injured teammates, with risk factors including: severity and duration of injury, previous mental health history, strength of athletic identity, quality of social support, fear of re-injury, and uncertainty about return to play. Warning signs requiring professional help: persistent sadness lasting weeks, loss of interest in all activities, significant changes in sleep or appetite, withdrawal from all social contact, or thoughts of self-harm.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🏆 Protective Factors During Recovery</h4>
+                                <p>Research identifies factors that buffer against injury-related mental health decline: strong social support from teammates and coaches, maintaining meaningful team roles during rehabilitation, balanced identity beyond athletics, realistic optimism about recovery, engagement with mental skills training (visualization, goal-setting), and access to sports medicine and psychological support professionals who understand athletic identity and team culture.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Injury & Mental Health Research</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">2-3x</div>
+                            <p>Higher depression rates in injured athletes compared to non-injured teammates during rehabilitation</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">67%</div>
+                            <p>Of injured athletes report feelings of isolation and disconnection from their team during recovery</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">45%</div>
+                            <p>Faster psychological recovery when injured athletes maintain meaningful team roles throughout rehabilitation</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">58%</div>
+                            <p>Of athletes with strong athletic identity experience significant identity crisis during major injuries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mental Health Strategies for Injured Athletes -->
+            <div class="learning-section">
+                <h2>🌟 Mental Health Strategies During Injury Recovery</h2>
+
+                <div class="training-program">
+                    <div class="program-overview">
+                        <h3>📋 Maintaining Psychological Wellness During Rehabilitation</h3>
+                        <p>Evidence-based approaches for protecting mental health while recovering from injury:</p>
+                    </div>
+
+                    <div class="week-by-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>💚 Maintaining Team Connection</h4>
+                                <span class="week-focus">Preventing isolation and identity loss</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Strategies for Staying Connected:</h5>
+                                    <ul>
+                                        <li><strong>Attend Practices & Games:</strong> Be present even when you can't play—your support matters to teammates</li>
+                                        <li><strong>Contribute Strategically:</strong> Offer video analysis, scout opponents, mentor younger players, assist coaches with planning</li>
+                                        <li><strong>Participate in Team Activities:</strong> Join meals, social events, and team meetings to maintain relationships</li>
+                                        <li><strong>Communicate Openly:</strong> Share your recovery progress and emotions with teammates rather than withdrawing</li>
+                                        <li><strong>Accept Support:</strong> Let teammates help practically and emotionally—mutual support strengthens team bonds</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>💙 Mental Skills Training</h4>
+                                <span class="week-focus">Using your mind to support physical healing</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Neuroplasticity-Based Techniques:</h5>
+                                    <ul>
+                                        <li><strong>Visualization/Imagery:</strong> Mentally rehearse skills 15-20 min daily—brain imaging shows similar activation as physical practice</li>
+                                        <li><strong>Process Goals:</strong> Set rehabilitation goals you can control (complete all PT exercises, improve flexibility by X) vs. outcome goals (return date)</li>
+                                        <li><strong>Positive Self-Talk:</strong> Replace "I'll never be the same" with "I'm getting stronger each day, my body is healing"</li>
+                                        <li><strong>Mindfulness Practice:</strong> Accept current reality without judgment, focus on present progress rather than past abilities or future fears</li>
+                                        <li><strong>Gratitude Journaling:</strong> Identify daily positives during recovery to combat depression and maintain perspective</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>🌿 Identity Diversification</h4>
+                                <span class="week-focus">Strengthening non-athletic aspects of self</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Balanced Identity Development:</h5>
+                                    <ul>
+                                        <li><strong>Academic Focus:</strong> Use recovery time for coursework, skill development, or intellectual interests</li>
+                                        <li><strong>Relationship Investment:</strong> Strengthen friendships and family connections outside athletics</li>
+                                        <li><strong>New Skills/Hobbies:</strong> Explore interests previously neglected due to training demands</li>
+                                        <li><strong>Career Exploration:</strong> Consider internships, volunteer work, or future planning beyond athletics</li>
+                                        <li><strong>Personal Growth:</strong> Develop aspects of yourself beyond "athlete"—creative, intellectual, social, spiritual dimensions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>🏆 Professional Support Integration</h4>
+                                <span class="week-focus">Knowing when and how to seek help</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>When to Seek Professional Help:</h5>
+                                    <ul>
+                                        <li><strong>Persistent Depression:</strong> Sadness, hopelessness, or emptiness lasting more than 2 weeks</li>
+                                        <li><strong>Severe Anxiety:</strong> Panic attacks, constant worry, or avoidance of rehabilitation</li>
+                                        <li><strong>Sleep/Appetite Changes:</strong> Significant disruptions not explained by injury itself</li>
+                                        <li><strong>Social Withdrawal:</strong> Complete isolation from teammates, friends, and family</li>
+                                        <li><strong>Thoughts of Self-Harm:</strong> Any suicidal ideation requires immediate professional intervention</li>
+                                        <li>Resources: Sports psychologist, campus counseling, athletic department mental health services</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Injury Support Scenarios -->
+            <div class="interactive-section">
+                <h2>🎯 Supporting Injured Teammates: Practice Scenarios</h2>
+                <p>Develop your skills for providing effective mental health support to injured teammates:</p>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <h3>💚 Scenario 1: Recent Injury</h3>
+                        <p>Your teammate suffered a season-ending ACL tear yesterday. They're in the denial/anger stage, saying "This isn't that bad, I'll push through rehab fast and be back in 2 months" (unrealistic given typical 6-9 month recovery).</p>
+                        <p><strong>Support Challenge:</strong> How do you provide emotional support while not enabling denial?</p>
+                        <textarea rows="4" placeholder="Describe your approach: validating emotions, offering presence, avoiding false hope or harsh reality checks..."></textarea>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>💙 Scenario 2: Prolonged Isolation</h3>
+                        <p>A teammate has been injured for 6 weeks and has stopped attending practices, games, and team social events. When you text, they say "What's the point? I'm not really part of the team anymore."</p>
+                        <p><strong>Support Challenge:</strong> How do you help them reconnect and combat social identity threat?</p>
+                        <textarea rows="4" placeholder="Outline specific actions: invitations, role suggestions, empathy for their feelings, maintaining connection..."></textarea>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🌿 Scenario 3: Depression Warning Signs</h3>
+                        <p>An injured teammate confides that they've been feeling hopeless, having trouble sleeping, and have lost interest in everything—not just sports. They mention "sometimes I wonder if anything matters anymore."</p>
+                        <p><strong>Support Challenge:</strong> How do you respond to potential depression and suicidal ideation?</p>
+                        <textarea rows="4" placeholder="Describe immediate response, assessing safety, connecting to professional resources, involving coaches/counselors..."></textarea>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🏆 Scenario 4: Return-to-Play Anxiety</h3>
+                        <p>Your teammate is medically cleared to return after a serious injury but is experiencing intense anxiety about re-injury. They're hesitant in practice, playing far below their previous level due to fear.</p>
+                        <p><strong>Support Challenge:</strong> How do you support their gradual return while validating their legitimate fears?</p>
+                        <textarea rows="4" placeholder="Balance encouragement with patience, normalize fear of re-injury, suggest mental skills work, avoid pressure..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="interactive-section">
+                <h2>📈 Track Your Injury Psychology Understanding</h2>
+                <p>Assess your developing knowledge and support capabilities:</p>
+
+                <div class="tracking-dashboard">
+                    <div class="tracking-categories">
+                        <div class="category-tracker">
+                            <h3>🧠 Injury Psychology Knowledge</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Understanding of grief stages in injury response (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="grief-understanding">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Knowledge of social identity threat (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="identity-knowledge">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Awareness of depression warning signs (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="depression-awareness">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-tracker">
+                            <h3>💚 Support Capabilities</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Confidence in supporting injured teammates (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="support-confidence">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Ability to recognize when professional help is needed (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="professional-recognition">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Skills for maintaining injured athlete team connection (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="connection-skills">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="saveInjuryProgress">📊 Save Injury Psychology Progress</button>
+                </div>
+            </div>
+
+            <!-- Reflection and Planning -->
+            <div class="learning-section">
+                <h2>🤔 Injury Recovery Reflection</h2>
+
+                <div class="reflection-questions">
+                    <div class="question-set">
+                        <h3>🧠 Personal Insights</h3>
+                        <div class="question-item">
+                            <label>If you've experienced a sports injury, what psychological stages did you go through? How did your team support (or not support) your mental health?</label>
+                            <textarea rows="4" placeholder="Reflect on personal injury experiences and their mental health impact..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How central is your athletic identity to your overall self-concept? What other aspects of yourself would remain if you couldn't participate in sports?</label>
+                            <textarea rows="4" placeholder="Assess your identity diversity and potential vulnerability to social identity threat during injury..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What warning signs would indicate an injured teammate needs professional mental health support beyond athletic training?</label>
+                            <textarea rows="4" placeholder="List specific depression, anxiety, or crisis indicators requiring counselor or psychologist involvement..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="question-set">
+                        <h3>🎯 Support Action Planning</h3>
+                        <div class="question-item">
+                            <label>How can your team better support injured athletes' mental health? What specific practices or norms would help?</label>
+                            <textarea rows="4" placeholder="Propose concrete approaches: maintaining connection, meaningful roles, mental skills support, reducing isolation..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>If you were to become injured, what mental health strategies from this lesson would you implement to support your recovery?</label>
+                            <textarea rows="4" placeholder="Create a personal injury mental health plan: team connection, visualization, goal-setting, identity diversification..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveInjuryReflections">💾 Save My Injury Psychology Insights</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-9-6-managing-competition-pressure-performance-anxiety.html" class="nav-btn secondary">← Previous: Managing Competition Pressure and Performance Anxi</a>
+                <a href="lesson-9-8-conflict-resolution-team-harmony.html" class="nav-btn primary">Next: Conflict Resolution and Team Harmony →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 2: Communication & Team Culture • Lesson 7 of 20 • 35% Complete</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+
+    <script>
+        // Enhanced injury recovery lesson functionality
+        (function() {
+            'use strict';
+
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+                console.log(`Lesson 9.7 button clicked: ${action}`);
+
+                switch(action) {
+                    case 'saveInjuryProgress':
+                        saveInjuryProgressTemplate();
+                        break;
+                    case 'saveInjuryReflections':
+                        saveInjuryReflectionsTemplate();
+                        break;
+                    case 'hideCrisisBanner':
+                        hideCrisisBannerTemplate();
+                        break;
+                    default:
+                        console.log(`Unknown action: ${action}`);
+                }
+            }
+
+            function saveInjuryProgressTemplate() {
+                alert(`📊 Injury Psychology Progress Saved!\n\nYour understanding of injury mental health challenges and support strategies has been recorded. You're developing crucial skills for supporting teammates through recovery.\n\nRemember: Injuries heal both physically and psychologically—support matters!`);
+            }
+
+            function saveInjuryReflectionsTemplate() {
+                alert(`💾 Injury Psychology Insights Saved!\n\nYour reflections about injury recovery and mental health support have been recorded. This knowledge will help you navigate injury experiences with greater resilience.\n\nGreat work on completing Lesson 9.7! Ready to explore conflict resolution and team harmony?`);
+            }
+
+            function hideCrisisBannerTemplate() {
+                const banner = document.getElementById('crisis-banner');
+                if (banner) {
+                    banner.style.display = 'none';
+                    sessionStorage.setItem('crisisBannerDismissed', 'true');
+                }
+            }
+
+            // Initialize interactions
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('[data-action]');
+                buttons.forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+
+                // Initialize slider interactions
+                const sliders = document.querySelectorAll('.tracker-slider');
+                sliders.forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    if (valueSpan) {
+                        slider.addEventListener('input', function() {
+                            valueSpan.textContent = this.value;
+                        });
+                    }
+                });
+
+                console.log('Lesson 9.7: Injury Recovery & Mental Health Support loaded successfully');
+            });
+        })();
+    </script>
+
+    <!-- Enhanced styling for injury recovery lesson -->
+    <style>
+        :root {
+            --primary-green: #2E7D32;
+            --secondary-blue: #1976D2;
+            --accent-orange: #FF6F00;
+            --success-green: #388E3C;
+            --neutral-gray: #616161;
+        }
+
+        .science-explanation { background: linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--primary-green); }
+
+        .week-by-week { display: grid; gap: 2rem; margin: 2rem 0; }
+        .week-card { background: #fefefe; border: 2px solid #e0e0e0; border-radius: 16px; overflow: hidden; }
+        .week-header { background: linear-gradient(90deg, var(--primary-green), var(--success-green)); color: white; padding: 1.5rem; }
+        .week-content { padding: 1.5rem; }
+        .week-focus { background: rgba(255,255,255,0.25); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.9rem; display: inline-block; margin-top: 0.5rem; }
+
+        .applications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .application-card { background: #f1f8f4; border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--primary-green); }
+        .application-card textarea { width: 100%; padding: 0.75rem; border: 1px solid #a5d6a7; border-radius: 6px; font-family: inherit; margin-top: 0.5rem; }
+
+        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmin(200px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .research-item { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; border-left: 4px solid var(--primary-green); }
+        .research-stat { font-size: 2.5rem; font-weight: bold; color: var(--primary-green); margin-bottom: 0.5rem; }
+
+        .btn-primary { background: var(--primary-green); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        .btn-primary:hover { background: var(--success-green); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3); }
+
+        .crisis-banner { background: linear-gradient(135deg, #d32f2f, #c62828); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; position: relative; }
+        .crisis-contacts { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0; }
+        .crisis-link { background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; transition: all 0.3s; }
+        .crisis-link:hover { background: rgba(255,255,255,0.3); }
+        .athlete-resources { margin-top: 1rem; font-size: 0.95rem; }
+
+        @media (max-width: 768px) {
+            .brain-systems, .applications-grid, .research-grid { grid-template-columns: 1fr; }
+            .crisis-contacts { flex-direction: column; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

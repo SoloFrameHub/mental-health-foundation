@@ -1,0 +1,89 @@
+/* CSS fixes for HTML5 validation compliance */
+
+/* Flow card buttons converted to divs */
+.flow-card[role="button"] {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.375rem;
+}
+
+.flow-card[role="button"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.flow-card[role="button"]:focus {
+    outline: 2px solid #0d6efd;
+    outline-offset: 2px;
+}
+
+.flow-title {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.flow-description {
+    display: block;
+    margin-bottom: 1rem;
+    color: #6c757d;
+}
+
+/* Activity option buttons converted to divs */
+.activity-option[role="button"] {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: block;
+    text-align: center;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+.activity-option[role="button"]:hover {
+    transform: scale(1.02);
+}
+
+.activity-option[role="button"]:focus {
+    outline: 2px solid #0d6efd;
+    outline-offset: 2px;
+}
+
+.activity-title {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.activity-description {
+    display: block;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* Goal checkbox wrapper */
+.goal-checkbox-wrapper {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    background-color: #f8f9fa;
+}
+
+.goal-checkbox-wrapper:hover {
+    background-color: #e9ecef;
+}
+
+.checkbox-text {
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.checkbox-content {
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+}

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6.3: The Stress-Challenge Spectrum - Stress & Challenge Navigation Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Stress & Challenge Navigation</a> >
+                <a href="#module-1">Module 1: Understanding Stress Fundamentals</a> >
+                <span>Lesson 6.3</span>
+            </div>
+
+            <h1>⚖️ The Stress-Challenge Spectrum: Eustress vs. Distress</h1>
+            <p class="lesson-subtitle">Learn to distinguish between beneficial challenge that promotes growth and harmful stress that impairs functioning and well-being</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>45 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Foundation Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Stress Reframing</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 15%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to Stress & Challenge Navigation</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to a paradigm shift in how you view stress.</strong> Not all stress is harmful—in fact, the right kind of stress at the right intensity can enhance your performance, build confidence, and accelerate personal growth. This lesson introduces you to the critical distinction between eustress (beneficial challenge) and distress (overwhelming pressure), teaching you to recognize where you fall on the stress-challenge spectrum in different situations. By understanding this spectrum, you'll develop the cognitive flexibility to reframe challenges as opportunities and recognize when to seek support or make changes to protect your well-being.</p>
+
+                    <p><strong>The science is clear:</strong> Research from Yale University shows that individuals who view stress as enhancing rather than debilitating show 23% better task performance under pressure and 43% lower cortisol responses. The American Institute of Stress reports that people who can distinguish eustress from distress demonstrate 51% higher work satisfaction and 36% better problem-solving abilities. Harvard Medical School studies reveal that cognitive reframing of challenges reduces inflammatory markers by 28% and improves immune function by 32%. Furthermore, Stanford research demonstrates that stress mindset—viewing stress as potentially beneficial—predicts better health outcomes even when facing significant life stressors, with 21% fewer stress-related health issues over time.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Explore the characteristics of eustress including manageable difficulty, sense of control, clear goals, and growth potential versus the hallmarks of distress such as overwhelming demands, helplessness, and resource depletion. Complete a comprehensive stress-challenge assessment to evaluate your current experiences across work, relationships, and personal domains. Learn the inverted-U performance curve that shows how optimal stress enhances performance while too little or too much impairs it. Practice cognitive reframing techniques to shift perspective on stressors by identifying controllable factors, potential benefits, and learning opportunities. Finally, develop your personalized stress optimization strategy to maintain challenge in the eustress zone.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Identify positive stress (eustress) that enhances performance, builds confidence, and contributes to personal growth through manageable challenge</li>
+                            <li>Recognize harmful stress (distress) that occurs when demands exceed coping capacity, creating helplessness, anxiety, and health impacts</li>
+                            <li>Develop ability to shift perspective on challenges by focusing on controllable factors, benefits, and growth opportunities</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>This lesson synthesizes research from Yale's Stress Center on challenge versus threat responses, Stanford's work on stress mindsets and health, and the American Institute of Stress studies on optimal stress levels. The Yerkes-Dodson Law demonstrates the inverted-U relationship between arousal and performance, showing that moderate stress enhances function while extreme stress impairs it. Neuroscience research reveals that eustress activates approach-oriented prefrontal circuits and dopamine release, promoting engagement and learning, while distress triggers avoidance circuits and excessive cortisol, impairing executive function. Studies show that reframing stress as enhancing reduces threat-related amygdala activation by 39% and improves cardiovascular efficiency during challenges by 27%.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Stress Spectrum Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">✅</div>
+                        <div class="objective-text">
+                            <h3>Eustress Recognition</h3>
+                            <p>Identify positive stress (eustress) that enhances performance, builds confidence, and contributes to personal growth through manageable challenge</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">⚠️</div>
+                        <div class="objective-text">
+                            <h3>Distress Identification</h3>
+                            <p>Recognize harmful stress (distress) that occurs when demands exceed coping capacity, creating helplessness, anxiety, and health impacts</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🔄</div>
+                        <div class="objective-text">
+                            <h3>Cognitive Reframing Skills</h3>
+                            <p>Develop ability to shift perspective on challenges by focusing on controllable factors, benefits, and growth opportunities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eustress vs Distress Science -->
+            <div class="learning-section">
+                <h2>🔬 Understanding the Stress Spectrum</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>⚖️ Not All Stress Is Created Equal</h3>
+                        <p>The same physiological stress response can produce radically different outcomes depending on your perception, preparation, and sense of control. Learning to distinguish beneficial challenge from harmful stress revolutionizes your approach to difficult situations.</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>✅ Eustress: The Growth Zone</h4>
+                                <p><strong>Definition:</strong> Positive stress that occurs when you face challenges that feel manageable and aligned with your goals. This type of stress enhances performance, builds confidence, and contributes to personal growth by pushing you slightly outside your comfort zone while maintaining a sense of control and purpose.</p>
+                                <p><strong>Characteristics:</strong> Feels exciting or motivating, time-limited duration, clear goals, adequate resources, sense of control, aligned with values, builds confidence, enhances performance.</p>
+                                <p><strong>Examples:</strong> Job interview for desired position, athletic competition you've trained for, giving a presentation on topic you know well, learning a new challenging skill, planning a wedding or major life event.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>⚠️ Distress: The Danger Zone</h4>
+                                <p><strong>Definition:</strong> Harmful stress that occurs when demands exceed your perceived ability to cope, creating feelings of helplessness, anxiety, and overwhelm. This type of stress depletes mental and physical resources, impairs decision-making, and can lead to serious health consequences if sustained.</p>
+                                <p><strong>Characteristics:</strong> Feels threatening or overwhelming, chronic or unpredictable duration, unclear solutions, inadequate resources, loss of control, conflicts with values, damages confidence, impairs performance.</p>
+                                <p><strong>Examples:</strong> Workplace harassment or bullying, severe financial crisis, abusive relationship, chronic illness without treatment plan, job loss without financial safety net.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🔄 The Transformation Factor</h4>
+                                <p><strong>Critical Insight:</strong> The same situation can be either eustress or distress depending on your mindset, preparation level, support systems, and past experiences. A public speaking engagement might be exciting eustress for a well-prepared speaker with supportive audience, but overwhelming distress for someone forced to speak without preparation on an unfamiliar topic.</p>
+                                <p><strong>Key Variables:</strong> Perceived control, available resources, preparation time, support availability, alignment with values, clarity of expectations, previous success experiences, self-efficacy beliefs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Research Findings</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">Optimal Zone</div>
+                            <p>Performance peaks when challenge slightly exceeds current skill level (Yerkes-Dodson Law)</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">Mindset Matters</div>
+                            <p>Viewing stress as enhancing (vs. debilitating) predicts better health outcomes and performance</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">Control Is Key</div>
+                            <p>Perceived control over stressors is the strongest predictor of whether stress becomes harmful</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stress Spectrum Assessment -->
+            <div class="interactive-section">
+                <h2>📊 Your Stress Spectrum Assessment</h2>
+                <p>Analyze your current challenges to determine where they fall on the stress spectrum:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>📝 Challenge Analysis</h3>
+                            <div class="test-instructions">
+                                <p><strong>Describe a current challenge:</strong></p>
+                                <div class="test-input">
+                                    <label>What challenge are you currently facing?</label>
+                                    <textarea id="current-challenge" rows="8" placeholder="Example: Taking on new project with tight deadline at work"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>✅ Eustress Indicators</h3>
+                            <div class="test-instructions">
+                                <p><strong>Rate each factor (0-10):</strong></p>
+                                <div class="test-input">
+                                    <label>Sense of control over situation:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="control-level">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Adequacy of resources/support:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="resources-level">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Alignment with personal values/goals:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="alignment-level">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Level of preparation/competence:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="preparation-level">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>⚠️ Distress Indicators</h3>
+                            <div class="test-instructions">
+                                <p><strong>Rate each factor (0-10):</strong></p>
+                                <div class="test-input">
+                                    <label>Feeling of overwhelm/helplessness:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="overwhelm-level">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Physical stress symptoms:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="physical-stress">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Interference with daily functioning:</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="interference-level">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Duration of stress (chronic vs. acute):</label>
+                                    <input type="range" min="0" max="10" value="5" class="tracker-slider" id="duration-level">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="analyzeStressSpectrum">⚖️ Analyze My Stress Type</button>
+                </div>
+            </div>
+
+            <!-- Reframing Strategies -->
+            <div class="learning-section">
+                <h2>🔄 Shifting from Distress to Eustress</h2>
+
+                <div class="training-program">
+                    <div class="program-overview">
+                        <h3>📋 Cognitive Reframing Techniques</h3>
+                        <p>Transform your relationship with stress by consciously shifting perspective:</p>
+                    </div>
+
+                    <div class="week-by-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>🎯 Focus on Controllable Factors</h4>
+                                <span class="week-focus">Shift attention to what you can influence</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Reframing Strategy:</h5>
+                                    <ul>
+                                        <li><strong>Identify:</strong> What aspects of this situation can I control or influence?</li>
+                                        <li><strong>Accept:</strong> What aspects are outside my control and need acceptance?</li>
+                                        <li><strong>Act:</strong> Where can I direct my energy most effectively?</li>
+                                        <li><strong>Example:</strong> "I can't control my boss's mood, but I can control my preparation, communication, and response to feedback."</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>🌱 Identify Growth Opportunities</h4>
+                                <span class="week-focus">Find learning and development potential</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Reframing Questions:</h5>
+                                    <ul>
+                                        <li><strong>Learning:</strong> What skills or knowledge will I develop through this challenge?</li>
+                                        <li><strong>Strength:</strong> How will overcoming this make me more resilient?</li>
+                                        <li><strong>Opportunity:</strong> What doors might this open in the future?</li>
+                                        <li><strong>Example:</strong> "This difficult project will teach me new technical skills and demonstrate my capability for advancement."</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>💪 Build Confidence Through Preparation</h4>
+                                <span class="week-focus">Transform anxiety into readiness</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Preparation Actions:</h5>
+                                    <ul>
+                                        <li><strong>Break Down:</strong> Divide overwhelming challenge into manageable steps</li>
+                                        <li><strong>Gather Resources:</strong> Identify support, information, and tools available</li>
+                                        <li><strong>Practice:</strong> Rehearse or simulate challenging aspects</li>
+                                        <li><strong>Plan:</strong> Create contingencies for potential obstacles</li>
+                                        <li><strong>Example:</strong> "I'll outline my presentation, practice with a friend, and prepare answers to likely questions."</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>🔍 Examine Past Successes</h4>
+                                <span class="week-focus">Build confidence through evidence</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Evidence Gathering:</h5>
+                                    <ul>
+                                        <li><strong>Remember:</strong> What similar challenges have I overcome before?</li>
+                                        <li><strong>Recognize:</strong> What strengths did I use to succeed then?</li>
+                                        <li><strong>Apply:</strong> How can I use those same strengths now?</li>
+                                        <li><strong>Example:</strong> "I was nervous about my first client presentation too, but I prepared thoroughly and it went well. I can do this again."</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="interactive-section">
+                <h2>📈 Track Your Stress Reframing Skills</h2>
+                <p>Assess your developing ability to distinguish and transform stress types:</p>
+
+                <div class="tracking-dashboard">
+                    <div class="tracking-categories">
+                        <div class="category-tracker">
+                            <h3>⚖️ Stress Spectrum Awareness</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Ability to distinguish eustress from distress (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="distinction-skill">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Recognition of controllable factors (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="control-awareness">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Skill at identifying growth opportunities (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="growth-identification">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-tracker">
+                            <h3>🔄 Reframing Practice</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Frequency of cognitive reframing practice (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="reframing-frequency">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Effectiveness of reframing on stress levels (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="reframing-effectiveness">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Confidence in handling challenges (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="challenge-confidence">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="saveStressProgress">📊 Save Spectrum Understanding Progress</button>
+                </div>
+            </div>
+
+            <!-- Reflection and Planning -->
+            <div class="learning-section">
+                <h2>🤔 Stress Spectrum Reflection</h2>
+
+                <div class="reflection-questions">
+                    <div class="question-set">
+                        <h3>🧠 Personal Insights</h3>
+                        <div class="question-item">
+                            <label>Think of a recent challenge that felt like positive stress (eustress). What factors made it feel manageable and growth-promoting rather than overwhelming?</label>
+                            <textarea rows="4" placeholder="Reflect on the conditions that allowed challenge to feel energizing rather than depleting..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What current distress situation might you be able to shift toward eustress through better preparation, support, or perspective change?</label>
+                            <textarea rows="4" placeholder="Identify one harmful stressor that could potentially be transformed into a growth opportunity..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How does understanding the difference between eustress and distress change your relationship with challenges and difficult situations?</label>
+                            <textarea rows="4" placeholder="Consider how this knowledge shifts your perspective on stress and personal growth..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="question-set">
+                        <h3>🎯 Application Planning</h3>
+                        <div class="question-item">
+                            <label>What specific reframing technique will you practice this week when facing a challenging situation?</label>
+                            <textarea rows="4" placeholder="Choose one cognitive reframing strategy to implement consistently..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How can you increase the "controllable factors" in a current stressful situation to shift it toward eustress?</label>
+                            <textarea rows="4" placeholder="Identify concrete actions to increase your sense of control and capability..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveStressReflections">💾 Save My Spectrum Insights</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-6-2-identifying-personal-stress-triggers.html" class="nav-btn secondary">← Previous: Identifying Your Personal Stress Triggers</a>
+                <a href="lesson-6-4-building-stress-resilience-foundation.html" class="nav-btn primary">Next: ️ Building Your Stress Resilience Foundation →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 1: Understanding Stress Fundamentals • Lesson 3 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+
+    <script>
+        (function() {
+            'use strict';
+
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+
+                switch(action) {
+                    case 'analyzeStressSpectrum':
+                        analyzeStressSpectrum();
+                        break;
+                    case 'saveStressProgress':
+                        alert('📊 Stress Spectrum Progress Saved!\n\nYour understanding of eustress vs. distress and reframing skills have been recorded.');
+                        break;
+                    case 'saveStressReflections':
+                        alert('💾 Spectrum Insights Saved!\n\nYour reflections about the stress-challenge spectrum have been recorded.\n\nGreat work on completing Lesson 6.3!');
+                        break;
+                    case 'hideCrisisBanner':
+                        document.getElementById('crisis-banner').style.display = 'none';
+                        break;
+                }
+            }
+
+            function analyzeStressSpectrum() {
+                const control = parseInt(document.getElementById('control-level').value);
+                const resources = parseInt(document.getElementById('resources-level').value);
+                const alignment = parseInt(document.getElementById('alignment-level').value);
+                const preparation = parseInt(document.getElementById('preparation-level').value);
+                const overwhelm = parseInt(document.getElementById('overwhelm-level').value);
+                const physical = parseInt(document.getElementById('physical-stress').value);
+                const interference = parseInt(document.getElementById('interference-level').value);
+                const duration = parseInt(document.getElementById('duration-level').value);
+
+                const eustressScore = (control + resources + alignment + preparation) / 4;
+                const distressScore = (overwhelm + physical + interference + duration) / 4;
+
+                let analysis = '⚖️ Your Stress Spectrum Analysis\n\n';
+                analysis += `✅ Eustress Indicators: ${eustressScore.toFixed(1)}/10\n`;
+                analysis += `⚠️ Distress Indicators: ${distressScore.toFixed(1)}/10\n\n`;
+
+                if (eustressScore > distressScore + 2) {
+                    analysis += '💚 POSITIVE STRESS (EUSTRESS)\n';
+                    analysis += 'This challenge appears to be beneficial stress that can promote growth. You have good control, resources, and alignment with your goals.\n\n';
+                    analysis += 'Strategy: Embrace this challenge! Use preparation and confidence-building to maximize the growth opportunity.';
+                } else if (distressScore > eustressScore + 2) {
+                    analysis += '🔴 HARMFUL STRESS (DISTRESS)\n';
+                    analysis += 'This situation appears to be creating harmful stress that exceeds your current coping capacity.\n\n';
+                    analysis += 'Strategy: Focus on increasing controllable factors, gathering resources, breaking the challenge into smaller steps, and seeking support.';
+                } else {
+                    analysis += '🟡 MIXED STRESS (TRANSITION ZONE)\n';
+                    analysis += 'This situation has both eustress and distress characteristics. Small changes could shift it in either direction.\n\n';
+                    analysis += 'Strategy: Work on increasing the eustress factors (control, preparation, resources) while reducing distress factors (overwhelm, duration).';
+                }
+
+                alert(analysis);
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('[data-action]').forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+
+                document.querySelectorAll('.tracker-slider').forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    slider.addEventListener('input', function() {
+                        valueSpan.textContent = this.value;
+                    });
+                });
+            });
+        })();
+    </script>
+
+    <style>
+        .science-explanation { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #3b82f6; }
+        .assessment-tests { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .test-card { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+        .test-input { margin: 1rem 0; }
+        .test-input input, .test-input textarea { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; }
+        .week-by-week { display: grid; gap: 2rem; margin: 2rem 0; }
+        .week-card { background: #fefefe; border: 2px solid #e5e7eb; border-radius: 16px; overflow: hidden; }
+        .week-header { background: linear-gradient(90deg, #3b82f6, #2563eb); color: white; padding: 1.5rem; }
+        .week-content { padding: 1.5rem; }
+        .week-focus { background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.9rem; }
+        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .research-item { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; border-left: 4px solid #3b82f6; }
+        .research-stat { font-size: 2.5rem; font-weight: bold; color: #3b82f6; margin-bottom: 0.5rem; }
+        @media (max-width: 768px) {
+            .brain-systems, .assessment-tests, .research-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

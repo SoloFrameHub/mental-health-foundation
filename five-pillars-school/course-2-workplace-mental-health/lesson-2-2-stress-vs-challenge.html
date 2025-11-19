@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.2: Understanding Workplace Stress vs. Healthy Challenge - Workplace Mental Health Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Workplace Mental Health</a> >
+                <a href="#module-2">Module 2: Workplace Foundations</a> >
+                <span>Lesson 2.2</span>
+            </div>
+
+            <h1>⚖️ Understanding Workplace Stress vs. Healthy Challenge</h1>
+            <p class="lesson-subtitle">Learn to distinguish between productive workplace challenge and harmful stress to optimize your performance and wellbeing</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>60-75 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Foundation Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Assessment & Optimization</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 10%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- QUICK START: Immediate Value First -->
+            <div class="quick-start-section">
+                <div class="quick-start-card">
+                    <span class="quick-badge">⚡ TRY THIS RIGHT NOW (2 MINUTES)</span>
+                    <h3>Feeling Stressed? Start Here Before Reading</h3>
+                    <p class="hook">Before diving into theory, let's get you immediate relief. This evidence-based technique works in 90 seconds:</p>
+
+                    <div class="immediate-action">
+                        <div class="quick-technique">
+                            <h4>🎯 The "3-3-3 Stress Reset"</h4>
+                            <ol class="quick-steps">
+                                <li><strong>Name 3 things you see:</strong> Look around and identify them out loud or in your mind</li>
+                                <li><strong>Name 3 sounds you hear:</strong> Even subtle ones - typing, breathing, distant traffic</li>
+                                <li><strong>Move 3 body parts:</strong> Wiggle fingers, roll shoulders, stretch your neck</li>
+                            </ol>
+                            <p class="quick-why"><strong>Why this works:</strong> This grounds you in the present moment, interrupting your stress response and activating your parasympathetic nervous system.</p>
+                        </div>
+                        <div class="quick-action-buttons">
+                            <button class="btn btn-success btn-large" data-action="completeQuickStart">✓ I Tried It - Show Me Why It Works</button>
+                            <button class="btn btn-outline-secondary" data-action="skipToAssessment">Skip to Assessment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Indicator -->
+            <div class="lesson-progress-indicator" id="lesson-progress-indicator">
+                <div class="progress-text">
+                    <span id="progress-percentage">0%</span> Complete • <span id="time-remaining">~45 min</span> remaining
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progress-bar-fill" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Lesson Introduction (Now Brief) -->
+            <section class="lesson-introduction" id="section-intro">
+                <h2>Welcome to Mastering Workplace Stress vs. Healthy Challenge</h2>
+                <div class="introduction-content">
+                    <p><strong>Here's what you need to know:</strong> Not all workplace pressure is bad. Healthy challenge energizes you and boosts creativity. Harmful stress drains you and impairs decision-making. The difference? Control and recovery.</p>
+
+                    <div class="key-insight-box">
+                        <h3>🔑 The Core Insight</h3>
+                        <p><strong>High Demands + High Control = Optimal Performance</strong><br>
+                        <strong>High Demands + Low Control = Chronic Stress</strong></p>
+                        <p class="insight-detail">Workers with high control have 43% less stress-related illness, even with the same workload.<sup><a href="#ref-1">1</a></sup> Control is the key.</p>
+                    </div>
+
+                    <div class="lesson-objectives-brief">
+                        <h3>What You'll Get From This Lesson:</h3>
+                        <ul>
+                            <li>✅ Assessment to identify if you're in the stress or challenge zone</li>
+                            <li>✅ Practical strategies to increase control and reduce harmful stress</li>
+                            <li>✅ Personalized action plan you can start using today</li>
+                        </ul>
+                    </div>
+
+                    <details class="deep-dive-toggle">
+                        <summary>📚 Want the Full Science? (Optional Deep Dive)</summary>
+                        <div class="deep-dive-content">
+                            <p>Research using the Demand-Control-Support model developed by occupational health psychologists demonstrates that high demands combined with high control creates an "Active Learning Zone" where professionals experience optimal performance and job satisfaction. In contrast, high demands with low control creates a "High Strain Zone" associated with burnout affecting 67% of professionals.<sup><a href="#ref-2">2</a></sup></p>
+
+                            <p>Studies from NIOSH and the American Psychological Association show that workers in high-control positions have 43% lower stress-related illness despite facing similar work demands,<sup><a href="#ref-1">1</a></sup> highlighting the critical role of autonomy and support in transforming stress into productive challenge.</p>
+
+                            <p><strong>Research Foundation:</strong> This lesson integrates the Demand-Control-Support model from occupational psychology research,<sup><a href="#ref-3">3</a></sup> stress response neuroscience demonstrating how different types of workplace demands affect brain function, Yerkes-Dodson Law research on optimal arousal for performance,<sup><a href="#ref-4">4</a></sup> and longitudinal studies on how perceived control moderates the relationship between work demands and health outcomes.</p>
+
+                            <p><em>This evidence-based curriculum is developed in partnership with board-certified psychiatric mental health nurse practitioners at <a href="https://realpsychiatricservices.com" target="_blank">Real Psychiatric Services</a>.</em></p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- First Checkpoint -->
+            <div class="checkpoint-card">
+                <h4>📍 Checkpoint: Ready to Find Your Stress Zone?</h4>
+                <p>You've learned the core concept. Now you can:</p>
+                <div class="checkpoint-options">
+                    <button class="btn btn-primary" data-action="continueToAssessment">Take the 5-Minute Assessment</button>
+                    <button class="btn btn-outline" data-action="skipToScience">Learn the Science First (10 min)</button>
+                    <button class="btn btn-secondary" data-action="saveAndReturn">Bookmark & Come Back Later</button>
+                </div>
+            </div>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Stress vs. Challenge Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">🧪</div>
+                        <div class="objective-text">
+                            <h3>Scientific Distinction</h3>
+                            <p>Master the Demand-Control-Support model to identify when workplace demands enhance vs. impair performance</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🎯</div>
+                        <div class="objective-text">
+                            <h3>Optimal Challenge Zone</h3>
+                            <p>Discover your personal sweet spot where challenge enhances creativity and job satisfaction</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">📊</div>
+                        <div class="objective-text">
+                            <h3>Self-Assessment Tools</h3>
+                            <p>Learn physiological markers and tracking techniques to monitor your stress-challenge balance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stress vs Challenge Science Deep Dive -->
+            <div class="learning-section">
+                <h2>🔬 The Neuroscience of Stress vs. Challenge</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 The Stress Response Spectrum</h3>
+                        <p>Understanding the physiological and psychological differences between beneficial challenge and harmful stress reveals why some workplace demands energize while others deplete:</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>💚 Healthy Challenge Response</h4>
+                                <p>Moderate arousal activates the sympathetic nervous system temporarily, enhancing focus, energy, and cognitive function. Recovery occurs naturally within hours, promoting growth and adaptation through neuroplasticity.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>⚠️ Chronic Stress Response</h4>
+                                <p>Sustained activation keeps cortisol elevated, impairing hippocampus function (memory), suppressing immune system, and disrupting sleep patterns. Recovery becomes increasingly difficult without intervention.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🔄 The Recovery Factor</h4>
+                                <p>The key distinction lies not in the intensity of the challenge, but in adequate recovery time and perception of control. Challenge without recovery becomes chronic stress that impairs performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Research Findings</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">High Demand + High Control</div>
+                            <p>= Active Learning Zone (Optimal Performance)</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">High Demand + Low Control</div>
+                            <p>= High Strain Zone (Chronic Stress)</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">+ Social Support</div>
+                            <p>Transforms any situation toward wellbeing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stress vs Challenge Assessment -->
+            <div class="interactive-section" id="section-assessment">
+                <h2>📊 Your Stress vs. Challenge Assessment</h2>
+                <p><strong>5 minutes:</strong> Answer these questions to discover if you're in the optimal zone:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-progress">
+                        <span id="assessment-question-count">Question 1 of 6</span>
+                    </div>
+
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>⚖️ Demand-Control Test</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Rate your current work situation on these key factors</p>
+                                <div class="test-input">
+                                    <label>Work demands level (1-10):</label>
+                                    <input type="range" id="demands-level" min="1" max="10" value="5" class="range-slider">
+                                    <span class="range-value" id="demands-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Control over work (1-10):</label>
+                                    <input type="range" id="control-level" min="1" max="10" value="5" class="range-slider">
+                                    <span class="range-value" id="control-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>🔍 Physiological Markers Check</h3>
+                            <div class="test-instructions">
+                                <p><strong>Past week:</strong> Count how many of these you experienced</p>
+                                <div class="test-input">
+                                    <label>Healthy challenge indicators (energized, focused, motivated, sleeping well, excited about work):</label>
+                                    <input type="range" id="positive-indicators" min="0" max="5" value="2" class="range-slider">
+                                    <span class="range-value" id="positive-value">2</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Stress indicators (exhausted, anxious, tense, trouble sleeping, dreading work):</label>
+                                    <input type="range" id="stress-indicators" min="0" max="5" value="2" class="range-slider">
+                                    <span class="range-value" id="stress-value">2</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>🤝 Support System Evaluation</h3>
+                            <div class="test-instructions">
+                                <div class="test-input">
+                                    <label>Social support at work (1=none, 10=excellent):</label>
+                                    <input type="range" id="social-support" min="1" max="10" value="5" class="range-slider">
+                                    <span class="range-value" id="support-value">5</span>
+                                </div>
+                                <div class="test-input">
+                                    <label>Recovery time quality (1=can't disconnect, 10=fully recharge):</label>
+                                    <input type="range" id="recovery-time" min="1" max="10" value="5" class="range-slider">
+                                    <span class="range-value" id="recovery-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-large" data-action="analyzeStressChallengeAssessment">📊 Get My Personalized Results</button>
+                </div>
+
+                <!-- Results Panel (Hidden Initially) -->
+                <div id="assessment-results-panel" class="results-panel" style="display: none;">
+                    <div class="results-header">
+                        <h3>✅ Your Stress-Challenge Profile</h3>
+                        <span class="results-date" id="results-date"></span>
+                    </div>
+
+                    <div class="results-score">
+                        <div class="score-visual">
+                            <div class="score-circle" id="score-circle">
+                                <span class="score-number" id="score-number">0</span>
+                                <span class="score-label">Overall Score</span>
+                            </div>
+                        </div>
+                        <div class="score-zone" id="score-zone">
+                            <h4 id="zone-title"></h4>
+                            <p id="zone-description"></p>
+                        </div>
+                    </div>
+
+                    <div class="results-breakdown">
+                        <div class="breakdown-item strength">
+                            <h4>💪 Your Strength</h4>
+                            <p id="strength-area"></p>
+                        </div>
+                        <div class="breakdown-item focus">
+                            <h4>🎯 Focus This Week</h4>
+                            <p id="focus-area"></p>
+                        </div>
+                    </div>
+
+                    <div class="results-action">
+                        <h4>⚡ Your Next Action:</h4>
+                        <p id="next-action-text"></p>
+                        <div class="action-buttons">
+                            <button class="btn btn-primary" data-action="startPersonalizedPlan">Start My Action Plan</button>
+                            <button class="btn btn-outline" data-action="exploreStrategies">Explore All Strategies</button>
+                        </div>
+                    </div>
+
+                    <div class="results-comparison" id="results-comparison" style="display: none;">
+                        <h4>📈 Your Progress</h4>
+                        <p id="comparison-text"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optimal Challenge Zone Program -->
+            <div class="learning-section" id="section-program">
+                <h2>🏗️ Building Your Optimal Challenge Zone</h2>
+
+                <div class="training-program">
+                    <div class="program-overview">
+                        <h3>📋 Flexible Challenge Optimization Program</h3>
+                        <p><strong>Choose your pace:</strong> Pick the path that fits your time and goals.</p>
+
+                        <!-- Pace Selector -->
+                        <div class="pace-selector">
+                            <div class="pace-option" data-pace="express">
+                                <input type="radio" name="pace" id="pace-express" value="express">
+                                <label for="pace-express">
+                                    <span class="pace-badge">⚡ EXPRESS</span>
+                                    <h4>3 Days</h4>
+                                    <p>Core practices only<br><small>15 min/day</small></p>
+                                </label>
+                            </div>
+                            <div class="pace-option active" data-pace="standard">
+                                <input type="radio" name="pace" id="pace-standard" value="standard" checked>
+                                <label for="pace-standard">
+                                    <span class="pace-badge recommended">⭐ STANDARD</span>
+                                    <h4>2 Weeks</h4>
+                                    <p>Balanced approach<br><small>20 min/day</small></p>
+                                </label>
+                            </div>
+                            <div class="pace-option" data-pace="comprehensive">
+                                <input type="radio" name="pace" id="pace-comprehensive" value="comprehensive">
+                                <label for="pace-comprehensive">
+                                    <span class="pace-badge">🎯 DEEP DIVE</span>
+                                    <h4>4 Weeks</h4>
+                                    <p>Full program<br><small>30 min/day</small></p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="pace-description">
+                            <p id="pace-description-text">Balanced approach with daily practices and weekly focuses. Recommended for sustainable change.</p>
+                        </div>
+                    </div>
+
+                    <div class="week-by-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Week 1: Zone Assessment</h4>
+                                <span class="week-focus">Focus: Understanding your current stress-challenge balance</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (15 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Challenge Tracking:</strong> Rate daily challenges on energy vs. drain scale (1-10)</li>
+                                        <li><strong>Recovery Monitoring:</strong> Track how long you need to recover from different tasks</li>
+                                        <li><strong>Peak Performance Analysis:</strong> Identify times when you feel most capable and engaged</li>
+                                        <li><strong>Stress Signal Recognition:</strong> Note physical and emotional stress indicators</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Develop awareness of your unique stress vs. challenge patterns. Notice what conditions create optimal performance versus overwhelm or boredom.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Week 2: Control Enhancement</h4>
+                                <span class="week-focus">Focus: Increasing your sense of control over workplace demands</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (20 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Decision Authority Mapping:</strong> Identify areas where you can increase autonomy</li>
+                                        <li><strong>Proactive Planning:</strong> Anticipate challenges and prepare response strategies</li>
+                                        <li><strong>Boundary Negotiation:</strong> Practice discussions about workload and expectations</li>
+                                        <li><strong>Skill Building:</strong> Develop capabilities that increase your confidence and control</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Build confidence in your ability to influence your work environment. Focus on expanding areas of control while accepting what you cannot change.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Week 3: Support System Optimization</h4>
+                                <span class="week-focus">Focus: Building and utilizing support networks for challenge navigation</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (25 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Support Network Mapping:</strong> Identify and strengthen professional relationships</li>
+                                        <li><strong>Collaborative Problem-Solving:</strong> Practice seeking input on challenging situations</li>
+                                        <li><strong>Mentorship Connections:</strong> Connect with colleagues who can provide guidance</li>
+                                        <li><strong>Team Synergy Building:</strong> Contribute to others' success to build reciprocal support</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Recognize that challenges become more manageable with appropriate support. Focus on both giving and receiving support in professional relationships.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Week 4: Sustainable Challenge Navigation</h4>
+                                <span class="week-focus">Focus: Creating long-term strategies for optimal challenge engagement</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Daily Practices (30 minutes):</h5>
+                                    <ul>
+                                        <li><strong>Challenge Calibration:</strong> Fine-tune your approach to different types of workplace demands</li>
+                                        <li><strong>Recovery Protocol Development:</strong> Create systematic approaches to restore energy</li>
+                                        <li><strong>Growth Edge Identification:</strong> Identify next-level challenges that promote development</li>
+                                        <li><strong>Stress Prevention Planning:</strong> Develop early warning systems and intervention strategies</li>
+                                    </ul>
+                                </div>
+                                <div class="mental-focus">
+                                    <h5>Mental Focus Points:</h5>
+                                    <p>Integrate all learned strategies into a sustainable system that supports both high performance and long-term wellbeing. Plan for continued growth and adaptation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practical Applications -->
+            <div class="interactive-section">
+                <h2>🌟 Real-World Stress vs. Challenge Applications</h2>
+                <p>Discover how to apply stress-challenge distinctions in common workplace situations:</p>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <h3>📅 Project Deadline Management</h3>
+                        <ul>
+                            <li>Transform time pressure into focused energy through planning</li>
+                            <li>Break overwhelming projects into manageable challenge phases</li>
+                            <li>Build in recovery periods during intensive work cycles</li>
+                            <li>Maintain perspective on project importance and personal capacity</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreDeadlineManagement">📅 Explore Deadline Strategies</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>💬 Difficult Conversation Navigation</h3>
+                        <ul>
+                            <li>Reframe confrontation as collaborative problem-solving</li>
+                            <li>Prepare thoroughly to increase sense of control</li>
+                            <li>Focus on mutual interests rather than positions</li>
+                            <li>Practice stress regulation techniques before challenging discussions</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreConversationStrategies">💬 Explore Conversation Strategies</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>📈 Performance Evaluation Optimization</h3>
+                        <ul>
+                            <li>View evaluations as growth opportunities rather than judgment</li>
+                            <li>Prepare evidence of accomplishments to increase confidence</li>
+                            <li>Focus on learning and development goals</li>
+                            <li>Use feedback as data for continued improvement</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="explorePerformanceStrategies">📈 Explore Performance Strategies</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🔄 Change Management Resilience</h3>
+                        <ul>
+                            <li>Approach organizational changes as opportunities for growth</li>
+                            <li>Focus on aspects of change you can influence</li>
+                            <li>Build support networks during transition periods</li>
+                            <li>Maintain perspective on temporary nature of adjustment stress</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreChangeStrategies">🔄 Explore Change Strategies</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="interactive-section">
+                <h2>📈 Track Your Challenge-Stress Balance Journey</h2>
+                <p>Monitor your progress in distinguishing and navigating workplace stress vs. healthy challenge:</p>
+
+                <div class="tracking-dashboard">
+                    <div class="tracking-categories">
+                        <div class="category-tracker">
+                            <h3>⚖️ Challenge-Stress Balance Metrics</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Challenge engagement level (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="challenge-engagement">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Stress management effectiveness (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="stress-management">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Recovery quality and speed (1-10):</label>
+                                    <input type="range" min="0" max="10" value="7" class="tracker-slider" id="recovery-quality">
+                                    <span class="tracker-value">7</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-tracker">
+                            <h3>🎯 Optimal Zone Metrics</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Time spent in optimal challenge zone (%):</label>
+                                    <input type="range" min="0" max="100" value="60" class="tracker-slider" id="optimal-zone-time">
+                                    <span class="tracker-value">60</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Control and autonomy in work tasks (1-10):</label>
+                                    <input type="range" min="1" max="10" value="7" class="tracker-slider" id="work-autonomy">
+                                    <span class="tracker-value">7</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Support system utilization and effectiveness (1-10):</label>
+                                    <input type="range" min="1" max="10" value="6" class="tracker-slider" id="support-utilization">
+                                    <span class="tracker-value">6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="saveChallengeProgress">📊 Save Progress Report</button>
+                </div>
+            </div>
+
+            <!-- Reflection and Planning -->
+            <div class="learning-section">
+                <h2>🤔 Stress vs. Challenge Reflection</h2>
+
+                <div class="reflection-questions">
+                    <div class="question-set">
+                        <h3>🧠 Personal Insights</h3>
+                        <div class="question-item">
+                            <label>When do you feel most energized and productive at work?</label>
+                            <textarea rows="4" placeholder="Consider the conditions, type of work, environment, and support factors that create your optimal challenge zone..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What warning signs tell you that challenge has become harmful stress?</label>
+                            <textarea rows="4" placeholder="Think about physical, emotional, and behavioral indicators that signal you've moved out of your optimal zone..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How do you currently recover from challenging work situations?</label>
+                            <textarea rows="4" placeholder="Reflect on your existing recovery strategies and their effectiveness..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="question-set">
+                        <h3>🎯 Goal Setting</h3>
+                        <div class="question-item">
+                            <label>How can you increase your sense of control in challenging workplace situations?</label>
+                            <textarea rows="4" placeholder="Consider planning, communication, skill-building, and support strategies..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What support systems will you build or strengthen to navigate workplace challenges?</label>
+                            <textarea rows="4" placeholder="Plan specific actions to enhance your professional support network..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveReflections">💾 Save My Reflections</button>
+            </div>
+        </div>
+
+        <!-- References Section -->
+        <div class="references-section">
+            <h3>📚 References & Further Reading</h3>
+            <ol class="references-list">
+                <li id="ref-1">Karasek, R., & Theorell, T. (1990). <em>Healthy Work: Stress, Productivity, and the Reconstruction of Working Life.</em> Basic Books. [Original study demonstrating 43% reduction in stress-related illness among high-control workers]</li>
+                <li id="ref-2">Gallup. (2022). <em>State of the Global Workplace: 2022 Report.</em> Gallup, Inc. [Finding that 60-67% of workers experience burnout symptoms, particularly in high-strain roles]</li>
+                <li id="ref-3">Karasek, R. A. (1979). Job Demands, Job Decision Latitude, and Mental Strain: Implications for Job Redesign. <em>Administrative Science Quarterly, 24</em>(2), 285-308. [Foundational paper on the Demand-Control model]</li>
+                <li id="ref-4">Yerkes, R. M., & Dodson, J. D. (1908). The relation of strength of stimulus to rapidity of habit-formation. <em>Journal of Comparative Neurology and Psychology, 18</em>(5), 459-482. [Original Yerkes-Dodson Law research on optimal arousal]</li>
+                <li id="ref-5">National Institute for Occupational Safety and Health (NIOSH). (2019). <em>Stress at Work.</em> CDC Publication No. 99-101. [Comprehensive review of workplace stress research and interventions]</li>
+                <li id="ref-6">American Psychological Association. (2023). <em>Work in America Survey: 2023 Report.</em> APA Center for Organizational Excellence. [Current data on workplace stress and control factors]</li>
+            </ol>
+            <p class="disclaimer"><strong>Educational Disclaimer:</strong> This lesson provides evidence-based wellness education and is not a substitute for professional mental health treatment. The assessment tool is for educational purposes only and does not constitute clinical diagnosis. For clinical mental health services, visit <a href="https://realpsychiatricservices.com" target="_blank">Real Psychiatric Services</a>.</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-2-1-workplace-crisis.html" class="nav-btn secondary">← Previous: The Modern Workplace Mental Health Crisis</a>
+                <a href="lesson-2-3-psychological-safety.html" class="nav-btn primary">Next: Building Psychological Safety in Team Environments →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 2: Workplace Mental Health • Lesson 2 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+
+    <script>
+        // Enhanced stress vs challenge lesson functionality with localStorage and visual feedback
+        (function() {
+            'use strict';
+
+            const LESSON_ID = 'lesson-2-2-stress-challenge';
+            let lessonProgress = loadProgress();
+
+            // Progress Management
+            function loadProgress() {
+                const saved = localStorage.getItem('course_progress');
+                const allProgress = saved ? JSON.parse(saved) : {};
+                return allProgress[LESSON_ID] || {
+                    quickStartComplete: false,
+                    assessmentComplete: false,
+                    assessmentData: null,
+                    sectionsViewed: [],
+                    startedAt: new Date().toISOString(),
+                    lastUpdate: new Date().toISOString()
+                };
+            }
+
+            function saveProgress() {
+                const saved = localStorage.getItem('course_progress');
+                const allProgress = saved ? JSON.parse(saved) : {};
+                lessonProgress.lastUpdate = new Date().toISOString();
+                allProgress[LESSON_ID] = lessonProgress;
+                localStorage.setItem('course_progress', JSON.stringify(allProgress));
+                updateProgressIndicator();
+            }
+
+            function updateProgressIndicator() {
+                let progress = 5; // Base progress for landing
+                if (lessonProgress.quickStartComplete) progress += 10;
+                if (lessonProgress.sectionsViewed.includes('intro')) progress += 15;
+                if (lessonProgress.assessmentComplete) progress += 30;
+                if (lessonProgress.sectionsViewed.includes('program')) progress += 20;
+                if (lessonProgress.sectionsViewed.includes('applications')) progress += 20;
+
+                const progressPercent = Math.min(100, progress);
+                const timeRemaining = Math.max(5, Math.ceil((100 - progressPercent) * 0.45)); // ~45 min total
+
+                document.getElementById('progress-percentage').textContent = progressPercent + '%';
+                document.getElementById('time-remaining').textContent = `~${timeRemaining} min`;
+                document.getElementById('progress-bar-fill').style.width = progressPercent + '%';
+            }
+
+            // Action Handlers
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+                console.log(`Lesson 2.2 button clicked: ${action}`);
+
+                const actionMap = {
+                    'completeQuickStart': completeQuickStart,
+                    'skipToAssessment': () => scrollToSection('section-assessment'),
+                    'continueToAssessment': () => scrollToSection('section-assessment'),
+                    'skipToScience': () => scrollToSection('section-intro'),
+                    'saveAndReturn': saveAndReturn,
+                    'analyzeStressChallengeAssessment': analyzeAssessment,
+                    'startPersonalizedPlan': () => scrollToSection('section-program'),
+                    'exploreStrategies': () => scrollToSection('interactive-section'),
+                    'saveChallengeProgress': saveChallengeProgress,
+                    'saveReflections': saveReflections,
+                    'hideCrisisBanner': hideCrisisBanner,
+                    'exploreDeadlineManagement': () => showComingSoon('Deadline Management Strategies'),
+                    'exploreConversationStrategies': () => showComingSoon('Conversation Strategies'),
+                    'explorePerformanceStrategies': () => showComingSoon('Performance Strategies'),
+                    'exploreChangeStrategies': () => showComingSoon('Change Management Strategies')
+                };
+
+                const handler = actionMap[action];
+                if (handler) {
+                    handler();
+                } else {
+                    console.log(`Unknown action: ${action}`);
+                }
+            }
+
+            function completeQuickStart() {
+                lessonProgress.quickStartComplete = true;
+                saveProgress();
+
+                // Visual feedback
+                const quickStartCard = document.querySelector('.quick-start-card');
+                quickStartCard.style.background = 'linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%)';
+                quickStartCard.innerHTML = `
+                    <span class="quick-badge">✅ COMPLETED</span>
+                    <h3>Great Job! You Just Regulated Your Nervous System</h3>
+                    <p>That simple technique activated your parasympathetic nervous system - your body's natural calming mechanism. When you ground yourself in sensory details (sight, sound, movement), you interrupt the stress response loop.</p>
+                    <p><strong>Pro tip:</strong> Use this anytime you feel stress building. It works because it shifts your attention from internal worry to external reality.</p>
+                    <button class="btn btn-primary" data-action="continueToAssessment">Continue to Assessment →</button>
+                `;
+
+                // Re-attach event listener
+                const newBtn = quickStartCard.querySelector('[data-action]');
+                newBtn.addEventListener('click', handleButtonClick);
+            }
+
+            function scrollToSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if (!lessonProgress.sectionsViewed.includes(sectionId)) {
+                        lessonProgress.sectionsViewed.push(sectionId);
+                        saveProgress();
+                    }
+                }
+            }
+
+            function showToast(message, type = 'success') {
+                const toast = document.createElement('div');
+                toast.className = `toast toast-${type}`;
+                toast.innerHTML = `
+                    <span class="toast-icon">${type === 'success' ? '✅' : type === 'info' ? 'ℹ️' : '⚠️'}</span>
+                    <span class="toast-message">${message}</span>
+                `;
+                document.body.appendChild(toast);
+
+                setTimeout(() => toast.classList.add('show'), 100);
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    setTimeout(() => toast.remove(), 300);
+                }, 3000);
+            }
+
+            function saveAndReturn() {
+                saveProgress();
+                showToast('📌 Progress saved! You can return anytime and pick up where you left off.', 'success');
+            }
+
+            function analyzeAssessment() {
+                const demands = parseInt(document.getElementById('demands-level').value);
+                const control = parseInt(document.getElementById('control-level').value);
+                const socialSupport = parseInt(document.getElementById('social-support').value);
+                const recoveryTime = parseInt(document.getElementById('recovery-time').value);
+                const positiveIndicators = parseInt(document.getElementById('positive-indicators').value);
+                const stressIndicators = parseInt(document.getElementById('stress-indicators').value);
+
+                // Calculate overall score - weighted formula based on Demand-Control-Support model
+                // Higher score = better wellbeing
+                const overallScore = ((control + socialSupport + recoveryTime + positiveIndicators) - stressIndicators) / 2.5;
+
+                let zone, zoneColor, strengthArea, focusArea, nextAction;
+
+                // Zone classification based on Karasek Demand-Control model
+                // Check in order of priority: Active Learning > High Strain > Passive > Low Strain > Balanced
+
+                if (demands >= 7 && control >= 7 && socialSupport >= 6) {
+                    // High demands + High control + Good support = Optimal
+                    zone = 'Active Learning Zone';
+                    zoneColor = '#10b981';
+                    strengthArea = 'You have high demands balanced with strong control and support. You\'re in the optimal zone for growth!';
+                    focusArea = 'Maintain this balance by monitoring your recovery time and stress signals.';
+                    nextAction = 'Keep doing what you\'re doing! Help others reach this zone by sharing your strategies.';
+                } else if (demands >= 7 && (control <= 4 || socialSupport <= 3 || stressIndicators >= 4)) {
+                    // High demands + Low control OR low support OR high stress = High Strain (DANGER ZONE)
+                    zone = 'High Strain Zone';
+                    zoneColor = '#ef4444';
+                    strengthArea = 'Your awareness that demands exceed your control is the first step to change.';
+                    focusArea = 'Urgently work to increase control: negotiate workload, build skills, or set boundaries.';
+                    nextAction = 'Start with Week 2: Control Enhancement. Focus on expanding areas where you can influence outcomes.';
+                } else if (demands <= 4 && control <= 4) {
+                    // Low demands + Low control = Passive (boredom risk)
+                    zone = 'Passive Zone';
+                    zoneColor = '#f59e0b';
+                    strengthArea = 'You have capacity for more challenge without overwhelming yourself.';
+                    focusArea = 'Seek meaningful challenges that align with your growth goals.';
+                    nextAction = 'Look for projects that excite you. Talk to your manager about expanding your responsibilities.';
+                } else if (demands <= 4 && control >= 7) {
+                    // Low demands + High control = Low Strain (comfortable but may plateau)
+                    zone = 'Low Strain Zone';
+                    zoneColor = '#3b82f6';
+                    strengthArea = 'You have excellent control and manageable demands - a comfortable position.';
+                    focusArea = 'Consider gradually increasing challenges to stay engaged and growing.';
+                    nextAction = 'Use your high control to take on stretch projects that interest you.';
+                } else {
+                    // Everything else = Balanced (sustainable)
+                    zone = 'Balanced Zone';
+                    zoneColor = '#10b981';
+                    strengthArea = 'You have manageable demands with adequate control - a sustainable position.';
+                    focusArea = 'Continue building skills and support to move toward the Active Learning Zone.';
+                    nextAction = 'Gradually increase challenges while maintaining your current level of control.';
+                }
+
+                // Display results first
+                displayResults(overallScore, zone, zoneColor, strengthArea, focusArea, nextAction, {
+                    demands, control, socialSupport, recoveryTime,
+                    positiveIndicators, stressIndicators
+                });
+
+                // Add to assessment history
+                lessonProgress.assessmentHistory = lessonProgress.assessmentHistory || [];
+                lessonProgress.assessmentHistory.push({
+                    date: new Date().toISOString(),
+                    overallScore,
+                    zone,
+                    demands, control, socialSupport, recoveryTime,
+                    positiveIndicators, stressIndicators
+                });
+
+                // Store current assessment data
+                lessonProgress.assessmentComplete = true;
+                lessonProgress.assessmentData = {
+                    date: new Date().toISOString(),
+                    demands, control, socialSupport, recoveryTime,
+                    positiveIndicators, stressIndicators,
+                    overallScore, zone
+                };
+                saveProgress();
+            }
+
+            function displayResults(score, zone, color, strength, focus, action, currentData) {
+                const resultsPanel = document.getElementById('assessment-results-panel');
+
+                document.getElementById('results-date').textContent = new Date().toLocaleDateString();
+                document.getElementById('score-number').textContent = Math.round(score * 10) / 10;
+                document.getElementById('score-circle').style.borderColor = color;
+                document.getElementById('zone-title').textContent = zone;
+                document.getElementById('zone-description').style.color = color;
+                document.getElementById('strength-area').textContent = strength;
+                document.getElementById('focus-area').textContent = focus;
+                document.getElementById('next-action-text').textContent = action;
+
+                // Show comparison if previous assessment exists
+                const assessmentHistory = lessonProgress.assessmentHistory || [];
+                if (assessmentHistory.length > 0) {
+                    const previousAssessment = assessmentHistory[assessmentHistory.length - 1];
+                    const previousScore = previousAssessment.overallScore;
+                    const improvement = ((score - previousScore) / previousScore * 100).toFixed(1);
+
+                    if (Math.abs(improvement) > 5) {
+                        document.getElementById('results-comparison').style.display = 'block';
+                        const trend = improvement > 0 ? '📈 improved' : '📉 decreased';
+                        const previousDate = new Date(previousAssessment.date);
+                        const daysSince = Math.floor((new Date() - previousDate) / (1000 * 60 * 60 * 24));
+
+                        let timeText = daysSince === 0 ? 'earlier today' :
+                                      daysSince === 1 ? 'yesterday' :
+                                      `${daysSince} days ago`;
+
+                        document.getElementById('comparison-text').textContent =
+                            `Your score ${trend} by ${Math.abs(improvement)}% compared to ${timeText}.`;
+                    }
+                }
+
+                resultsPanel.style.display = 'block';
+                resultsPanel.scrollIntoView({ behavior: 'smooth' });
+
+                // Celebrate completion
+                setTimeout(() => {
+                    resultsPanel.style.animation = 'slideIn 0.5s ease-out';
+                }, 100);
+            }
+
+            function saveChallengeProgress() {
+                saveProgress();
+                showToast('📊 Progress saved! Continue monitoring these metrics weekly.', 'success');
+            }
+
+            function saveReflections() {
+                saveProgress();
+                showToast('💾 Reflections saved! ✅ Lesson 2.2 Complete!', 'success');
+            }
+
+            function hideCrisisBanner() {
+                document.getElementById('crisis-banner').style.display = 'none';
+                sessionStorage.setItem('crisisBannerDismissed', 'true');
+            }
+
+            function showComingSoon(featureName) {
+                showToast(`${featureName} - Coming soon in a future update!`, 'info');
+            }
+
+            // Initialize
+            document.addEventListener('DOMContentLoaded', function() {
+                // Restore saved progress
+                updateProgressIndicator();
+
+                // Setup all button handlers
+                document.querySelectorAll('[data-action]').forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+
+                // Setup range sliders with real-time updates
+                const sliderPairs = [
+                    ['demands-level', 'demands-value'],
+                    ['control-level', 'control-value'],
+                    ['positive-indicators', 'positive-value'],
+                    ['stress-indicators', 'stress-value'],
+                    ['social-support', 'support-value'],
+                    ['recovery-time', 'recovery-value']
+                ];
+
+                // Map slider IDs to saved data keys
+                const sliderDataMap = {
+                    'demands-level': 'demands',
+                    'control-level': 'control',
+                    'positive-indicators': 'positiveIndicators',
+                    'stress-indicators': 'stressIndicators',
+                    'social-support': 'socialSupport',
+                    'recovery-time': 'recoveryTime'
+                };
+
+                sliderPairs.forEach(([sliderId, valueId]) => {
+                    const slider = document.getElementById(sliderId);
+                    const valueSpan = document.getElementById(valueId);
+                    if (slider && valueSpan) {
+                        slider.addEventListener('input', function() {
+                            valueSpan.textContent = this.value;
+                            updateAssessmentProgress();
+                        });
+
+                        // Restore saved values
+                        const dataKey = sliderDataMap[sliderId];
+                        if (lessonProgress.assessmentData && lessonProgress.assessmentData[dataKey]) {
+                            const savedValue = lessonProgress.assessmentData[dataKey];
+                            slider.value = savedValue;
+                            valueSpan.textContent = savedValue;
+                        }
+                    }
+                });
+
+                // Assessment progress counter
+                function updateAssessmentProgress() {
+                    const sliders = ['demands-level', 'control-level', 'positive-indicators',
+                                   'stress-indicators', 'social-support', 'recovery-time'];
+                    let answered = 0;
+                    sliders.forEach(id => {
+                        const slider = document.getElementById(id);
+                        if (slider && parseInt(slider.value) !== parseInt(slider.defaultValue)) {
+                            answered++;
+                        }
+                    });
+
+                    const counter = document.getElementById('assessment-question-count');
+                    if (counter) {
+                        counter.textContent = `Question ${Math.min(answered + 1, 6)} of 6`;
+                    }
+                }
+
+                // Setup all other tracker sliders
+                document.querySelectorAll('.tracker-slider').forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    if (valueSpan) {
+                        slider.addEventListener('input', function() {
+                            valueSpan.textContent = this.value;
+                        });
+                    }
+                });
+
+                // Pace selector
+                document.querySelectorAll('.pace-option').forEach(option => {
+                    option.addEventListener('click', function() {
+                        document.querySelectorAll('.pace-option').forEach(o => o.classList.remove('active'));
+                        this.classList.add('active');
+                        this.querySelector('input[type="radio"]').checked = true;
+
+                        const pace = this.dataset.pace;
+                        const descriptions = {
+                            express: 'Fast-track the essentials. Perfect when you need immediate strategies.',
+                            standard: 'Balanced approach with daily practices and weekly focuses. Recommended for sustainable change.',
+                            comprehensive: 'Deep dive into all strategies with extended practice time. For those committed to mastery.'
+                        };
+                        document.getElementById('pace-description-text').textContent = descriptions[pace];
+
+                        // Save selection
+                        lessonProgress.selectedPace = pace;
+                        saveProgress();
+                        showToast(`${pace === 'express' ? '⚡ Express' : pace === 'comprehensive' ? '🎯 Deep Dive' : '⭐ Standard'} path selected!`, 'info');
+                    });
+                });
+
+                // Restore saved pace selection
+                if (lessonProgress.selectedPace) {
+                    const savedOption = document.querySelector(`[data-pace="${lessonProgress.selectedPace}"]`);
+                    if (savedOption) {
+                        savedOption.click();
+                    }
+                }
+
+                console.log('Lesson 2.2: Enhanced version loaded successfully');
+            });
+        })();
+    </script>
+
+    <!-- Enhanced styling for stress vs challenge lesson -->
+    <style>
+        /* Quick Start Section */
+        .quick-start-section { margin: 2rem 0; animation: fadeIn 0.6s ease-in; }
+        .quick-start-card { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 16px; padding: 2rem; border: 3px solid #f59e0b; box-shadow: 0 8px 20px rgba(245, 158, 11, 0.2); }
+        .quick-badge { background: #f59e0b; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem; display: inline-block; margin-bottom: 1rem; }
+        .quick-start-card h3 { color: #92400e; margin: 0.5rem 0 1rem 0; }
+        .hook { font-size: 1.1rem; color: #78350f; margin-bottom: 1.5rem; }
+        .quick-technique { background: white; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+        .quick-technique h4 { color: #10b981; margin-top: 0; }
+        .quick-steps { margin: 1rem 0; padding-left: 1.5rem; }
+        .quick-steps li { margin: 0.75rem 0; line-height: 1.6; }
+        .quick-why { background: #f0fdf4; border-left: 4px solid #10b981; padding: 1rem; margin-top: 1rem; border-radius: 6px; font-style: italic; }
+        .quick-action-buttons { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+        .btn-large { padding: 1rem 2rem; font-size: 1.1rem; }
+
+        /* Progress Indicator */
+        .lesson-progress-indicator { background: white; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .progress-text { display: flex; justify-content: space-between; margin-bottom: 0.75rem; font-weight: 600; color: #1f2937; }
+        .progress-bar-container { height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden; }
+        .progress-bar-fill { height: 100%; background: linear-gradient(90deg, #10b981, #059669); transition: width 0.5s ease-out; border-radius: 4px; }
+
+        /* Key Insight Box */
+        .key-insight-box { background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; border-left: 5px solid #10b981; }
+        .key-insight-box h3 { color: #065f46; margin-top: 0; }
+        .insight-detail { color: #047857; font-style: italic; margin-top: 0.5rem; }
+
+        /* Deep Dive Toggle */
+        .deep-dive-toggle { margin: 2rem 0; background: #f8fafc; border-radius: 8px; padding: 1rem; }
+        .deep-dive-toggle summary { cursor: pointer; font-weight: 600; color: #3b82f6; padding: 0.5rem; list-style: none; }
+        .deep-dive-toggle summary::-webkit-details-marker { display: none; }
+        .deep-dive-toggle summary::before { content: '📚 '; }
+        .deep-dive-content { padding: 1rem; margin-top: 1rem; }
+
+        /* Checkpoint Cards */
+        .checkpoint-card { background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); border-radius: 16px; padding: 2rem; margin: 3rem 0; border: 2px solid #6366f1; }
+        .checkpoint-card h4 { color: #312e81; margin-top: 0; }
+        .checkpoint-options { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+
+        /* Assessment Enhancements */
+        .assessment-progress { background: #f1f5f9; padding: 0.75rem 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; text-align: center; font-weight: 600; color: #475569; }
+        .range-slider { width: 100%; height: 8px; -webkit-appearance: none; background: #e2e8f0; outline: none; border-radius: 4px; }
+        .range-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 20px; height: 20px; background: #10b981; cursor: pointer; border-radius: 50%; }
+        .range-slider::-moz-range-thumb { width: 20px; height: 20px; background: #10b981; cursor: pointer; border-radius: 50%; border: none; }
+        .range-value { display: inline-block; background: #10b981; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; margin-left: 1rem; font-weight: bold; min-width: 40px; text-align: center; }
+        .test-input label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: #334155; }
+
+        /* Results Panel */
+        .results-panel { background: white; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 3px solid #10b981; }
+        .results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid #e5e7eb; padding-bottom: 1rem; }
+        .results-header h3 { margin: 0; color: #1f2937; }
+        .results-date { color: #6b7280; font-size: 0.9rem; }
+        .results-score { display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center; margin-bottom: 2rem; }
+        .score-circle { width: 120px; height: 120px; border-radius: 50%; border: 8px solid #10b981; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); }
+        .score-number { font-size: 2.5rem; font-weight: bold; color: #065f46; }
+        .score-label { font-size: 0.8rem; color: #047857; }
+        .score-zone h4 { color: #10b981; margin: 0 0 0.5rem 0; font-size: 1.5rem; }
+        .results-breakdown { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .breakdown-item { border-radius: 12px; padding: 1.5rem; }
+        .breakdown-item.strength { background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-left: 4px solid #10b981; }
+        .breakdown-item.focus { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-left: 4px solid #f59e0b; }
+        .breakdown-item h4 { margin-top: 0; }
+        .results-action { background: #f0f9ff; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+        .results-action h4 { margin-top: 0; color: #1e40af; }
+        .action-buttons { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
+        .results-comparison { background: #f0fdf4; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; border-left: 4px solid #10b981; }
+
+        /* Pace Selector */
+        .pace-selector { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .pace-option { cursor: pointer; transition: transform 0.2s; }
+        .pace-option:hover { transform: translateY(-4px); }
+        .pace-option input[type="radio"] { display: none; }
+        .pace-option label { cursor: pointer; background: white; border: 3px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; display: block; text-align: center; transition: all 0.3s; }
+        .pace-option.active label, .pace-option input:checked + label { border-color: #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); }
+        .pace-badge { display: inline-block; background: #6b7280; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .pace-badge.recommended { background: #f59e0b; }
+        .pace-option label h4 { margin: 0.5rem 0; color: #1f2937; }
+        .pace-option label p { margin: 0; color: #6b7280; }
+        .pace-description { background: #f8fafc; border-radius: 8px; padding: 1rem; margin-top: 1rem; text-align: center; color: #475569; }
+
+        /* Existing Styles */
+        .science-explanation { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #10b981; }
+        .assessment-tests { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .test-card { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+        .test-input { margin: 1rem 0; }
+        .week-by-week { display: grid; gap: 2rem; margin: 2rem 0; }
+        .week-card { background: #fefefe; border: 2px solid #e5e7eb; border-radius: 16px; overflow: hidden; }
+        .week-header { background: linear-gradient(90deg, #10b981, #059669); color: white; padding: 1.5rem; }
+        .week-content { padding: 1.5rem; }
+        .week-focus { background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.9rem; }
+        .applications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .application-card { background: #f1f5f9; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #10b981; }
+        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .research-item { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; border-left: 4px solid #10b981; }
+        .research-stat { font-size: 1.5rem; font-weight: bold; color: #10b981; margin-bottom: 0.5rem; }
+
+        /* Toast Notifications */
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transform: translateX(400px);
+            transition: transform 0.3s ease-out;
+            z-index: 9999;
+            max-width: 350px;
+        }
+        .toast.show { transform: translateX(0); }
+        .toast-icon { font-size: 1.5rem; flex-shrink: 0; }
+        .toast-message { font-weight: 500; color: #1f2937; }
+        .toast-success { border-left: 4px solid #10b981; }
+        .toast-info { border-left: 4px solid #3b82f6; }
+        .toast-warning { border-left: 4px solid #f59e0b; }
+
+        /* References Section */
+        .references-section {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-top: 3px solid #3b82f6;
+        }
+        .references-section h3 {
+            color: #1e40af;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        .references-list {
+            list-style: decimal;
+            padding-left: 1.5rem;
+            margin: 0 0 1.5rem 0;
+        }
+        .references-list li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #334155;
+        }
+        .references-list em {
+            color: #1e293b;
+        }
+
+        /* Citation Links */
+        sup a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        sup a:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+        .references-list li {
+            scroll-margin-top: 100px;
+            transition: background-color 0.3s;
+        }
+        .references-list li:target {
+            background-color: #dbeafe;
+            padding: 0.5rem;
+            border-radius: 6px;
+            margin-left: -0.5rem;
+            margin-right: -0.5rem;
+        }
+
+        .disclaimer {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0 0 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .disclaimer strong {
+            color: #92400e;
+        }
+        .disclaimer a {
+            color: #4a6fa5;
+            text-decoration: underline;
+        }
+        .disclaimer a:hover {
+            color: #3d5a8a;
+        }
+        sup {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+
+        /* Animations */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .brain-systems, .assessment-tests, .applications-grid, .research-grid, .pace-selector { grid-template-columns: 1fr; }
+            .results-score { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+            .quick-action-buttons, .checkpoint-options, .action-buttons { flex-direction: column; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

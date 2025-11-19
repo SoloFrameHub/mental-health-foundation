@@ -1,0 +1,33 @@
+# QUICK COPY-PASTE FOR NEW CLAUDE SESSIONS
+
+I already have a working anxiety body map course. DO NOT rebuild it.
+
+Working files location:
+`/github-deployment/anxiety-toolkit/lesson-1-1-ANATOMICALLY-CORRECT.html`
+
+Body images location:
+`/github-deployment/anxiety-toolkit/images/full-body-image.jpg`
+
+RULES:
+1. Hearts go in CHESTS not stomachs
+2. Stomachs go in BELLIES not groins  
+3. Hands go on ARMS not legs
+4. Humans have TWO legs not one
+
+If you want to help:
+- Use my EXISTING files
+- Deploy what I ALREADY built
+- Stop creating new "solutions"
+- Read STOP-PUTTING-ORGANS-IN-WRONG-PLACES.md
+
+The course works. Just deploy it:
+`bash JUST-DEPLOY-IT.sh`
+
+DO NOT:
+- Create state management systems
+- Build progress trackers
+- Make new automation scripts
+- "Fix" the body map
+- Rebuild anything
+
+The anatomy is correct. The files work. Deploy them.

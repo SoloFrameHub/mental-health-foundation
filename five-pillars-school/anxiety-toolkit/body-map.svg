@@ -1,0 +1,81 @@
+<svg viewBox="0 0 300 600" xmlns="http://www.w3.org/2000/svg" id="anxiety-body-map">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Body Outline -->
+  <g id="body-outline">
+    <!-- Head/Neck -->
+    <ellipse cx="150" cy="45" rx="35" ry="40" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <path d="M 130 80 Q 130 95, 135 100" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <path d="M 170 80 Q 170 95, 165 100" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+
+    <!-- Shoulders and Arms -->
+    <ellipse cx="100" cy="140" rx="25" ry="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <ellipse cx="200" cy="140" rx="25" ry="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+
+    <!-- Torso -->
+    <path d="M 125 100 L 115 180 L 120 280 L 130 360 L 140 360 L 150 360 L 160 360 L 170 360 L 180 280 L 185 180 L 175 100 Z"
+          fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+
+    <!-- Arms -->
+    <rect x="85" y="160" width="20" height="120" rx="10" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <rect x="195" y="160" width="20" height="120" rx="10" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+
+    <!-- Hands -->
+    <ellipse cx="95" cy="300" rx="18" ry="22" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <ellipse cx="205" cy="300" rx="18" ry="22" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+
+    <!-- Legs -->
+    <rect x="130" y="360" width="18" height="200" rx="8" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <rect x="152" y="360" width="18" height="200" rx="8" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+
+    <!-- Feet -->
+    <ellipse cx="139" cy="570" rx="14" ry="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <ellipse cx="161" cy="570" rx="14" ry="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+  </g>
+
+  <!-- Interactive Regions -->
+
+  <!-- Head/Mind Region -->
+  <g id="region-head" class="body-region" data-region="head">
+    <ellipse cx="150" cy="45" rx="38" ry="43" class="pulse-ring"/>
+    <ellipse cx="150" cy="45" rx="35" ry="40" class="region-clickable" fill="rgba(74, 144, 164, 0.5)"/>
+  </g>
+
+  <!-- Chest/Heart Region -->
+  <g id="region-chest" class="body-region" data-region="chest">
+    <ellipse cx="150" cy="170" rx="53" ry="63" class="pulse-ring"/>
+    <ellipse cx="150" cy="170" rx="50" ry="60" class="region-clickable" fill="rgba(74, 144, 164, 0.5)"/>
+  </g>
+
+  <!-- Stomach/Gut Region -->
+  <g id="region-stomach" class="body-region" data-region="stomach">
+    <ellipse cx="150" cy="280" rx="43" ry="53" class="pulse-ring"/>
+    <ellipse cx="150" cy="280" rx="40" ry="50" class="region-clickable" fill="rgba(74, 144, 164, 0.5)"/>
+  </g>
+
+  <!-- Hands Region (Left) -->
+  <g id="region-hand-left" class="body-region" data-region="hands">
+    <circle cx="95" cy="300" r="28" class="pulse-ring"/>
+    <circle cx="95" cy="300" r="25" class="region-clickable" fill="rgba(74, 144, 164, 0.5)"/>
+  </g>
+
+  <!-- Hands Region (Right) -->
+  <g id="region-hand-right" class="body-region" data-region="hands">
+    <circle cx="205" cy="300" r="28" class="pulse-ring"/>
+    <circle cx="205" cy="300" r="25" class="region-clickable" fill="rgba(74, 144, 164, 0.5)"/>
+  </g>
+
+  <!-- Legs Region -->
+  <g id="region-legs" class="body-region" data-region="legs">
+    <rect x="125" y="360" width="50" height="170" rx="8" class="pulse-ring"/>
+    <rect x="128" y="360" width="44" height="170" rx="8" class="region-clickable" fill="rgba(74, 144, 164, 0.5)"/>
+  </g>
+</svg>

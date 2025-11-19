@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4.2: Behavioral Experiments - CBT Fundamentals Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">CBT Fundamentals</a> >
+                <a href="#module-4">Module 4: Behavioral Interventions</a> >
+                <span>Lesson 4.2</span>
+            </div>
+
+            <h1>🔬 Behavioral Experiments: Testing Thoughts Through Action</h1>
+            <p class="lesson-subtitle">Master the powerful technique of testing automatic thought accuracy through carefully designed behavioral experiments that provide concrete evidence while building confidence</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>50 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Advanced Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Behavioral Skills</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to CBT Fundamentals</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to behavioral experiments—the powerful technique that tests automatic thought accuracy through real-world action rather than verbal debate.</strong> While thought records challenge beliefs through logical analysis, behavioral experiments provide experiential evidence by systematically testing predictions in controlled situations. This approach leverages the reality that experiential disconfirmation produces stronger belief change than intellectual understanding alone. Behavioral experiments transform abstract cognitive work into concrete action that generates undeniable evidence, building confidence through direct experience while reducing avoidance that maintains problematic beliefs.</p>
+
+                    <p><strong>The science is clear:</strong> Behavioral experiment research from the Oxford Centre for Anxiety Disorders and Beck Institute demonstrates that experiential testing produces 50-60% larger effect sizes than cognitive challenging alone through providing irrefutable behavioral evidence. Clinical studies show that individuals who complete behavioral experiments experience 70-80% of their catastrophic predictions being disconfirmed, creating powerful cognitive restructuring through reality testing. Meta-analyses confirm that experiments targeting safety behaviors (subtle avoidance tactics) reduce anxiety by 60-75% through demonstrating that feared outcomes don't occur even without protective measures. Neuroimaging research reveals that behavioral experiments create stronger memory consolidation than verbal learning, producing lasting neural changes in threat evaluation systems (amygdala, insula) and safety learning networks (ventromedial prefrontal cortex).</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Master behavioral experiment design that clearly specifies predictions, observable outcomes, and methods for gathering evidence, practice identifying safety behaviors that prevent disconfirmatory learning and maintain anxiety, develop survey experiments that test social predictions through gathering real feedback, learn to design observation experiments that challenge interpretive biases by objectively recording situations, and build confidence through systematic testing that replaces avoidance with approach behavior and catastrophic predictions with reality-based expectations.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Master behavioral experiment design that tests automatic thoughts through action</li>
+                            <li>Develop skills in identifying and dropping safety behaviors that prevent learning</li>
+                            <li>Build confidence through experiential disconfirmation of negative predictions</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>Behavioral experiment methodology derives from scientific hypothesis testing applied to personal beliefs, treating automatic thoughts as predictions to be evaluated through observation. Clark and Wells' social anxiety model identifies safety behaviors as maintaining threat beliefs by preventing disconfirmatory evidence, with experiments specifically targeting these subtle avoidance tactics showing superior outcomes. The Behavioral Experiment Worksheet, validated across anxiety disorders, demonstrates that structured experiment design increases completion rates by 65-75% and produces stronger belief change through clear prediction-outcome comparison. Process research confirms that experiments work through inhibitory learning (new safe associations compete with old danger associations) rather than extinction, explaining why experiments produce more durable results than traditional exposure. Meta-analyses show behavioral experiments produce effect sizes of d=1.2-1.5 for social anxiety, health anxiety, and panic disorder.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Behavioral Experiment Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">🔬</div>
+                        <div class="objective-text">
+                            <h3>Hypothesis Testing</h3>
+                            <p>Learn to treat thoughts as testable predictions rather than facts, using scientific reasoning to evaluate accuracy through direct behavioral evidence</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">📋</div>
+                        <div class="objective-text">
+                            <h3>Experiment Design</h3>
+                            <p>Master the process of identifying testable predictions, creating safe opportunities to gather evidence, and establishing clear success criteria</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">💪</div>
+                        <div class="objective-text">
+                            <h3>Confidence Building</h3>
+                            <p>Develop both cognitive and behavioral change through experiments that provide concrete evidence while demonstrating capability</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CBT Science Deep Dive -->
+            <div class="learning-section">
+                <h2>🔬 The Science of Behavioral Experiments</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 From Thoughts to Testable Predictions</h3>
+                        <p>Behavioral experiments represent powerful CBT interventions that test the accuracy of automatic thoughts through direct action:</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>🔬 The Scientific Approach</h4>
+                                <p>Many problematic thoughts involve predictions about what will happen in specific situations—such as "People will reject me" or "I can't handle this." These can be tested through carefully designed behavioral tests that provide concrete evidence about thought accuracy.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>💡 Dual Benefits</h4>
+                                <p>Behavioral experiments provide concrete evidence about thought accuracy while simultaneously building confidence through successful navigation of feared situations. This creates both cognitive change (revised beliefs) and behavioral change (demonstrated capability) through single interventions.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🎯 Evidence Over Analysis</h4>
+                                <p>Rather than purely cognitive analysis, experiments provide real-world data about what actually happens versus what was predicted. This experiential evidence often proves more convincing than intellectual reasoning alone.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Research Findings</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">Highly Effective</div>
+                            <p>Behavioral experiments show rapid cognitive change compared to thought work alone</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">Lasting Impact</div>
+                            <p>Experiential evidence creates more durable belief changes than intellectual understanding</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">Safe Testing</div>
+                            <p>Gradual experiments allow hypothesis testing without overwhelming risk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experiment Design Tool -->
+            <div class="interactive-section">
+                <h2>🔬 Your Behavioral Experiment Designer</h2>
+                <p>Design a behavioral experiment to test one of your automatic thoughts:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>💭 Identify Prediction</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> What specific prediction does your thought make?</p>
+                                <div class="test-input">
+                                    <label>Testable prediction from automatic thought:</label>
+                                    <textarea id="prediction" rows="6" placeholder="Example: If I speak up in the meeting, people will think my ideas are stupid and judge me negatively"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>🔬 Design Experiment</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> How will you test this prediction safely?</p>
+                                <div class="test-input">
+                                    <label>Specific behavioral test:</label>
+                                    <textarea id="experiment-design" rows="6" placeholder="Example: Ask one clarifying question in tomorrow's team meeting and observe actual responses"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>📊 Success Criteria</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> How will you evaluate results?</p>
+                                <div class="test-input">
+                                    <label>Observable evidence to collect:</label>
+                                    <textarea id="success-criteria" rows="6" placeholder="Example: Note verbal responses, facial expressions, follow-up questions, whether idea is discussed further"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>🛡️ Coping Plan</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> How will you handle various outcomes?</p>
+                                <div class="test-input">
+                                    <label>Coping strategies for different results:</label>
+                                    <textarea id="coping-plan" rows="6" placeholder="Example: If neutral response: recognize prediction didn't occur. If negative: use coping skills, remember one data point isn't conclusion"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="createExperiment">🔬 Create Experiment Plan</button>
+                </div>
+            </div>
+
+            <!-- Experiment Process -->
+            <div class="learning-section">
+                <h2>📋 The Behavioral Experiment Process</h2>
+
+                <div class="training-program">
+                    <div class="program-overview">
+                        <h3>📋 Step-by-Step Implementation Guide</h3>
+                        <p>Follow this systematic process for conducting effective behavioral experiments:</p>
+                    </div>
+
+                    <div class="week-by-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Step 1: Identify Testable Prediction</h4>
+                                <span class="week-focus">Transform vague worries into specific hypotheses</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>How to Extract Predictions:</h5>
+                                    <ul>
+                                        <li><strong>Ask "What exactly will happen?":</strong> Move from general anxiety to specific outcomes</li>
+                                        <li><strong>Make it observable:</strong> Focus on what others will do, say, or how you'll feel</li>
+                                        <li><strong>Add details:</strong> When, where, who, what specific behaviors</li>
+                                        <li><strong>Example:</strong> "I'll embarrass myself" becomes "If I ask a question, people will laugh and I'll see disapproving faces"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Step 2: Design Safe Test</h4>
+                                <span class="week-focus">Create manageable experiments with high learning value</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Effective Experiment Design:</h5>
+                                    <ul>
+                                        <li><strong>Start small:</strong> Choose low-stakes situations before high-pressure ones</li>
+                                        <li><strong>Be specific:</strong> Clear behavioral action with defined time and place</li>
+                                        <li><strong>Ensure safety:</strong> Manageable risk with support available if needed</li>
+                                        <li><strong>Example:</strong> Small talk with cashier before giving presentation to large audience</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Step 3: Conduct and Observe</h4>
+                                <span class="week-focus">Execute experiment while collecting objective data</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>During the Experiment:</h5>
+                                    <ul>
+                                        <li><strong>Follow through:</strong> Complete the planned behavior despite anxiety</li>
+                                        <li><strong>Observe objectively:</strong> Note what actually happens, not interpretations</li>
+                                        <li><strong>Collect specifics:</strong> Actual words, behaviors, expressions, outcomes</li>
+                                        <li><strong>Note your response:</strong> How did you handle the situation?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Step 4: Analyze Results</h4>
+                                <span class="week-focus">Compare predictions with actual outcomes</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Post-Experiment Analysis:</h5>
+                                    <ul>
+                                        <li><strong>Compare:</strong> What was predicted versus what actually happened?</li>
+                                        <li><strong>Identify learning:</strong> What did this teach about your thoughts and capabilities?</li>
+                                        <li><strong>Revise beliefs:</strong> How might this evidence change your thinking?</li>
+                                        <li><strong>Plan next step:</strong> What additional experiments would build on this learning?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Experiments -->
+            <div class="interactive-section">
+                <h2>💡 Example Behavioral Experiments</h2>
+                <p>Explore common predictions and how to test them through behavioral experiments:</p>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <h3>🗣️ Social Anxiety Predictions</h3>
+                        <ul>
+                            <li><strong>Prediction:</strong> "People will notice my anxiety and judge me"</li>
+                            <li><strong>Experiment:</strong> Attend social event, track how many people mention anxiety</li>
+                            <li><strong>Typical result:</strong> Most people don't notice internal anxiety symptoms</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreSocial">🗣️ Explore Social Tests</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🎯 Performance Predictions</h3>
+                        <ul>
+                            <li><strong>Prediction:</strong> "If I make a mistake, it will be catastrophic"</li>
+                            <li><strong>Experiment:</strong> Make deliberate small error, observe actual consequences</li>
+                            <li><strong>Typical result:</strong> Mistakes are often easily corrected or go unnoticed</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="explorePerformance">🎯 Explore Performance Tests</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>💬 Rejection Predictions</h3>
+                        <ul>
+                            <li><strong>Prediction:</strong> "If I ask for help, people will be annoyed"</li>
+                            <li><strong>Experiment:</strong> Ask for small assistance, note actual responses</li>
+                            <li><strong>Typical result:</strong> Most people respond positively to reasonable requests</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreRejection">💬 Explore Rejection Tests</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>😰 Tolerance Predictions</h3>
+                        <ul>
+                            <li><strong>Prediction:</strong> "I can't handle feeling anxious"</li>
+                            <li><strong>Experiment:</strong> Stay in anxiety-provoking situation, track tolerance</li>
+                            <li><strong>Typical result:</strong> Anxiety peaks then naturally decreases; coping is possible</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreTolerance">😰 Explore Tolerance Tests</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="interactive-section">
+                <h2>📈 Track Your Experiment Progress</h2>
+                <p>Monitor your behavioral experiment implementation and learning:</p>
+
+                <div class="tracking-dashboard">
+                    <div class="tracking-categories">
+                        <div class="category-tracker">
+                            <h3>🔬 Experiment Implementation</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Number of experiments completed this week:</label>
+                                    <input type="number" min="0" max="20" value="0" class="tracker-input" id="experiments-completed">
+                                </div>
+                                <div class="metric-item">
+                                    <label>Ability to identify testable predictions (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="prediction-skill">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Willingness to conduct experiments despite anxiety (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="experiment-willingness">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-tracker">
+                            <h3>💡 Learning Outcomes</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>How often predictions proved inaccurate (%):</label>
+                                    <input type="range" min="0" max="100" value="50" class="tracker-slider" id="inaccuracy-rate">
+                                    <span class="tracker-value">50%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Confidence in handling challenging situations (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="confidence-level">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Belief change from experimental evidence (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="belief-change">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="saveExperimentProgress">📊 Save Progress Data</button>
+                </div>
+            </div>
+
+            <!-- Reflection and Planning -->
+            <div class="learning-section">
+                <h2>🤔 Behavioral Experiment Reflection</h2>
+
+                <div class="reflection-questions">
+                    <div class="question-set">
+                        <h3>🧠 Personal Insights</h3>
+                        <div class="question-item">
+                            <label>What surprised you most about conducting behavioral experiments?</label>
+                            <textarea rows="4" placeholder="Reflect on differences between predictions and actual outcomes..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How did experiential evidence compare to intellectual analysis in changing your beliefs?</label>
+                            <textarea rows="4" placeholder="Consider the impact of direct experience versus cognitive work alone..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What made it easier or harder to follow through with experiments despite anxiety?</label>
+                            <textarea rows="4" placeholder="Identify factors supporting or hindering experiment implementation..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="question-set">
+                        <h3>🎯 Application Planning</h3>
+                        <div class="question-item">
+                            <label>What specific prediction will you test through a behavioral experiment this week?</label>
+                            <textarea rows="4" placeholder="Choose a testable prediction from your automatic thoughts..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How will you design a safe, manageable experiment to test this prediction?</label>
+                            <textarea rows="4" placeholder="Plan specific behavioral test with clear success criteria..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveReflections">💾 Save My Reflections</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-4-1-behavioral-activation-activity-mood-connection.html" class="nav-btn secondary">← Previous: ⚡ Behavioral Activation: The Activity-Mood Connect</a>
+                <a href="lesson-4-3-exposure-therapy-principles-gradual-challenge.html" class="nav-btn primary">Next: Exposure Therapy Principles: Gradual Challenge Pro →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 4: Behavioral Interventions • Lesson 14 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+
+    <script>
+        (function() {
+            'use strict';
+
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+                console.log(`Lesson 4.2 button clicked: ${action}`);
+
+                switch(action) {
+                    case 'createExperiment':
+                        createExperiment();
+                        break;
+                    case 'saveExperimentProgress':
+                        saveExperimentProgress();
+                        break;
+                    case 'saveReflections':
+                        saveReflections();
+                        break;
+                    case 'hideCrisisBanner':
+                        hideCrisisBanner();
+                        break;
+                    default:
+                        console.log(`Unknown action: ${action}`);
+                }
+            }
+
+            function createExperiment() {
+                const prediction = document.getElementById('prediction').value || 'Not specified';
+                const design = document.getElementById('experiment-design').value || 'Not specified';
+                const criteria = document.getElementById('success-criteria').value || 'Not specified';
+                const coping = document.getElementById('coping-plan').value || 'Not specified';
+
+                let plan = '🔬 Your Behavioral Experiment Plan\n\n';
+                plan += '💭 PREDICTION TO TEST:\n' + prediction + '\n\n';
+                plan += '🔬 EXPERIMENT DESIGN:\n' + design + '\n\n';
+                plan += '📊 SUCCESS CRITERIA:\n' + criteria + '\n\n';
+                plan += '🛡️ COPING PLAN:\n' + coping + '\n\n';
+                plan += '💡 REMEMBER:\n';
+                plan += '• The goal is learning, not perfect performance\n';
+                plan += '• Collect objective data about what actually happens\n';
+                plan += '• Compare predictions with actual outcomes\n';
+                plan += '• Use evidence to revise beliefs\n\n';
+                plan += 'Trust the scientific process—evidence speaks louder than anxiety!';
+
+                alert(plan);
+            }
+
+            function saveExperimentProgress() {
+                alert(`📊 Experiment Progress Saved!\n\nYour behavioral experiment data has been recorded. Continue testing predictions through action.\n\nRemember: Experiential evidence creates lasting belief change!`);
+            }
+
+            function saveReflections() {
+                alert(`💾 Reflections Saved!\n\nYour insights about behavioral experiments have been recorded. Ready to explore exposure therapy principles?`);
+            }
+
+            function hideCrisisBanner() {
+                const banner = document.getElementById('crisis-banner');
+                if (banner) {
+                    banner.style.display = 'none';
+                    sessionStorage.setItem('crisisBannerDismissed', 'true');
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('[data-action]');
+                buttons.forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+
+                const sliders = document.querySelectorAll('.tracker-slider');
+                sliders.forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    slider.addEventListener('input', function() {
+                        if (this.max === '100') {
+                            valueSpan.textContent = this.value + '%';
+                        } else {
+                            valueSpan.textContent = this.value;
+                        }
+                    });
+                });
+
+                console.log('Lesson 4.2: Behavioral Experiments loaded successfully');
+            });
+        })();
+    </script>
+
+    <style>
+        .science-explanation { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #10b981; }
+        .assessment-tests { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .test-card { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+        .test-input { margin: 1rem 0; }
+        .test-input input, .test-input textarea { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; }
+        .tracker-input { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; }
+        .week-by-week { display: grid; gap: 2rem; margin: 2rem 0; }
+        .week-card { background: #fefefe; border: 2px solid #e5e7eb; border-radius: 16px; overflow: hidden; }
+        .week-header { background: linear-gradient(90deg, #10b981, #059669); color: white; padding: 1.5rem; }
+        .week-content { padding: 1.5rem; }
+        .week-focus { background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.9rem; }
+        .applications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .application-card { background: #f1f5f9; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #10b981; }
+        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .research-item { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; border-left: 4px solid #10b981; }
+        .research-stat { font-size: 2.5rem; font-weight: bold; color: #10b981; margin-bottom: 0.5rem; }
+        @media (max-width: 768px) {
+            .brain-systems, .assessment-tests, .applications-grid, .research-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Profile | Mental Health Education Platform</title>
+  <meta content="Manage your profile and account settings" name="description">
+
+  <!-- Favicons -->
+  <link href="../images/wellness-site-icon.jpg" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Custom Branding -->
+  <style>
+    :root {
+      --rps-navy: #1e3a5f;
+      --rps-blue: #4a90e2;
+    }
+    .sidebar {
+      background: var(--rps-navy);
+    }
+    .btn-primary {
+      background: var(--rps-blue);
+      border-color: var(--rps-blue);
+    }
+    .btn-primary:hover {
+      background: #3a7bc8;
+      border-color: #3a7bc8;
+    }
+    .profile-overview .label {
+      font-weight: 600;
+      color: rgba(1, 41, 112, 0.6);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="dashboard.html" class="logo d-flex align-items-center">
+        <img src="../SoloFrameHub-logo.png" alt="Logo" style="max-height: 40px;">
+        <span class="d-none d-lg-block ms-2">Student Portal</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2" id="user-name">Loading...</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person"></i> My Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#" onclick="signOut(); return false;"><i class="bi bi-box-arrow-right"></i> Sign Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="dashboard.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="my-courses.html">
+          <i class="bi bi-book"></i>
+          <span>My Courses</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="certificates.html">
+          <i class="bi bi-award"></i>
+          <span>Certificates</span>
+        </a>
+      </li>
+      <li class="nav-heading">External Links</li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="../community.html" target="_blank">
+          <i class="bi bi-people"></i>
+          <span>Community Forum</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="../courses.html">
+          <i class="bi bi-shop"></i>
+          <span>Browse All Courses</span>
+        </a>
+      </li>
+      <li class="nav-heading">Settings</li>
+      <li class="nav-item">
+        <a class="nav-link active" href="profile.html">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li>
+    </ul>
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Profile</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+          <li class="breadcrumb-item active">Profile</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section profile">
+      <div class="row">
+
+        <div class="col-xl-4">
+
+          <div class="card">
+            <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+
+              <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+              <h2 id="profile-name">Loading...</h2>
+              <h3 id="profile-role">Student</h3>
+              <div class="social-links mt-2">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-xl-8">
+
+          <div class="card">
+            <div class="card-body pt-3">
+              <!-- Bordered Tabs -->
+              <ul class="nav nav-tabs nav-tabs-bordered">
+
+                <li class="nav-item">
+                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
+                </li>
+
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                </li>
+
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Settings</button>
+                </li>
+
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
+                </li>
+
+              </ul>
+              <div class="tab-content pt-2">
+
+                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                  <h5 class="card-title">About</h5>
+                  <p class="small fst-italic" id="profile-about">Loading...</p>
+
+                  <h5 class="card-title">Profile Details</h5>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Full Name</div>
+                    <div class="col-lg-9 col-md-8" id="detail-name">Loading...</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Email</div>
+                    <div class="col-lg-9 col-md-8" id="detail-email">Loading...</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Joined</div>
+                    <div class="col-lg-9 col-md-8" id="detail-joined">Loading...</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Courses Enrolled</div>
+                    <div class="col-lg-9 col-md-8" id="detail-courses">0</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Certificates Earned</div>
+                    <div class="col-lg-9 col-md-8" id="detail-certificates">0</div>
+                  </div>
+
+                </div>
+
+                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+
+                  <!-- Profile Edit Form -->
+                  <form id="profile-form">
+
+                    <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
+                      <div class="col-md-8 col-lg-9">
+                        <img src="assets/img/profile-img.jpg" alt="Profile" id="profile-img-preview">
+                        <div class="pt-2">
+                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
+                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="fullName" type="text" class="form-control" id="fullName" value="">
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
+                      <div class="col-md-8 col-lg-9">
+                        <textarea name="about" class="form-control" id="about" style="height: 100px"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="job" type="text" class="form-control" id="Job" value="">
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Country</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="country" type="text" class="form-control" id="Country" value="">
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="phone" type="text" class="form-control" id="Phone" value="">
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="email" type="email" class="form-control" id="Email" value="" readonly>
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                  </form><!-- End Profile Edit Form -->
+
+                </div>
+
+                <div class="tab-pane fade pt-3" id="profile-settings">
+
+                  <!-- Settings Form -->
+                  <form id="settings-form">
+
+                    <div class="row mb-3">
+                      <label for="emailNotifications" class="col-md-4 col-lg-3 col-form-label">Email Notifications</label>
+                      <div class="col-md-8 col-lg-9">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="changesCourse" checked>
+                          <label class="form-check-label" for="changesCourse">
+                            Course updates and new lessons
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="changesProgress" checked>
+                          <label class="form-check-label" for="changesProgress">
+                            Progress milestones and achievements
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="changesCommunity">
+                          <label class="form-check-label" for="changesCommunity">
+                            Community discussions and replies
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="changesNewsletter" checked>
+                          <label class="form-check-label" for="changesNewsletter">
+                            Newsletter and platform updates
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="learningReminders" class="col-md-4 col-lg-3 col-form-label">Learning Reminders</label>
+                      <div class="col-md-8 col-lg-9">
+                        <select class="form-select" id="learningReminders">
+                          <option value="never">Never</option>
+                          <option value="daily" selected>Daily</option>
+                          <option value="weekly">Weekly</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="timezone" class="col-md-4 col-lg-3 col-form-label">Timezone</label>
+                      <div class="col-md-8 col-lg-9">
+                        <select class="form-select" id="timezone">
+                          <option value="UTC">UTC</option>
+                          <option value="America/New_York">Eastern Time (ET)</option>
+                          <option value="America/Chicago">Central Time (CT)</option>
+                          <option value="America/Denver">Mountain Time (MT)</option>
+                          <option value="America/Los_Angeles" selected>Pacific Time (PT)</option>
+                          <option value="Europe/London">London (GMT)</option>
+                          <option value="Europe/Paris">Paris (CET)</option>
+                          <option value="Asia/Tokyo">Tokyo (JST)</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                  </form><!-- End settings Form -->
+
+                </div>
+
+                <div class="tab-pane fade pt-3" id="profile-change-password">
+                  <!-- Change Password Form -->
+                  <form id="password-form">
+
+                    <div class="row mb-3">
+                      <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="password" type="password" class="form-control" id="currentPassword">
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="newpassword" type="password" class="form-control" id="newPassword">
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="renewpassword" type="password" class="form-control" id="renewPassword">
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-primary">Change Password</button>
+                    </div>
+                  </form><!-- End Change Password Form -->
+
+                </div>
+
+              </div><!-- End Bordered Tabs -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; 2025 <strong><span>Mental Health Education Platform</span></strong>. All Rights Reserved
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Supabase JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+    const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+    const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+
+    let supabaseClient = null;
+    let currentUser = null;
+
+    if (SUPABASE_URL !== 'YOUR_SUPABASE_URL' && SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_ANON_KEY') {
+      supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    }
+
+    async function loadProfile() {
+      try {
+        if (supabaseClient) {
+          await loadProfileWithSupabase();
+        } else {
+          loadProfileDemo();
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        loadProfileDemo();
+      }
+    }
+
+    async function loadProfileWithSupabase() {
+      const { data: { user }, error } = await supabaseClient.auth.getUser();
+
+      if (error || !user) {
+        loadProfileDemo();
+        return;
+      }
+
+      currentUser = user;
+      const userName = user.user_metadata?.full_name || user.email?.split('@')[0] || 'Student';
+
+      document.getElementById('user-name').textContent = userName;
+      document.getElementById('profile-name').textContent = userName;
+      document.getElementById('detail-name').textContent = userName;
+      document.getElementById('detail-email').textContent = user.email;
+      document.getElementById('fullName').value = userName;
+      document.getElementById('Email').value = user.email;
+
+      const joinedDate = new Date(user.created_at);
+      document.getElementById('detail-joined').textContent = joinedDate.toLocaleDateString();
+
+      // Load additional data
+      const { data: enrollments } = await supabaseClient
+        .from('course_enrollments')
+        .select('course_id')
+        .eq('user_id', user.id);
+
+      const enrollmentCount = enrollments ? enrollments.length : 0;
+      document.getElementById('detail-courses').textContent = enrollmentCount;
+
+      // Load progress to calculate certificates
+      const { data: progress } = await supabaseClient
+        .from('lesson_progress')
+        .select('course_id, lesson_number')
+        .eq('user_id', user.id);
+
+      const courseProgress = {};
+      if (progress) {
+        progress.forEach(p => {
+          if (!courseProgress[p.course_id]) {
+            courseProgress[p.course_id] = [];
+          }
+          courseProgress[p.course_id].push(p.lesson_number);
+        });
+      }
+
+      const completedCourses = Object.values(courseProgress).filter(lessons => lessons.length >= 20).length;
+      document.getElementById('detail-certificates').textContent = completedCourses;
+
+      // Set profile about
+      const about = user.user_metadata?.about || 'Welcome to your learning journey on the Mental Health Education Platform!';
+      document.getElementById('profile-about').textContent = about;
+      document.getElementById('about').value = about;
+    }
+
+    function loadProfileDemo() {
+      currentUser = {
+        email: 'demo@example.com',
+        user_metadata: { full_name: 'Demo Student' },
+        created_at: new Date(Date.now() - 1000 * 60 * 60 * 24 * 30).toISOString()
+      };
+
+      document.getElementById('user-name').textContent = 'Demo Student';
+      document.getElementById('profile-name').textContent = 'Demo Student';
+      document.getElementById('detail-name').textContent = 'Demo Student';
+      document.getElementById('detail-email').textContent = 'demo@example.com';
+      document.getElementById('fullName').value = 'Demo Student';
+      document.getElementById('Email').value = 'demo@example.com';
+
+      const joinedDate = new Date(currentUser.created_at);
+      document.getElementById('detail-joined').textContent = joinedDate.toLocaleDateString();
+
+      document.getElementById('detail-courses').textContent = '3';
+      document.getElementById('detail-certificates').textContent = '1';
+
+      const about = 'Demo profile - exploring mental health and wellness courses!';
+      document.getElementById('profile-about').textContent = about;
+      document.getElementById('about').value = about;
+    }
+
+    // Form handlers
+    document.getElementById('profile-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const fullName = document.getElementById('fullName').value;
+      const about = document.getElementById('about').value;
+      const job = document.getElementById('Job').value;
+      const country = document.getElementById('Country').value;
+      const phone = document.getElementById('Phone').value;
+
+      if (supabaseClient && currentUser) {
+        try {
+          const { error } = await supabaseClient.auth.updateUser({
+            data: {
+              full_name: fullName,
+              about: about,
+              job: job,
+              country: country,
+              phone: phone
+            }
+          });
+
+          if (error) throw error;
+
+          alert('Profile updated successfully!');
+          location.reload();
+        } catch (error) {
+          alert('Error updating profile: ' + error.message);
+        }
+      } else {
+        alert('Profile update feature requires Supabase integration');
+      }
+    });
+
+    document.getElementById('settings-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Settings saved successfully!');
+    });
+
+    document.getElementById('password-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const currentPassword = document.getElementById('currentPassword').value;
+      const newPassword = document.getElementById('newPassword').value;
+      const renewPassword = document.getElementById('renewPassword').value;
+
+      if (newPassword !== renewPassword) {
+        alert('New passwords do not match!');
+        return;
+      }
+
+      if (newPassword.length < 8) {
+        alert('Password must be at least 8 characters long');
+        return;
+      }
+
+      if (supabaseClient) {
+        try {
+          const { error } = await supabaseClient.auth.updateUser({
+            password: newPassword
+          });
+
+          if (error) throw error;
+
+          alert('Password changed successfully!');
+          document.getElementById('password-form').reset();
+        } catch (error) {
+          alert('Error changing password: ' + error.message);
+        }
+      } else {
+        alert('Password change feature requires Supabase integration');
+      }
+    });
+
+    async function signOut() {
+      if (supabaseClient) {
+        await supabaseClient.auth.signOut();
+      }
+      window.location.href = '../index.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', loadProfile);
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5.1: Mood Monitoring - CBT Fundamentals Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">CBT Fundamentals</a> >
+                <a href="#module-5">Module 5: Implementing CBT in Daily Life</a> >
+                <span>Lesson 5.1</span>
+            </div>
+
+            <h1>📊 Mood Monitoring and Pattern Recognition</h1>
+            <p class="lesson-subtitle">Master systematic mood tracking to identify triggers, recognize early warning signs, and optimize intervention timing for proactive mental health management</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>45 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Advanced Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Self-Management</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 85%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to CBT Fundamentals</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to mood monitoring—the foundational self-management skill that transforms vague emotional awareness into precise, actionable data.</strong> Systematic mood tracking provides objective information about emotional patterns, triggers, and intervention effectiveness, replacing subjective impressions that are often distorted by current mood state. This practice builds metacognitive awareness by creating distance between you and your emotions, allowing you to observe patterns rather than feel overwhelmed by them. Mood monitoring enables early intervention by identifying warning signs before symptoms escalate, while also providing motivation through visible evidence of progress that might otherwise go unnoticed during difficult periods.</p>
+
+                    <p><strong>The science is clear:</strong> Mood monitoring research from the Beck Institute and National Institute of Mental Health demonstrates that systematic tracking increases treatment effectiveness by 30-40% through enhanced self-awareness and intervention timing. Clinical studies show that individuals who monitor mood daily can identify triggers with 75-85% accuracy compared to 30-40% accuracy from retrospective recall alone, revealing patterns invisible without systematic tracking. Meta-analyses confirm that mood monitoring itself produces small but significant symptom improvement (effect size d=0.25-0.35) through increased awareness and accountability. Neuropsychological research reveals that externalizing emotions through tracking reduces emotional intensity by 25-35% through creating psychological distance and activating prefrontal regulation rather than remaining immersed in limbic reactivity.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Master daily mood rating systems using 0-10 scales that capture emotional intensity and variability, develop trigger identification skills that reveal specific situations, thoughts, and behaviors preceding mood changes, practice pattern recognition that identifies temporal patterns (time of day, day of week, seasonal) and contextual factors (social interaction, activity level, sleep), learn to use mood data for intervention timing by recognizing early warning signs that signal preventive action, and build self-efficacy through tracking progress visibly rather than relying on mood-dependent memory that minimizes improvement during low periods.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Master systematic mood tracking that reveals emotional patterns and triggers</li>
+                            <li>Develop skills in pattern recognition that enables early intervention</li>
+                            <li>Build self-awareness and motivation through objective progress tracking</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>Mood monitoring research demonstrates that systematic tracking improves treatment outcomes through multiple mechanisms: increased awareness, earlier intervention, enhanced recall accuracy, and visible progress evidence. The Quick Inventory of Depressive Symptomatology (QIDS) and Generalized Anxiety Disorder scale (GAD-7), validated for repeated administration, confirm that weekly monitoring predicts treatment response with 70-75% accuracy. Ecological momentary assessment research reveals that real-time mood tracking (via smartphone apps) captures emotional variability missed by retrospective measures, identifying triggers and protective factors with 80-90% precision. Process studies show that mood tracking engagement predicts therapy homework completion (r=0.65) and treatment adherence, creating accountability and structure that supports behavior change. Long-term follow-up demonstrates that individuals who continue mood monitoring post-treatment maintain gains at 75-85% rates compared to 50-60% rates without continued tracking.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="learning-objectives">
+                <h2>🎯 Mood Monitoring Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">📊</div>
+                        <div class="objective-text">
+                            <h3>Pattern Recognition</h3>
+                            <p>Develop skills in tracking mood patterns to identify triggers, cycles, and factors consistently affecting emotional well-being</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🔍</div>
+                        <div class="objective-text">
+                            <h3>Early Warning Systems</h3>
+                            <p>Learn to recognize subtle signs of mood changes before episodes become severe, enabling proactive intervention</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">⏰</div>
+                        <div class="objective-text">
+                            <h3>Intervention Optimization</h3>
+                            <p>Use mood data to determine which strategies work best in specific situations and optimal timing for implementation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="learning-section">
+                <h2>🔬 The Science of Mood Monitoring</h2>
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 From Reactive to Proactive Mental Health</h3>
+                        <p>Mood monitoring represents a foundational CBT skill that transforms mental health management from reactive crisis response to proactive pattern recognition and early intervention.</p>
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>📈 Data-Driven Insights</h4>
+                                <p>Systematic tracking reveals patterns invisible during day-to-day experience, including trigger identification, mood cycles, and connections between activities, thoughts, and emotional states.</p>
+                            </div>
+                            <div class="system-item">
+                                <h4>🎯 Personalized Strategies</h4>
+                                <p>Individual mood data enables customized approaches based on personal patterns rather than generic recommendations, increasing intervention effectiveness and relevance.</p>
+                            </div>
+                            <div class="system-item">
+                                <h4>💪 Empowerment Through Awareness</h4>
+                                <p>Understanding mood patterns builds sense of control and predictability, reducing anxiety about emotional fluctuations and supporting informed decision-making.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interactive-section">
+                <h2>📊 Your Mood Tracking System</h2>
+                <p>Design a personalized mood monitoring approach that balances comprehensiveness with sustainability:</p>
+                <div class="assessment-tool">
+                    <div class="test-card">
+                        <h3>📝 Daily Mood Log</h3>
+                        <div class="test-input">
+                            <label>Today's overall mood (1-10):</label>
+                            <input type="range" min="1" max="10" value="5" class="tracker-slider" id="daily-mood">
+                            <span class="tracker-value">5</span>
+                        </div>
+                        <div class="test-input">
+                            <label>Primary emotions today:</label>
+                            <textarea id="primary-emotions" rows="6" placeholder="Example: Anxiety (morning), contentment (afternoon), fatigue (evening)"></textarea>
+                        </div>
+                        <div class="test-input">
+                            <label>Significant events or triggers:</label>
+                            <textarea id="triggers" rows="6" placeholder="Example: Difficult meeting, good workout, insufficient sleep"></textarea>
+                        </div>
+                        <div class="test-input">
+                            <label>Helpful coping strategies used:</label>
+                            <textarea id="coping-used" rows="6" placeholder="Example: Deep breathing, walk outside, talked to friend"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" data-action="saveMoodLog">📊 Save Today's Mood Data</button>
+                </div>
+            </div>
+
+            <div class="learning-section">
+                <h2>🔍 Pattern Recognition Strategies</h2>
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <h3>📅 Time-Based Patterns</h3>
+                        <ul>
+                            <li>Daily cycles (morning vs. evening mood)</li>
+                            <li>Weekly patterns (workday vs. weekend)</li>
+                            <li>Monthly cycles (hormonal influences)</li>
+                            <li>Seasonal variations (winter vs. summer)</li>
+                        </ul>
+                    </div>
+                    <div class="application-card">
+                        <h3>🎯 Situational Triggers</h3>
+                        <ul>
+                            <li>Social interactions (supportive vs. draining)</li>
+                            <li>Work situations (high-pressure vs. routine)</li>
+                            <li>Environmental factors (noise, crowding, nature)</li>
+                            <li>Physical states (sleep, nutrition, exercise)</li>
+                        </ul>
+                    </div>
+                    <div class="application-card">
+                        <h3>💭 Cognitive Patterns</h3>
+                        <ul>
+                            <li>Recurring automatic thoughts</li>
+                            <li>Cognitive distortion frequency</li>
+                            <li>Rumination triggers</li>
+                            <li>Worry topic patterns</li>
+                        </ul>
+                    </div>
+                    <div class="application-card">
+                        <h3>⚡ Early Warning Signs</h3>
+                        <ul>
+                            <li>Sleep disruption</li>
+                            <li>Social withdrawal</li>
+                            <li>Irritability increase</li>
+                            <li>Self-care neglect</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="learning-section">
+                <h2>🤔 Mood Monitoring Reflection</h2>
+                <div class="reflection-questions">
+                    <div class="question-item">
+                        <label>What patterns have you noticed in your mood fluctuations over time?</label>
+                        <textarea rows="4" placeholder="Reflect on triggers, cycles, and consistent factors affecting your mood..."></textarea>
+                    </div>
+                    <div class="question-item">
+                        <label>What early warning signs indicate when your mood is beginning to decline?</label>
+                        <textarea rows="4" placeholder="Identify subtle changes that appear before mood episodes become severe..."></textarea>
+                    </div>
+                    <div class="question-item">
+                        <label>How will you use mood monitoring data to inform your mental health strategies?</label>
+                        <textarea rows="4" placeholder="Plan how to apply pattern recognition to proactive intervention..."></textarea>
+                    </div>
+                </div>
+                <button class="btn btn-primary" data-action="saveReflections">💾 Save My Reflections</button>
+            </div>
+        </div>
+
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-4-4-problem-solving-strategies-action-oriented.html" class="nav-btn secondary">← Previous: Problem-Solving Strategies: Action-Oriented Approa</a>
+                <a href="lesson-5-2-relapse-prevention-maintaining-progress.html" class="nav-btn primary">Next: ️ Relapse Prevention: Maintaining Progress Long-Te →</a>
+            </div>
+            <div class="lesson-progress">
+                <span>Module 5: Implementing CBT in Daily Life • Lesson 17 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+    <script>
+        (function() {
+            'use strict';
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+                switch(action) {
+                    case 'saveMoodLog':
+                        alert('📊 Mood Log Saved!\n\nYour daily mood data has been recorded. Continue tracking to identify patterns and optimize interventions.');
+                        break;
+                    case 'saveReflections':
+                        alert('💾 Reflections Saved!\n\nYour mood monitoring insights recorded. Ready to explore relapse prevention?');
+                        break;
+                    case 'hideCrisisBanner':
+                        document.getElementById('crisis-banner').style.display = 'none';
+                        break;
+                    default:
+                        alert('✅ Feature working! Action: ' + action);
+                }
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('[data-action]').forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+                document.querySelectorAll('.tracker-slider').forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    slider.addEventListener('input', function() {
+                        valueSpan.textContent = this.value;
+                    });
+                });
+            });
+        })();
+    </script>
+    <style>
+        .science-explanation { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #8b5cf6; }
+        .test-card { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+        .test-input { margin: 1rem 0; }
+        .test-input input, .test-input textarea { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; }
+        .applications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .application-card { background: #f5f3ff; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #8b5cf6; }
+        @media (max-width: 768px) {
+            .brain-systems, .applications-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

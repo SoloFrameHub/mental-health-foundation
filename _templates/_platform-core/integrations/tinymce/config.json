@@ -1,0 +1,57 @@
+{
+  "tinymce": {
+    "version": "7",
+    "selfHosted": true,
+    "baseUrl": "/assets/tinymce",
+    "apiKey": "no-api-key-required-self-hosted",
+    "modes": {
+      "symptom-oriented": {
+        "name": "Structured Notebook",
+        "description": "Clinical documentation and treatment plan tracking",
+        "toolbar": "undo redo | blocks | bold italic underline | checklist numlist bullist | link image | emoticons | save",
+        "plugins": "autosave lists link image emoticons save checklist",
+        "menubar": "file edit insert view format",
+        "height": 500,
+        "placeholder": "Document your symptoms, triggers, coping strategies, and progress...",
+        "templates": [
+          {
+            "title": "Symptom Log",
+            "description": "Track symptoms over time",
+            "content": "<h2>Symptom Log - {{date}}</h2><p><strong>Symptoms:</strong></p><ul><li></li></ul><p><strong>Severity (1-10):</strong></p><p><strong>Triggers:</strong></p><p><strong>Coping Used:</strong></p><p><strong>Effectiveness:</strong></p>"
+          },
+          {
+            "title": "Safety Plan",
+            "description": "Crisis management plan",
+            "content": "<h2>My Safety Plan</h2><p><strong>Warning Signs:</strong></p><ul><li></li></ul><p><strong>Coping Strategies:</strong></p><ul><li></li></ul><p><strong>Support Contacts:</strong></p><ul><li></li></ul><p><strong>Professional Resources:</strong></p><ul><li>Therapist: </li><li>Psychiatrist: </li><li>Crisis Line: 988</li></ul>"
+          }
+        ]
+      },
+      "five-pillars": {
+        "name": "Reflective Journal",
+        "description": "Personal growth and wellness exploration",
+        "toolbar": "undo redo | blocks | bold italic | bullist | link | emoticons | save",
+        "plugins": "autosave lists link emoticons save",
+        "menubar": "file edit insert view",
+        "height": 450,
+        "placeholder": "Reflect on your journey, insights, and growth...",
+        "templates": [
+          {
+            "title": "Daily Reflection",
+            "description": "Daily wellness check-in",
+            "content": "<h2>Daily Reflection - {{date}}</h2><p><strong>What went well today?</strong></p><p></p><p><strong>What challenged me?</strong></p><p></p><p><strong>What am I grateful for?</strong></p><p></p><p><strong>Tomorrow's intention:</strong></p><p></p>"
+          },
+          {
+            "title": "Growth Milestone",
+            "description": "Celebrate progress and learning",
+            "content": "<h2>Growth Milestone</h2><p><strong>What I learned:</strong></p><p></p><p><strong>How I've grown:</strong></p><p></p><p><strong>What I'm proud of:</strong></p><p></p><p><strong>Next steps:</strong></p><p></p>"
+          }
+        ]
+      }
+    },
+    "storage": {
+      "type": "localStorage",
+      "autosaveInterval": 30000,
+      "key": "mental-health-workbook"
+    }
+  }
+}

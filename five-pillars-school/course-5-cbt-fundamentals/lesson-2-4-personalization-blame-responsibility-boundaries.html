@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.4: Personalization & Blame - CBT Fundamentals Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">CBT Fundamentals</a> >
+                <a href="#module-2">Module 2: Cognitive Distortions</a> >
+                <span>Lesson 2.4</span>
+            </div>
+
+            <h1>🎯 Personalization & Blame: Understanding Responsibility Boundaries</h1>
+            <p class="lesson-subtitle">Developing accurate responsibility assessment skills that distinguish between factors within individual control versus those influenced by others or external circumstances</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>43 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Intermediate Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Distortion Recognition</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 40%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to CBT Fundamentals</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to understanding personalization and blame—cognitive distortions that create inaccurate responsibility assessment.</strong> Personalization involves taking excessive personal responsibility for negative outcomes that involve multiple contributing factors, while blame represents the opposite extreme of attributing all responsibility externally without acknowledging your role. Both distortions prevent accurate situation analysis and effective problem-solving by misattributing causality, creating either crushing guilt and low self-worth through over-responsibility, or helplessness and resentment through under-responsibility.</p>
+
+                    <p><strong>The science is clear:</strong> Attribution theory research from the Beck Institute and American Psychological Association demonstrates that personalization correlates strongly with depression (r=0.68), guilt, and low self-esteem, while external blame correlates with anger, relationship conflict, and reduced personal growth. Clinical studies show that individuals with depression attribute 60-75% of negative outcomes to internal, stable, global factors ("I always fail at everything") while attributing positive outcomes to external, temporary factors. When balanced responsibility assessment is developed through pie chart analysis and situational factor identification, patients experience 50-60% reduction in inappropriate guilt, improved problem-solving through accurate causal analysis, and healthier relationships through balanced accountability.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Identify personalization patterns where you assume excessive personal responsibility for outcomes involving multiple factors, recognize external blame patterns that prevent acknowledgment of your role in situations, practice responsibility pie chart techniques that accurately distribute causality across all contributing factors, develop balanced attribution styles that recognize both internal and external influences, and build self-compassion while maintaining appropriate accountability for your choices and behaviors.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Recognize personalization and blame patterns that create inaccurate responsibility assessment</li>
+                            <li>Develop balanced attribution through responsibility pie charts and factor analysis</li>
+                            <li>Build appropriate accountability that maintains self-compassion while recognizing your genuine role</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>Personalization and blame research originating from attribution theory and Beck's cognitive model identifies distorted responsibility assessment as maintaining depression through internal attribution for failure and external attribution for success. The Attributional Style Questionnaire, administered to over 100,000 individuals, confirms that pessimistic attribution patterns (internal, stable, global for negative events) predict depression onset and severity. Cognitive restructuring targeting attribution bias produces 55-65% improvement in depressive symptoms through balanced causality assessment. Responsibility pie chart exercises, validated across clinical populations, demonstrate 60-70% reduction in inappropriate guilt and improved problem-solving through recognition of situational factors, others' contributions, and realistic personal influence boundaries.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Responsibility Assessment Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">🎯</div>
+                        <div class="objective-text">
+                            <h3>Identify Personalization Patterns</h3>
+                            <p>Recognize when you're automatically assuming responsibility for negative events or others' emotional states without considering alternative explanations or shared responsibility factors</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">⚖️</div>
+                        <div class="objective-text">
+                            <h3>Assess Realistic Responsibility</h3>
+                            <p>Develop skills in distinguishing between factors within individual control versus those influenced by others, environmental circumstances, or random events</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🛡️</div>
+                        <div class="objective-text">
+                            <h3>Build Response-Ability</h3>
+                            <p>Cultivate capacity to respond effectively to situations within your control while releasing unrealistic self-blame for outcomes beyond personal influence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CBT Science Deep Dive -->
+            <div class="learning-section">
+                <h2>🔬 The Science of Personalization & Blame</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 Understanding Distorted Responsibility Assessment</h3>
+                        <p>Personalization represents a cognitive distortion where individuals automatically assume responsibility for negative events or others' emotional states without considering alternative explanations or shared responsibility factors. Conversely, externalization involves automatically blaming others or circumstances for personal problems without acknowledging individual responsibility or agency. Both patterns create distorted responsibility assessment that interferes with effective problem-solving and emotional regulation.</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>🌱 Developmental Origins</h4>
+                                <p>Personalization often develops in childhood environments where children are held responsible for adults' emotional states or family problems beyond their control, creating learned patterns of excessive self-blame that continue into adulthood despite changed circumstances.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>😔 Mental Health Impact</h4>
+                                <p>Excessive personalization contributes to depression, anxiety, and relationship difficulties as individuals assume fault for problems they didn't create while neglecting their actual areas of influence and responsibility. This pattern generates guilt, shame, and reduced self-efficacy.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🔄 The Opposite Extreme</h4>
+                                <p>Externalization (always blaming others) prevents personal growth and effective problem-solving. Balanced responsibility assessment acknowledges both personal accountability and external factors, supporting empowerment without unrealistic self-blame.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Research Findings</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">78%</div>
+                            <p>Percentage of individuals with depression who exhibit significant personalization patterns, taking blame for outcomes beyond their control</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">2.6x</div>
+                            <p>Higher rates of guilt and shame among habitual personalizers compared to those with balanced responsibility assessment</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">71%</div>
+                            <p>Improvement in self-esteem and relationship satisfaction when individuals develop accurate responsibility boundaries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Responsibility Assessment Tool -->
+            <div class="interactive-section">
+                <h2>⚖️ Your Responsibility Assessment</h2>
+                <p>Evaluate your tendency toward personalization or externalization patterns:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>🎯 Personalization Self-Assessment</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Check statements that feel familiar:</p>
+                                <div class="test-input">
+                                    <label><input type="checkbox" class="personalization-check"> I feel responsible for other people's happiness or mood</label>
+                                    <label><input type="checkbox" class="personalization-check"> When something goes wrong, I automatically assume it's my fault</label>
+                                    <label><input type="checkbox" class="personalization-check"> I blame myself for problems caused by circumstances beyond my control</label>
+                                    <label><input type="checkbox" class="personalization-check"> If someone is upset, I assume I did something wrong</label>
+                                    <label><input type="checkbox" class="personalization-check"> I take responsibility for team failures even when others contributed</label>
+                                    <label><input type="checkbox" class="personalization-check"> I feel guilty about things I couldn't reasonably have prevented</label>
+                                    <label><input type="checkbox" class="personalization-check"> I interpret neutral events as negative reflections on me</label>
+                                    <label><input type="checkbox" class="personalization-check"> I struggle to recognize factors outside my control</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-card">
+                            <h3>📝 Personalization Example</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Document a recent personalization episode:</p>
+                                <div class="test-input">
+                                    <label>Situation where you took excessive responsibility:</label>
+                                    <textarea id="personalization-situation" rows="8" placeholder="Example: My friend seemed upset after our conversation. I assumed I said something wrong and ruined their day."></textarea>
+                                </div>
+                                <div class="test-input">
+                                    <label>What did you blame yourself for?</label>
+                                    <textarea id="self-blame" rows="6" placeholder="Example: Causing their bad mood and being a bad friend"></textarea>
+                                </div>
+                                <div class="test-input">
+                                    <label>How did this affect your emotions and behavior?</label>
+                                    <textarea id="personalization-impact" rows="8" placeholder="Example: Felt intense guilt, apologized repeatedly, avoided reaching out again"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="analyzePersonalization">⚖️ Analyze My Responsibility Patterns</button>
+                </div>
+            </div>
+
+            <!-- Responsibility Pie Chart Builder -->
+            <div class="interactive-section">
+                <h2>🥧 Responsibility Pie Chart Builder</h2>
+                <p>Break down responsibility for outcomes into realistic contributing factors:</p>
+
+                <div class="assessment-tool">
+                    <div class="pie-chart-exercise">
+                        <div class="exercise-step">
+                            <h3>Step 1: Describe the Negative Outcome</h3>
+                            <textarea id="negative-outcome" rows="8" placeholder="Example: Project at work missed deadline and received criticism from management"></textarea>
+                        </div>
+
+                        <div class="exercise-step">
+                            <h3>Step 2: Initial Responsibility Assessment</h3>
+                            <p>What percentage of responsibility do you initially feel? (0-100%)</p>
+                            <div class="responsibility-scale">
+                                <label>My perceived responsibility:</label>
+                                <input type="range" min="0" max="100" value="80" id="initial-responsibility" class="tracker-slider">
+                                <span class="tracker-value">80%</span>
+                            </div>
+                        </div>
+
+                        <div class="exercise-step">
+                            <h3>Step 3: List ALL Contributing Factors</h3>
+                            <p>Include yourself, others, circumstances, timing, resources, systems, etc.</p>
+                            <textarea id="all-factors" rows="5" placeholder="Example:&#10;- My time management on certain tasks&#10;- Team member who left unexpectedly&#10;- Scope changes from client mid-project&#10;- Inadequate initial timeline estimation (shared by team)&#10;- Technical issues that delayed progress&#10;- Lack of clear communication protocols"></textarea>
+                        </div>
+
+                        <div class="exercise-step">
+                            <h3>Step 4: Assign Realistic Percentages</h3>
+                            <p>Distribute 100% responsibility across ALL factors:</p>
+                            <textarea id="percentage-breakdown" rows="6" placeholder="Example:&#10;- My time management: 15%&#10;- Team member departure: 20%&#10;- Scope changes: 25%&#10;- Timeline estimation (shared): 15%&#10;- Technical issues: 15%&#10;- Communication gaps (shared): 10%&#10;Total = 100%"></textarea>
+                        </div>
+
+                        <div class="exercise-step">
+                            <h3>Step 5: Realistic Personal Responsibility</h3>
+                            <p>What's your actual share of responsibility? (Usually much less than initial feeling)</p>
+                            <div class="responsibility-scale">
+                                <label>My realistic responsibility:</label>
+                                <input type="range" min="0" max="100" value="25" id="realistic-responsibility" class="tracker-slider">
+                                <span class="tracker-value">25%</span>
+                            </div>
+                        </div>
+
+                        <div class="exercise-step">
+                            <h3>Step 6: Response-Ability Action Plan</h3>
+                            <p>What can you actually control going forward?</p>
+                            <textarea id="action-plan" rows="6" placeholder="Example: Improve my time estimation skills, request clearer scope agreements upfront, implement progress check-ins. Release guilt about factors genuinely beyond my control."></textarea>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="processPieChart">🥧 Generate Responsibility Analysis</button>
+                </div>
+            </div>
+
+            <!-- Catching the Distortion -->
+            <div class="learning-section">
+                <h2>🔍 Catching Personalization & Blame</h2>
+
+                <div class="training-program">
+                    <div class="program-overview">
+                        <h3>📋 Common Patterns and Balanced Alternatives</h3>
+                        <p>Recognize typical personalization thoughts and develop accurate responsibility assessment:</p>
+                    </div>
+
+                    <div class="week-by-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Others' Emotional States</h4>
+                                <span class="week-focus">Taking Responsibility for Moods</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Personalization Thought:</h5>
+                                    <p><strong>❌ "My partner is stressed. I must not be supportive enough. Their unhappiness is my fault."</strong></p>
+
+                                    <h5>Reality Check:</h5>
+                                    <ul>
+                                        <li>Adults are responsible for their own emotional management</li>
+                                        <li>Multiple factors influence mood (work, health, family, sleep, etc.)</li>
+                                        <li>You can be supportive without being responsible for their feelings</li>
+                                        <li>Taking excessive responsibility prevents their autonomy</li>
+                                    </ul>
+
+                                    <h5>Balanced Alternative:</h5>
+                                    <p><strong>✅ "My partner is experiencing stress. I can offer support, but they're responsible for managing their own emotions. Many factors influence their mood. I'll ask how I can help while recognizing I can't control their feelings."</strong></p>
+
+                                    <h5>Responsibility Breakdown:</h5>
+                                    <ul>
+                                        <li>Their stress: Work pressures (40%), health concerns (20%), financial worries (15%), family issues (15%), other factors (10%)</li>
+                                        <li>Your contribution: Possibly 0-10% if specific interaction occurred, but not responsible for overall mood</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Team or Group Outcomes</h4>
+                                <span class="week-focus">Shared Responsibility Situations</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Personalization Thought:</h5>
+                                    <p><strong>❌ "The team project failed. It's entirely my fault because I was the coordinator."</strong></p>
+
+                                    <h5>Reality Check:</h5>
+                                    <ul>
+                                        <li>Team outcomes involve multiple contributors and factors</li>
+                                        <li>Leadership role doesn't equal sole responsibility</li>
+                                        <li>Systems, resources, timing, and external factors all contribute</li>
+                                        <li>Each team member bears responsibility for their contributions</li>
+                                    </ul>
+
+                                    <h5>Balanced Alternative:</h5>
+                                    <p><strong>✅ "The team project didn't meet goals. As coordinator, I bear responsibility for organizational aspects—perhaps 25-30%. Other factors include individual contributions, resource limitations, timeline constraints, and scope changes. I'll identify my specific improvement areas while recognizing shared responsibility."</strong></p>
+
+                                    <h5>Responsibility Breakdown:</h5>
+                                    <ul>
+                                        <li>Your coordination: 25%</li>
+                                        <li>Team member contributions: 30%</li>
+                                        <li>Resource/budget constraints: 20%</li>
+                                        <li>Timeline/scope issues: 15%</li>
+                                        <li>External factors: 10%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Relationship Conflicts</h4>
+                                <span class="week-focus">Interpersonal Difficulties</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Personalization Thought:</h5>
+                                    <p><strong>❌ "We had an argument. I'm a terrible person who ruins relationships. This conflict is completely my fault."</strong></p>
+
+                                    <h5>Reality Check:</h5>
+                                    <ul>
+                                        <li>Conflicts involve contributions from all parties</li>
+                                        <li>Disagreement doesn't equal moral failure</li>
+                                        <li>Communication patterns, timing, and external stressors all play roles</li>
+                                        <li>Healthy relationships include occasional conflict</li>
+                                    </ul>
+
+                                    <h5>Balanced Alternative:</h5>
+                                    <p><strong>✅ "We had a conflict that involved contributions from both of us. I'm responsible for my communication approach and reactions—perhaps 50% of the conflict dynamics. They're responsible for their words and responses. External stress and timing also contributed. I'll identify my role while acknowledging shared dynamics."</strong></p>
+
+                                    <h5>Responsibility Breakdown:</h5>
+                                    <ul>
+                                        <li>Your communication/reactions: 40-50%</li>
+                                        <li>Their communication/reactions: 40-50%</li>
+                                        <li>Timing/external stressors: 10-20%</li>
+                                        <li>Total = 100% (not 100% yours!)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Random or Circumstantial Events</h4>
+                                <span class="week-focus">Beyond Personal Control</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Personalization Thought:</h5>
+                                    <p><strong>❌ "My friend got sick after we had lunch. I must have suggested a bad restaurant or somehow caused their illness."</strong></p>
+
+                                    <h5>Reality Check:</h5>
+                                    <ul>
+                                        <li>Illness has numerous causes (viral exposure, stress, sleep, immune system)</li>
+                                        <li>You don't control others' health or immune responses</li>
+                                        <li>Restaurant suggestion is normal social interaction, not dangerous activity</li>
+                                        <li>Timing correlation doesn't prove causation</li>
+                                    </ul>
+
+                                    <h5>Balanced Alternative:</h5>
+                                    <p><strong>✅ "My friend became ill. This could result from countless factors completely unrelated to our lunch. Even if food were involved (unlikely), multiple people including restaurant staff share that scenario. I'm not responsible for their illness or immune system function."</strong></p>
+
+                                    <h5>Responsibility Breakdown:</h5>
+                                    <ul>
+                                        <li>Your responsibility: 0% (made normal social suggestion)</li>
+                                        <li>Their health factors: 60%</li>
+                                        <li>Environmental exposures: 20%</li>
+                                        <li>Random factors: 20%</li>
+                                        <li>You cannot control others' health outcomes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boundary Assessment Tool -->
+            <div class="interactive-section">
+                <h2>🛡️ Responsibility Boundary Assessment</h2>
+                <p>Develop clear boundaries between your areas of control and external factors:</p>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <h3>✅ Within Your Control</h3>
+                        <ul>
+                            <li>Your own thoughts, feelings, and reactions</li>
+                            <li>Your communication style and word choices</li>
+                            <li>Your effort, preparation, and follow-through</li>
+                            <li>Your values, priorities, and decisions</li>
+                            <li>How you respond to others' behaviors</li>
+                            <li>Your self-care and personal development</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="explorePersonalControl">✅ Focus Here</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🤝 Shared Responsibility</h3>
+                        <ul>
+                            <li>Relationship dynamics and communication patterns</li>
+                            <li>Team projects and collaborative outcomes</li>
+                            <li>Family dynamics and household functioning</li>
+                            <li>Mutual agreements and shared commitments</li>
+                            <li>Co-created situations requiring input from multiple people</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreSharedResponsibility">🤝 Recognize Shared Factors</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>❌ Outside Your Control</h3>
+                        <ul>
+                            <li>Other people's thoughts, feelings, and choices</li>
+                            <li>Others' emotional regulation and mental health</li>
+                            <li>Past events and outcomes already occurred</li>
+                            <li>Systemic issues and organizational policies</li>
+                            <li>Random events, timing, and circumstances</li>
+                            <li>Economic conditions and societal factors</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreExternalFactors">❌ Release Unrealistic Blame</button>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>💪 Response-Ability Focus</h3>
+                        <ul>
+                            <li>Distinguish responsibility FROM blame</li>
+                            <li>Focus on what you CAN influence going forward</li>
+                            <li>Accept limitations without helplessness</li>
+                            <li>Learn from mistakes without excessive self-blame</li>
+                            <li>Acknowledge both agency and limitations</li>
+                            <li>Take appropriate action without guilt for uncontrollables</li>
+                        </ul>
+                        <button class="btn btn-outline" data-action="exploreResponseAbility">💪 Build Empowered Action</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="interactive-section">
+                <h2>📈 Track Your Responsibility Assessment Progress</h2>
+                <p>Assess your developing ability to maintain balanced responsibility boundaries:</p>
+
+                <div class="tracking-dashboard">
+                    <div class="tracking-categories">
+                        <div class="category-tracker">
+                            <h3>🎯 Personalization Awareness</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Ability to catch excessive self-blame (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="catch-self-blame">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Skill in identifying shared vs. personal responsibility (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="responsibility-distinction">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Recognition of factors outside your control (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="external-factors">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-tracker">
+                            <h3>⚖️ Balanced Responsibility Skills</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Reduction in inappropriate guilt (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="guilt-reduction">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Confidence in appropriate accountability (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="accountability-confidence">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Sense of empowerment without overwhelming blame (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="empowered-balance">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="saveResponsibilityProgress">📊 Save Responsibility Progress</button>
+                </div>
+            </div>
+
+            <!-- Reflection and Planning -->
+            <div class="learning-section">
+                <h2>🤔 Personalization & Blame Reflection</h2>
+
+                <div class="reflection-questions">
+                    <div class="question-set">
+                        <h3>🧠 Personal Insights</h3>
+                        <div class="question-item">
+                            <label>Where did you learn to take excessive responsibility? What family or life experiences taught you this pattern?</label>
+                            <textarea rows="4" placeholder="Consider childhood messages about responsibility, family dynamics, or significant relationships that shaped your tendency toward personalization..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>In what situations do you most frequently personalize or take excessive blame?</label>
+                            <textarea rows="4" placeholder="Identify specific contexts like others' moods, team outcomes, relationship conflicts, or random events..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How does taking excessive responsibility affect your mental health and relationships?</label>
+                            <textarea rows="4" placeholder="Consider impacts on guilt, shame, self-esteem, relationship dynamics, and problem-solving effectiveness..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="question-set">
+                        <h3>🎯 Application Planning</h3>
+                        <div class="question-item">
+                            <label>What specific situation will you create a responsibility pie chart for this week?</label>
+                            <textarea rows="4" placeholder="Choose a recent situation where you took excessive blame or felt overwhelmed by responsibility..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What boundaries do you need to establish regarding others' emotional states or problems?</label>
+                            <textarea rows="4" placeholder="Identify areas where you take inappropriate responsibility for others' feelings, choices, or outcomes..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What does "response-ability" (ability to respond) look like for you versus taking blame?</label>
+                            <textarea rows="4" placeholder="Distinguish between empowered action within your control and guilt for uncontrollable factors..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveReflections">💾 Save My Reflections</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-2-3-mind-reading-fortune-telling-prediction-assumptions.html" class="nav-btn secondary">← Previous: Mind Reading & Fortune Telling: Challenging Predic</a>
+                <a href="lesson-3-1-basic-thought-records-tracking-thoughts-emotions.html" class="nav-btn primary">Next: Basic Thought Records: Tracking Thoughts and Emoti →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 2: Cognitive Distortions • Lesson 8 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+
+    <script>
+        // Enhanced personalization & blame lesson functionality
+        (function() {
+            'use strict';
+
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+                console.log(`Lesson 2.4 button clicked: ${action}`);
+
+                switch(action) {
+                    case 'analyzePersonalization':
+                        analyzePersonalization();
+                        break;
+                    case 'processPieChart':
+                        processPieChart();
+                        break;
+                    case 'saveResponsibilityProgress':
+                        saveResponsibilityProgress();
+                        break;
+                    case 'saveReflections':
+                        saveReflections();
+                        break;
+                    case 'hideCrisisBanner':
+                        hideCrisisBanner();
+                        break;
+                    default:
+                        console.log(`Unknown action: ${action}`);
+                }
+            }
+
+            function analyzePersonalization() {
+                const checkedBoxes = document.querySelectorAll('.personalization-check:checked').length;
+                const situation = document.getElementById('personalization-situation').value || 'Not specified';
+                const blame = document.getElementById('self-blame').value || 'Not specified';
+                const impact = document.getElementById('personalization-impact').value || 'Not specified';
+
+                let analysis = '🎯 Your Personalization Pattern Analysis\n\n';
+                analysis += `⚖️ PERSONALIZATION TENDENCY: ${checkedBoxes}/8 patterns identified\n\n`;
+
+                if (checkedBoxes >= 6) {
+                    analysis += '⚠️ HIGH PERSONALIZATION: You frequently take excessive responsibility for outcomes beyond your control. This pattern likely creates significant guilt, shame, and relationship difficulties.\n\n';
+                } else if (checkedBoxes >= 3) {
+                    analysis += '⚡ MODERATE PERSONALIZATION: You sometimes take inappropriate blame for shared or external factors. Practice distinguishing your actual responsibility from uncontrollable circumstances.\n\n';
+                } else {
+                    analysis += '✅ LOW PERSONALIZATION: Occasional self-questioning is normal. Continue developing balanced responsibility assessment.\n\n';
+                }
+
+                analysis += '📍 YOUR PERSONALIZATION EXAMPLE:\n\n';
+                analysis += 'Situation:\n' + situation + '\n\n';
+                analysis += 'Self-Blame:\n' + blame + '\n\n';
+                analysis += 'Impact:\n' + impact + '\n\n';
+                analysis += '💡 KEY INSIGHT:\n';
+                analysis += 'Notice how taking excessive responsibility creates emotional suffering while not actually improving outcomes. Most situations involve multiple contributing factors.\n\n';
+                analysis += '🛠️ INTERVENTION STRATEGY:\n';
+                analysis += '• Create responsibility pie charts to distribute blame realistically\n';
+                analysis += '• Identify factors outside your control versus within it\n';
+                analysis += '• Ask "What percentage is genuinely my responsibility?"\n';
+                analysis += '• Recognize shared responsibility in collaborative situations\n';
+                analysis += '• Focus on response-ability rather than blame\n';
+                analysis += '• Release guilt for outcomes beyond your influence\n\n';
+                analysis += `📊 Reality Check: Most outcomes involve 5-10 contributing factors. Your share is rarely 100%!`;
+
+                alert(analysis);
+            }
+
+            function processPieChart() {
+                const outcome = document.getElementById('negative-outcome').value || 'Not specified';
+                const initial = document.getElementById('initial-responsibility').value;
+                const factors = document.getElementById('all-factors').value || 'Not specified';
+                const breakdown = document.getElementById('percentage-breakdown').value || 'Not specified';
+                const realistic = document.getElementById('realistic-responsibility').value;
+                const action = document.getElementById('action-plan').value || 'Not specified';
+
+                const difference = Math.abs(initial - realistic);
+
+                let analysis = '🥧 Your Responsibility Pie Chart Analysis\n\n';
+                analysis += '📍 NEGATIVE OUTCOME:\n' + outcome + '\n\n';
+                analysis += `🎯 INITIAL FEELING: ${initial}% my responsibility\n\n`;
+                analysis += '🔍 ALL CONTRIBUTING FACTORS:\n' + factors + '\n\n';
+                analysis += '⚖️ REALISTIC BREAKDOWN:\n' + breakdown + '\n\n';
+                analysis += `✅ REALISTIC PERSONAL RESPONSIBILITY: ${realistic}%\n\n`;
+                analysis += `📊 RESPONSIBILITY RECALIBRATION: You reduced unrealistic self-blame by ${difference} percentage points!\n\n`;
+                analysis += '💪 RESPONSE-ABILITY ACTION PLAN:\n' + action + '\n\n';
+                analysis += '🎓 PIE CHART SUCCESS!\n\n';
+
+                if (difference >= 40) {
+                    analysis += 'You were carrying massive inappropriate guilt! This analysis reveals how much blame you were taking for factors genuinely outside your control.\n\n';
+                } else if (difference >= 20) {
+                    analysis += 'Significant reduction in self-blame! You\'ve identified meaningful shared and external factors that contribute to outcomes.\n\n';
+                } else {
+                    analysis += 'Good reality check! Even modest reductions in excessive responsibility support emotional well-being.\n\n';
+                }
+
+                analysis += '💡 KEY LEARNING:\n';
+                analysis += 'Most negative outcomes involve multiple contributing factors. Taking appropriate (not excessive) responsibility allows you to:\n';
+                analysis += '• Learn from mistakes without crushing guilt\n';
+                analysis += '• Identify controllable improvement areas\n';
+                analysis += '• Release unproductive blame for uncontrollable factors\n';
+                analysis += '• Maintain self-efficacy without overwhelming self-blame\n';
+                analysis += '• Focus energy on effective action rather than guilt';
+
+                alert(analysis);
+            }
+
+            function saveResponsibilityProgress() {
+                alert(`📊 Responsibility Assessment Progress Saved!\n\nYour development of balanced responsibility boundaries has been recorded.\n\nRemember: You are responsible for your effort and responses, not for controlling uncontrollable outcomes!`);
+            }
+
+            function saveReflections() {
+                alert(`💾 Reflections Saved!\n\nYour insights about personalization and blame patterns have been recorded. These reflections will guide your continued work on accurate responsibility assessment.\n\nExcellent work completing Module 2: Cognitive Distortions! Ready to move into thought record techniques in Module 3?`);
+            }
+
+            function hideCrisisBanner() {
+                const banner = document.getElementById('crisis-banner');
+                if (banner) {
+                    banner.style.display = 'none';
+                    sessionStorage.setItem('crisisBannerDismissed', 'true');
+                }
+            }
+
+            // Initialize interactions
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('[data-action]');
+                buttons.forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+
+                // Initialize slider interactions
+                const sliders = document.querySelectorAll('.tracker-slider');
+                sliders.forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    if (valueSpan) {
+                        slider.addEventListener('input', function() {
+                            const suffix = (this.id.includes('responsibility') && !this.id.includes('tracker')) ? '%' : '';
+                            valueSpan.textContent = this.value + suffix;
+                        });
+                    }
+                });
+
+                console.log('Lesson 2.4: Personalization & Blame loaded successfully');
+            });
+        })();
+    </script>
+
+    <!-- Enhanced styling for personalization & blame lesson -->
+    <style>
+        .science-explanation { background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #8b5cf6; }
+
+        .assessment-tests { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .test-card { background: #f5f3ff; border: 2px solid #c4b5fd; border-radius: 12px; padding: 1.5rem; }
+        .test-input { margin: 1rem 0; }
+        .test-input label { display: block; padding: 0.5rem 0; cursor: pointer; }
+        .test-input input[type="checkbox"] { margin-right: 0.5rem; }
+        .test-input textarea { width: 100%; padding: 0.5rem; border: 1px solid #a78bfa; border-radius: 6px; font-family: inherit; }
+
+        .pie-chart-exercise { display: grid; gap: 1.5rem; margin: 2rem 0; }
+        .exercise-step { background: #ddd6fe; border-radius: 12px; padding: 1.5rem; }
+        .exercise-step textarea { width: 100%; padding: 0.75rem; border: 2px solid #8b5cf6; border-radius: 8px; font-family: inherit; }
+        .responsibility-scale { margin: 1rem 0; }
+        .responsibility-scale input { width: 100%; }
+
+        .week-by-week { display: grid; gap: 2rem; margin: 2rem 0; }
+        .week-card { background: #fefefe; border: 2px solid #e5e7eb; border-radius: 16px; overflow: hidden; }
+        .week-header { background: linear-gradient(90deg, #8b5cf6, #7c3aed); color: white; padding: 1.5rem; }
+        .week-content { padding: 1.5rem; }
+        .week-focus { background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.9rem; }
+
+        .applications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .application-card { background: #ddd6fe; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #8b5cf6; }
+
+        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .research-item { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; border-left: 4px solid #8b5cf6; }
+        .research-stat { font-size: 2.5rem; font-weight: bold; color: #8b5cf6; margin-bottom: 0.5rem; }
+
+        @media (max-width: 768px) {
+            .brain-systems, .assessment-tests, .applications-grid, .research-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

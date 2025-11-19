@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>My Courses | Mental Health Education Platform</title>
+  <meta content="View all your enrolled courses and track progress" name="description">
+
+  <!-- Favicons -->
+  <link href="../images/wellness-site-icon.jpg" rel="icon">
+  <link href="../images/wellness-site-icon.jpg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Custom Branding -->
+  <style>
+    :root {
+      --rps-navy: #1e3a5f;
+      --rps-blue: #4a90e2;
+      --rps-light-blue: #e3f2fd;
+    }
+    .sidebar {
+      background: var(--rps-navy);
+    }
+    .btn-primary {
+      background: var(--rps-blue);
+      border-color: var(--rps-blue);
+    }
+    .btn-primary:hover {
+      background: #3a7bc8;
+      border-color: #3a7bc8);
+    }
+    .progress-bar {
+      background-color: var(--rps-blue);
+    }
+    .course-card {
+      transition: transform 0.2s;
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .course-image {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .badge-enrolled {
+      background-color: var(--rps-blue);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="dashboard.html" class="logo d-flex align-items-center">
+        <img src="../SoloFrameHub-logo.png" alt="Logo" style="max-height: 40px;">
+        <span class="d-none d-lg-block ms-2">Student Portal</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2" id="user-name">Loading...</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6 id="user-name-header">Loading...</h6>
+              <span id="user-email">Loading...</span>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#" onclick="signOut(); return false;">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="dashboard.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="my-courses.html">
+          <i class="bi bi-book"></i>
+          <span>My Courses</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="certificates.html">
+          <i class="bi bi-award"></i>
+          <span>Certificates</span>
+        </a>
+      </li>
+      <li class="nav-heading">External Links</li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="../community.html" target="_blank">
+          <i class="bi bi-people"></i>
+          <span>Community Forum</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="../courses.html">
+          <i class="bi bi-shop"></i>
+          <span>Browse All Courses</span>
+        </a>
+      </li>
+      <li class="nav-heading">Settings</li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="profile.html">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li>
+    </ul>
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>My Courses</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+          <li class="breadcrumb-item active">My Courses</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+
+      <!-- Filter Tabs -->
+      <ul class="nav nav-tabs nav-tabs-bordered mb-4" id="courseTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="enrolled-tab" data-bs-toggle="tab" data-bs-target="#enrolled" type="button" role="tab">
+            <i class="bi bi-check-circle"></i> Enrolled Courses
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">
+            <i class="bi bi-book"></i> All Available Courses
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content pt-2" id="courseTabContent">
+
+        <!-- Enrolled Courses Tab -->
+        <div class="tab-pane fade show active" id="enrolled" role="tabpanel">
+          <div class="row" id="enrolled-courses">
+            <div class="col-12 text-center py-5">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <p class="mt-3">Loading your courses...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- All Courses Tab -->
+        <div class="tab-pane fade" id="all" role="tabpanel">
+          <div class="row" id="all-courses">
+            <div class="col-12 text-center py-5">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <p class="mt-3">Loading courses...</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; 2025 <strong><span>Mental Health Education Platform</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Built with <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Supabase JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+    const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+    const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+
+    let supabaseClient = null;
+
+    if (SUPABASE_URL !== 'YOUR_SUPABASE_URL' && SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_ANON_KEY') {
+      supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    }
+
+    // All courses data
+    const allCoursesData = [
+      { id: 1, title: 'Movement Medicine: Exercise for Mental Health', slug: 'course-1-movement-medicine', description: 'Discover the profound connection between physical activity and mental wellness.', price: 29.95, total_lessons: 20, category: 'Physical Wellness' },
+      { id: 2, title: 'Workplace Mental Health & Professional Development', slug: 'course-2-workplace-mental-health', description: 'Navigate workplace challenges while maintaining mental wellness.', price: 29.95, total_lessons: 20, category: 'Professional Development' },
+      { id: 3, title: 'Digital Wellness & Technology Balance', slug: 'course-3-digital-wellness', description: 'Master your relationship with technology for better mental health.', price: 29.95, total_lessons: 20, category: 'Digital Wellness' },
+      { id: 4, title: 'Growth Mindset for Lasting Change', slug: 'course-4-growth-mindset', description: 'Develop resilience and embrace challenges as opportunities.', price: 29.95, total_lessons: 20, category: 'Personal Growth' },
+      { id: 5, title: 'CBT Fundamentals', slug: 'course-5-cbt-fundamentals', description: 'Learn practical cognitive behavioral therapy techniques.', price: 29.95, total_lessons: 20, category: 'Mental Health' },
+      { id: 6, title: 'Stress Challenge Navigation', slug: 'course-6-stress-challenge-navigation', description: 'Build effective strategies for managing stress and adversity.', price: 29.95, total_lessons: 20, category: 'Stress Management' },
+      { id: 7, title: 'Boundaries Bootcamp', slug: 'course-7-boundaries-bootcamp', description: 'Set and maintain healthy boundaries in all areas of life.', price: 29.95, total_lessons: 20, category: 'Relationships' },
+      { id: 8, title: 'Social Circle Mastery', slug: 'course-8-social-circle-mastery', description: 'Build meaningful connections and a supportive social network.', price: 29.95, total_lessons: 20, category: 'Relationships' },
+      { id: 9, title: 'Team Sports & Mental Health', slug: 'course-9-team-sports-mental-health', description: 'Explore the mental health benefits of team sports.', price: 29.95, total_lessons: 20, category: 'Physical Wellness' },
+      { id: 10, title: 'Relationship Dynamics', slug: 'course-10-relationship-dynamics', description: 'Understand and improve your intimate relationships.', price: 29.95, total_lessons: 20, category: 'Relationships' },
+      { id: 11, title: 'Family Parenting & Mental Health', slug: 'course-11-family-parenting-mental-health', description: 'Support family mental health through mindful parenting.', price: 29.95, total_lessons: 20, category: 'Family' },
+      { id: 12, title: 'Purpose and Responsibility', slug: 'course-12-purpose-and-responsibility', description: 'Discover meaning and take ownership of your life.', price: 29.95, total_lessons: 20, category: 'Personal Growth' },
+      { id: 13, title: 'Mental Health First Aid', slug: 'course-13-mental-health-first-aid', description: 'Learn to recognize and respond to mental health crises.', price: 29.95, total_lessons: 20, category: 'Mental Health' },
+      { id: 14, title: 'Coaching & Mentoring', slug: 'course-14-coaching-mentoring', description: 'Develop skills to guide and support others effectively.', price: 29.95, total_lessons: 20, category: 'Professional Development' },
+      { id: 15, title: 'Legacy Building', slug: 'course-15-legacy-building', description: 'Create lasting impact and define your personal legacy.', price: 29.95, total_lessons: 20, category: 'Personal Growth' },
+      { id: 16, title: 'Recreational Therapy', slug: 'course-16-recreational-therapy', description: 'Use recreation and leisure for mental wellness.', price: 29.95, total_lessons: 20, category: 'Mental Health' },
+      { id: 17, title: 'Creative Expression', slug: 'course-17-creative-expression', description: 'Unlock mental wellness through creative outlets.', price: 29.95, total_lessons: 20, category: 'Creative Wellness' },
+      { id: 18, title: 'Adventure & Outdoor Mental Health', slug: 'course-18-adventure-outdoor-mental-health', description: 'Harness nature and adventure for psychological well-being.', price: 29.95, total_lessons: 20, category: 'Physical Wellness' },
+      { id: 19, title: 'Music, Movement & Wellness', slug: 'course-19-music-movement-wellness', description: 'Integrate music and movement for holistic health.', price: 29.95, total_lessons: 20, category: 'Creative Wellness' }
+    ];
+
+    async function loadMyCourses() {
+      try {
+        if (supabaseClient) {
+          await loadCoursesWithSupabase();
+        } else {
+          loadCoursesDemo();
+        }
+      } catch (error) {
+        console.error('Error loading courses:', error);
+        loadCoursesDemo();
+      }
+    }
+
+    async function loadCoursesWithSupabase() {
+      const { data: { user }, error: userError } = await supabaseClient.auth.getUser();
+
+      if (userError || !user) {
+        loadCoursesDemo();
+        return;
+      }
+
+      const userName = user.user_metadata?.full_name || user.email?.split('@')[0] || 'Student';
+      document.getElementById('user-name').textContent = userName;
+      document.getElementById('user-name-header').textContent = userName;
+      document.getElementById('user-email').textContent = user.email;
+
+      // Get enrolled courses
+      const { data: enrollments, error: enrollError } = await supabaseClient
+        .from('course_enrollments')
+        .select('course_id, enrolled_at')
+        .eq('user_id', user.id);
+
+      if (enrollError) {
+        console.error('Error fetching enrollments:', enrollError);
+      }
+
+      const enrolledIds = enrollments ? enrollments.map(e => e.course_id) : [];
+
+      // Get progress
+      const { data: progress, error: progressError } = await supabaseClient
+        .from('lesson_progress')
+        .select('course_id, lesson_number')
+        .eq('user_id', user.id);
+
+      if (progressError) {
+        console.error('Error fetching progress:', progressError);
+      }
+
+      renderCourses(enrolledIds, progress || []);
+    }
+
+    function loadCoursesDemo() {
+      document.getElementById('user-name').textContent = 'Demo Student';
+      document.getElementById('user-name-header').textContent = 'Demo Student';
+      document.getElementById('user-email').textContent = 'demo@example.com';
+
+      const enrolledIds = [1, 2, 3];
+      const demoProgress = [
+        { course_id: 1, lesson_number: 1 },
+        { course_id: 1, lesson_number: 2 },
+        { course_id: 1, lesson_number: 3 },
+        { course_id: 2, lesson_number: 1 },
+        { course_id: 3, lesson_number: 1 }
+      ];
+
+      renderCourses(enrolledIds, demoProgress);
+    }
+
+    function renderCourses(enrolledIds, progress) {
+      const courseProgress = {};
+      progress.forEach(p => {
+        if (!courseProgress[p.course_id]) {
+          courseProgress[p.course_id] = [];
+        }
+        courseProgress[p.course_id].push(p.lesson_number);
+      });
+
+      // Render enrolled courses
+      const enrolledCourses = allCoursesData.filter(c => enrolledIds.includes(c.id));
+      let enrolledHTML = '';
+
+      if (enrolledCourses.length === 0) {
+        enrolledHTML = `
+          <div class="col-12">
+            <div class="alert alert-info">
+              <h5><i class="bi bi-info-circle"></i> No enrolled courses yet</h5>
+              <p>Browse all available courses to get started with your learning journey!</p>
+            </div>
+          </div>
+        `;
+      } else {
+        enrolledCourses.forEach(course => {
+          const completed = courseProgress[course.id]?.length || 0;
+          const percent = Math.round((completed / course.total_lessons) * 100);
+
+          enrolledHTML += `
+            <div class="col-lg-6 col-xl-4">
+              <div class="card course-card h-100">
+                <div class="card-body">
+                  <span class="badge badge-enrolled mb-2">Enrolled</span>
+                  <h5 class="card-title">${course.title}</h5>
+                  <p class="card-text text-muted small">${course.description}</p>
+
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                      <small>Progress</small>
+                      <small>${completed}/${course.total_lessons} lessons</small>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                      <div class="progress-bar" role="progressbar" style="width: ${percent}%"
+                           aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="d-grid gap-2">
+                    <a href="../${course.slug}/" class="btn btn-primary btn-sm">
+                      <i class="bi bi-play-circle"></i> ${completed > 0 ? 'Continue' : 'Start'} Learning
+                    </a>
+                    <a href="course-progress.html?id=${course.id}" class="btn btn-outline-secondary btn-sm">
+                      <i class="bi bi-bar-chart"></i> View Details
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      document.getElementById('enrolled-courses').innerHTML = enrolledHTML;
+
+      // Render all courses
+      let allHTML = '';
+      allCoursesData.forEach(course => {
+        const isEnrolled = enrolledIds.includes(course.id);
+        const completed = courseProgress[course.id]?.length || 0;
+        const percent = isEnrolled ? Math.round((completed / course.total_lessons) * 100) : 0;
+
+        allHTML += `
+          <div class="col-lg-6 col-xl-4">
+            <div class="card course-card h-100">
+              <div class="card-body">
+                ${isEnrolled ? '<span class="badge badge-enrolled mb-2">Enrolled</span>' : ''}
+                <span class="badge bg-secondary mb-2">${course.category}</span>
+                <h5 class="card-title">${course.title}</h5>
+                <p class="card-text text-muted small">${course.description}</p>
+
+                <div class="mb-3">
+                  <small class="text-muted"><i class="bi bi-book"></i> ${course.total_lessons} lessons</small>
+                  ${isEnrolled ? `
+                    <div class="mt-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <small>Progress</small>
+                        <small>${completed}/${course.total_lessons}</small>
+                      </div>
+                      <div class="progress" style="height: 8px;">
+                        <div class="progress-bar" role="progressbar" style="width: ${percent}%"
+                             aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  ` : `
+                    <div class="mt-2">
+                      <h4 class="text-primary">$${course.price.toFixed(2)}</h4>
+                    </div>
+                  `}
+                </div>
+
+                <div class="d-grid gap-2">
+                  ${isEnrolled ? `
+                    <a href="../${course.slug}/" class="btn btn-primary btn-sm">
+                      <i class="bi bi-play-circle"></i> Continue Learning
+                    </a>
+                  ` : `
+                    <a href="../courses.html#${course.slug}" class="btn btn-primary btn-sm">
+                      <i class="bi bi-cart"></i> Enroll Now
+                    </a>
+                  `}
+                  <a href="../${course.slug}/" class="btn btn-outline-secondary btn-sm">
+                    <i class="bi bi-info-circle"></i> Learn More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      document.getElementById('all-courses').innerHTML = allHTML;
+    }
+
+    async function signOut() {
+      if (supabaseClient) {
+        await supabaseClient.auth.signOut();
+      }
+      window.location.href = '../index.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', loadMyCourses);
+  </script>
+
+</body>
+
+</html>

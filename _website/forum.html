@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Community Forum - Mental Health Education Platform</title>
+    <meta name="description" content="Join our vibrant community forum. Connect with peers, share experiences, ask questions, and support each other on your wellness journey.">
+    <meta name="keywords" content="mental health forum, wellness community, support group, peer support, mental health discussion">
+
+    <!-- Favicons -->
+    <link href="images/wellness-site-icon.jpg" rel="icon">
+    <link href="images/wellness-site-icon.jpg" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #6c757d;
+            --accent-color: #20c997;
+            --dark-color: #2c3e50;
+            --light-color: #f4f6f9;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--dark-color);
+            background: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Header */
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-toggler {
+            border-color: var(--primary-color);
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 0.25rem rgba(74, 111, 165, 0.25);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2874, 111, 165, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: var(--dark-color);
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .btn-getstarted {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-getstarted:hover {
+            background: #0b5ed7;
+            transform: translateY(-2px);
+            color: #fff;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #4a6fa5 0%, #5a7fb8 100%);
+            color: #fff;
+            padding: 4rem 0 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            pointer-events: none;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Forum Features */
+        .forum-features {
+            padding: 4rem 0;
+            background: var(--light-color);
+        }
+
+        .feature-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .feature-card p {
+            color: var(--secondary-color);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* Forum Categories Preview */
+        .forum-categories {
+            padding: 4rem 0;
+        }
+
+        .category-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .category-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+        }
+
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .category-content {
+            flex-grow: 1;
+        }
+
+        .category-content h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .category-content p {
+            margin-bottom: 0;
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+        }
+
+        .category-stats {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item .number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .stat-item .label {
+            font-size: 0.75rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* CTA Section */
+        .forum-cta {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            padding: 4rem 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .forum-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .forum-cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .btn-forum-enter {
+            background: #fff;
+            color: var(--primary-color);
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-forum-enter:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            color: var(--primary-color);
+        }
+
+        .btn-forum-enter i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .btn-forum-enter:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Community Guidelines */
+        .guidelines {
+            padding: 4rem 0;
+            background: var(--light-color);
+        }
+
+        .guideline-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+        }
+
+        .guideline-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .guideline-content h5 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .guideline-content p {
+            margin-bottom: 0;
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: #fff;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: #fff;
+            margin-right: 0.5rem;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                margin-top: 1rem;
+            }
+
+            .btn-getstarted {
+                margin-top: 1rem;
+                margin-left: 0 !important;
+                width: 100%;
+                text-align: center;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .category-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .category-stats {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a href="index.html" class="navbar-brand">
+                    <img src="rps-logo.png" alt="Real Psychiatric Services" style="height: 40px; margin-right: 10px;">
+                    <img src="SoloFrameHub-logo.png" alt="SoloFrameHub" style="height: 40px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courses.html" class="nav-link">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="instructors.html" class="nav-link">Instructors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="community.html" class="nav-link">Community</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link active">Forum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="5-pillars-evidence.html" class="nav-link">5 Pillars</a>
+                        </li>
+                    </ul>
+                    <a class="btn-getstarted ms-3" href="courses.html">Browse Courses</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container text-center">
+                <h1><i class="bi bi-chat-dots me-3"></i>Community Forum</h1>
+                <p class="lead">Connect, share, and grow together. Join thousands of members on their wellness journey.</p>
+            </div>
+        </section>
+
+        <!-- Forum Features -->
+        <section class="forum-features">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2>Why Join Our Community?</h2>
+                    <p class="text-muted">Experience the power of peer support and shared wisdom</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <h3>Supportive Community</h3>
+                            <p>Connect with peers who understand your journey and share similar experiences.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h3>Safe Space</h3>
+                            <p>Moderated environment ensuring respectful, supportive, and constructive discussions.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-lightbulb-fill"></i>
+                            </div>
+                            <h3>Expert Insights</h3>
+                            <p>Get guidance from mental health professionals and experienced community members.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <h3>24/7 Access</h3>
+                            <p>Share and seek support anytime, with an active community around the clock.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forum Categories -->
+        <section class="forum-categories">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2>Popular Discussion Topics</h2>
+                    <p class="text-muted">Explore conversations across diverse wellness topics</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="bi bi-heart-pulse"></i>
+                            </div>
+                            <div class="category-content">
+                                <h4>Mental Health & Wellness</h4>
+                                <p>Share experiences, strategies, and support for managing mental health challenges.</p>
+                            </div>
+                            <div class="category-stats">
+                                <div class="stat-item">
+                                    <span class="number">2.5k</span>
+                                    <span class="label">Topics</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="number">18k</span>
+                                    <span class="label">Posts</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="category-card" style="border-left-color: #70ad47;">
+                            <div class="category-icon" style="color: #70ad47;">
+                                <i class="bi bi-trophy"></i>
+                            </div>
+                            <div class="category-content">
+                                <h4>Success Stories</h4>
+                                <p>Celebrate victories, share breakthroughs, and inspire others on their journey.</p>
+                            </div>
+                            <div class="category-stats">
+                                <div class="stat-item">
+                                    <span class="number" style="color: #70ad47;">1.2k</span>
+                                    <span class="label">Stories</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="number" style="color: #70ad47;">8.5k</span>
+                                    <span class="label">Replies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="category-card" style="border-left-color: #9966cc;">
+                            <div class="category-icon" style="color: #9966cc;">
+                                <i class="bi bi-book"></i>
+                            </div>
+                            <div class="category-content">
+                                <h4>Course Discussions</h4>
+                                <p>Discuss course content, ask questions, and deepen your learning experience.</p>
+                            </div>
+                            <div class="category-stats">
+                                <div class="stat-item">
+                                    <span class="number" style="color: #9966cc;">980</span>
+                                    <span class="label">Topics</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="number" style="color: #9966cc;">5.2k</span>
+                                    <span class="label">Posts</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="category-card" style="border-left-color: #20c997;">
+                            <div class="category-icon" style="color: #20c997;">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <div class="category-content">
+                                <h4>Questions & Support</h4>
+                                <p>Get answers, guidance, and encouragement from the community.</p>
+                            </div>
+                            <div class="category-stats">
+                                <div class="stat-item">
+                                    <span class="number" style="color: #20c997;">3.1k</span>
+                                    <span class="label">Questions</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="number" style="color: #20c997;">12k</span>
+                                    <span class="label">Answers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="category-card" style="border-left-color: #ff9f40;">
+                            <div class="category-icon" style="color: #ff9f40;">
+                                <i class="bi bi-palette"></i>
+                            </div>
+                            <div class="category-content">
+                                <h4>Creative Expression</h4>
+                                <p>Share art, writing, music, and other creative wellness practices.</p>
+                            </div>
+                            <div class="category-stats">
+                                <div class="stat-item">
+                                    <span class="number" style="color: #ff9f40;">650</span>
+                                    <span class="label">Works</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="number" style="color: #ff9f40;">3.8k</span>
+                                    <span class="label">Comments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="category-card" style="border-left-color: #4a90a4;">
+                            <div class="category-icon" style="color: #4a90a4;">
+                                <i class="bi bi-chat-square-text"></i>
+                            </div>
+                            <div class="category-content">
+                                <h4>General Discussion</h4>
+                                <p>Off-topic conversations, introductions, and community connections.</p>
+                            </div>
+                            <div class="category-stats">
+                                <div class="stat-item">
+                                    <span class="number" style="color: #4a90a4;">1.8k</span>
+                                    <span class="label">Topics</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="number" style="color: #4a90a4;">9.2k</span>
+                                    <span class="label">Posts</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Guidelines -->
+        <section class="guidelines">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2>Community Guidelines</h2>
+                    <p class="text-muted">Creating a safe, supportive space for everyone</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="guideline-item">
+                            <div class="guideline-icon">
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <div class="guideline-content">
+                                <h5>Be Respectful & Supportive</h5>
+                                <p>Treat all members with kindness, empathy, and respect. Everyone's journey is unique and valid.</p>
+                            </div>
+                        </div>
+
+                        <div class="guideline-item">
+                            <div class="guideline-icon">
+                                <i class="bi bi-lock"></i>
+                            </div>
+                            <div class="guideline-content">
+                                <h5>Maintain Privacy</h5>
+                                <p>Respect confidentiality. Don't share others' personal information or experiences outside the forum.</p>
+                            </div>
+                        </div>
+
+                        <div class="guideline-item">
+                            <div class="guideline-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <div class="guideline-content">
+                                <h5>Stay Safe</h5>
+                                <p>If you're in crisis, please contact emergency services. The forum is for peer support, not crisis intervention.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="guideline-item">
+                            <div class="guideline-icon">
+                                <i class="bi bi-chat-left-quote"></i>
+                            </div>
+                            <div class="guideline-content">
+                                <h5>Share Constructively</h5>
+                                <p>Offer support based on personal experience. Avoid giving medical advice or diagnosing others.</p>
+                            </div>
+                        </div>
+
+                        <div class="guideline-item">
+                            <div class="guideline-icon">
+                                <i class="bi bi-flag"></i>
+                            </div>
+                            <div class="guideline-content">
+                                <h5>Report Concerns</h5>
+                                <p>Use the report feature if you see content that violates guidelines. Our moderators review all reports promptly.</p>
+                            </div>
+                        </div>
+
+                        <div class="guideline-item">
+                            <div class="guideline-icon">
+                                <i class="bi bi-emoji-smile"></i>
+                            </div>
+                            <div class="guideline-content">
+                                <h5>Stay Positive</h5>
+                                <p>Focus on constructive, supportive discussions. Avoid negativity, judgment, or harmful content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="forum-cta">
+            <div class="container">
+                <h2>Ready to Join the Conversation?</h2>
+                <p>Create your free account and start connecting with our supportive community today.</p>
+                <a href="https://forum.realpsychiatricservices.com" class="btn-forum-enter" target="_blank">
+                    Enter Forum<i class="bi bi-arrow-right"></i>
+                </a>
+                <div class="mt-4">
+                    <small style="opacity: 0.9;">Already have an account? <a href="https://forum.realpsychiatricservices.com/login" style="color: #fff; text-decoration: underline;" target="_blank">Sign in here</a></small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4>Mental Health Education Platform</h4>
+                    <p style="color: rgba(255,255,255,0.7);">Evidence-based mental health and wellness education designed by board-certified psychiatric professionals.</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4>Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="instructors.html">Instructors</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="5-pillars-evidence.html">5 Pillars</a></li>
+                        <li><a href="#">Crisis Resources</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="https://realpsychiatricservices.com">RPS Home</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="https://realpsychiatricservices.com/appointments">Book Appointment</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Real Psychiatric Services. All rights reserved. A partnership with SoloFrameHub.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

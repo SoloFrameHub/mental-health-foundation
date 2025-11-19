@@ -1,0 +1,207 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Cta Section
+--------------------------------------------------------------*/
+.cta {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/bg/abstract-bg-3.webp') center/cover;
+    opacity: 0.03;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-content {
+    padding-right: 30px;
+
+    @media (max-width: 991px) {
+      padding-right: 0;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      line-height: 1.2;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      line-height: 1.6;
+    }
+  }
+
+  .features-list {
+    margin-bottom: 32px;
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+
+      i {
+        font-size: 1.2rem;
+        color: var(--accent-color);
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+
+      span {
+        font-weight: 500;
+        color: var(--default-color);
+      }
+    }
+  }
+
+  .cta-actions {
+    margin-bottom: 40px;
+
+    .btn {
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-right: 16px;
+      margin-bottom: 12px;
+      transition: all 0.3s ease;
+
+      &.btn-primary {
+        background: var(--accent-color);
+        border: 2px solid var(--accent-color);
+        color: var(--contrast-color);
+
+        &:hover {
+          background: color-mix(in srgb, var(--accent-color), black 10%);
+          border-color: color-mix(in srgb, var(--accent-color), black 10%);
+          transform: translateY(-2px);
+        }
+      }
+
+      &.btn-outline {
+        background: transparent;
+        border: 2px solid var(--accent-color);
+        color: var(--accent-color);
+
+        &:hover {
+          background: var(--accent-color);
+          color: var(--contrast-color);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 40px;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .stat-item {
+      h3 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: var(--accent-color);
+        margin-bottom: 8px;
+        line-height: 1;
+      }
+
+      p {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--heading-color);
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  .cta-image {
+    position: relative;
+
+    img {
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    .floating-element {
+      position: absolute;
+      background: var(--surface-color);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+
+      &.student-card {
+        top: 20px;
+        right: -20px;
+
+        @media (max-width: 576px) {
+          right: 10px;
+          padding: 15px;
+        }
+      }
+
+      &.course-card {
+        bottom: 30px;
+        left: -20px;
+
+        @media (max-width: 576px) {
+          left: 10px;
+          padding: 15px;
+        }
+      }
+
+      .card-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        i {
+          font-size: 2rem;
+          color: var(--accent-color);
+        }
+
+        .text {
+          .number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            line-height: 1;
+          }
+
+          .label {
+            font-size: 0.8rem;
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

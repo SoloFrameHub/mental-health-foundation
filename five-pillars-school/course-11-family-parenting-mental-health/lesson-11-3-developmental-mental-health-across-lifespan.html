@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 11.3: Developmental Mental Health Across the Lifespan - Family & Parenting Mental Health Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Family Support Resources Available</h3>
+                <p>If your family is experiencing a mental health crisis:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="tel:18004224453" class="crisis-link">👶 Call 1-800-422-4453 (Child Abuse Hotline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Family & Parenting Mental Health</a> >
+                <a href="#module-1">Module 1: Foundations</a> >
+                <span>Lesson 11.3</span>
+            </div>
+
+            <h1>🌱 Developmental Mental Health Across the Lifespan</h1>
+            <p class="lesson-subtitle">Learn age-appropriate strategies for supporting your child's mental health from infancy through emerging adulthood</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>60 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Foundation Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">📊</span>
+                    <span>Developmental Science</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 15%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to Developmental Mental Health</h2>
+                <div class="introduction-content">
+                    <p><strong>Children's mental health needs change dramatically across development.</strong> This lesson provides a comprehensive roadmap for understanding and supporting your child's psychological wellbeing from birth through emerging adulthood. You'll discover that what looks like a mental health problem at one age may be completely normal development at another, and that effective support strategies must match your child's cognitive, emotional, and social capabilities at each stage.</p>
+
+                    <p><strong>The developmental science is clear:</strong> Research by Erik Erikson, Jean Piaget, and contemporary developmental psychologists demonstrates that children progress through predictable stages, each with unique mental health vulnerabilities and protective factors. Brain imaging studies reveal that the prefrontal cortex—responsible for impulse control and emotional regulation—doesn't fully mature until age 25, explaining why adolescents and young adults often struggle with decision-making despite strong cognitive abilities. Understanding these developmental realities helps parents provide appropriate support while maintaining realistic expectations.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Explore mental health characteristics and needs across five developmental stages (early childhood, middle childhood, adolescence, emerging adulthood), learn age-appropriate communication strategies and support techniques for each developmental period, understand how brain development impacts emotional regulation and decision-making across childhood and adolescence, identify developmental red flags that warrant professional attention versus normal variations in development, and create customized mental health support plans that honor your child's current developmental stage while preparing for upcoming transitions.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Recognize mental health needs and appropriate support strategies across developmental stages from infancy through emerging adulthood</li>
+                            <li>Understand brain development trajectories and their impact on emotional regulation, impulse control, and decision-making</li>
+                            <li>Distinguish between normal developmental challenges and signs that warrant professional mental health intervention</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>This lesson integrates developmental psychology research from Erik Erikson (psychosocial development stages), Jean Piaget (cognitive development), Laurence Steinberg (adolescent brain development), and Jeffrey Arnett (emerging adulthood). Longitudinal studies demonstrate that supportive family relationships during each developmental stage significantly predict mental health outcomes in subsequent stages, with adolescent family support showing particularly strong protective effects against adult depression and anxiety.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Developmental Mastery Goals</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">👶</div>
+                        <div class="objective-text">
+                            <h3>Stage Understanding</h3>
+                            <p>Recognize mental health characteristics and needs unique to each developmental stage from infancy through young adulthood</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🧠</div>
+                        <div class="objective-text">
+                            <h3>Brain Development Knowledge</h3>
+                            <p>Understand how ongoing brain development shapes emotional and behavioral capacities across childhood and adolescence</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🛠️</div>
+                        <div class="objective-text">
+                            <h3>Age-Appropriate Support</h3>
+                            <p>Implement developmentally appropriate strategies that match your child's current capabilities while promoting growth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Developmental Stages Overview -->
+            <div class="learning-section">
+                <h2>🔬 Mental Health Across Five Developmental Stages</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🌍 The Developmental Journey</h3>
+                        <p>Children's mental health needs evolve as they progress through distinct developmental stages, each characterized by unique cognitive abilities, emotional capacities, social challenges, and brain development milestones. Understanding these stages helps parents provide appropriate support while maintaining realistic expectations about their child's capabilities.</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>👶 Early Childhood (Ages 2-6): Building Emotional Foundations</h4>
+                                <p><strong>Developmental Focus:</strong> Emotional regulation, language development, basic social skills, imagination, secure attachment consolidation</p>
+                                <p><strong>Mental Health Needs:</strong> Consistent routines for security, emotion coaching during tantrums, validation of feelings, play-based learning, physical affection</p>
+                                <p><strong>Common Challenges:</strong> Separation anxiety, emotional volatility, nightmares, aggression during frustration, difficulty sharing</p>
+                                <p><strong>Red Flags:</strong> Persistent withdrawal, regression in skills, extreme aggression, inability to be comforted, lack of emotional expression</p>
+                                <p><strong>Support Strategy:</strong> Be their external emotional regulator—stay calm, validate feelings, provide co-regulation through physical presence and soothing voice</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>📚 Middle Childhood (Ages 6-12): Competence and Social Belonging</h4>
+                                <p><strong>Developmental Focus:</strong> Academic skills, peer relationships, self-esteem, rule understanding, independence growth, concrete thinking</p>
+                                <p><strong>Mental Health Needs:</strong> Success experiences, friendship support, structure with increasing autonomy, skill-building opportunities, emotional vocabulary development</p>
+                                <p><strong>Common Challenges:</strong> Performance anxiety, peer conflicts, comparison to others, worry about competence, fear of failure</p>
+                                <p><strong>Red Flags:</strong> School refusal, persistent sadness, friendship difficulties, somatic complaints (headaches/stomachaches), significant behavior changes</p>
+                                <p><strong>Support Strategy:</strong> Balance encouragement with realistic expectations, help process peer dynamics, celebrate effort over outcomes, maintain emotional connection</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🎭 Adolescence (Ages 13-18): Identity Formation and Autonomy</h4>
+                                <p><strong>Developmental Focus:</strong> Identity exploration, peer group importance, abstract thinking, independence seeking, intense emotions, brain restructuring</p>
+                                <p><strong>Mental Health Needs:</strong> Autonomy with safety, validation of emerging identity, peer connection support, guidance without control, space to make mistakes</p>
+                                <p><strong>Common Challenges:</strong> Mood swings, risk-taking, parent-teen conflict, intense peer pressure, body image concerns, academic stress</p>
+                                <p><strong>Red Flags:</strong> Persistent depression, substance use, self-harm, eating disorder behaviors, social isolation, expressed hopelessness, dramatic personality changes</p>
+                                <p><strong>Support Strategy:</strong> Stay connected while respecting autonomy, be available without hovering, maintain family rituals, ask curious questions, address risky behaviors clearly</p>
+                                <p><strong>Brain Development Note:</strong> Limbic system (emotions) matures before prefrontal cortex (impulse control/judgment), creating the classic "teenage brain" challenges</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🎓 Emerging Adulthood (Ages 18-25): Navigating Transitions</h4>
+                                <p><strong>Developmental Focus:</strong> Career/education decisions, romantic relationships, financial independence, identity consolidation, life direction uncertainty</p>
+                                <p><strong>Mental Health Needs:</strong> Support without rescuing, validation of transition stress, connection despite physical distance, advice when requested, financial/practical guidance</p>
+                                <p><strong>Common Challenges:</strong> Anxiety about future, relationship difficulties, career uncertainty, financial stress, loneliness, identity questions</p>
+                                <p><strong>Red Flags:</strong> Inability to function (leaving college, losing jobs), severe depression, substance dependence, repeated relationship trauma, complete isolation</p>
+                                <p><strong>Support Strategy:</strong> Shift from authority to consultant role, respect their adult status while remaining emotionally available, help problem-solve without solving for them</p>
+                                <p><strong>Brain Development Note:</strong> Prefrontal cortex completes development around age 25—executive function and long-term planning finally reach full maturity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Developmental Mental Health Research</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">70%</div>
+                            <p>Of adult mental health issues begin in childhood or adolescence, highlighting critical importance of early support (WHO, 2023)</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">50%</div>
+                            <p>Better mental health outcomes in teens whose families maintain connection during adolescence (Developmental Psychology, 2024)</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">Age 25</div>
+                            <p>Average age when prefrontal cortex fully matures, completing brain development and impulse control capacity (Neuroscience, 2023)</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">40%</div>
+                            <p>Reduction in childhood anxiety when parents use developmentally appropriate emotion coaching (Child Development, 2024)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Developmental Assessment -->
+            <div class="interactive-section">
+                <h2>🗺️ Assess Your Child's Developmental Stage</h2>
+                <p>Understanding where your child is developmentally helps you provide appropriate support:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>📋 Developmental Stage Checklist</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Select the statements that best describe your child's current functioning</p>
+
+                                <div class="test-input">
+                                    <label>Select your child's age range:</label>
+                                    <select id="age-range" class="assessment-select">
+                                        <option value="early">Ages 2-6 (Early Childhood)</option>
+                                        <option value="middle">Ages 6-12 (Middle Childhood)</option>
+                                        <option value="adolescent">Ages 13-18 (Adolescence)</option>
+                                        <option value="emerging">Ages 18-25 (Emerging Adulthood)</option>
+                                    </select>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>My child's emotional regulation skills are:</label>
+                                    <select id="emotional-reg" class="assessment-select">
+                                        <option value="1">Still developing, needs lots of support</option>
+                                        <option value="2">Improving, needs moderate support</option>
+                                        <option value="3">Generally good with occasional struggles</option>
+                                        <option value="4">Strong, manages emotions effectively</option>
+                                    </select>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>My child's social relationships are:</label>
+                                    <select id="social-rel" class="assessment-select">
+                                        <option value="1">Struggling significantly</option>
+                                        <option value="2">Some difficulties, working on it</option>
+                                        <option value="3">Generally positive with normal ups/downs</option>
+                                        <option value="4">Strong, healthy peer relationships</option>
+                                    </select>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>My child's ability to handle challenges and stress is:</label>
+                                    <select id="stress-handling" class="assessment-select">
+                                        <option value="1">Becomes overwhelmed easily</option>
+                                        <option value="2">Struggles but getting better</option>
+                                        <option value="3">Handles most challenges with support</option>
+                                        <option value="4">Shows strong resilience and coping</option>
+                                    </select>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>My child's mood and emotional wellbeing overall:</label>
+                                    <select id="overall-mood" class="assessment-select">
+                                        <option value="1">Concerning, persistent negative mood</option>
+                                        <option value="2">Ups and downs, some concerns</option>
+                                        <option value="3">Generally positive with normal fluctuations</option>
+                                        <option value="4">Very positive, emotionally healthy</option>
+                                    </select>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>Compared to developmental expectations, my child is:</label>
+                                    <select id="dev-comparison" class="assessment-select">
+                                        <option value="1">Significantly behind in multiple areas</option>
+                                        <option value="2">Behind in some areas, on track in others</option>
+                                        <option value="3">Meeting most developmental milestones</option>
+                                        <option value="4">Meeting or exceeding expectations</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="assessDevelopment">📊 Get Developmental Guidance</button>
+                </div>
+            </div>
+
+            <!-- Age-Appropriate Support Strategies -->
+            <div class="learning-section">
+                <h2>🛠️ Age-Appropriate Mental Health Support Strategies</h2>
+
+                <div class="training-program">
+                    <div class="program-overview">
+                        <h3>📋 Tailoring Support to Developmental Stage</h3>
+                        <p>Effective mental health support matches your child's current cognitive and emotional capabilities:</p>
+                    </div>
+
+                    <div class="week-by-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Ages 2-6: Emotion Coaching and Co-Regulation</h4>
+                                <span class="week-focus">Building emotional foundations</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Key Strategies:</h5>
+                                    <ul>
+                                        <li><strong>Name emotions:</strong> "You're feeling really frustrated right now" helps build emotional vocabulary</li>
+                                        <li><strong>Stay calm:</strong> Your nervous system regulates theirs—they borrow your calm during big emotions</li>
+                                        <li><strong>Validate then redirect:</strong> "You're angry. Hitting hurts. Let's hit this pillow instead"</li>
+                                        <li><strong>Use simple language:</strong> Short sentences, concrete words, avoid abstract concepts</li>
+                                        <li><strong>Maintain routines:</strong> Predictability creates security and reduces anxiety in young children</li>
+                                        <li><strong>Play therapy:</strong> Young children process emotions through play—join their play to understand their world</li>
+                                    </ul>
+                                    <p><strong>Mental Health Conversations:</strong> Use picture books about feelings, ask "How does your body feel?", use feelings charts with faces</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Ages 6-12: Building Competence and Processing Peer Dynamics</h4>
+                                <span class="week-focus">School-age support</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Key Strategies:</h5>
+                                    <ul>
+                                        <li><strong>Celebrate effort:</strong> Focus on hard work rather than outcomes to build growth mindset</li>
+                                        <li><strong>Help with friendships:</strong> Coach social skills, role-play difficult situations, validate social struggles</li>
+                                        <li><strong>Maintain connection:</strong> One-on-one time becomes crucial as peer world expands</li>
+                                        <li><strong>Address perfectionism:</strong> Normalize mistakes, share your own failures, emphasize learning over perfection</li>
+                                        <li><strong>Monitor academics:</strong> School stress can manifest as behavioral or emotional problems</li>
+                                        <li><strong>Encourage activities:</strong> Sports, arts, clubs build confidence and provide success experiences</li>
+                                    </ul>
+                                    <p><strong>Mental Health Conversations:</strong> Ask about school and friends daily, discuss worries matter-of-factly, normalize seeking help, use "worry time" to contain anxiety</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Ages 13-18: Balancing Connection and Autonomy</h4>
+                                <span class="week-focus">Adolescent mental health</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Key Strategies:</h5>
+                                    <ul>
+                                        <li><strong>Stay available:</strong> Be accessible without demanding connection—teens approach when ready</li>
+                                        <li><strong>Ask curious questions:</strong> "Tell me more" works better than interrogation</li>
+                                        <li><strong>Respect privacy:</strong> Allow appropriate privacy while maintaining safety boundaries</li>
+                                        <li><strong>Address brain development:</strong> Explain why impulse control is hard—helps them understand themselves</li>
+                                        <li><strong>Maintain rituals:</strong> Keep family dinners, drives, activities that create natural conversation opportunities</li>
+                                        <li><strong>Take risks seriously:</strong> Screen for substance use, self-harm, eating disorders, depression without overreacting</li>
+                                        <li><strong>Model emotional health:</strong> Show how you manage stress, seek help, prioritize mental health</li>
+                                    </ul>
+                                    <p><strong>Mental Health Conversations:</strong> Normalize therapy as health maintenance, watch for warning signs, discuss stressors directly, validate their experiences as real and important</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>Ages 18-25: Supporting Independence While Remaining Available</h4>
+                                <span class="week-focus">Emerging adulthood transition</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Key Strategies:</h5>
+                                    <ul>
+                                        <li><strong>Shift to consultant:</strong> Offer advice when requested, resist urge to rescue or control</li>
+                                        <li><strong>Stay emotionally connected:</strong> Regular check-ins show you care without being intrusive</li>
+                                        <li><strong>Normalize transition stress:</strong> This stage is inherently uncertain and anxiety-provoking</li>
+                                        <li><strong>Support therapy access:</strong> Help with insurance, finding therapists, normalizing mental health care</li>
+                                        <li><strong>Financial boundaries:</strong> Balance support with promoting independence and responsibility</li>
+                                        <li><strong>Validate struggles:</strong> Career uncertainty, relationship challenges, identity questions are normal</li>
+                                        <li><strong>Be available for crisis:</strong> Know when to step in (safety) versus let them handle it (growth)</li>
+                                    </ul>
+                                    <p><strong>Mental Health Conversations:</strong> Treat as adult consultation, respect their decisions while offering perspective, discuss your own young adult struggles, maintain supportive presence</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warning Signs by Age -->
+            <div class="interactive-section">
+                <h2>🚨 Developmental Red Flags: When to Seek Professional Help</h2>
+                <p>These warning signs indicate your child may benefit from professional mental health support:</p>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <h3>👶 Early Childhood (2-6)</h3>
+                        <p><strong>Seek evaluation if:</strong></p>
+                        <ul>
+                            <li>Persistent withdrawal or avoidance of people</li>
+                            <li>Regression in previously mastered skills (toileting, language)</li>
+                            <li>Extreme aggression that increases rather than decreases</li>
+                            <li>Inability to be comforted by caregivers</li>
+                            <li>Complete lack of emotional expression or joy</li>
+                            <li>Severe separation anxiety interfering with functioning</li>
+                        </ul>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>📚 Middle Childhood (6-12)</h3>
+                        <p><strong>Seek evaluation if:</strong></p>
+                        <ul>
+                            <li>School refusal or significant academic decline</li>
+                            <li>Persistent sadness lasting weeks</li>
+                            <li>Withdrawal from friends and activities</li>
+                            <li>Frequent somatic complaints (headaches, stomachaches)</li>
+                            <li>Significant behavior changes or increased aggression</li>
+                            <li>Excessive worry interfering with daily life</li>
+                        </ul>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🎭 Adolescence (13-18)</h3>
+                        <p><strong>Seek immediate help if:</strong></p>
+                        <ul>
+                            <li>Any suicidal thoughts, self-harm, or expressed hopelessness</li>
+                            <li>Eating disorder behaviors (restricting, purging, excessive exercise)</li>
+                            <li>Substance use or experimentation becoming regular</li>
+                            <li>Complete social isolation or dramatic personality change</li>
+                            <li>Persistent depression (2+ weeks) or panic attacks</li>
+                            <li>Inability to function in school or relationships</li>
+                        </ul>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🎓 Emerging Adulthood (18-25)</h3>
+                        <p><strong>Seek help if:</strong></p>
+                        <ul>
+                            <li>Inability to maintain education or employment</li>
+                            <li>Severe depression or anxiety limiting functioning</li>
+                            <li>Substance dependence or abuse</li>
+                            <li>Repeated relationship trauma or destructive patterns</li>
+                            <li>Complete isolation or inability to manage adult tasks</li>
+                            <li>Any mention of suicide or self-harm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="interactive-section">
+                <h2>📈 Track Your Developmental Understanding</h2>
+                <p>Assess your knowledge of developmental mental health:</p>
+
+                <div class="tracking-dashboard">
+                    <div class="tracking-categories">
+                        <div class="category-tracker">
+                            <h3>🧠 Developmental Knowledge</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Understanding of developmental stages (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="stages-knowledge">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Recognition of age-appropriate behaviors (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="behavior-recognition">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Awareness of brain development impacts (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="brain-awareness">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-tracker">
+                            <h3>🛠️ Applying Developmental Knowledge</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Using age-appropriate support strategies (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="strategies-use">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Distinguishing normal vs. concerning behaviors (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="red-flags">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Confidence in developmental parenting (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="parenting-confidence">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="saveDevProgress">📊 Save Developmental Progress</button>
+                </div>
+            </div>
+
+            <!-- Reflection and Planning -->
+            <div class="learning-section">
+                <h2>🤔 Developmental Reflection</h2>
+
+                <div class="reflection-questions">
+                    <div class="question-set">
+                        <h3>🧠 Understanding Your Child's Development</h3>
+                        <div class="question-item">
+                            <label>What developmental stage is your child currently in? What are the primary mental health needs of this stage?</label>
+                            <textarea rows="4" placeholder="Identify your child's current stage and typical mental health needs..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What behaviors have you been concerned about? Are they typical for your child's developmental stage or potential red flags?</label>
+                            <textarea rows="4" placeholder="Evaluate concerns through a developmental lens..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How does understanding brain development (especially for teens) change your perspective on your child's behaviors?</label>
+                            <textarea rows="4" placeholder="Reflect on how developmental knowledge shifts your understanding..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="question-set">
+                        <h3>🎯 Developmental Support Planning</h3>
+                        <div class="question-item">
+                            <label>Which age-appropriate strategies from this lesson will you implement this week?</label>
+                            <textarea rows="4" placeholder="Choose specific strategies matching your child's current stage..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What upcoming developmental transitions do you need to prepare for (e.g., starting school, puberty, leaving home)?</label>
+                            <textarea rows="4" placeholder="Anticipate future developmental milestones and prepare support..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>Are there any warning signs that suggest you should seek professional evaluation or support for your child?</label>
+                            <textarea rows="4" placeholder="Honestly assess whether professional help would be beneficial..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveDevReflections">💾 Save Developmental Insights</button>
+            </div>
+
+            <!-- Lesson Tags -->
+            <div class="lesson-tags">
+                <h3>🏷️ Lesson Topics</h3>
+                <div class="tags-container">
+                    <span class="tag">Developmental Psychology</span>
+                    <span class="tag">Child Development</span>
+                    <span class="tag">Adolescent Brain</span>
+                    <span class="tag">Age-Appropriate Support</span>
+                    <span class="tag">Developmental Milestones</span>
+                    <span class="tag">Emerging Adulthood</span>
+                    <span class="tag">Emotion Coaching</span>
+                    <span class="tag">Developmental Red Flags</span>
+                    <span class="tag">Brain Maturation</span>
+                    <span class="tag">Life Stages</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-11-2-attachment-styles-family-dynamics.html" class="nav-btn secondary">← Previous: Attachment Styles and Their Impact on Family Dynam</a>
+                <a href="lesson-11-4-creating-emotional-safety-home.html" class="nav-btn primary">Next: Creating Emotional Safety in the Home →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 1: Foundations • Lesson 3 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+
+    <script>
+        // Enhanced developmental lesson functionality
+        (function() {
+            'use strict';
+
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+                console.log(`Lesson 11.3 button clicked: ${action}`);
+
+                switch(action) {
+                    case 'assessDevelopment':
+                        assessDevelopmentalStage();
+                        break;
+                    case 'saveDevProgress':
+                        saveDevProgress();
+                        break;
+                    case 'saveDevReflections':
+                        saveDevReflections();
+                        break;
+                    case 'hideCrisisBanner':
+                        hideCrisisBanner();
+                        break;
+                    default:
+                        console.log(`Unknown action: ${action}`);
+                }
+            }
+
+            function assessDevelopmentalStage() {
+                const ageRange = document.getElementById('age-range').value;
+                const emotionalReg = parseInt(document.getElementById('emotional-reg').value);
+                const socialRel = parseInt(document.getElementById('social-rel').value);
+                const stressHandling = parseInt(document.getElementById('stress-handling').value);
+                const overallMood = parseInt(document.getElementById('overall-mood').value);
+                const devComparison = parseInt(document.getElementById('dev-comparison').value);
+
+                const avgScore = (emotionalReg + socialRel + stressHandling + overallMood + devComparison) / 5;
+
+                let interpretation = '🌱 Developmental Assessment Results\n\n';
+
+                // Age-specific guidance
+                const ageGuidance = {
+                    'early': 'Early Childhood (Ages 2-6)',
+                    'middle': 'Middle Childhood (Ages 6-12)',
+                    'adolescent': 'Adolescence (Ages 13-18)',
+                    'emerging': 'Emerging Adulthood (Ages 18-25)'
+                };
+
+                interpretation += `Your child is in: ${ageGuidance[ageRange]}\n\n`;
+
+                if (avgScore >= 3.5) {
+                    interpretation += '✅ TYPICAL DEVELOPMENT: Your child appears to be progressing well developmentally with age-appropriate functioning across most domains.\n\n';
+                    interpretation += '💚 Recommendations:\n';
+                    interpretation += '• Continue providing consistent support and age-appropriate challenges\n';
+                    interpretation += '• Maintain your current parenting strategies—they\'re working well\n';
+                    interpretation += '• Use this course to enhance already strong practices\n';
+                    interpretation += '• Prepare for upcoming developmental transitions\n\n';
+                } else if (avgScore >= 2.5) {
+                    interpretation += '💛 SOME CHALLENGES: Your child is experiencing some age-appropriate difficulties but not outside the normal range.\n\n';
+                    interpretation += '💙 Recommendations:\n';
+                    interpretation += '• Implement age-appropriate support strategies from this lesson\n';
+                    interpretation += '• Monitor patterns over time—is it improving or worsening?\n';
+                    interpretation += '• Consider increasing one-on-one connection time\n';
+                    interpretation += '• If concerns persist 3+ months, consider professional consultation\n\n';
+                } else if (avgScore >= 1.5) {
+                    interpretation += '🧡 SIGNIFICANT CHALLENGES: Your child is struggling in multiple developmental areas.\n\n';
+                    interpretation += '💛 Recommendations:\n';
+                    interpretation += '• Strongly consider professional evaluation (therapist, pediatrician)\n';
+                    interpretation += '• Implement intensive support strategies from this lesson\n';
+                    interpretation += '• Document specific behaviors and patterns for professional consultation\n';
+                    interpretation += '• Ensure physical health issues have been ruled out\n';
+                    interpretation += '• Access support for yourself as well—parenting struggling children is stressful\n\n';
+                } else {
+                    interpretation += '❤️ SERIOUS CONCERNS: Your responses suggest significant developmental or mental health concerns.\n\n';
+                    interpretation += '🆘 Immediate Recommendations:\n';
+                    interpretation += '• Schedule professional evaluation within 1-2 weeks\n';
+                    interpretation += '• Contact pediatrician and request mental health referral\n';
+                    interpretation += '• If safety concerns exist, seek immediate help (988, emergency services)\n';
+                    interpretation += '• Remember: Early intervention dramatically improves outcomes\n';
+                    interpretation += '• You are not alone—professional support is available and effective\n\n';
+                }
+
+                interpretation += '📋 Remember: This assessment is educational, not diagnostic. Trust your parental instincts—you know your child best!';
+
+                alert(interpretation);
+            }
+
+            function saveDevProgress() {
+                alert(`📊 Developmental Progress Saved!\n\nYou've recorded your understanding of developmental stages and age-appropriate support strategies. This knowledge helps you provide exactly the right support at the right time.\n\nDevelopmentally-informed parenting is responsive parenting!`);
+            }
+
+            function saveDevReflections() {
+                alert(`💾 Developmental Insights Saved!\n\nYour reflections about your child's developmental stage and support needs have been recorded. Understanding development helps you distinguish normal challenges from concerning patterns.\n\nGreat work on Lesson 11.3! Ready to explore creating emotional safety in your home?`);
+            }
+
+            function hideCrisisBanner() {
+                const banner = document.getElementById('crisis-banner');
+                if (banner) {
+                    banner.style.display = 'none';
+                    sessionStorage.setItem('crisisBannerDismissed', 'true');
+                }
+            }
+
+            // Initialize interactions
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('[data-action]');
+                buttons.forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+
+                // Initialize slider interactions
+                const sliders = document.querySelectorAll('.tracker-slider');
+                sliders.forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    if (valueSpan) {
+                        slider.addEventListener('input', function() {
+                            valueSpan.textContent = this.value;
+                        });
+                    }
+                });
+
+                console.log('Lesson 11.3: Developmental Mental Health loaded successfully');
+            });
+        })();
+    </script>
+
+    <!-- Enhanced styling with RPS color scheme -->
+    <style>
+        .science-explanation { background: linear-gradient(135deg, #e3f4fc 0%, #f3f3f3 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #2ea3f2; }
+
+        .assessment-tests { display: grid; gap: 1.5rem; margin: 2rem 0; }
+        .test-card { background: #f3f3f3; border: 2px solid #abb8c3; border-radius: 12px; padding: 1.5rem; }
+        .test-input { margin: 1rem 0; }
+        .test-input label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: #333333; }
+        .assessment-select { width: 100%; padding: 0.5rem; border: 1px solid #abb8c3; border-radius: 6px; font-family: inherit; }
+
+        .week-by-week { display: grid; gap: 2rem; margin: 2rem 0; }
+        .week-card { background: #ffffff; border: 2px solid #abb8c3; border-radius: 16px; overflow: hidden; }
+        .week-header { background: linear-gradient(90deg, #2ea3f2, #5fabcd); color: white; padding: 1.5rem; }
+        .week-content { padding: 1.5rem; }
+        .week-focus { background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.9rem; }
+        .daily-exercises ul { margin: 1rem 0; padding-left: 1.5rem; }
+        .daily-exercises li { margin: 0.5rem 0; }
+
+        .applications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .application-card { background: #f3f3f3; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #2ea3f2; }
+        .application-card ul { margin: 0.5rem 0; padding-left: 1.5rem; }
+        .application-card li { margin: 0.25rem 0; font-size: 0.9rem; }
+
+        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .research-item { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; border-left: 4px solid #2ea3f2; }
+        .research-stat { font-size: 2.5rem; font-weight: bold; color: #2ea3f2; margin-bottom: 0.5rem; }
+
+        .tracking-dashboard { margin: 2rem 0; }
+        .tracking-categories { display: grid; gap: 2rem; }
+        .category-tracker { background: #f3f3f3; border-radius: 12px; padding: 1.5rem; }
+        .metric-items { display: grid; gap: 1rem; margin: 1rem 0; }
+        .metric-item { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; }
+        .tracker-slider { width: 100%; }
+        .tracker-value { font-weight: bold; color: #2ea3f2; min-width: 2rem; text-align: center; }
+
+        .reflection-questions { display: grid; gap: 2rem; margin: 2rem 0; }
+        .question-set { background: #f3f3f3; border-radius: 12px; padding: 1.5rem; }
+        .question-item { margin: 1.5rem 0; }
+        .question-item label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: #333333; }
+        .question-item textarea { width: 100%; padding: 0.75rem; border: 1px solid #abb8c3; border-radius: 6px; font-family: inherit; }
+
+        .lesson-tags { background: #f3f3f3; border-radius: 12px; padding: 2rem; margin: 2rem 0; }
+        .lesson-tags h3 { color: #333333; margin-bottom: 1rem; }
+        .tags-container { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .tag { background: white; color: #2ea3f2; padding: 0.5rem 1rem; border-radius: 20px; border: 2px solid #2ea3f2; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; }
+        .tag:hover { background: #2ea3f2; color: white; }
+
+        @media (max-width: 768px) {
+            .brain-systems, .applications-grid, .research-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

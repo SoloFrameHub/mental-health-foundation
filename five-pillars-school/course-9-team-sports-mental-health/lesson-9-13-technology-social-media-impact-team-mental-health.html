@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9.13: Technology and Social Media Impact on Team Mental Health - Team Sports & Mental Health Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                    <a href="tel:18006624357" class="crisis-link">🏃 SAMHSA Helpline: 1-800-662-4357</a>
+                </div>
+                <p class="athlete-resources"><strong>Athletic Support:</strong> Contact your athletic department, team physician, or athletic trainer immediately</p>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Team Sports & Mental Health</a> >
+                <a href="#module-4">Module 4: Modern Challenges</a> >
+                <span>Lesson 9.13</span>
+            </div>
+
+            <h1>📱 Technology and Social Media Impact on Team Mental Health</h1>
+            <p class="lesson-subtitle">Navigate the complex relationship between social media and mental wellness in team sports environments, developing healthy technology habits that support rather than undermine psychological wellbeing</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>55 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Advanced Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Digital Wellness</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to Digital Wellness for Athletes</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to this critical exploration of how technology and social media profoundly impact team mental health in modern athletics.</strong> This lesson addresses the complex reality that digital platforms simultaneously connect us to teammates, fans, and resources while also creating comparison pressures, cyberbullying risks, and disrupted sleep patterns that can significantly undermine psychological wellbeing. You'll discover how the "compare and despair" phenomenon proves particularly intense in athletic contexts where performance metrics and achievements are constantly visible and comparable across teams, conferences, and even international levels.</p>
+
+                    <p><strong>The research is eye-opening:</strong> Studies reveal that athletes with heavy social media use show increased rates of anxiety, depression, and body dissatisfaction, with neurological impacts including disrupted dopamine regulation, shortened attention spans, and heightened anxiety responses. However, the same platforms also provide meaningful benefits including connection with supportive fans, team building through shared content, and access to mental health resources and educational materials. Research demonstrates that teams with clear social media guidelines and education about healthy technology use show better mental health outcomes and fewer technology-related conflicts compared to teams without structured approaches.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Complete a comprehensive Social Media Audit Tool to assess how digital platforms impact your mood, self-esteem, and athletic performance, explore the neurological effects of excessive social media on dopamine pathways and stress responses, learn strategies for developing healthy boundaries with technology while maintaining beneficial connections, discover how team social media agreements can protect collective mental health, and develop practical skills for managing cyberbullying, negative comparisons, and the pressure to maintain perfect online personas.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Understand the neurological and psychological impacts of social media on athletic mental health through research on comparison effects, dopamine disruption, and digital stress</li>
+                            <li>Assess your personal social media relationship and its impact on mood, performance, and team dynamics using evidence-based audit tools</li>
+                            <li>Develop healthy technology boundaries and team digital wellness strategies that maximize benefits while minimizing mental health risks</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>This lesson is built on research demonstrating that heavy social media use correlates with increased anxiety, depression, and body dissatisfaction in athletes, neurological studies showing dopamine disruption and attention impacts from excessive technology use, and evidence that teams with structured digital wellness approaches show better mental health outcomes. The Social Media Audit Tool draws from validated instruments measuring problematic social media use and its psychological impacts.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Digital Wellness Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">💚</div>
+                        <div class="objective-text">
+                            <h3>Technology Impact Understanding</h3>
+                            <p>Understand the neurological and psychological impacts of social media on athletic mental health through research on comparison effects, dopamine disruption, and digital stress</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🌿</div>
+                        <div class="objective-text">
+                            <h3>Personal Social Media Audit</h3>
+                            <p>Assess your personal social media relationship and its impact on mood, performance, and team dynamics using evidence-based audit tools</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🏃</div>
+                        <div class="objective-text">
+                            <h3>Healthy Digital Boundaries</h3>
+                            <p>Develop healthy technology boundaries and team digital wellness strategies that maximize benefits while minimizing mental health risks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology & Social Media Deep Dive -->
+            <div class="learning-section">
+                <h2>🔬 The Science of Social Media & Athletic Mental Health</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 Why Social Media Impacts Athletic Mental Health</h3>
+                        <p>Social media and digital technology profoundly impact team mental health through multiple pathways including constant performance comparison, cyberbullying or harassment, disrupted sleep patterns from excessive screen time, and the pressure to maintain perfect online personas that may conflict with authentic experiences and emotions. The neurological impact of excessive social media use includes disrupted dopamine regulation, shortened attention spans, and increased anxiety responses—all of which can negatively impact both athletic performance and team relationships.</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>💚 The "Compare and Despair" Effect</h4>
+                                <p>Social comparison theory proves particularly relevant in athletic contexts where performance metrics and achievements are constantly visible across teams, conferences, and international levels. Athletes naturally compare their training, bodies, performance, and recognition with others, leading to feelings of inadequacy even when objectively successful. Research shows this comparison process on social media increases anxiety, depression, and body dissatisfaction significantly.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🌿 Dopamine Disruption & Attention</h4>
+                                <p>Social media platforms are designed to provide intermittent rewards (likes, comments, shares) that trigger dopamine releases in the brain's reward pathways. Over time, this conditions users to seek constant digital validation, disrupting natural dopamine regulation and making it difficult to find satisfaction in slower, real-world rewards like training progress or team connection. This also shortens attention spans critical for athletic focus.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>💙 Cyberbullying & Digital Harassment</h4>
+                                <p>Athletes face unique cyberbullying risks including criticism from fans, opponents, or even teammates, harassment about performance or appearance, and viral spread of mistakes or losses. Research shows cyberbullying creates similar or greater mental health impacts than face-to-face bullying, with 24/7 accessibility making it inescapable. Many athletes report checking social media constantly to monitor what's being said about them.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🏃 Sleep Disruption & Blue Light</h4>
+                                <p>Technology use before bed disrupts circadian rhythms through blue light exposure that suppresses melatonin production, making it difficult to fall asleep. Additionally, stimulating content (game highlights, training videos, team drama) keeps the mind activated when it should be winding down. Sleep deprivation then increases anxiety, depression, and impaired athletic performance—creating a vicious cycle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Social Media & Athletic Mental Health Research</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">3-4x</div>
+                            <p>Higher rates of anxiety, depression, and body dissatisfaction with heavy social media use (5+ hours daily) in athletes</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">67%</div>
+                            <p>Of elite athletes report social media increases performance pressure and comparison anxiety</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">45%</div>
+                            <p>Have experienced cyberbullying or harassment related to athletic performance or appearance</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">72%</div>
+                            <p>Of athletes who took social media breaks reported improved mood, focus, and team connection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Audit Tool -->
+            <div class="interactive-section">
+                <h2>🏃 Social Media Audit Tool</h2>
+                <p>This comprehensive audit helps you understand how social media impacts your mental health, athletic performance, and team dynamics. Answer honestly—all responses are for your personal reflection:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>📋 Social Media Mental Health Impact Assessment</h3>
+                            <div class="test-instructions">
+                                <p><strong>Part 1: Usage Patterns</strong></p>
+
+                                <div class="test-input">
+                                    <label>Average daily social media time:</label>
+                                    <select id="social-time" class="assessment-select">
+                                        <option value="">Select time range</option>
+                                        <option value="1">Less than 1 hour</option>
+                                        <option value="2">1-2 hours</option>
+                                        <option value="3">2-3 hours</option>
+                                        <option value="4">3-4 hours</option>
+                                        <option value="5">4-5 hours</option>
+                                        <option value="6">5+ hours</option>
+                                    </select>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>When do you check social media? (Select primary time):</label>
+                                    <select id="check-timing" class="assessment-select">
+                                        <option value="">Select timing</option>
+                                        <option value="morning">First thing upon waking</option>
+                                        <option value="throughout">Throughout the day constantly</option>
+                                        <option value="downtime">During downtime/breaks</option>
+                                        <option value="evening">Primarily in evening</option>
+                                        <option value="bedtime">Right before bed</option>
+                                    </select>
+                                </div>
+
+                                <p><strong>Part 2: Emotional Impact (Rate 1-5: Strongly Disagree to Strongly Agree)</strong></p>
+
+                                <div class="test-input">
+                                    <label>1. Social media often makes me feel inadequate about my athletic performance:</label>
+                                    <select id="performance-comparison" class="assessment-select">
+                                        <option value="1">Strongly Disagree</option>
+                                        <option value="2">Disagree</option>
+                                        <option value="3">Neutral</option>
+                                        <option value="4">Agree</option>
+                                        <option value="5">Strongly Agree</option>
+                                    </select>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>2. I frequently compare my body/appearance to other athletes online:</label>
+                                    <select id="body-comparison" class="assessment-select">
+                                        <option value="1">Strongly Disagree</option>
+                                        <option value="2">Disagree</option>
+                                        <option value="3">Neutral</option>
+                                        <option value="4">Agree</option>
+                                        <option value="5">Strongly Agree</option>
+                                    </select>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>3. My mood is affected by likes, comments, and online engagement:</label>
+                                    <select id="validation-seeking" class="assessment-select">
+                                        <option value="1">Strongly Disagree</option>
+                                        <option value="2">Disagree</option>
+                                        <option value="3">Neutral</option>
+                                        <option value="4">Agree</option>
+                                        <option value="5">Strongly Agree</option>
+                                    </select>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>4. I feel anxious when I can't check social media:</label>
+                                    <select id="digital-anxiety" class="assessment-select">
+                                        <option value="1">Strongly Disagree</option>
+                                        <option value="2">Disagree</option>
+                                        <option value="3">Neutral</option>
+                                        <option value="4">Agree</option>
+                                        <option value="5">Strongly Agree</option>
+                                    </select>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>5. Social media disrupts my sleep or pre-sleep routine:</label>
+                                    <select id="sleep-disruption" class="assessment-select">
+                                        <option value="1">Strongly Disagree</option>
+                                        <option value="2">Disagree</option>
+                                        <option value="3">Neutral</option>
+                                        <option value="4">Agree</option>
+                                        <option value="5">Strongly Agree</option>
+                                    </select>
+                                </div>
+
+                                <div class="test-input">
+                                    <label>6. I've experienced cyberbullying or negative comments about my athletics:</label>
+                                    <select id="cyberbullying" class="assessment-select">
+                                        <option value="1">Never</option>
+                                        <option value="2">Rarely</option>
+                                        <option value="3">Sometimes</option>
+                                        <option value="4">Often</option>
+                                        <option value="5">Very Often</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="calculateSocialAudit">📊 Calculate My Social Media Impact Profile</button>
+                </div>
+            </div>
+
+            <!-- Digital Wellness Strategies -->
+            <div class="learning-section">
+                <h2>🌟 Building Healthy Digital Boundaries</h2>
+
+                <div class="training-program">
+                    <div class="program-overview">
+                        <h3>📋 Evidence-Based Digital Wellness Strategies</h3>
+                        <p>These research-backed strategies help athletes maintain beneficial social media connections while protecting mental health and team dynamics:</p>
+                    </div>
+
+                    <div class="week-by-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>💚 Individual Digital Wellness Practices</h4>
+                                <span class="week-focus">Personal boundary development</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Healthy Technology Habits:</h5>
+                                    <ul>
+                                        <li><strong>Curate Your Feed:</strong> Unfollow or mute accounts that trigger comparison, inadequacy, or negative self-talk. Follow accounts that inspire, educate, or genuinely support your wellbeing</li>
+                                        <li><strong>Set Time Boundaries:</strong> Use app timers to limit daily social media to 1-2 hours maximum. Schedule specific check-in times rather than constant scrolling</li>
+                                        <li><strong>Create Tech-Free Zones:</strong> No phones during meals, team meetings, or 1 hour before bed. Keep devices out of bedroom to protect sleep quality</li>
+                                        <li><strong>Turn Off Notifications:</strong> Disable push notifications for social apps to prevent constant interruption and reduce compulsive checking behaviors</li>
+                                        <li><strong>Practice Reality Checks:</strong> Remember that social media shows curated highlights, not reality. Most posts are carefully selected best moments, not daily life</li>
+                                        <li><strong>Take Regular Breaks:</strong> Schedule 24-48 hour social media breaks monthly to reset dopamine pathways and reconnect with offline life</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>🌿 Team Social Media Guidelines</h4>
+                                <span class="week-focus">Collective digital wellness</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Team Digital Agreements:</h5>
+                                    <ul>
+                                        <li><strong>Phone-Free Training:</strong> Establish team norm of no phones during practice, film sessions, or team meetings to maximize connection and focus</li>
+                                        <li><strong>Supportive Posting:</strong> Agree to support teammates publicly online, never post criticism or private team matters, and celebrate collective achievements</li>
+                                        <li><strong>Privacy Protocols:</strong> Respect teammates' consent before posting photos/videos that include them. Not everyone wants the same level of online visibility</li>
+                                        <li><strong>Cyberbullying Response:</strong> Create clear team process for reporting and addressing online harassment, ensuring victims feel supported</li>
+                                        <li><strong>Travel Tech Limits:</strong> Establish phone-free times during team travel to promote actual conversation and connection rather than parallel isolation</li>
+                                        <li><strong>Mental Health Messaging:</strong> Use team platforms to share mental health resources and normalize seeking support rather than just highlighting performance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h4>💙 Managing Negative Online Experiences</h4>
+                                <span class="week-focus">Protection strategies</span>
+                            </div>
+                            <div class="week-content">
+                                <div class="daily-exercises">
+                                    <h5>Cyberbullying & Comparison Management:</h5>
+                                    <ul>
+                                        <li><strong>Block/Mute Liberally:</strong> Don't hesitate to block accounts that send negative messages or trigger unhealthy comparisons. Your mental health matters more than follower counts</li>
+                                        <li><strong>Don't Read Comments After Losses:</strong> Post-loss, avoid reading comments for 24-48 hours when negativity peaks and you're emotionally vulnerable</li>
+                                        <li><strong>Screenshot & Report:</strong> Document cyberbullying with screenshots and report to platforms, coaches, and athletic departments if serious</li>
+                                        <li><strong>Reframe Comparison:</strong> When comparing yourself unfavorably, remember: you're seeing others' highlight reels, not behind-the-scenes struggles</li>
+                                        <li><strong>Seek Offline Validation:</strong> Focus on in-person feedback from coaches and teammates rather than online metrics for self-worth</li>
+                                        <li><strong>Use Private Accounts:</strong> Consider making athletic accounts private to control who can comment and reduce exposure to anonymous criticism</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practical Applications -->
+            <div class="interactive-section">
+                <h2>🌟 Your Digital Wellness Action Plan</h2>
+                <p>Develop personalized strategies for healthy technology use based on your social media audit results:</p>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <h3>💚 Boundary Setting</h3>
+                        <ul>
+                            <li>What specific time limits will you set for social media?</li>
+                            <li>Which times/places will be tech-free zones?</li>
+                            <li>What notifications will you disable?</li>
+                            <li>How will you enforce your boundaries?</li>
+                        </ul>
+                        <textarea rows="4" placeholder="Define your personal digital boundaries..."></textarea>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🌿 Feed Curation</h3>
+                        <ul>
+                            <li>Which accounts trigger comparison or negative feelings?</li>
+                            <li>Who inspires and supports your wellbeing?</li>
+                            <li>What content helps vs. harms your mental health?</li>
+                            <li>How will you maintain a positive digital environment?</li>
+                        </ul>
+                        <textarea rows="4" placeholder="Plan your social media feed curation..."></textarea>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>💙 Team Digital Culture</h3>
+                        <ul>
+                            <li>What team social media guidelines would support mental health?</li>
+                            <li>How can your team use technology to build connection?</li>
+                            <li>What phone-free times would benefit team dynamics?</li>
+                            <li>How will your team address cyberbullying?</li>
+                        </ul>
+                        <textarea rows="4" placeholder="Envision healthy team digital practices..."></textarea>
+                    </div>
+
+                    <div class="application-card">
+                        <h3>🏃 Digital Detox Planning</h3>
+                        <ul>
+                            <li>When will you take your first 24-48 hour social media break?</li>
+                            <li>What offline activities will replace scrolling time?</li>
+                            <li>How will you manage FOMO during breaks?</li>
+                            <li>What benefits do you hope to experience?</li>
+                        </ul>
+                        <textarea rows="4" placeholder="Design your digital detox strategy..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="interactive-section">
+                <h2>📈 Track Your Digital Wellness Progress</h2>
+                <p>Monitor your developing skills in managing technology for mental health:</p>
+
+                <div class="tracking-dashboard">
+                    <div class="tracking-categories">
+                        <div class="category-tracker">
+                            <h3>🧠 Awareness & Understanding</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Understanding of social media's neurological impacts (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="neuro-understanding">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Awareness of personal social media triggers (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="trigger-awareness">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Recognition of comparison effects on mental health (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="comparison-recognition">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-tracker">
+                            <h3>💚 Practical Implementation</h3>
+                            <div class="metric-items">
+                                <div class="metric-item">
+                                    <label>Confidence in setting digital boundaries (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="boundary-confidence">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Ability to curate supportive social media environment (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="curation-ability">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                                <div class="metric-item">
+                                    <label>Readiness to implement team digital wellness strategies (1-10):</label>
+                                    <input type="range" min="1" max="10" value="5" class="tracker-slider" id="team-readiness">
+                                    <span class="tracker-value">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" data-action="saveDigitalProgress">📊 Save Digital Wellness Progress</button>
+                </div>
+            </div>
+
+            <!-- Reflection and Planning -->
+            <div class="learning-section">
+                <h2>🤔 Digital Wellness Reflection</h2>
+
+                <div class="reflection-questions">
+                    <div class="question-set">
+                        <h3>🧠 Personal Insights</h3>
+                        <div class="question-item">
+                            <label>How does social media currently impact your mental health, self-esteem, and athletic performance?</label>
+                            <textarea rows="4" placeholder="Reflect honestly on both benefits (connection, inspiration) and challenges (comparison, pressure, time drain)..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>What surprised you about the neurological research on dopamine disruption, attention impacts, or comparison effects?</label>
+                            <textarea rows="4" placeholder="Consider the 3-4x higher anxiety rates with heavy use, sleep disruption, and validation-seeking patterns..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>Which specific accounts, content types, or behaviors trigger negative feelings or unhealthy comparisons for you?</label>
+                            <textarea rows="4" placeholder="Identify your personal digital triggers to inform curation decisions..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="question-set">
+                        <h3>🎯 Application Planning</h3>
+                        <div class="question-item">
+                            <label>What concrete digital boundaries will you implement this week to protect your mental health?</label>
+                            <textarea rows="4" placeholder="Be specific about time limits, tech-free zones, notification changes, or feed curation plans..."></textarea>
+                        </div>
+
+                        <div class="question-item">
+                            <label>How could your team develop healthier collective technology practices that support everyone's mental wellness?</label>
+                            <textarea rows="4" placeholder="Consider phone-free times, supportive posting norms, privacy agreements, or cyberbullying protocols..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-action="saveDigitalReflections">💾 Save My Digital Wellness Insights</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-9-12-mental-health-first-aid-athletes.html" class="nav-btn secondary">← Previous: Mental Health First Aid for Athletes</a>
+                <a href="lesson-9-14-nutrition-mental-health-team-athletes.html" class="nav-btn primary">Next: Nutrition and Mental Health for Team Athletes →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 4: Modern Challenges • Lesson 13 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-interactions.js"></script>
+
+    <script>
+        // Enhanced digital wellness lesson functionality
+        (function() {
+            'use strict';
+
+            function handleButtonClick(event) {
+                event.preventDefault();
+                const action = event.target.dataset.action;
+                console.log(`Lesson 9.13 button clicked: ${action}`);
+
+                switch(action) {
+                    case 'calculateSocialAudit':
+                        calculateSocialMediaAudit();
+                        break;
+                    case 'saveDigitalProgress':
+                        saveDigitalProgressTemplate();
+                        break;
+                    case 'saveDigitalReflections':
+                        saveDigitalReflectionsTemplate();
+                        break;
+                    case 'hideCrisisBanner':
+                        hideCrisisBannerTemplate();
+                        break;
+                    default:
+                        console.log(`Unknown action: ${action}`);
+                }
+            }
+
+            function calculateSocialMediaAudit() {
+                const socialTime = parseInt(document.getElementById('social-time')?.value || 3);
+                const checkTiming = document.getElementById('check-timing')?.value || 'unknown';
+
+                const scores = {
+                    performance: parseInt(document.getElementById('performance-comparison')?.value || 3),
+                    body: parseInt(document.getElementById('body-comparison')?.value || 3),
+                    validation: parseInt(document.getElementById('validation-seeking')?.value || 3),
+                    anxiety: parseInt(document.getElementById('digital-anxiety')?.value || 3),
+                    sleep: parseInt(document.getElementById('sleep-disruption')?.value || 3),
+                    bullying: parseInt(document.getElementById('cyberbullying')?.value || 3)
+                };
+
+                const totalScore = Object.values(scores).reduce((sum, val) => sum + val, 0);
+                const riskLevel = totalScore >= 24 ? 'HIGH' : totalScore >= 18 ? 'MODERATE' : totalScore >= 12 ? 'LOW' : 'MINIMAL';
+
+                let interpretation = '📱 Your Social Media Impact Profile\n\n';
+                interpretation += `Daily Usage: ${['Unknown', '<1hr', '1-2hrs', '2-3hrs', '3-4hrs', '4-5hrs', '5+hrs'][socialTime]}\n`;
+                interpretation += `Check Timing: ${checkTiming}\n`;
+                interpretation += `Mental Health Impact Score: ${totalScore}/30\n`;
+                interpretation += `Risk Level: ${riskLevel}\n\n`;
+
+                if (riskLevel === 'HIGH') {
+                    interpretation += '🚨 HIGH IMPACT: Social media is significantly affecting your mental health. Your comparison patterns, validation-seeking, or cyberbullying experiences warrant immediate attention. Consider:\n';
+                    interpretation += '• Taking a 1-2 week complete social media break\n';
+                    interpretation += '• Speaking with a counselor about digital stress\n';
+                    interpretation += '• Deleting social media apps from your phone temporarily\n';
+                    interpretation += '• Focusing on in-person team connections\n\n';
+                } else if (riskLevel === 'MODERATE') {
+                    interpretation += '⚠️ MODERATE IMPACT: Social media has mixed effects on your wellbeing—some benefits but also notable challenges. Focus on:\n';
+                    interpretation += '• Setting clear time boundaries (1-2 hours daily max)\n';
+                    interpretation += '• Aggressive feed curation—unfollow comparison triggers\n';
+                    interpretation += '• Creating tech-free zones (meals, before bed)\n';
+                    interpretation += '• Regular 24-48 hour breaks monthly\n\n';
+                } else if (riskLevel === 'LOW') {
+                    interpretation += '✅ LOW IMPACT: You maintain relatively healthy social media boundaries, though there\'s room for improvement. Continue:\n';
+                    interpretation += '• Monitoring usage patterns to prevent escalation\n';
+                    interpretation += '• Curating feed to maximize positive content\n';
+                    interpretation += '• Maintaining tech-free times for sleep quality\n';
+                    interpretation += '• Being mindful of comparison tendencies\n\n';
+                } else {
+                    interpretation += '💚 MINIMAL IMPACT: Social media has limited negative effects on your mental health. Maintain:\n';
+                    interpretation += '• Current healthy boundaries and usage patterns\n';
+                    interpretation += '• Awareness to catch any escalating patterns early\n';
+                    interpretation += '• Your balanced perspective on online vs. real life\n';
+                    interpretation += '• Supporting teammates with digital wellness struggles\n\n';
+                }
+
+                interpretation += '🔍 KEY INSIGHTS:\n';
+                interpretation += '• 3-4x higher anxiety/depression with heavy use (5+ hours daily)\n';
+                interpretation += '• 67% of athletes report social media increases comparison stress\n';
+                interpretation += '• 45% have experienced athletics-related cyberbullying\n';
+                interpretation += '• 72% who take breaks report improved mood and focus\n\n';
+                interpretation += 'Remember: Social media shows curated highlights, not reality. Your worth isn\'t measured in likes!';
+
+                alert(interpretation);
+            }
+
+            function saveDigitalProgressTemplate() {
+                alert(`📊 Digital Wellness Progress Saved!\n\nYour understanding of technology's impact on mental health and skills in setting healthy boundaries have been recorded.\n\nRemember: The goal isn't to eliminate technology, but to use it in ways that support rather than undermine your wellbeing!`);
+            }
+
+            function saveDigitalReflectionsTemplate() {
+                alert(`💾 Digital Wellness Insights Saved!\n\nYour reflections about social media's impact and your action plans for healthier technology use have been recorded.\n\nGreat work on Lesson 9.13! Ready to explore nutrition and mental health for team athletes?`);
+            }
+
+            function hideCrisisBannerTemplate() {
+                const banner = document.getElementById('crisis-banner');
+                if (banner) {
+                    banner.style.display = 'none';
+                    sessionStorage.setItem('crisisBannerDismissed', 'true');
+                }
+            }
+
+            // Initialize interactions
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('[data-action]');
+                buttons.forEach(button => {
+                    button.addEventListener('click', handleButtonClick);
+                });
+
+                // Initialize slider interactions
+                const sliders = document.querySelectorAll('.tracker-slider');
+                sliders.forEach(slider => {
+                    const valueSpan = slider.parentNode.querySelector('.tracker-value');
+                    if (valueSpan) {
+                        slider.addEventListener('input', function() {
+                            valueSpan.textContent = this.value;
+                        });
+                    }
+                });
+
+                console.log('Lesson 9.13: Technology & Social Media Impact loaded successfully');
+            });
+        })();
+    </script>
+
+    <!-- Enhanced styling for digital wellness lesson -->
+    <style>
+        :root {
+            --primary-green: #2E7D32;
+            --secondary-blue: #1976D2;
+            --accent-orange: #FF6F00;
+            --success-green: #388E3C;
+            --neutral-gray: #616161;
+        }
+
+        .science-explanation { background: linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 100%); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .brain-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .system-item { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--primary-green); }
+
+        .assessment-tests { display: grid; gap: 1.5rem; margin: 2rem 0; }
+        .test-card { background: #f1f8f4; border: 2px solid #c8e6c9; border-radius: 12px; padding: 1.5rem; }
+        .test-input { margin: 1rem 0; }
+        .test-input label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--neutral-gray); }
+        .assessment-select { width: 100%; padding: 0.75rem; border: 1px solid #a5d6a7; border-radius: 6px; font-family: inherit; background: white; }
+
+        .week-by-week { display: grid; gap: 2rem; margin: 2rem 0; }
+        .week-card { background: #fefefe; border: 2px solid #e0e0e0; border-radius: 16px; overflow: hidden; }
+        .week-header { background: linear-gradient(90deg, var(--primary-green), var(--success-green)); color: white; padding: 1.5rem; }
+        .week-content { padding: 1.5rem; }
+        .week-focus { background: rgba(255,255,255,0.25); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.9rem; display: inline-block; margin-top: 0.5rem; }
+
+        .applications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .application-card { background: #f1f8f4; border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--primary-green); }
+        .application-card textarea { width: 100%; padding: 0.75rem; border: 1px solid #a5d6a7; border-radius: 6px; font-family: inherit; margin-top: 0.5rem; }
+
+        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .research-item { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; border-left: 4px solid var(--primary-green); }
+        .research-stat { font-size: 2.5rem; font-weight: bold; color: var(--primary-green); margin-bottom: 0.5rem; }
+
+        .btn-primary { background: var(--primary-green); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        .btn-primary:hover { background: var(--success-green); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3); }
+
+        .crisis-banner { background: linear-gradient(135deg, #d32f2f, #c62828); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; position: relative; }
+        .crisis-contacts { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0; }
+        .crisis-link { background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; transition: all 0.3s; }
+        .crisis-link:hover { background: rgba(255,255,255,0.3); }
+        .athlete-resources { margin-top: 1rem; font-size: 0.95rem; }
+
+        @media (max-width: 768px) {
+            .brain-systems, .applications-grid, .research-grid { grid-template-columns: 1fr; }
+            .crisis-contacts { flex-direction: column; }
+        }
+    </style>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1 Workbook - Anxiety Toolkit</title>
+    
+    <style>
+        :root {
+            --calming-teal: #4a90a4;
+            --deep-teal: #357a8a;
+            --soft-blue: #6ba3d0;
+            --sage-green: #87a96b;
+            --warm-gray: #7d8597;
+            --gentle-text: #4a5568;
+            --light-sage: #f7f8f6;
+            --soft-white: #fdfdfd;
+            --light-teal: #e8f4f6;
+            --accent-orange: #fb923c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--gentle-text);
+            background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 30%, #fef3c7 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--accent-orange);
+        }
+
+        .header h1 {
+            color: var(--deep-teal);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: var(--warm-gray);
+            font-size: 1.2rem;
+        }
+
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: var(--light-sage);
+            border-radius: 16px;
+            border-left: 6px solid var(--sage-green);
+        }
+
+        .section h2 {
+            color: var(--deep-teal);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .prompt {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 2px solid var(--light-teal);
+        }
+
+        .prompt label {
+            display: block;
+            font-weight: 600;
+            color: var(--deep-teal);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border: 2px solid var(--light-teal);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            line-height: 1.6;
+            resize: vertical;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--calming-teal);
+            box-shadow: 0 0 0 3px rgba(74, 144, 164, 0.1);
+        }
+
+        .save-indicator {
+            text-align: right;
+            color: var(--sage-green);
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .body-map-tracker {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .checkbox-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid var(--light-teal);
+        }
+
+        .checkbox-item:hover {
+            background: var(--light-teal);
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .checkbox-item label {
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .export-btn {
+            background: var(--accent-orange);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(251, 146, 60, 0.3);
+        }
+
+        .export-btn:hover {
+            background: #ea580c;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(251, 146, 60, 0.4);
+        }
+
+        .action-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid var(--light-sage);
+        }
+
+        .back-link {
+            color: var(--deep-teal);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--calming-teal);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📓 Module 1 Workbook</h1>
+            <p>Understanding Your Anxiety - Personal Tracking & Reflection</p>
+        </div>
+
+        <!-- Section 1: Body Map -->
+        <div class="section">
+            <h2>🗺️ My Anxiety Body Map</h2>
+            <p>Check all the areas where YOU feel anxiety. This is your personal map - no right or wrong answers.</p>
+            
+            <div class="body-map-tracker">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="head" onchange="saveData()">
+                    <label for="head">🧠 Head/Mind</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="chest" onchange="saveData()">
+                    <label for="chest">💓 Chest/Heart</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="stomach" onchange="saveData()">
+                    <label for="stomach">🦋 Stomach</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="hands" onchange="saveData()">
+                    <label for="hands">🖐️ Hands</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="legs" onchange="saveData()">
+                    <label for="legs">🦵 Legs</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="shoulders" onchange="saveData()">
+                    <label for="shoulders">💪 Shoulders/Neck</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="throat" onchange="saveData()">
+                    <label for="throat">🗣️ Throat</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="other" onchange="saveData()">
+                    <label for="other">📍 Other Areas</label>
+                </div>
+            </div>
+
+            <div class="prompt">
+                <label>Describe YOUR anxiety experience in detail:</label>
+                <textarea id="anxiety-description" placeholder="What does anxiety feel like in YOUR body? Where do you notice it first? What physical sensations stand out?" oninput="saveData()"></textarea>
+                <div class="save-indicator" id="save-1">Auto-saved ✓</div>
+            </div>
+        </div>
+
+        <!-- Section 2: Early Warning Signs -->
+        <div class="section">
+            <h2>⚠️ My Early Warning Signs</h2>
+            
+            <div class="prompt">
+                <label>What are the FIRST signs that anxiety is starting for me?</label>
+                <textarea id="early-signs" placeholder="Think about the earliest signals - before anxiety gets big. What do you notice first?" oninput="saveData()"></textarea>
+                <div class="save-indicator" id="save-2">Auto-saved ✓</div>
+            </div>
+
+            <div class="prompt">
+                <label>When does my anxiety typically show up?</label>
+                <textarea id="triggers" placeholder="Certain situations? Times of day? Around specific people? When making decisions?" oninput="saveData()"></textarea>
+                <div class="save-indicator" id="save-3">Auto-saved ✓</div>
+            </div>
+        </div>
+
+        <!-- Section 3: Pattern Recognition -->
+        <div class="section">
+            <h2>📊 My Anxiety Patterns</h2>
+            
+            <div class="prompt">
+                <label>Physical patterns I'm noticing:</label>
+                <textarea id="physical-patterns" placeholder="Which physical symptoms happen together? Which ones are strongest?" oninput="saveData()"></textarea>
+                <div class="save-indicator" id="save-4">Auto-saved ✓</div>
+            </div>
+
+            <div class="prompt">
+                <label>Mental/thought patterns I'm noticing:</label>
+                <textarea id="mental-patterns" placeholder="What kind of thoughts come up? What do I worry about most?" oninput="saveData()"></textarea>
+                <div class="save-indicator" id="save-5">Auto-saved ✓</div>
+            </div>
+
+            <div class="prompt">
+                <label>Behavioral patterns I'm noticing:</label>
+                <textarea id="behavioral-patterns" placeholder="What do I do when anxious? Avoid? Withdraw? Seek reassurance? Overthink?" oninput="saveData()"></textarea>
+                <div class="save-indicator" id="save-6">Auto-saved ✓</div>
+            </div>
+        </div>
+
+        <!-- Section 4: Personal Insights -->
+        <div class="section">
+            <h2>💡 My Key Insights</h2>
+            
+            <div class="prompt">
+                <label>What surprised me about how I experience anxiety?</label>
+                <textarea id="surprises" placeholder="Anything you didn't realize before? New connections you're making?" oninput="saveData()"></textarea>
+                <div class="save-indicator" id="save-7">Auto-saved ✓</div>
+            </div>
+
+            <div class="prompt">
+                <label>What do I want to remember about MY anxiety experience?</label>
+                <textarea id="remember" placeholder="Key realizations, important observations, things you want to track going forward..." oninput="saveData()"></textarea>
+                <div class="save-indicator" id="save-8">Auto-saved ✓</div>
+            </div>
+        </div>
+
+        <!-- Action Bar -->
+        <div class="action-bar">
+            <a href="lesson-1-1-understanding-your-anxiety-experience.html" class="back-link">← Back to Lesson</a>
+            <button class="export-btn" onclick="exportToPDF()">📥 Export to PDF</button>
+        </div>
+    </div>
+
+    <script>
+        // Auto-save functionality
+        function saveData() {
+            const data = {
+                bodyMap: {
+                    head: document.getElementById('head').checked,
+                    chest: document.getElementById('chest').checked,
+                    stomach: document.getElementById('stomach').checked,
+                    hands: document.getElementById('hands').checked,
+                    legs: document.getElementById('legs').checked,
+                    shoulders: document.getElementById('shoulders').checked,
+                    throat: document.getElementById('throat').checked,
+                    other: document.getElementById('other').checked
+                },
+                anxietyDescription: document.getElementById('anxiety-description').value,
+                earlySigns: document.getElementById('early-signs').value,
+                triggers: document.getElementById('triggers').value,
+                physicalPatterns: document.getElementById('physical-patterns').value,
+                mentalPatterns: document.getElementById('mental-patterns').value,
+                behavioralPatterns: document.getElementById('behavioral-patterns').value,
+                surprises: document.getElementById('surprises').value,
+                remember: document.getElementById('remember').value,
+                lastSaved: new Date().toISOString()
+            };
+            
+            localStorage.setItem('module1-workbook', JSON.stringify(data));
+            console.log('Workbook auto-saved');
+        }
+
+        // Load saved data
+        function loadData() {
+            const saved = localStorage.getItem('module1-workbook');
+            if (saved) {
+                const data = JSON.parse(saved);
+                
+                // Load checkboxes
+                if (data.bodyMap) {
+                    Object.keys(data.bodyMap).forEach(key => {
+                        const checkbox = document.getElementById(key);
+                        if (checkbox) checkbox.checked = data.bodyMap[key];
+                    });
+                }
+                
+                // Load textareas
+                document.getElementById('anxiety-description').value = data.anxietyDescription || '';
+                document.getElementById('early-signs').value = data.earlySigns || '';
+                document.getElementById('triggers').value = data.triggers || '';
+                document.getElementById('physical-patterns').value = data.physicalPatterns || '';
+                document.getElementById('mental-patterns').value = data.mentalPatterns || '';
+                document.getElementById('behavioral-patterns').value = data.behavioralPatterns || '';
+                document.getElementById('surprises').value = data.surprises || '';
+                document.getElementById('remember').value = data.remember || '';
+            }
+        }
+
+        // Export to PDF functionality
+        function exportToPDF() {
+            window.print();
+        }
+
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>

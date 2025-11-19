@@ -1,0 +1,275 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Course Categories Section
+--------------------------------------------------------------*/
+.course-categories {
+  .category-card {
+    background: var(--surface-color);
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+    }
+
+    .category-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 30px;
+        color: var(--contrast-color);
+      }
+    }
+
+    h5 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--heading-color);
+    }
+
+    .course-count {
+      font-size: 14px;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      font-weight: 500;
+    }
+
+    // Tech Category - Blue
+    &.category-tech {
+      .category-icon {
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      }
+
+      &:hover {
+        border-color: #3b82f6;
+      }
+    }
+
+    // Business Category - Green
+    &.category-business {
+      .category-icon {
+        background: linear-gradient(135deg, #10b981, #047857);
+      }
+
+      &:hover {
+        border-color: #10b981;
+      }
+    }
+
+    // Design Category - Purple
+    &.category-design {
+      .category-icon {
+        background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+      }
+
+      &:hover {
+        border-color: #8b5cf6;
+      }
+    }
+
+    // Health Category - Red
+    &.category-health {
+      .category-icon {
+        background: linear-gradient(135deg, #ef4444, #dc2626);
+      }
+
+      &:hover {
+        border-color: #ef4444;
+      }
+    }
+
+    // Language Category - Orange
+    &.category-language {
+      .category-icon {
+        background: linear-gradient(135deg, #f97316, #ea580c);
+      }
+
+      &:hover {
+        border-color: #f97316;
+      }
+    }
+
+    // Science Category - Cyan
+    &.category-science {
+      .category-icon {
+        background: linear-gradient(135deg, #06b6d4, #0891b2);
+      }
+
+      &:hover {
+        border-color: #06b6d4;
+      }
+    }
+
+    // Marketing Category - Pink
+    &.category-marketing {
+      .category-icon {
+        background: linear-gradient(135deg, #ec4899, #db2777);
+      }
+
+      &:hover {
+        border-color: #ec4899;
+      }
+    }
+
+    // Finance Category - Emerald
+    &.category-finance {
+      .category-icon {
+        background: linear-gradient(135deg, #059669, #047857);
+      }
+
+      &:hover {
+        border-color: #059669;
+      }
+    }
+
+    // Photography Category - Slate
+    &.category-photography {
+      .category-icon {
+        background: linear-gradient(135deg, #64748b, #475569);
+      }
+
+      &:hover {
+        border-color: #64748b;
+      }
+    }
+
+    // Music Category - Violet
+    &.category-music {
+      .category-icon {
+        background: linear-gradient(135deg, #7c3aed, #5b21b6);
+      }
+
+      &:hover {
+        border-color: #7c3aed;
+      }
+    }
+
+    // Engineering Category - Gray
+    &.category-engineering {
+      .category-icon {
+        background: linear-gradient(135deg, #6b7280, #4b5563);
+      }
+
+      &:hover {
+        border-color: #6b7280;
+      }
+    }
+
+    // Law Category - Amber
+    &.category-law {
+      .category-icon {
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+      }
+
+      &:hover {
+        border-color: #f59e0b;
+      }
+    }
+
+    // Culinary Category - Rose
+    &.category-culinary {
+      .category-icon {
+        background: linear-gradient(135deg, #f43f5e, #e11d48);
+      }
+
+      &:hover {
+        border-color: #f43f5e;
+      }
+    }
+
+    // Sports Category - Lime
+    &.category-sports {
+      .category-icon {
+        background: linear-gradient(135deg, #84cc16, #65a30d);
+      }
+
+      &:hover {
+        border-color: #84cc16;
+      }
+    }
+
+    // Writing Category - Indigo
+    &.category-writing {
+      .category-icon {
+        background: linear-gradient(135deg, #6366f1, #4338ca);
+      }
+
+      &:hover {
+        border-color: #6366f1;
+      }
+    }
+
+    // Psychology Category - Teal
+    &.category-psychology {
+      .category-icon {
+        background: linear-gradient(135deg, #14b8a6, #0d9488);
+      }
+
+      &:hover {
+        border-color: #14b8a6;
+      }
+    }
+
+    // Environment Category - Green
+    &.category-environment {
+      .category-icon {
+        background: linear-gradient(135deg, #22c55e, #16a34a);
+      }
+
+      &:hover {
+        border-color: #22c55e;
+      }
+    }
+
+    // Communication Category - Sky
+    &.category-communication {
+      .category-icon {
+        background: linear-gradient(135deg, #0ea5e9, #0284c7);
+      }
+
+      &:hover {
+        border-color: #0ea5e9;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .category-card {
+      padding: 20px 15px;
+
+      .category-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+
+        i {
+          font-size: 24px;
+        }
+      }
+
+      h5 {
+        font-size: 14px;
+      }
+
+      .course-count {
+        font-size: 13px;
+      }
+    }
+  }
+}

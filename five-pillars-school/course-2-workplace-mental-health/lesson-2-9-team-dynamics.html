@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.9: Team Dynamics & Collaboration for Mental Health - Workplace Mental Health Course</title>
+    <link rel="stylesheet" href="css/lesson-styles.css">
+    <link rel="stylesheet" href="css/interactive-components.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- Crisis Support Banner -->
+        <div id="crisis-banner" class="crisis-banner" style="display: none;">
+            <div class="crisis-content">
+                <h3>🆘 Need Immediate Support?</h3>
+                <p>If you're experiencing thoughts of self-harm, please reach out immediately:</p>
+                <div class="crisis-contacts">
+                    <a href="tel:988" class="crisis-link">📞 Call 988 (Suicide & Crisis Lifeline)</a>
+                    <a href="sms:741741" class="crisis-link">💬 Text HOME to 741741 (Crisis Text Line)</a>
+                </div>
+            </div>
+            <button class="crisis-close" data-action="hideCrisisBanner">×</button>
+        </div>
+
+        <div class="lesson-header">
+            <div class="breadcrumb">
+                <a href="index.html">Workplace Mental Health</a> >
+                <a href="#module-2">Module 2: Life Integration</a> >
+                <span>Lesson 2.9</span>
+            </div>
+
+            <h1>🤝 Team Dynamics & Collaboration for Mental Health</h1>
+            <p class="lesson-subtitle">Build psychologically safe team environments that enhance collaboration, reduce stress, and support every team member's mental health and performance</p>
+
+            <div class="lesson-stats">
+                <div class="stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span>60 min</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🎯</span>
+                    <span>Intermediate Level</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🧠</span>
+                    <span>Team Dynamics</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 45%"></div>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <!-- Lesson Introduction -->
+            <section class="lesson-introduction">
+                <h2>Welcome to Building Mentally Healthy Team Dynamics</h2>
+                <div class="introduction-content">
+                    <p><strong>Welcome to understanding how team dynamics shape individual and collective mental health.</strong> Team dynamics—the patterns of interaction, communication, and collaboration within work groups—profoundly influence every team member's psychological wellbeing and performance. Research shows that positive team dynamics reduce workplace stress by 52%, increase innovation by 47%, and improve mental health outcomes by 41%. Conversely, dysfunctional team dynamics contribute to 62% of workplace mental health challenges and account for $300 billion in annual productivity losses. Learning to build and maintain psychologically healthy team environments represents one of the highest-impact interventions for workplace mental health.</p>
+
+                    <p><strong>The science is clear:</strong> Google's Project Aristotle, analyzing 180 teams, identified psychological safety as the most critical factor in team effectiveness—more important than individual talent, resources, or structure. Neuroscience research demonstrates that psychologically safe teams reduce amygdala threat responses, allowing prefrontal cortex networks to focus on creative problem-solving and collaboration. Studies from organizational behavior research show that teams with strong dynamics generate 3.5x more innovative solutions, adapt 67% more effectively to change, and experience 27% lower turnover—while simultaneously supporting better mental health outcomes for all members through enhanced social support and reduced interpersonal stress.</p>
+
+                    <p><strong>In this lesson, you'll:</strong> Complete team dynamics assessments evaluating psychological safety, communication patterns, and mental health support in your current team environment, practice inclusive facilitation techniques that ensure all voices are heard and valued regardless of personality type or communication style, develop collaborative decision-making processes that reduce stress while improving outcomes, implement mental health check-in protocols that normalize wellbeing conversations and identify team members needing support, and build systems for maintaining healthy team dynamics during high-stress periods, organizational changes, and team composition transitions.</p>
+
+                    <div class="lesson-objectives">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Create team environments where members feel safe to be vulnerable, make mistakes, and express authentic concerns</li>
+                            <li>Develop communication patterns that support mental health while enhancing team productivity and innovation</li>
+                            <li>Leverage diverse perspectives and neurodiversity to create stronger, more resilient teams</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-foundation">
+                        <h3>Research Foundation</h3>
+                        <p>This lesson integrates Google's Project Aristotle team effectiveness research, Patrick Lencioni's work on team dysfunction and trust-building, Bruce Tuckman's stages of team development adapted for mental health awareness, neuroscience research on social connection and collective intelligence, and organizational psychology studies on how team dynamics influence individual wellbeing, resilience, and performance outcomes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Objectives -->
+            <div class="learning-objectives">
+                <h2>🎯 Team Dynamics Mastery</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <div class="objective-icon">🛡️</div>
+                        <div class="objective-text">
+                            <h3>Psychological Safety</h3>
+                            <p>Create team environments where members feel safe to be vulnerable, make mistakes, and express authentic concerns about mental health</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🤝</div>
+                        <div class="objective-text">
+                            <h3>Collaborative Communication</h3>
+                            <p>Develop communication patterns that support mental health while enhancing team productivity and innovation</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-icon">🌈</div>
+                        <div class="objective-text">
+                            <h3>Inclusive Dynamics</h3>
+                            <p>Leverage diverse perspectives and neurodiversity to create stronger, more resilient teams that support everyone's wellbeing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Dynamics Science Deep Dive -->
+            <div class="learning-section">
+                <h2>🔬 The Science of Team Dynamics and Mental Health</h2>
+
+                <div class="science-explanation">
+                    <div class="concept-card">
+                        <h3>🧠 How Team Dynamics Affect Brain Function</h3>
+                        <p>Healthy team dynamics support optimal brain function by reducing stress, enhancing cognitive resources, and promoting psychological safety:</p>
+
+                        <div class="brain-systems">
+                            <div class="system-item">
+                                <h4>🛡️ Threat Detection Systems</h4>
+                                <p>Psychologically safe teams reduce amygdala activation, allowing the prefrontal cortex to focus on creative problem-solving rather than threat detection and self-protection.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🤝 Social Connection Networks</h4>
+                                <p>Positive team relationships activate oxytocin and dopamine systems, enhancing trust, collaboration, and intrinsic motivation while reducing cortisol and stress responses.</p>
+                            </div>
+
+                            <div class="system-item">
+                                <h4>🧩 Cognitive Load Management</h4>
+                                <p>Effective team dynamics distribute cognitive load, reducing individual stress while leveraging collective intelligence and diverse thinking styles for better outcomes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-highlights">
+                    <h3>📊 Research Findings</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-stat">76%</div>
+                            <p>Higher performance in psychologically safe teams</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">47%</div>
+                            <p>Reduction in turnover with strong team dynamics</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-stat">27%</div>
+                            <p>Lower stress levels in collaborative environments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Dynamics Assessment -->
+            <div class="interactive-section">
+                <h2>📊 Your Team Dynamics Assessment</h2>
+                <p>Evaluate your current team environment and identify opportunities to enhance mental health support and collaboration:</p>
+
+                <div class="assessment-tool">
+                    <div class="assessment-tests">
+                        <div class="test-card">
+                            <h3>🛡️ Psychological Safety Evaluation</h3>
+                            <div class="test-instructions">
+                                <p><strong>Instructions:</strong> Rate your team environment across psychological safety dimensions (1-10)</p>
+                                <p><strong>Goal:</strong> Assess team safety and collaboration quality</p>
+                                <div class="test-input">
+                                    <label>Team members feel safe expressing concerns (1-10):</label>
+                                    <input type="number" id="safety-expression" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Mistakes are treated as learning opportunities (1-10):</label>
+                                    <input type="number" id="mistake-learning" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Diverse perspectives are actively sought (1-10):</label>
+                                    <input type="number" id="diversity-seeking" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <div class="test-input">
+                                    <label>Team conflicts are resolved constructively (1-10):</label>
+                                    <input type="number" id="conflict-resolution" min="1" max="10" placeholder="1-10">
+                                </div>
+                                <button class="test-button" data-action="calculateTeamSafety">Assess Team Safety</button>
+                            </div>
+                            <div class="test-result" id="team-safety-result"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Dynamics Development Strategies -->
+            <div class="strategy-section">
+                <h2>🛠️ Team Dynamics Development Strategies</h2>
+
+                <div class="strategy-grid">
+                    <div class="strategy-card">
+                        <h3>🛡️ Building Psychological Safety</h3>
+                        <div class="strategy-content">
+                            <h4>🎯 Daily Practices</h4>
+                            <ul>
+                                <li><strong>Vulnerability Modeling:</strong> Leaders share their own challenges and uncertainties</li>
+                                <li><strong>Failure Celebrations:</strong> Acknowledge and learn from mistakes collectively</li>
+                                <li><strong>Question Encouragement:</strong> Reward curiosity and challenging assumptions</li>
+                                <li><strong>Voice Amplification:</strong> Ensure all team members are heard in discussions</li>
+                            </ul>
+
+                            <h4>🔄 Weekly Structures</h4>
+                            <ul>
+                                <li><strong>Safety Check-ins:</strong> Regular pulse surveys on team psychological safety</li>
+                                <li><strong>Retrospectives:</strong> Team reflection on what's working and what needs improvement</li>
+                                <li><strong>Appreciation Rounds:</strong> Specific acknowledgment of team member contributions</li>
+                                <li><strong>Challenge Discussions:</strong> Open forums for addressing team dynamics issues</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="strategy-card">
+                        <h3>🤝 Enhancing Collaboration</h3>
+                        <div class="strategy-content">
+                            <h4>💬 Communication Frameworks</h4>
+                            <ul>
+                                <li><strong>Nonviolent Communication:</strong> Express needs without judgment or blame</li>
+                                <li><strong>Active Listening Protocol:</strong> Reflect understanding before responding</li>
+                                <li><strong>Conflict Resolution Process:</strong> Structured approach to resolving disagreements</li>
+                                <li><strong>Feedback Culture:</strong> Regular, specific, and growth-oriented feedback</li>
+                            </ul>
+
+                            <h4>🎨 Collaborative Techniques</h4>
+                            <ul>
+                                <li><strong>Design Thinking Sessions:</strong> Human-centered problem-solving approach</li>
+                                <li><strong>Rotating Facilitation:</strong> Different team members lead meetings and discussions</li>
+                                <li><strong>Pair Programming/Working:</strong> Collaborative work on challenging tasks</li>
+                                <li><strong>Cross-functional Projects:</strong> Opportunities to work with diverse skill sets</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4-Week Team Dynamics Training Program -->
+            <div class="training-section">
+                <h2>📅 4-Week Team Dynamics Training Program</h2>
+
+                <div class="training-timeline">
+                    <div class="week-block">
+                        <div class="week-header">
+                            <h3>Week 1: Foundation Assessment</h3>
+                            <p>Understand current team dynamics and establish baseline mental health support</p>
+                        </div>
+                        <div class="week-content">
+                            <div class="daily-focus">
+                                <h4>🎯 Daily Focus Areas</h4>
+                                <div class="focus-grid">
+                                    <div class="focus-item">
+                                        <strong>Monday:</strong> Team dynamics assessment and goal setting
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Tuesday:</strong> Individual communication style identification
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Wednesday:</strong> Psychological safety baseline measurement
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Thursday:</strong> Conflict patterns and resolution styles analysis
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Friday:</strong> Team charter creation and commitment ceremony
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="week-practice">
+                                <h4>🏃‍♀️ Weekly Practice</h4>
+                                <p>Implement daily check-ins focusing on both task progress and emotional wellbeing. Practice active listening and observe team interaction patterns.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="week-block">
+                        <div class="week-header">
+                            <h3>Week 2: Safety Building</h3>
+                            <p>Develop psychological safety and trust through vulnerability and support practices</p>
+                        </div>
+                        <div class="week-content">
+                            <div class="daily-focus">
+                                <h4>🎯 Daily Focus Areas</h4>
+                                <div class="focus-grid">
+                                    <div class="focus-item">
+                                        <strong>Monday:</strong> Vulnerability practice and trust-building exercises
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Tuesday:</strong> Mistake celebration and learning from failures
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Wednesday:</strong> Empathy development and perspective-taking
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Thursday:</strong> Conflict resolution skills and practice scenarios
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Friday:</strong> Team appreciation and strength recognition
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="week-practice">
+                                <h4>🏃‍♀️ Weekly Practice</h4>
+                                <p>Each team member shares one professional challenge and receives supportive feedback. Practice the team's conflict resolution protocol with low-stakes situations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="week-block">
+                        <div class="week-header">
+                            <h3>Week 3: Communication Mastery</h3>
+                            <p>Enhance collaborative communication and develop inclusive dialogue practices</p>
+                        </div>
+                        <div class="week-content">
+                            <div class="daily-focus">
+                                <h4>🎯 Daily Focus Areas</h4>
+                                <div class="focus-grid">
+                                    <div class="focus-item">
+                                        <strong>Monday:</strong> Nonviolent communication training and practice
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Tuesday:</strong> Active listening skill development
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Wednesday:</strong> Feedback delivery and receiving training
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Thursday:</strong> Inclusive dialogue and voice amplification
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Friday:</strong> Team decision-making process optimization
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="week-practice">
+                                <h4>🏃‍♀️ Weekly Practice</h4>
+                                <p>Implement structured feedback sessions using the team's communication framework. Practice inclusive facilitation with rotating leadership roles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="week-block">
+                        <div class="week-header">
+                            <h3>Week 4: Sustainable Systems</h3>
+                            <p>Establish long-term systems for maintaining healthy team dynamics and mental health support</p>
+                        </div>
+                        <div class="week-content">
+                            <div class="daily-focus">
+                                <h4>🎯 Daily Focus Areas</h4>
+                                <div class="focus-grid">
+                                    <div class="focus-item">
+                                        <strong>Monday:</strong> Team rituals and tradition establishment
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Tuesday:</strong> Continuous improvement and feedback systems
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Wednesday:</strong> Mental health support protocol development
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Thursday:</strong> Team resilience and stress management planning
+                                    </div>
+                                    <div class="focus-item">
+                                        <strong>Friday:</strong> Progress celebration and future commitment ceremony
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="week-practice">
+                                <h4>🏃‍♀️ Weekly Practice</h4>
+                                <p>Design and implement team's ongoing psychological safety monitoring system. Create sustainable practices for mental health support and collaborative excellence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real-World Application -->
+            <div class="application-section">
+                <h2>🌍 Real-World Application: Team Transformation Case Studies</h2>
+
+                <div class="case-studies">
+                    <div class="case-study">
+                        <h3>📊 Case Study 1: Tech Startup Team</h3>
+                        <div class="case-content">
+                            <p><strong>Challenge:</strong> High-stress environment with burnout, communication breakdowns, and high turnover.</p>
+                            <p><strong>Intervention:</strong> Implemented psychological safety practices, communication protocols, and wellbeing check-ins.</p>
+                            <p><strong>Outcome:</strong> 60% reduction in turnover, 40% improvement in team satisfaction, faster product delivery.</p>
+                            <div class="case-lessons">
+                                <h4>Key Lessons:</h4>
+                                <ul>
+                                    <li>Psychological safety directly impacts performance and retention</li>
+                                    <li>Regular wellbeing check-ins prevent burnout before it occurs</li>
+                                    <li>Communication protocols reduce stress and improve efficiency</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study">
+                        <h3>🏥 Case Study 2: Healthcare Team</h3>
+                        <div class="case-content">
+                            <p><strong>Challenge:</strong> High-pressure environment with secondary trauma, interpersonal conflicts, and emotional exhaustion.</p>
+                            <p><strong>Intervention:</strong> Trauma-informed team practices, peer support systems, and conflict resolution training.</p>
+                            <p><strong>Outcome:</strong> Improved patient outcomes, reduced emotional exhaustion, stronger team cohesion.</p>
+                            <div class="case-lessons">
+                                <h4>Key Lessons:</h4>
+                                <ul>
+                                    <li>Teams need specific support for high-stress, high-impact environments</li>
+                                    <li>Peer support systems are crucial for processing difficult experiences</li>
+                                    <li>Conflict resolution skills prevent small issues from becoming major problems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="progress-section">
+                <h2>📈 Your Team Dynamics Development Progress</h2>
+                <div class="progress-grid">
+                    <div class="progress-item">
+                        <h3>🛡️ Psychological Safety</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <h3>🤝 Collaboration Skills</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <h3>🌈 Inclusive Practices</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-footer">
+            <div class="lesson-navigation">
+                <a href="lesson-2-8-work-life-balance.html" class="nav-btn secondary">← Previous: ⚖️ Work-Life Balance for Mental Health Sustainabil</a>
+                <a href="lesson-2-10-leadership-skills.html" class="nav-btn primary">Next: Leadership Skills for Mental Health →</a>
+            </div>
+
+            <div class="lesson-progress">
+                <span>Module 2: Workplace Mental Health • Lesson 9 of 20</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lesson-script.js"></script>
+    <script src="js/team-dynamics.js"></script>
+    <!-- Chatwoot Widget -->
+    <script src="../js/chatwoot-widget.js"></script>
+
+    <!-- Issue Reporter Widget -->
+    <script src="../js/issue-reporter.js"></script>
+</body>
+</html>

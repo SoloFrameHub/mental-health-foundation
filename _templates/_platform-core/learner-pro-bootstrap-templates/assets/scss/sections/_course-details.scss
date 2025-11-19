@@ -1,0 +1,789 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Course Details Section
+--------------------------------------------------------------*/
+.course-details {
+  .course-hero {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    align-items: center;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero-content {
+      flex: 1;
+
+      .course-badge {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+
+        @media (max-width: 992px) {
+          justify-content: center;
+        }
+
+        span {
+          padding: 8px 16px;
+          border-radius: 25px;
+          font-size: 13px;
+          font-weight: 600;
+
+          &.category {
+            background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+            color: var(--accent-color);
+          }
+
+          &.level {
+            background-color: color-mix(in srgb, var(--heading-color), transparent 85%);
+            color: var(--heading-color);
+          }
+        }
+      }
+
+      h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        color: var(--heading-color);
+
+        @media (max-width: 768px) {
+          font-size: 32px;
+        }
+      }
+
+      .course-subtitle {
+        font-size: 18px;
+        line-height: 1.6;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        margin-bottom: 30px;
+      }
+
+      .instructor-card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        background-color: var(--surface-color);
+        border-radius: 15px;
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+        @media (max-width: 992px) {
+          justify-content: center;
+        }
+
+        .instructor-image {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .instructor-details {
+          h5 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--heading-color);
+          }
+
+          span {
+            display: block;
+            font-size: 14px;
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
+            margin-bottom: 8px;
+          }
+
+          .instructor-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            i {
+              color: #ffc107;
+              font-size: 14px;
+            }
+
+            span {
+              font-size: 13px;
+              color: color-mix(in srgb, var(--default-color), transparent 40%);
+              margin-left: 8px;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .hero-image {
+      flex: 1;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+      }
+
+      .play-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        .play-btn {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background-color: var(--accent-color);
+          border: none;
+          color: var(--contrast-color);
+          font-size: 32px;
+          margin-bottom: 15px;
+          transition: all 0.3s;
+          box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 50%);
+
+          &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px color-mix(in srgb, var(--accent-color), transparent 40%);
+          }
+        }
+
+        span {
+          display: block;
+          font-size: 14px;
+          font-weight: 600;
+          color: var(--contrast-color);
+          text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+
+  .course-nav-tabs {
+    .nav-tabs {
+      border: none;
+      background-color: var(--surface-color);
+      border-radius: 15px;
+      padding: 10px;
+      margin-bottom: 40px;
+      box-shadow: 0 5px 20px color-mix(in srgb, var(--default-color), transparent 90%);
+
+      .nav-item {
+        flex: 1;
+      }
+
+      .nav-link {
+        border: none;
+        border-radius: 10px;
+        padding: 15px 20px;
+        text-align: center;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        background: none;
+        font-weight: 500;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        @media (max-width: 576px) {
+          padding: 12px 10px;
+          font-size: 14px;
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        i {
+          font-size: 18px;
+
+          @media (max-width: 576px) {
+            font-size: 16px;
+          }
+        }
+
+        &.active {
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+          box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 60%);
+        }
+
+        &:hover:not(.active) {
+          background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    .tab-content {
+      .overview-section {
+        margin-bottom: 40px;
+
+        h3 {
+          font-size: 24px;
+          margin-bottom: 20px;
+          color: var(--heading-color);
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.7;
+          color: var(--default-color);
+          margin-bottom: 15px;
+        }
+      }
+
+      .skills-grid {
+        margin-bottom: 40px;
+
+        h3 {
+          font-size: 24px;
+          margin-bottom: 30px;
+          color: var(--heading-color);
+        }
+
+        .skill-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+          padding: 25px;
+          background-color: var(--surface-color);
+          border-radius: 15px;
+          margin-bottom: 20px;
+          border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+          transition: all 0.3s;
+
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 85%);
+          }
+
+          .skill-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), blue 20%));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            i {
+              font-size: 24px;
+              color: var(--contrast-color);
+            }
+          }
+
+          .skill-content {
+            h5 {
+              margin: 0 0 8px 0;
+              font-size: 18px;
+              font-weight: 600;
+              color: var(--heading-color);
+            }
+
+            p {
+              margin: 0;
+              font-size: 14px;
+              color: color-mix(in srgb, var(--default-color), transparent 30%);
+            }
+          }
+        }
+      }
+
+      .requirements-section {
+        h3 {
+          font-size: 24px;
+          margin-bottom: 20px;
+          color: var(--heading-color);
+        }
+
+        .requirements-list {
+          list-style: none;
+          padding: 0;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: var(--default-color);
+
+            i {
+              color: var(--accent-color);
+              font-size: 18px;
+              flex-shrink: 0;
+            }
+          }
+        }
+      }
+
+      .curriculum-overview {
+        margin-bottom: 30px;
+
+        .curriculum-stats {
+          display: flex;
+          gap: 30px;
+          padding: 25px;
+          background-color: var(--surface-color);
+          border-radius: 15px;
+          border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+          @media (max-width: 576px) {
+            flex-direction: column;
+            gap: 15px;
+          }
+
+          .stat {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            i {
+              color: var(--accent-color);
+              font-size: 20px;
+            }
+
+            span {
+              font-weight: 600;
+              color: var(--default-color);
+            }
+          }
+        }
+      }
+
+      .accordion {
+        .curriculum-module {
+          border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+          border-radius: 12px;
+          margin-bottom: 15px;
+          overflow: hidden;
+
+          .accordion-button {
+            background-color: var(--surface-color);
+            color: var(--default-color);
+            border: none;
+            padding: 25px;
+            font-weight: 600;
+            box-shadow: none;
+
+            &:not(.collapsed) {
+              background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+              color: var(--heading-color);
+            }
+
+            &:focus {
+              box-shadow: none;
+            }
+
+            .module-info {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 5px;
+
+              .module-title {
+                font-size: 18px;
+              }
+
+              .module-meta {
+                font-size: 14px;
+                color: color-mix(in srgb, var(--default-color), transparent 40%);
+                font-weight: 400;
+              }
+            }
+          }
+
+          .accordion-body {
+            padding: 0;
+
+            .lessons-list {
+              .lesson {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 18px 25px;
+                border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+                transition: background-color 0.3s;
+
+                &:hover {
+                  background-color: color-mix(in srgb, var(--accent-color), transparent 96%);
+                }
+
+                &:last-child {
+                  border-bottom: none;
+                }
+
+                i {
+                  color: var(--accent-color);
+                  font-size: 18px;
+                  margin-right: 15px;
+                }
+
+                .lesson-title {
+                  flex: 1;
+                  font-size: 15px;
+                  color: var(--default-color);
+                }
+
+                .lesson-time {
+                  font-size: 14px;
+                  color: color-mix(in srgb, var(--default-color), transparent 40%);
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .reviews-summary {
+        margin-bottom: 40px;
+        text-align: center;
+        padding: 40px;
+        background-color: var(--surface-color);
+        border-radius: 20px;
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+        .rating-overview {
+          .overall-rating {
+            .rating-number {
+              font-size: 64px;
+              font-weight: 700;
+              color: var(--accent-color);
+              line-height: 1;
+              margin-bottom: 10px;
+            }
+
+            .rating-stars {
+              margin-bottom: 10px;
+
+              i {
+                font-size: 24px;
+                color: #ffc107;
+                margin: 0 2px;
+              }
+            }
+
+            .rating-text {
+              font-size: 16px;
+              color: color-mix(in srgb, var(--default-color), transparent 30%);
+            }
+          }
+        }
+      }
+
+      .reviews-list {
+        .review-item {
+          padding: 30px;
+          background-color: var(--surface-color);
+          border-radius: 15px;
+          border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+          margin-bottom: 25px;
+
+          .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+
+            .reviewer-avatar {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+
+            .reviewer-details {
+              flex: 1;
+
+              h6 {
+                margin: 0 0 5px 0;
+                font-size: 16px;
+                font-weight: 600;
+                color: var(--heading-color);
+              }
+
+              .review-rating {
+                i {
+                  color: #ffc107;
+                  font-size: 14px;
+                  margin-right: 2px;
+                }
+              }
+            }
+
+            .review-date {
+              font-size: 13px;
+              color: color-mix(in srgb, var(--default-color), transparent 50%);
+            }
+          }
+
+          .review-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--default-color);
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .enrollment-card {
+    background-color: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px color-mix(in srgb, var(--default-color), transparent 90%);
+    position: sticky;
+    top: 100px;
+
+    .card-header {
+      padding: 30px 30px 20px;
+      border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+
+      .price-display {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+
+        .current-price {
+          font-size: 36px;
+          font-weight: 700;
+          color: var(--accent-color);
+        }
+
+        .original-price {
+          font-size: 20px;
+          color: color-mix(in srgb, var(--default-color), transparent 50%);
+          text-decoration: line-through;
+        }
+
+        .discount {
+          padding: 5px 12px;
+          background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+          color: var(--accent-color);
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: 700;
+        }
+      }
+
+      .enrollment-count {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+
+        i {
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    .card-body {
+      padding: 30px;
+
+      .course-highlights {
+        margin-bottom: 30px;
+
+        .highlight-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 12px;
+
+          i {
+            color: var(--accent-color);
+            font-size: 16px;
+            width: 16px;
+          }
+
+          span {
+            font-size: 14px;
+            color: var(--default-color);
+          }
+        }
+      }
+
+      .action-buttons {
+        margin-bottom: 25px;
+
+        .btn-primary {
+          width: 100%;
+          padding: 16px;
+          background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), blue 20%));
+          color: var(--contrast-color);
+          border: none;
+          border-radius: 12px;
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 12px;
+          transition: all 0.3s;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
+          }
+        }
+
+        .btn-secondary {
+          width: 100%;
+          padding: 16px;
+          background-color: transparent;
+          color: var(--accent-color);
+          border: 2px solid var(--accent-color);
+          border-radius: 12px;
+          font-size: 16px;
+          font-weight: 600;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: var(--accent-color);
+            color: var(--contrast-color);
+          }
+        }
+      }
+
+      .guarantee {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 13px;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+
+        i {
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
+
+  .course-details-card {
+    background-color: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+
+    h4 {
+      font-size: 20px;
+      margin-bottom: 25px;
+      color: var(--heading-color);
+    }
+
+    .detail-grid {
+      .detail-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .detail-label {
+          font-size: 14px;
+          font-weight: 600;
+          color: var(--default-color);
+        }
+
+        .detail-value {
+          font-size: 14px;
+          color: color-mix(in srgb, var(--default-color), transparent 20%);
+        }
+      }
+    }
+  }
+
+  .share-course-card {
+    background-color: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+
+    h4 {
+      font-size: 20px;
+      margin-bottom: 25px;
+      color: var(--heading-color);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+
+      .social-link {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        text-decoration: none;
+
+        &.facebook {
+          background-color: #1877f2;
+          color: white;
+
+          &:hover {
+            background-color: color-mix(in srgb, #1877f2, black 10%);
+          }
+        }
+
+        &.twitter {
+          background-color: #1da1f2;
+          color: white;
+
+          &:hover {
+            background-color: color-mix(in srgb, #1da1f2, black 10%);
+          }
+        }
+
+        &.linkedin {
+          background-color: #0077b5;
+          color: white;
+
+          &:hover {
+            background-color: color-mix(in srgb, #0077b5, black 10%);
+          }
+        }
+
+        &.email {
+          background-color: var(--accent-color);
+          color: white;
+
+          &:hover {
+            background-color: color-mix(in srgb, var(--accent-color), black 10%);
+          }
+        }
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .enrollment-card {
+      position: static;
+    }
+  }
+}
